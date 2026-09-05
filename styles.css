@@ -2080,6 +2080,11 @@ h1 em, h2 em {
   .hero__scroll { left: 42%; }
 }
 
+/* Press feedback on the low-frequency CTAs (D-120 / Kowalski): the interface confirms the press. */
+@media (prefers-reduced-motion: no-preference) {
+  .button:active, .dates a:active, .wayfinder__list a:active { transform: scale(0.97); transition-duration: 160ms; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
