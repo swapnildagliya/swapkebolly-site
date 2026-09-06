@@ -1582,3 +1582,26 @@ body.is-settled .hero__depth { transition: none; }
 
 @media (min-width: 821px) { .inv-stage { padding-top: 6rem; } }
 .bdy-eyebrow { top: 5.5rem; }
+
+/* The caption and scroll cue occupy a real row below the 3D stage. */
+.hero { grid-template-rows: minmax(0, 1fr) auto; }
+.hero__depth { min-height: 0; grid-template-rows: 1fr auto 0.45fr; padding-bottom: 2rem; }
+.hero__title { font-size: clamp(2.6rem, min(10.8vw, 17svh), 12rem); }
+.hero__dancer { bottom: 6rem; }
+.hero__dancer img { height: min(48svh, 31rem); }
+.hero__footer { position: relative; z-index: 6; width: 100%; display: grid; justify-items: center; gap: 1rem; padding: 0 var(--page) max(1.5rem, env(safe-area-inset-bottom)); }
+.hero__footer .hero__note { width: 100%; max-width: 48rem; margin: 0; transform: none; }
+.hero__footer .hero__cue { position: relative; inset: auto; transform: none; margin: 0; }
+@media (max-width: 640px) {
+  .hero__title { font-size: clamp(2.9rem, 16.5vw, 5.2rem); }
+  .hero__depth { padding-top: 5rem; padding-bottom: 1.5rem; }
+  .hero__dancer img { height: min(39svh, 22rem); }
+  .hero__footer { gap: 0.9rem; }
+  .hero__footer .hero__note { font-size: 0.9rem; line-height: 1.45; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero { display: block; }
+  .hero__footer .hero__cue { transform: none; }
+}
+html.no-js .hero { display: block; }
+html.no-js .hero__footer .hero__cue { transform: none; }
