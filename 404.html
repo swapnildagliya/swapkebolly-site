@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#16100d">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="That page isn’t part of the programme. Back to the start of the show.">
+  <title>Not in the programme — Swapnil Dagliya</title>
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="fonts.css?v=20260817a">
+  <style>
+    :root {
+      --ink-deep: oklch(0.15 0.018 45);
+      --cream: oklch(0.955 0.02 85);
+      --marigold: oklch(0.84 0.155 82);
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --page: clamp(1.25rem, 4.5vw, 5rem);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; background: var(--ink-deep); }
+    body {
+      margin: 0; min-width: 320px; overflow-x: clip;
+      min-height: 100svh;
+      display: grid; align-content: center; justify-items: start;
+      gap: 1.4rem;
+      padding: clamp(3rem, 12vh, 7rem) var(--page);
+      background: var(--ink-deep); color: var(--cream);
+      font-family: "Instrument Sans", "Avenir Next", sans-serif;
+      font-size: 1.0625rem; line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Two house beams, exactly as the Overture opens — but nobody is standing in them. */
+    .beams { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: clip; }
+    .beams i {
+      position: absolute; top: -18vh; width: 46vw; height: 150vh;
+      background: linear-gradient(to bottom, oklch(0.9 0.16 92 / 0.10), transparent 62%);
+      filter: blur(26px);
+    }
+    .beams i:first-child { left: -8vw; rotate: -16deg; transform-origin: top left; }
+    .beams i:last-child { right: -8vw; rotate: 16deg; transform-origin: top right; }
+
+    main { position: relative; z-index: 1; display: grid; gap: 1.3rem; justify-items: start; max-width: 46rem; }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--marigold);
+    }
+    h1 {
+      margin: 0;
+      font-family: "Archivo", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+      font-weight: 810; font-stretch: 112%;
+      font-size: clamp(2.6rem, 9vw, 6.4rem); line-height: 0.88;
+      letter-spacing: -0.03em; text-transform: uppercase; text-wrap: balance;
+    }
+    h1 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--marigold); }
+    p.lede { margin: 0; max-width: 32rem; opacity: 0.78; }
+
+    .home {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      margin-top: 0.6rem;
+      padding: 0.95rem 1.6rem;
+      border: 2.5px solid currentColor; border-radius: 99px;
+      color: var(--cream); text-decoration: none;
+      font-weight: 600; font-size: 0.98rem;
+      transition: background-color 200ms ease, color 200ms ease, transform 160ms var(--ease-out);
+    }
+    .home:active { transform: scale(0.96); }
+    .home b { transition: transform 220ms var(--ease-out); }
+    @media (hover: hover) and (pointer: fine) {
+      .home:hover { background: var(--marigold); border-color: var(--marigold); color: oklch(0.19 0.02 50); }
+      .home:hover b { transform: translateX(3px); }
+    }
+    .home:focus-visible { outline: 3px solid var(--marigold); outline-offset: 4px; }
+
+    .scribble {
+      margin: 0;
+      font-family: "Shantell Sans", "Comic Sans MS", cursive;
+      font-size: 1.05rem; color: var(--marigold); opacity: 0.85;
+      rotate: -3deg;
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="beams" aria-hidden="true"><i></i><i></i></div>
+  <main>
+    <p class="eyebrow">404 · wrong door</p>
+    <h1>This scene isn’t in the <em>programme.</em></h1>
+    <p class="lede">The page you were after has left the stage — renamed, retired, or never written. The show itself is still running.</p>
+    <a class="home" href="/swapkebolly-site/"><span>Back to the opening</span><b aria-hidden="true">→</b></a>
+    <p class="scribble" aria-hidden="true">lights up again!</p>
+  </main>
+
+</body>
+</html>

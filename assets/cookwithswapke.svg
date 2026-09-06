@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" fill="none">
+  <g transform="translate(20,40)">
+    <circle cx="0" cy="0" r="20" stroke="currentColor" stroke-width="1"></circle>
+    <path d="M -10 -2 Q -5 -8 0 -2 Q 5 4 10 -2" stroke="currentColor" stroke-width="1" fill="none"></path>
+    <path d="M -10 4 Q -5 -2 0 4 Q 5 10 10 4" stroke="currentColor" stroke-width="1" fill="none"></path>
+  </g>
+  <text x="52" y="36" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="500" font-size="22" fill="currentColor">@cookwithswapke</text>
+  <text x="52" y="58" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="9" fill="currentColor" letter-spacing="1.6">HOME  KITCHEN · INDIA</text>
+</svg>
