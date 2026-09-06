@@ -8,7 +8,7 @@
      copy into the Shoonya contact form (no address ever ships). Paste the access key
      from web3forms.com to have submissions posted straight to the studio inbox; the
      packaged hand-off stays as the fallback whenever a send fails. */
-  const FORM_ACCESS_KEY = "";
+  const FORM_ACCESS_KEY = "2bb1d384-ba9a-4c74-b300-09087117f016";
 
   const root = document.documentElement;
   const body = document.body;
@@ -605,7 +605,17 @@
       enquiryStatus.classList.remove("is-copied");
     }
 
-    if (FORM_ACCESS_KEY) deliver(data, intent, styles, summary);
+    if (FORM_ACCESS_KEY) {
+      deliver(data, intent, styles, summary);
+    } else {
+      sayCurtain(
+        "Packed. Not posted.",
+        "Your message is written.",
+        "One last move: copy it, open the Shoonya contact form, paste it in the message field. That form lands with me."
+      );
+      const acts = document.querySelector("#enquiryActs");
+      if (acts) acts.hidden = false;
+    }
 
     enquiryDone.scrollIntoView({
       behavior: reduceMotion.matches ? "auto" : "smooth",
@@ -617,16 +627,18 @@
   /* Posts to Web3Forms when a key is set. The packaged message stays on screen the
      whole time, so a failed send costs the visitor nothing: the copy + contact-form
      route is still right there. */
-  async function deliver(data, intent, styles, summary) {
+  function sayCurtain(e, t, l) {
     const eyebrow = document.querySelector("#enquiryEyebrow");
     const title = document.querySelector("#enquiryTitle");
     const lede = document.querySelector("#enquiryLede");
+    if (eyebrow) eyebrow.textContent = e;
+    if (title) title.textContent = t;
+    if (lede) lede.textContent = l;
+  }
+
+  async function deliver(data, intent, styles, summary) {
     const acts = document.querySelector("#enquiryActs");
-    const say = (e, t, l) => {
-      if (eyebrow) eyebrow.textContent = e;
-      if (title) title.textContent = t;
-      if (lede) lede.textContent = l;
-    };
+    const say = sayCurtain;
 
     say("Sending…", "Handing it over.", "One moment — posting this straight to Swapnil.");
 
