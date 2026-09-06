@@ -1,3 +1,4 @@
+@property --focus { syntax: "<number>"; inherits: false; initial-value: 0; }
 @property --progress { syntax: "<number>"; inherits: false; initial-value: 0; }
 /* ==========================================================================
    Swapnil Dagliya — Fable 5 Motion Concept
@@ -721,10 +722,10 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
 .bdy-troupe { position: absolute; inset: 0; z-index: 1; }
 .bdy-figure {
   position: absolute; bottom: 0; height: var(--h); width: auto; transform-origin: bottom center;
-  transform: translateX(calc(var(--progress) * var(--drift))) translateY(6vh) scale(0.98);
-  filter: brightness(0.42) saturate(0.7) contrast(0.95); opacity: 0.85;
-  transition: opacity 600ms var(--ease-out);
-  will-change: transform, filter;
+  transform: translateX(calc((1 - var(--focus)) * var(--progress) * var(--drift) + var(--focus) * clamp(var(--cue-min, -100vw), calc(var(--progress) * var(--drift)), var(--cue-max, 100vw)))) translateY(calc((1 - var(--focus)) * 2vh)) scale(calc(.98 + var(--focus) * .08));
+  filter: none; opacity: calc(.32 + var(--focus) * .68);
+  transition: none;
+  will-change: transform, opacity;
 }
 /* max-width:none defeats the global img{max-width:100%}, which otherwise clamps the widest
    cutout (Garba, at left:85%) to the right-edge sliver and squishes it. */
@@ -745,8 +746,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
 .scene--body[data-phase="0"] .f-kalbel, .scene--body[data-phase="1"] .f-folk,
 .scene--body[data-phase="2"] .f-bhangra, .scene--body[data-phase="3"] .f-bolly,
 .scene--body[data-phase="4"] .f-anarkali, .scene--body[data-phase="5"] .f-garba {
-  filter: brightness(1.06) saturate(1.05) contrast(1); opacity: 1; z-index: 3;
-  transform: translateX(clamp(var(--cue-min, -100vw), calc(var(--progress) * var(--drift)), var(--cue-max, 100vw))) translateY(0) scale(1.06);
+  z-index: 3;
 }
 .scene--body[data-phase="0"] .f-kalbel figcaption, .scene--body[data-phase="1"] .f-folk figcaption,
 .scene--body[data-phase="2"] .f-bhangra figcaption, .scene--body[data-phase="3"] .f-bolly figcaption,
@@ -757,7 +757,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
   position: absolute; bottom: -10vh; z-index: 1; width: 52vh; height: 82vh; pointer-events: none;
   background: radial-gradient(50% 46% at 50% 60%, oklch(0.82 0.13 78 / 0.22), transparent 70%);
   left: 0; transform: translateX(calc(var(--sx, 50vw) - 50%)); opacity: 0;
-  transition: opacity 600ms ease, transform 700ms var(--ease-out);
+  transition: opacity 250ms var(--ease-out), transform 250ms var(--ease-out);
 }
 .scene--body[data-phase] .bdy-spot { opacity: 1; }
 .scene--body[data-phase="0"] { --sx: 10vw; } .scene--body[data-phase="1"] { --sx: 30vw; }
@@ -777,7 +777,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
 .bdy-eyebrow { position: absolute; top: clamp(1.4rem, 5vh, 3rem); left: var(--page); z-index: 6; margin: 0; }
 .bdy-beats { position: absolute; left: var(--page); bottom: clamp(5rem, 16vh, 9rem); z-index: 6; max-width: min(34rem, 74vw); display: grid; }
 .bdy-beat { grid-area: 1 / 1; opacity: 0; transform: translateY(18px);
-  transition: opacity 550ms var(--ease-out), transform 600ms var(--ease-out); }
+  transition: opacity 250ms var(--ease-out), transform 250ms var(--ease-out); }
 .scene--body[data-phase="0"] .bdy-beat--0, .scene--body[data-phase="1"] .bdy-beat--0,
 .scene--body[data-phase="2"] .bdy-beat--1, .scene--body[data-phase="3"] .bdy-beat--1,
 .scene--body[data-phase="4"] .bdy-beat--2, .scene--body[data-phase="5"] .bdy-beat--2 { opacity: 1; transform: none; }

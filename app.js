@@ -31,6 +31,7 @@
     top: 0,
     span: 1,
     phases: Number(el.dataset.phases || 0),
+    figures: [".f-kalbel", ".f-folk", ".f-bhangra", ".f-bolly", ".f-anarkali", ".f-garba"].map(selector => el.querySelector(selector)).filter(Boolean),
     lastP: -1,
     lastPhase: -1
   }));
@@ -72,10 +73,17 @@
     scenes.forEach((scene) => {
       if (scrollY + vh < scene.top - vh || scrollY > scene.top + scene.span + vh * 2) return;
       const p = clamp01((scrollY - scene.top) / scene.span);
-      if (Math.abs(p - scene.lastP) > 0.0008) {
+      if (Math.abs(p - scene.lastP) > 0.00001) {
         scene.lastP = p;
         scene.el.style.setProperty("--p", p.toFixed(4));
         scene.targets.forEach(target => target.style.setProperty("--progress", p.toFixed(4)));
+        scene.figures.forEach((figure, i) => {
+          const smooth = value => { const t = clamp01(value); return t * t * (3 - 2 * t); };
+          const cue = p * scene.phases;
+          const enter = i === 0 ? 1 : smooth((cue - i + .12) / .24);
+          const leave = i === scene.phases - 1 ? 1 : 1 - smooth((cue - i - 1 + .12) / .24);
+          figure.style.setProperty("--focus", (enter * leave).toFixed(4));
+        });
       }
       if (scene.phases) {
         const phase = Math.min(scene.phases - 1, Math.floor(p * scene.phases));
@@ -247,6 +255,7 @@
       select: document.querySelector("#srlSelect"),
     };
     let current = -1;
+    let captionTimer = 0;
 
     const showScene = (i) => {
       if (i === current || !SCENES[i]) return;
@@ -260,7 +269,8 @@
       cells.forEach((c, j) => c.classList.toggle("is-on", j === i));
       dots.forEach((d, j) => d.classList.toggle("is-on", j === i));
       cap.classList.add("is-swapping");
-      window.setTimeout(() => {
+      window.clearTimeout(captionTimer);
+      captionTimer = window.setTimeout(() => {
         out.chapter.textContent = `SCENE ${pad(i + 1)} / ${pad(N)}`;
         out.kicker.textContent = o[2];
         out.title.textContent = o[1];
