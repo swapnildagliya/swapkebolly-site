@@ -456,7 +456,8 @@
 
         <label class="doors__message"><span>Tell me enough to get excited</span><textarea name="message" rows="5" required></textarea></label>
 
-        <div class="doors__finish">
+        <input type="checkbox" name="botcheck" class="doors__botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+          <div class="doors__finish">
           <button class="button button--ink" type="submit"><span>Package my message</span><b aria-hidden="true">↗</b></button>
           <p>Nothing is sent yet. I’ll write the whole message for you, ready to copy — mention dessert if it’s relevant.</p>
         </div>
@@ -464,11 +465,11 @@
 
       <!-- The form's ending. Filled + unhidden by app.js on submit; no email leaves the page. -->
       <div class="curtain" id="enquiryDone" tabindex="-1" hidden>
-        <p class="curtain__eyebrow">Packed. Not posted.</p>
-        <h3 class="curtain__title">Your message is <em>written.</em></h3>
-        <p class="curtain__lede">One last move: copy it, open the Shoonya contact form, paste it in the message field. That form lands with me.</p>
+        <p class="curtain__eyebrow" id="enquiryEyebrow">Packed. Not posted.</p>
+        <h3 class="curtain__title" id="enquiryTitle">Your message is <em>written.</em></h3>
+        <p class="curtain__lede" id="enquiryLede">One last move: copy it, open the Shoonya contact form, paste it in the message field. That form lands with me.</p>
         <pre class="curtain__summary" id="enquirySummary" tabindex="0"></pre>
-        <div class="curtain__acts">
+        <div class="curtain__acts" id="enquiryActs">
           <button class="button button--paper" type="button" id="enquiryCopy"><span>Copy the message</span><b aria-hidden="true">⧉</b></button>
           <a class="button" href="https://www.shoonyadance.com/contact" target="_blank" rel="noopener noreferrer"><span>Send it via the contact form</span><b aria-hidden="true">↗</b></a>
         </div>

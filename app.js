@@ -4,6 +4,12 @@
 (() => {
   "use strict";
 
+  /* Web3Forms delivery. Empty = the message is packaged on-page for the visitor to
+     copy into the Shoonya contact form (no address ever ships). Paste the access key
+     from web3forms.com to have submissions posted straight to the studio inbox; the
+     packaged hand-off stays as the fallback whenever a send fails. */
+  const FORM_ACCESS_KEY = "";
+
   const root = document.documentElement;
   const body = document.body;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -599,12 +605,64 @@
       enquiryStatus.classList.remove("is-copied");
     }
 
+    if (FORM_ACCESS_KEY) deliver(data, intent, styles, summary);
+
     enquiryDone.scrollIntoView({
       behavior: reduceMotion.matches ? "auto" : "smooth",
       block: "center"
     });
     window.setTimeout(() => enquiryDone.focus({ preventScroll: true }), reduceMotion.matches ? 0 : 420);
   });
+
+  /* Posts to Web3Forms when a key is set. The packaged message stays on screen the
+     whole time, so a failed send costs the visitor nothing: the copy + contact-form
+     route is still right there. */
+  async function deliver(data, intent, styles, summary) {
+    const eyebrow = document.querySelector("#enquiryEyebrow");
+    const title = document.querySelector("#enquiryTitle");
+    const lede = document.querySelector("#enquiryLede");
+    const acts = document.querySelector("#enquiryActs");
+    const say = (e, t, l) => {
+      if (eyebrow) eyebrow.textContent = e;
+      if (title) title.textContent = t;
+      if (lede) lede.textContent = l;
+    };
+
+    say("Sending…", "Handing it over.", "One moment — posting this straight to Swapnil.");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: FORM_ACCESS_KEY,
+          subject: `Website enquiry — ${intent}`,
+          from_name: String(data.get("name") || "Website visitor"),
+          name: String(data.get("name") || ""),
+          email: String(data.get("email") || ""),
+          intent,
+          styles: styles.join(", "),
+          place: String(data.get("place") || ""),
+          date: String(data.get("date") || ""),
+          people: String(data.get("people") || ""),
+          format: String(data.get("format") || ""),
+          message: String(data.get("message") || ""),
+          packaged: summary,
+          botcheck: ""
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success === false) throw new Error(result.message || "send failed");
+
+      say("Sent.", "It’s with me.", "Thank you — I read these myself and reply within a few days.");
+      if (acts) acts.hidden = true;
+      if (enquiryStatus) enquiryStatus.textContent = "Nothing else to do. You can close this page.";
+    } catch (error) {
+      say("Packed. Not posted.", "Your message is written.", "The send didn’t go through, so here it is intact: copy it, open the Shoonya contact form, paste it in the message field.");
+      if (acts) acts.hidden = false;
+      if (enquiryStatus) enquiryStatus.textContent = enquiryHint;
+    }
+  }
 
   enquiryCopy?.addEventListener("click", async () => {
     const text = enquirySummary?.textContent || "";
