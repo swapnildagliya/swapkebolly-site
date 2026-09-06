@@ -3,7 +3,7 @@
   --ink-soft: oklch(0.25 0.03 35);
   --paper: oklch(0.96 0.022 83);
   --paper-deep: oklch(0.91 0.035 79);
-  --saffron: oklch(0.66 0.205 39);
+  --saffron: #E85D1F;
   --saffron-dark: oklch(0.52 0.19 35);
   --yellow: oklch(0.89 0.18 100);
   --pink: oklch(0.79 0.105 350);
@@ -1608,6 +1608,11 @@ h1 em, h2 em {
 .contact--form .contact__copy { width: 100%; }
 .contact--form .contact__copy h2 { max-width: 10ch; }
 
+/* No-JS: the form needs script to prepare a message safely (no action/method,
+   so a native submit would GET personal data into the URL). Hide it and let
+   the <noscript> block right after it carry the fallback links instead. */
+html:not(.js) .enquiry-form[data-needs-js] { display: none; }
+
 .enquiry-form {
   width: min(78rem, 100%);
   display: grid;
@@ -1751,6 +1756,52 @@ h1 em, h2 em {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+.enquiry-form__handoff {
+  display: grid;
+  gap: var(--space-lg);
+  width: min(56rem, 100%);
+  padding: var(--space-xl);
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+.enquiry-form__handoff-lead {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.enquiry-form .enquiry-form__handoff-text {
+  width: 100%;
+  min-height: 9rem;
+  padding: var(--space-lg);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper-deep);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+.enquiry-form__handoff-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xl);
+}
+.enquiry-form__handoff-alt { font-size: 0.85rem; }
+.enquiry-form__handoff-alt a,
+.enquiry-form__noscript a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.enquiry-form__noscript {
+  max-width: 46ch;
+  margin-top: var(--space-xl);
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .privacy {

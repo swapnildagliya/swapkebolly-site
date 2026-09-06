@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  // Paste the Web3Forms access key here; empty = mailto fallback.
+  // Paste the Web3Forms access key here; empty = local handoff (copy/paste) mode.
   const FORM_ACCESS_KEY = "";
 
   const root = document.documentElement;
@@ -205,11 +205,14 @@
 
   const enquiryHelper = document.querySelector("#enquiryHelper");
   const enquirySubmit = document.querySelector("#enquirySubmit");
+  const enquiryHandoff = document.querySelector("#enquiryHandoff");
+  const enquiryHandoffText = document.querySelector("#enquiryHandoffText");
+  const enquiryCopyButton = document.querySelector("#enquiryCopyButton");
   const helperCopy = {
-    mailto: "This opens your email app with everything neatly packed. Nothing disappears into a mysterious form void.",
+    handoff: "Prepares your message here — copy it, then paste it into the studio contact form or a DM. Nothing is stored on this site.",
     keyed: "Sent straight to Swapnil — expect a reply within a few days.",
     sending: "Sending…",
-    error: "That didn’t send — opening your email app instead."
+    error: "That didn’t send — your message is ready to copy below."
   };
 
   const buildMessage = (data) => {
@@ -232,14 +235,31 @@
     return { intent, lines };
   };
 
-  const sendByMailto = (data) => {
-    const { intent, lines } = buildMessage(data);
-    const subject = encodeURIComponent(`Website enquiry — ${intent}`);
-    const bodyText = encodeURIComponent(lines.join("\n"));
-    window.location.href = `mailto:info@shoonyadance.com?subject=${subject}&body=${bodyText}`;
+  const showHandoff = (data) => {
+    const { lines } = buildMessage(data);
+    if (enquiryHandoffText) enquiryHandoffText.value = lines.join("\n");
+    enquiryHandoff?.classList.remove("is-form-hidden");
   };
 
-  if (enquiryHelper) enquiryHelper.textContent = FORM_ACCESS_KEY ? helperCopy.keyed : helperCopy.mailto;
+  const copyButtonDefaultLabel = "Copy message";
+  enquiryCopyButton?.addEventListener("click", () => {
+    const label = enquiryCopyButton.querySelector("span");
+    const text = enquiryHandoffText?.value || "";
+    const showCopied = () => {
+      if (!label) return;
+      label.textContent = "Copied";
+      window.setTimeout(() => {
+        label.textContent = copyButtonDefaultLabel;
+      }, 2000);
+    };
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(showCopied).catch(() => enquiryHandoffText?.select());
+    } else {
+      enquiryHandoffText?.select();
+    }
+  });
+
+  if (enquiryHelper) enquiryHelper.textContent = FORM_ACCESS_KEY ? helperCopy.keyed : helperCopy.handoff;
 
   enquiryForm?.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -248,7 +268,8 @@
     const data = new FormData(enquiryForm);
 
     if (!FORM_ACCESS_KEY) {
-      sendByMailto(data);
+      showHandoff(data);
+      if (enquiryHelper) enquiryHelper.textContent = helperCopy.handoff;
       return;
     }
 
@@ -286,7 +307,7 @@
         if (submitLabel) submitLabel.textContent = originalLabel || "Prepare my message";
         if (enquirySubmit) enquirySubmit.disabled = false;
         if (enquiryHelper) enquiryHelper.textContent = helperCopy.error;
-        sendByMailto(data);
+        showHandoff(data);
       });
   });
 

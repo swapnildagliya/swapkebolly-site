@@ -442,7 +442,7 @@
         <p class="eyebrow">No vague “contact us” box</p>
         <h2 id="contactTitle">What brings<br>you <em>here?</em></h2>
 
-        <form class="enquiry-form" id="enquiryForm">
+        <form class="enquiry-form" id="enquiryForm" data-needs-js>
           <fieldset>
             <legend>I would like to…</legend>
             <div class="enquiry-form__choices">
@@ -487,14 +487,28 @@
           <label class="enquiry-form__honeypot" aria-hidden="true"><span>Leave this empty</span><input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
           <div class="enquiry-form__finish">
             <button type="submit" id="enquirySubmit"><span>Prepare my message</span><b aria-hidden="true">↗</b></button>
-            <p id="enquiryHelper">This opens your email app with everything neatly packed. Nothing disappears into a mysterious form void.</p>
+            <p id="enquiryHelper">Prepares your message here — copy it, then paste it into the studio contact form or a DM. Nothing is stored on this site.</p>
+          </div>
+
+          <div class="enquiry-form__handoff is-form-hidden" id="enquiryHandoff">
+            <p class="enquiry-form__handoff-lead">Copy this, then send it your way:</p>
+            <textarea class="enquiry-form__handoff-text" id="enquiryHandoffText" readonly rows="8" aria-label="Your composed message"></textarea>
+            <div class="enquiry-form__handoff-actions">
+              <button type="button" class="button button--ink" id="enquiryCopyButton"><span>Copy message</span></button>
+              <a class="button button--ink" href="https://www.shoonyadance.com/contact" target="_blank" rel="noopener noreferrer">Send it via the studio contact form <span>↗</span></a>
+            </div>
+            <p class="enquiry-form__handoff-alt">…or send it as a DM to <a href="https://instagram.com/swapkebolly" target="_blank" rel="noopener noreferrer">@swapkebolly</a> on Instagram.</p>
           </div>
         </form>
+
+        <noscript>
+          <p class="enquiry-form__noscript">This form needs JavaScript to prepare your message. <a href="https://www.shoonyadance.com/contact" target="_blank" rel="noopener noreferrer">Contact the studio form ↗</a> — or send a DM to <a href="https://instagram.com/swapkebolly" target="_blank" rel="noopener noreferrer">@swapkebolly on Instagram ↗</a>.</p>
+        </noscript>
       </div>
 
       <section class="privacy" id="privacy" aria-labelledby="privacyTitle">
         <h2 id="privacyTitle">Privacy, briefly.</h2>
-        <p>No cookies, no analytics, no trackers. The fonts on this page are served from this site, not from a third party. This form composes a message in your own email app — nothing you type is stored here. Photos are mine or credited to their photographer.</p>
+        <p>No cookies, no analytics, no trackers. The fonts on this page are served from this site, not from a third party. The enquiry form prepares a message for you to send yourself; when a delivery service is switched on, submissions go straight to Swapnil through that service and are not stored on this site. Photos are mine or credited to their photographer.</p>
       </section>
 
       <footer class="footer">
