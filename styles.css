@@ -335,7 +335,7 @@ html.no-js .watch__iris { clip-path: none; }
 html.no-js .watch__iris::after { opacity: 1; }
 
 .scene--hero  { --len: 200; }
-.scene--body  { --len: 300; }
+.scene--body  { --len: 700; } /* Six styles, one viewport of scroll each. */
 .scene--invite{ --len: 280; }
 .scene--watch { --len: 220; }
 
@@ -746,7 +746,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
 .scene--body[data-phase="2"] .f-bhangra, .scene--body[data-phase="3"] .f-bolly,
 .scene--body[data-phase="4"] .f-anarkali, .scene--body[data-phase="5"] .f-garba {
   filter: brightness(1.06) saturate(1.05) contrast(1); opacity: 1; z-index: 3;
-  transform: translateX(calc(var(--progress) * var(--drift))) translateY(0) scale(1.06);
+  transform: translateX(clamp(var(--cue-min, -100vw), calc(var(--progress) * var(--drift)), var(--cue-max, 100vw))) translateY(0) scale(1.06);
 }
 .scene--body[data-phase="0"] .f-kalbel figcaption, .scene--body[data-phase="1"] .f-folk figcaption,
 .scene--body[data-phase="2"] .f-bhangra figcaption, .scene--body[data-phase="3"] .f-bolly figcaption,
@@ -792,11 +792,14 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
   font-size: 0.85rem; opacity: 0.72; text-align: right; max-width: min(30rem, 62vw); text-wrap: balance; }
 .bdy-caption a { color: var(--marigold); text-underline-offset: 3px; white-space: nowrap; }
 /* the three-beat meter */
-.bdy-meter { position: absolute; right: var(--page); top: clamp(1.4rem, 5vh, 3rem); z-index: 6; display: flex; gap: 0.5rem; }
+.bdy-meter { position: absolute; right: var(--page); top: 5.5rem; z-index: 6; display: flex; gap: 0.5rem; }
 .bdy-meter i { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: oklch(0.955 0.02 85 / 0.28); transition: background-color 300ms, transform 300ms; }
-.scene--body[data-phase="0"] .bdy-meter i:nth-child(1), .scene--body[data-phase="1"] .bdy-meter i:nth-child(1),
-.scene--body[data-phase="2"] .bdy-meter i:nth-child(2), .scene--body[data-phase="3"] .bdy-meter i:nth-child(2),
-.scene--body[data-phase="4"] .bdy-meter i:nth-child(3), .scene--body[data-phase="5"] .bdy-meter i:nth-child(3) { background: var(--marigold); transform: scale(1.5); }
+.scene--body[data-phase="0"] .bdy-meter i:nth-child(1),
+.scene--body[data-phase="1"] .bdy-meter i:nth-child(2),
+.scene--body[data-phase="2"] .bdy-meter i:nth-child(3),
+.scene--body[data-phase="3"] .bdy-meter i:nth-child(4),
+.scene--body[data-phase="4"] .bdy-meter i:nth-child(5),
+.scene--body[data-phase="5"] .bdy-meter i:nth-child(6) { background: var(--marigold); transform: scale(1.5); }
 
 @media (max-width: 720px) {
   /* keep all six — every one gets a lighting cue, so none may be hidden */
@@ -1442,7 +1445,7 @@ html.js .plate.is-visible { opacity: 1; scale: 1; }
   .invite__scribble { position: static; margin-top: 0.8rem; rotate: -2deg; text-align: left; }
 
   .scene--hero { --len: 165; }
-  .scene--body { --len: 260; }
+  .scene--body { --len: 700; }
   .scene--watch { --len: 190; }
 
   .hero__dancer img { height: min(44svh, 24rem); }

@@ -48,7 +48,14 @@
     scenes.forEach((scene) => {
       const rect = scene.el.getBoundingClientRect();
       scene.top = rect.top + scrollY;
-      scene.span = Math.max(1, scene.el.offsetHeight - window.innerHeight);
+      scene.span = Math.max(1, scene.el.offsetHeight - scene.el.querySelector(".scene__pin").offsetHeight);
+      // Keep the highlighted cutout inside the stage, including its 1.06 scale.
+      scene.el.querySelectorAll(".bdy-figure").forEach(figure => {
+        const width = figure.offsetWidth;
+        const gutter = scene.el.clientWidth * .03;
+        figure.style.setProperty("--cue-min", `${gutter - figure.offsetLeft + width * .03}px`);
+        figure.style.setProperty("--cue-max", `${scene.el.clientWidth - gutter - figure.offsetLeft - width * 1.03}px`);
+      });
     });
     if (inviteTrack && inviteViewport) {
       const shift = Math.max(0, inviteTrack.scrollWidth - inviteViewport.clientWidth);
