@@ -20,6 +20,11 @@
   --indigo-deep: oklch(0.2 0.06 295);
   --peacock: oklch(0.6 0.11 195);
 
+  /* CONTRAST RULE (measured 2026-09-07, WCAG AA 4.5:1):
+     cool/dark grounds carry cream — cobalt 5.6:1, deep indigo 15:1
+     warm/light grounds carry ink-deep — orange 4.9:1, marigold 12.3:1, pink 4.9:1
+     Cream on orange was 3.6:1 and on pink 3.9:1; nothing light passes on either.
+     Do not put cream on a warm ground. */
   /* BOLD SATURATED palette — vivid flat colour blocks (Codex energy). Reused across the show.
      Cobalt/orange/pink carry cream text; marigold is light so it carries ink text (used for
      the dense sections). --deep-indigo stays for Act I (the spotlight stage needs the dark). */
@@ -27,7 +32,7 @@
   --bold-cobalt:  oklch(0.50 0.21 264);
   --bold-orange:  oklch(0.62 0.22 33);
   --bold-marigold:oklch(0.85 0.16 84);
-  --bold-pink:    oklch(0.60 0.19 350);
+  --bold-pink:    oklch(0.62 0.19 350);  /* +0.02 L so ink-deep clears 4.5:1 (was 4.48) */
   --bold-cream:   oklch(0.96 0.03 84);
   --ink-text:     oklch(0.2 0.03 50);    /* text on the light bold grounds (marigold) */
   --glow: oklch(0.91 0.16 92);           /* bright accent that pops on cobalt/orange/pink */
@@ -344,7 +349,7 @@ html.no-js .watch__iris::after { opacity: 1; }
    body's act transition timing (which lags at scene handovers). */
 .scene--hero .scene__pin  { background: var(--ink-deep); color: var(--cream); }
 .scene--body .scene__pin  { color: var(--cream); } /* .bdy-stage paints its own radial */
-.scene--invite .scene__pin{ background: var(--bold-pink); color: var(--cream); }
+.scene--invite .scene__pin{ background: var(--bold-pink); color: var(--ink-deep); }
 .scene--watch .scene__pin { background: oklch(0.14 0.015 45); color: var(--cream); }
 
 /* ============================== Loading sequence (house lights) ============================== */
@@ -640,8 +645,8 @@ html.no-js .srl__sheet { display: grid; }
    section-scoped (--nts-*) so they never touch the global tokens other acts rely on. */
 .notes-credits {
   --len: 300;
-  --nts-paper: var(--bold-orange); --nts-ink: var(--cream);
-  --nts-gold: var(--glow); --nts-rani: var(--glow);
+  --nts-paper: var(--bold-orange); --nts-ink: var(--ink-deep);
+  --nts-gold: var(--cream); --nts-rani: var(--cream);  /* --glow on orange was 2.4:1 */
   --nts-mono: ui-monospace, "SF Mono", Menlo, monospace;
 }
 .notes-credits .scene__pin {
@@ -655,7 +660,7 @@ html.no-js .srl__sheet { display: grid; }
   line-height: 0.8; letter-spacing: -0.04em; color: oklch(1 0 0 / 0.05); font-variant-numeric: tabular-nums; }
 
 .nts-card { position: relative; z-index: 2; max-width: 34rem; }
-.notes-credits .eyebrow { color: var(--nts-gold); opacity: 1; }
+.notes-credits .eyebrow { color: color-mix(in oklch, var(--ink-deep), transparent 20%); opacity: 1; }
 .notes-credits h2 { font-family: var(--font-display); font-weight: 840; font-stretch: 114%; font-size: clamp(2.4rem, 6vw, 4.6rem);
   line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase; margin: 0 0 1.2rem; color: var(--nts-ink); }
 .notes-credits h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--nts-gold); }
@@ -841,7 +846,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
    Colours section-scoped p2- so they never touch global tokens. */
 .practice2 {
   --p2-paper: var(--bold-cobalt); --p2-ink: var(--cream);
-  --p2-rani: var(--glow-rose); --p2-gold: var(--glow);
+  --p2-rani: var(--glow); --p2-gold: var(--glow);  /* glow-rose on cobalt was 3.1:1 */
   --p2-mono: ui-monospace, "SF Mono", Menlo, monospace;
   background: radial-gradient(120vmax 80vmax at 80% -10%, oklch(0.56 0.2 262), var(--p2-paper) 70%);
   color: var(--p2-ink);
@@ -909,7 +914,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
    (JS sets --t/--a per frame). Bold pink ground, cream cards. Namespaced inv-. */
 .inv-stage { display: grid; grid-template-rows: auto 1fr auto; padding: clamp(1.4rem, 4vh, 2.6rem) 0; overflow: clip; }
 .inv-head { padding: 0 var(--page); position: relative; z-index: 3; }
-.scene--invite .eyebrow { color: color-mix(in oklch, var(--cream), transparent 22%); opacity: 1; margin-bottom: 0.7rem; }
+.scene--invite .eyebrow { color: color-mix(in oklch, var(--ink-deep), transparent 20%); opacity: 1; margin-bottom: 0.7rem; }
 .inv-head h2 { font-family: var(--font-display); font-weight: 850; font-stretch: 116%; font-size: clamp(2.2rem, 6.5vw, 4.8rem);
   line-height: 0.88; letter-spacing: -0.03em; text-transform: uppercase; margin: 0; color: var(--cream); }
 .inv-head h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--glow); }
@@ -1068,7 +1073,7 @@ html.js .lb-board.is-live .lb-cell:not(.gap) { animation: lb-flip 0.5s var(--eas
 /* ============================== Act V — The Thali ==============================
    A steel platter ringed with round dish cutouts; point at one and it serves into the centre.
    Bold orange ground; the metal platter and cream rings pop against it. Namespaced th-. */
-.thali-act { background: var(--bold-orange); color: var(--cream); overflow: clip; }
+.thali-act { background: var(--bold-orange); color: var(--ink-deep); overflow: clip; }
 .th-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   padding: 0.85rem var(--page); background: var(--ink-deep); color: var(--cream);
   font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; }
@@ -1077,10 +1082,10 @@ html.js .lb-board.is-live .lb-cell:not(.gap) { animation: lb-flip 0.5s var(--eas
 @keyframes th-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.82); } }
 .th-grid { padding: clamp(2.2rem, 7vh, 4.5rem) var(--page) clamp(3rem, 10vh, 7rem);
   display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(1.6rem, 4vw, 4rem); align-items: center; }
-.thali-act .eyebrow { color: color-mix(in oklch, var(--cream), transparent 25%); opacity: 1; margin-bottom: 0.9rem; }
+.thali-act .eyebrow { color: color-mix(in oklch, var(--ink-deep), transparent 20%); opacity: 1; margin-bottom: 0.9rem; }
 .thali-act h2 { font-family: var(--font-display); font-weight: 840; font-stretch: 114%; font-size: clamp(2rem, 5vw, 3.7rem);
   line-height: 0.92; letter-spacing: -0.03em; text-transform: uppercase; margin: 0; }
-.thali-act h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--glow); }
+.thali-act h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--cream); }
 .th-copy p { margin-top: 1.05rem; line-height: 1.65; opacity: 0.85; max-width: 30rem; }
 .th-cta { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; margin-top: 1.5rem; }
 .th-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--cream); color: var(--ink);
