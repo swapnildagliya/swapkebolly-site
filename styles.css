@@ -1461,12 +1461,37 @@ html.js .plate.is-visible { opacity: 1; scale: 1; }
 
 @media (max-width: 640px) {
   body { font-size: 1rem; }
-  .hero__title { font-size: clamp(2.9rem, 16.5vw, 5.2rem); }
+  .hero__title {
+    font-size: clamp(2.9rem, 16.5vw, 5.2rem);
+    /* line-height is 0.88 — tighter than the font — so glyph boxes bleed into
+       the neighbouring grid rows. On desktop `is` sits absolutely in the left
+       gutter and never meets them; in the mobile stack it does, and landed on
+       top of CHOREO. Space the rows rather than nudging one child. */
+    gap: 0.2em;
+  }
   .hero__line--2 {
-    position: static;
+    /* `static` drops the z-index, and the dancer sits at translateZ(120px), so
+       the word painted underneath the costume and vanished. `relative` keeps it
+       in flow between the two words but restores stacking; the translateZ puts
+       it in front of the dancer in the 3D context. */
+    position: relative;
+    /* the base rule's top/left are absolute-positioning coordinates; under
+       `relative` they become OFFSETS and shoved `is` 35px down into CHOREO. */
+    inset: auto;
+    z-index: 6;
     rotate: -4deg;
-    margin: 0.06em 0;
-    transform: scale(calc(1 + max(0, calc((var(--progress) - 0.05) / 0.95)) * 1.4));
+    /* The big words have a tight line-height, so a 0.06em margin left `is`
+       sitting inside CHOREO's line box. Give it its own band, and hold it left
+       the way the desktop composition does rather than centring it over the
+       letter mass. */
+    display: block;
+    line-height: 1;
+    margin: 0;
+    /* 0.38em of a 143px desktop h1 is 55px and holds its own; the same ratio on
+       a 64px mobile h1 is 24px, which disappears between two full-width words
+       and over the dancer. Give it presence at phone widths. */
+    font-size: 0.52em;
+    transform: translateZ(140px) scale(calc(1 + max(0, calc((var(--progress) - 0.05) / 0.95)) * 1.4));
     opacity: calc(1 - max(0, calc((var(--progress) - 0.05) / 0.95)) * 1.35);
   }
   .hero__note { font-size: 0.92rem; }
