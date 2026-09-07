@@ -508,6 +508,20 @@ html.no-js .preload { display: none; }
   opacity: calc(1 - max(0, calc((var(--progress) - 0.05) / 0.95)) * 2.4);
 }
 .hero__note strong { color: var(--marigold); font-weight: 600; }
+/* The only way to act from screen one. Everything else in the hero is an
+   in-page anchor, so a visitor who arrives ready to book had to scroll five
+   acts to find the form. Deliberately quiet — it must not outrank the title. */
+.hero__ask {
+  display: inline-block; margin-top: 0.75rem;
+  font-weight: 600; color: var(--cream);
+  border-bottom: 1.5px solid var(--marigold);
+  transition: border-color 200ms ease;
+}
+.hero__ask span { display: inline-block; transition: transform 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .hero__ask:hover { border-color: var(--marigold); }
+  .hero__ask:hover span { transform: translateY(3px); }
+}
 
 .hero__scribble { position: absolute; top: 14vh; left: clamp(1rem, 9vw, 12rem); z-index: 4; transform: translateZ(60px); }
 

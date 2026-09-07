@@ -236,9 +236,14 @@
       if (o[7]) {                                    // this scene plays a film
         bg.classList.add("srl__bg--video");
         const v = document.createElement("video");
-        v.src = o[7];
+        // No src yet. preload="metadata" did NOT keep these off the wire: the
+        // scene autoplays, so the browser fetched all 18 MB of film on first
+        // load, phones included. The URL waits in a data attribute until the
+        // scene is actually shown.
+        v.dataset.src = o[7];
+        v.poster = o[4];                             // same still as the card behind it
         v.muted = true; v.loop = true; v.playsInline = true;
-        v.preload = "metadata";                      // don't pull the file until it's needed
+        v.preload = "none";
         v.setAttribute("aria-hidden", "true");
         bg.appendChild(v);
       }
@@ -263,6 +268,15 @@
     let current = -1;
     let captionTimer = 0;
 
+    // A phone gets the 720p cut, and so does anyone on a metered connection.
+    // Reduced motion never loads a film at all — the poster is the whole scene.
+    const armFilm = (v) => {
+      if (v.src || !v.dataset.src) return;
+      const conn = navigator.connection || {};
+      const light = window.matchMedia("(max-width: 820px)").matches || conn.saveData === true;
+      v.src = light ? v.dataset.src.replace(/\.mp4$/, "-720.mp4") : v.dataset.src;
+    };
+
     const showScene = (i) => {
       if (i === current || !SCENES[i]) return;
       const o = SCENES[i];
@@ -270,7 +284,9 @@
         const live = j === i;
         b.classList.toggle("is-on", live);
         const v = b.querySelector("video");        // only the on-screen scene plays
-        if (v) { if (live && !reduceMotion.matches) { v.play().catch(() => {}); } else { v.pause(); } }
+        if (v) {
+          if (live && !reduceMotion.matches) { armFilm(v); v.play().catch(() => {}); } else { v.pause(); }
+        }
       });
       cells.forEach((c, j) => c.classList.toggle("is-on", j === i));
       dots.forEach((d, j) => d.classList.toggle("is-on", j === i));
