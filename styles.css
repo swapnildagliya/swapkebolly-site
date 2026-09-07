@@ -683,8 +683,13 @@ html.no-js .srl__sheet { display: grid; }
   mask-image: linear-gradient(transparent, #000 16%, #000 84%, transparent); }
 .nts-track { display: grid; gap: clamp(1.8rem, 4.2vh, 3rem); margin: 0; padding: 0; list-style: none; will-change: transform;
   transform: translateY(calc(var(--progress) * (var(--nts-travel, 0px) * -1))); }
+/* Was opacity 0.3, which left exactly one of eight credits legible at a time —
+   you had to scroll the whole pinned scene to read a CV. The roll should say
+   "this one is current", not "the others do not exist". Inactive rows are now
+   readable; the active row is marked by full opacity, the shift and the
+   marker line, which is plenty of signal. */
 .nts-credit { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1.1rem; align-items: baseline;
-  opacity: 0.3; transition: opacity 450ms var(--ease-out), transform 450ms var(--ease-out); transform: translateX(0); }
+  opacity: 0.66; transition: opacity 450ms var(--ease-out), transform 450ms var(--ease-out); transform: translateX(0); }
 .nts-credit.is-lit { opacity: 1; transform: translateX(6px); }
 .nts-credit time { font-family: var(--nts-mono); font-size: 0.78rem; letter-spacing: 0.08em; color: var(--nts-rani);
   font-variant-numeric: tabular-nums; padding-top: 0.25em; }
