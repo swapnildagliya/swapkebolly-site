@@ -925,7 +925,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
 /* ============================== Act III — The Invitation (lobby cards) ==============================
    Scroll-driven horizontal case of workshop cards; each tilts in 3D by its distance from centre
    (JS sets --t/--a per frame). Bold pink ground, cream cards. Namespaced inv-. */
-.inv-stage { display: grid; grid-template-rows: auto 1fr auto; padding: clamp(1.4rem, 4vh, 2.6rem) 0; overflow: clip; }
+.inv-stage { display: grid; grid-template-rows: auto 1fr auto auto; padding: clamp(1.4rem, 4vh, 2.6rem) 0; overflow: clip; }
 .inv-head { padding: 0 var(--page); position: relative; z-index: 3; }
 .scene--invite .eyebrow { color: color-mix(in oklch, var(--ink-deep), transparent 20%); opacity: 1; margin-bottom: 0.7rem; }
 .inv-head h2 { font-family: var(--font-display); font-weight: 850; font-stretch: 116%; font-size: clamp(2.2rem, 6.5vw, 4.8rem);
@@ -952,6 +952,23 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
 .inv-rail { margin: 0.9rem var(--page) 0; height: 2px; background: color-mix(in oklch, var(--cream), transparent 74%);
   position: relative; z-index: 3; border-radius: 2px; }
 .inv-rail i { position: absolute; inset: 0 auto 0 0; width: 100%; transform-origin: left; transform: scaleX(calc(0.18 + var(--progress) * 0.82)); background: var(--cream); border-radius: 2px; }
+/* Act III sold six dance forms and showed nothing. A programmer needs to see
+   that this has been done before, for a room like theirs — so: the crowd, and
+   the twelve cities it has actually happened in (derived from ABC's archive,
+   workshops only, guest-taught dates excluded). */
+.inv-proof { display: grid; grid-template-columns: minmax(0, 22rem) 1fr; gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: center; padding: 0 var(--page); margin-top: clamp(.6rem, 1.6vh, 1.2rem); }
+.inv-proof-media { margin: 0; border-radius: 12px; overflow: hidden; aspect-ratio: 16 / 9;
+  box-shadow: 0 20px 44px -26px oklch(0 0 0 / .6); }
+.inv-proof-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.inv-proof-lead { margin: 0 0 .5rem; font-size: clamp(1rem, 1.5vw, 1.25rem); font-weight: 650; }
+.inv-proof-cities { margin: 0; font-size: clamp(.85rem, 1.1vw, .98rem); line-height: 1.5; }
+.inv-proof-cities b { display: block; font-weight: 800; }
+@media (max-width: 820px) {
+  .inv-proof { grid-template-columns: 1fr; }
+  .inv-proof-media { max-width: 22rem; }
+}
+
 .inv-foot { display: flex; flex-wrap: wrap; gap: 1rem 2.2rem; align-items: center; justify-content: space-between;
   padding: 0 var(--page); position: relative; z-index: 3; margin-top: 0.9rem; color: var(--cream); }
 .inv-formats { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
