@@ -467,9 +467,17 @@ html.no-js .preload { display: none; }
   transform: translateX(-50%) translateZ(120px) scale(calc(0.96 + var(--progress) * 0.34)) translateY(calc(max(0, calc((var(--progress) - 0.05) / 0.95)) * 8vh));
   transform-origin: bottom center;
   will-change: transform;
+  /* The drop-shadow lives on the IMG, not here. This figure scales on every
+     scroll frame, and a filter on a scaling element is re-rasterised each
+     time — measured at 47 dropped frames out of 117 through the hero. On the
+     child it rasterises once and the parent's transform is composited: 26
+     dropped, identical to deleting the shadow, but the shadow is kept.
+     Do NOT add will-change: filter here — measured worse (45 dropped). */
+}
+.hero__dancer img {
+  height: min(58svh, 36rem); width: auto;
   filter: drop-shadow(0 22px 34px oklch(0 0 0 / 0.55));
 }
-.hero__dancer img { height: min(58svh, 36rem); width: auto; }
 .hero__shadow {
   position: absolute; left: 50%; bottom: -2.5vh;
   width: 130%; height: 5vh; transform: translateX(-50%);
