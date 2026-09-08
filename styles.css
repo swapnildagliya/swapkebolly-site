@@ -1701,3 +1701,12 @@ body.is-settled .hero__depth { transition: none; }
 }
 html.no-js .hero { display: block; }
 html.no-js .hero__footer .hero__cue { transform: none; }
+
+/* Said before the send button, not in small print underneath it. */
+.doors__privacy {
+  margin: 0 0 0.9rem; max-width: 52ch;
+  font-size: 0.94rem; line-height: 1.55;
+  color: color-mix(in oklch, var(--cream), transparent 32%);
+}
+.doors__privacy a { color: var(--marigold); border-bottom: 1px solid color-mix(in oklch, var(--marigold), transparent 55%); }
+@media (hover: hover) and (pointer: fine) { .doors__privacy a:hover { border-color: var(--marigold); } }

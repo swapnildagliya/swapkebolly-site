@@ -467,6 +467,9 @@
         <label class="doors__message"><span>Tell me enough to get excited</span><textarea name="message" rows="5" required></textarea></label>
 
         <input type="checkbox" name="botcheck" class="doors__botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+          <!-- Before the button, not after it. Someone is entitled to know where
+               their details go while they can still decide not to send them. -->
+          <p class="doors__privacy">It comes straight to my inbox, delivered by Web3Forms. Nobody else sees it. <a href="privacy.html">The whole story</a>.</p>
           <div class="doors__finish">
           <button class="button button--ink" type="submit"><span>Package my message</span><b aria-hidden="true">↗</b></button>
           <p>Nothing is sent yet. I’ll write the whole message for you, ready to copy — mention dessert if it’s relevant.</p>
