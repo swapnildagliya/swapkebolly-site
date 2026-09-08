@@ -471,12 +471,14 @@
                their details go while they can still decide not to send them. -->
           <p class="doors__privacy">It comes straight to my inbox, delivered by Web3Forms. Nobody else sees it. <a href="privacy.html">The whole story</a>.</p>
           <div class="doors__finish">
-          <button class="button button--ink" type="submit"><span>Package my message</span><b aria-hidden="true">↗</b></button>
-          <p>Nothing is sent yet. I’ll write the whole message for you, ready to copy — mention dessert if it’s relevant.</p>
+          <button class="button button--ink" type="submit"><span>Send it to me</span><b aria-hidden="true">↗</b></button>
+          <p>This one does send — straight to my inbox, and I read them myself. If it fails on the way, your message stays on screen so you can copy it. Mention dessert if it’s relevant.</p>
         </div>
       </form>
 
-      <!-- The form's ending. Filled + unhidden by app.js on submit; no email leaves the page. -->
+      <!-- The form's ending. Filled + unhidden by app.js on submit. The message IS sent
+       to Web3Forms at that point; the packaged text is the copy-out fallback for when
+       that send fails, not a preview step. -->
       <div class="curtain" id="enquiryDone" tabindex="-1" hidden>
         <p class="curtain__eyebrow" id="enquiryEyebrow">One moment.</p>
         <h3 class="curtain__title" id="enquiryTitle">Your message is <em>written.</em></h3>
