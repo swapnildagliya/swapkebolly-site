@@ -1710,3 +1710,10 @@ html.no-js .hero__footer .hero__cue { transform: none; }
 }
 .doors__privacy a { color: var(--marigold); border-bottom: 1px solid color-mix(in oklch, var(--marigold), transparent 55%); }
 @media (hover: hover) and (pointer: fine) { .doors__privacy a:hover { border-color: var(--marigold); } }
+
+/* Photography credit — quieter than the nav, louder than nothing. */
+.footer__credits {
+  margin-top: 0.35rem;
+  font-size: 0.86rem; line-height: 1.5;
+  color: color-mix(in oklch, var(--cream), transparent 45%);
+}
