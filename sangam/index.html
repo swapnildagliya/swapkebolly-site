@@ -949,20 +949,9 @@ strong, b { font-weight:600; }
 
 /* Arc — same five categories, Madhubani palette, flat fills */
 .arc-seg { border-radius:0; }
+.arc-bar { align-items:flex-end; }
 .arc-seg-label { font-size:0.66rem; letter-spacing:0.06em; font-weight:600; color:rgba(43,32,22,0.72); }
 [data-theme="dark"] .arc-seg-label { color:rgba(240,226,191,0.72); }
-.arc-bar .arc-seg:nth-child(1)  { background:rgba(168,98,15,0.16) !important; }
-.arc-bar .arc-seg:nth-child(2)  { background:rgba(168,98,15,0.26) !important; }
-.arc-bar .arc-seg:nth-child(3)  { background:rgba(31,79,138,0.3) !important; border-top-color:#1f4f8a !important; }
-.arc-bar .arc-seg:nth-child(4)  { background:rgba(168,98,15,0.2) !important; }
-.arc-bar .arc-seg:nth-child(5)  { background:rgba(168,98,15,0.3) !important; }
-.arc-bar .arc-seg:nth-child(6)  { background:rgba(151,30,22,0.3) !important; border-top-color:#971e16 !important; }
-.arc-bar .arc-seg:nth-child(7)  { background:rgba(110,66,18,0.55) !important; border-top-color:#4a2c0c !important; }
-.arc-bar .arc-seg:nth-child(8)  { background:rgba(110,66,18,0.32) !important; }
-.arc-bar .arc-seg:nth-child(9)  { background:rgba(140,82,16,0.28) !important; }
-.arc-bar .arc-seg:nth-child(10) { background:rgba(31,79,138,0.32) !important; }
-.arc-bar .arc-seg:nth-child(11) { background:rgba(31,79,138,0.5) !important; border-top-color:#1f4f8a !important; }
-.arc-bar .arc-seg:nth-child(12) { background:rgba(151,30,22,0.4) !important; border-top-color:#00585b !important; }
 .arc-bar + div > span > span { border-radius:0 !important; width:10px !important; height:10px !important; }
 [style*="184,146,42,0.5)"] { background:rgba(168,98,15,0.5) !important; }
 [style*="42,107,143,0.6)"] { background:rgba(31,79,138,0.6) !important; }
@@ -1053,12 +1042,24 @@ strong, b { font-weight:600; }
 :root[data-theme="dark"] .char-card:nth-child(3){--cc:var(--mk-ochre);--cc-bg:rgba(217,162,74,0.1);--cc-b:rgba(217,162,74,0.4)}
 :root[data-theme="dark"] .char-card:nth-child(4){--cc:var(--mk-teal);--cc-bg:rgba(95,184,177,0.1);--cc-b:rgba(95,184,177,0.4)}
 :root[data-theme="dark"] .char-card:nth-child(5){--cc:var(--mk-river);--cc-bg:rgba(134,176,224,0.1);--cc-b:rgba(134,176,224,0.4)}
+.char-card { border-top:5px solid var(--cc); }
+.char-card-top::before { display:none; }
+.char-art { margin:0; background:#2b2016; border-bottom:1px solid var(--border2); }
+.char-art img { display:block; width:100%; height:auto; aspect-ratio:1 / 1; object-fit:cover; object-position:center 40%; }
 .char-accent { font-family:var(--mk-display); font-weight:400; font-size:3.6rem; opacity:0.14; }
 .char-role { font-size:0.72rem; letter-spacing:0.14em; opacity:1; }
 .char-name { font-family:var(--mk-head); font-weight:500; font-size:1.6rem; line-height:1.2; }
 .char-sanskrit { font-family:var(--mk-head); font-size:1rem; color:var(--muted); }
 .char-played { font-size:0.7rem; letter-spacing:0.1em; font-weight:500; }
 .char-played strong { font-weight:700; }
+.char-played { display:flex; align-items:center; gap:0.75rem; }
+.char-player-photos { display:flex; gap:4px; flex-shrink:0; }
+.char-player-photos img { display:block; width:52px; height:52px; object-fit:cover; border:2px solid var(--cc); background:var(--surface2); }
+.ensemble-label { margin-top:3.5rem; }
+.ensemble-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:1rem; }
+.ensemble-person { margin:0; padding:0.75rem; background:var(--surface); border:1px solid var(--border2); text-align:center; }
+.ensemble-person img { display:block; width:100%; height:auto; aspect-ratio:1 / 1; object-fit:cover; border:2px solid var(--mk-teal); }
+.ensemble-person figcaption { margin-top:0.6rem; font-family:var(--mk-head); font-weight:500; font-size:1.02rem; line-height:1.3; color:var(--text); }
 .char-section-title { font-size:0.7rem; letter-spacing:0.14em; opacity:1; }
 .char-section-text { font-size:0.98rem; line-height:1.7; color:var(--text2); }
 .char-scene-tag { border-radius:0; font-size:0.68rem; letter-spacing:0.06em; font-weight:500; padding:0.28rem 0.6rem; }
@@ -1071,6 +1072,8 @@ strong, b { font-weight:600; }
   font-family:var(--mk-display); font-weight:400; font-size:1.35rem; color:var(--mk-title);
   background:var(--surface2); border:2px solid var(--mk-teal);
 }
+.cast-photo { width:72px; height:72px; flex-shrink:0; object-fit:cover; border:2px solid var(--mk-teal); background:var(--surface2); }
+.cast-photo-credit { margin-top:1.2rem; font-family:var(--mk-body); font-size:0.7rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
 .cast-dancer-name { font-family:var(--mk-head); font-weight:500; font-size:1.25rem; }
 .cast-dancer-stats { font-size:0.7rem; letter-spacing:0.1em; font-weight:500; }
 .cast-section-label { font-size:0.68rem; letter-spacing:0.14em; }
@@ -1190,6 +1193,7 @@ strong, b { font-weight:600; }
   .sc-orig, .sc-dir { padding:1.4rem 1.2rem; }
 }
 @media (max-width:560px) {
+  .ensemble-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:0.75rem; }
   .scene-card { grid-template-columns:40px minmax(0, 1fr); }
   .sc-num { font-size:0.66rem; letter-spacing:0.1em; }
   .char-card-top { padding:1.5rem 1.25rem; }
@@ -1302,18 +1306,17 @@ strong, b { font-weight:600; }
     <h2 class="section-heading">Emotional Temperature — 21 Scenes</h2>
     <p class="section-sub">Gold ◆ markers indicate the five key creative moments.</p>
     <div class="arc-bar">
-      <div class="arc-seg" style="background:rgba(184,146,42,0.12);flex:1;height:32px"><span class="arc-seg-label">PRE</span></div>
-      <div class="arc-seg" style="background:rgba(184,146,42,0.22);flex:3;height:46px"><span class="arc-seg-label">S1–3</span></div>
-      <div class="arc-seg" style="background:rgba(42,107,143,0.28);flex:2;height:56px;border-top:2px solid rgba(74,155,191,0.5)"><span class="arc-seg-label">S4–5</span></div>
-      <div class="arc-seg" style="background:rgba(184,146,42,0.16);flex:2;height:50px"><span class="arc-seg-label">S6–7</span></div>
-      <div class="arc-seg" style="background:rgba(184,146,42,0.26);flex:2;height:62px"><span class="arc-seg-label">S8–9</span></div>
-      <div class="arc-seg" style="background:linear-gradient(to right,rgba(184,146,42,0.45),rgba(160,58,90,0.45));flex:2;height:80px;border-top:3px solid #a03a5a"><span class="arc-seg-label">S10 — Feast → Rejection ◆</span></div>
-      <div class="arc-seg" style="background:rgba(139,94,26,0.5);flex:1;height:80px;border-top:3px solid var(--drought-light)"><span class="arc-seg-label">S13 ◆</span></div>
-      <div class="arc-seg" style="background:rgba(139,94,26,0.3);flex:1;height:54px"><span class="arc-seg-label">S14</span></div>
-      <div class="arc-seg" style="background:linear-gradient(to right,rgba(139,94,26,0.28),rgba(184,146,42,0.25));flex:4;height:68px"><span class="arc-seg-label">S15–18</span></div>
-      <div class="arc-seg" style="background:rgba(42,107,143,0.3);flex:2;height:72px"><span class="arc-seg-label">S19–20</span></div>
-      <div class="arc-seg" style="background:rgba(42,107,143,0.45);flex:1;height:62px;border-top:3px solid var(--river-light)"><span class="arc-seg-label">S17 ◆ Sangam</span></div>
-      <div class="arc-seg" style="background:linear-gradient(to right,rgba(42,107,143,0.4),rgba(196,33,90,0.4),rgba(220,100,30,0.35));flex:4;height:80px;border-top:3px solid var(--holi-teal)"><span class="arc-seg-label">S18–20 ◆</span></div>
+      <div class="arc-seg" style="background:rgba(168,98,15,0.16);flex:1;height:32px"><span class="arc-seg-label">PRE</span></div>
+      <div class="arc-seg" style="background:rgba(168,98,15,0.26);flex:3;height:46px"><span class="arc-seg-label">S01–03</span></div>
+      <div class="arc-seg" style="background:rgba(31,79,138,0.30);flex:2;height:56px;border-top:2px solid #1f4f8a"><span class="arc-seg-label">S04–05</span></div>
+      <div class="arc-seg" style="background:rgba(168,98,15,0.30);flex:2;height:62px"><span class="arc-seg-label">S06–07</span></div>
+      <div class="arc-seg" style="background:rgba(151,30,22,0.30);flex:2;height:80px;border-top:3px solid #971e16"><span class="arc-seg-label">S08 — Feast → Rejection ◆</span></div>
+      <div class="arc-seg" style="background:rgba(110,66,18,0.55);flex:1;height:80px;border-top:3px solid #4a2c0c"><span class="arc-seg-label">S09 ◆</span></div>
+      <div class="arc-seg" style="background:rgba(110,66,18,0.32);flex:2;height:54px"><span class="arc-seg-label">S10–11</span></div>
+      <div class="arc-seg" style="background:rgba(140,82,16,0.28);flex:4;height:68px"><span class="arc-seg-label">S12–15</span></div>
+      <div class="arc-seg" style="background:rgba(31,79,138,0.32);flex:1;height:72px"><span class="arc-seg-label">S16</span></div>
+      <div class="arc-seg" style="background:rgba(31,79,138,0.50);flex:1;height:62px;border-top:3px solid #1f4f8a"><span class="arc-seg-label">S17 ◆ Sangam</span></div>
+      <div class="arc-seg" style="background:rgba(151,30,22,0.40);flex:3;height:80px;border-top:3px solid #00585b"><span class="arc-seg-label">S18–20 ◆</span></div>
     </div>
     <div style="display:flex;gap:1.8rem;flex-wrap:wrap;margin-top:1rem">
       <span style="font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.18em;color:var(--muted);display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:rgba(184,146,42,0.5);display:inline-block"></span>Village life</span>
@@ -1328,16 +1331,16 @@ strong, b { font-weight:600; }
     <div class="scene-cards">
       <div class="scene-card">
         <div class="sc-num" style="background:#b8922a">SCENE 01 · BIRTH</div>
-        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">The Birth of a Boy &amp; a River</h3><p class="sc-orig-text"><strong>Desert village.</strong> Baby is born and rejected. Maha cradles the child alone — she knows what she must do. She weeps. Her tears become the first water this earth has ever held. The blue dupatta unfurls FROM her body. She lays the baby on it. <strong>The river carries him away to Sun &amp; Moon</strong>, who receive him as guardians. Maha stands empty-handed. The village wakes to flowing water and celebrates — never knowing it was bought with a child.</p></div>
-        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>Begin in total darkness. Desert. Cracked earth. Collective breath.</strong> Ganavya's "Call It Luck If You Want To" rises as the baby passes through the ensemble. The village turns away. Maha is left alone with the child. Silence. Then her tears begin — and <strong>Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave)</strong> rises. The blue dupatta unfurls FROM her body as she weeps. The river forms from her grief. She lays the baby on the water. The dupatta carries the baby across the stage. At the far edge, <strong>Sun &amp; Moon enter and lift him</strong> — they become his guardians in this exact moment. The river remains. Maha is empty-handed. The village wakes to abundance. They celebrate the water. <strong>They do not know what it cost.</strong> Only Maha keeps her hand at her heart.</p><div class="sc-key">"The village built its entire life on a child they threw away. Every drink of water is the boy they rejected. They drink her grief and call it bounty."</div></div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">The Birth of a Boy &amp; a River</h3><p class="sc-orig-text"><strong>Desert village.</strong> Baby is born and rejected. Uma cradles the child alone — she knows what she must do. She weeps. Her tears become the first water this earth has ever held. The blue dupatta unfurls FROM her body. She lays the baby on it. <strong>The river carries him away to Sun &amp; Moon</strong>, who receive him as guardians. Uma stands empty-handed. The village wakes to flowing water and celebrates — never knowing it was bought with a child.</p></div>
+        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>Begin in total darkness. Desert. Cracked earth. Collective breath.</strong> Ganavya's "Call It Luck If You Want To" rises as the baby passes through the ensemble. The village turns away. Uma is left alone with the child. Silence. Then her tears begin — and <strong>Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave)</strong> rises. The blue dupatta unfurls FROM her body as she weeps. The river forms from her grief. She lays the baby on the water. The dupatta carries the baby across the stage. At the far edge, <strong>Sun &amp; Moon enter and lift him</strong> — they become his guardians in this exact moment. The river remains. Uma is empty-handed. The village wakes to abundance. They celebrate the water. <strong>They do not know what it cost.</strong> Only Uma keeps her hand at her heart.</p><div class="sc-key">"The village built its entire life on a child they threw away. Every drink of water is the boy they rejected. They drink her grief and call it bounty."</div></div>
       </div>
       <div class="scene-card">
-        <div class="sc-num" style="background:#a03a5a">SCENE 10 · FEAST → REJECTION</div>
+        <div class="sc-num" style="background:#a03a5a">SCENE 08 · FEAST → REJECTION</div>
         <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Village Feast → Queen's Rejection</h3><p class="sc-orig-text">Kalbeliya peaks — the boy is in it, dancing with the village, accepted. At the climax the music cuts dead. Queen's gesture. Single distant voice. Full company freeze. Act 1 ends in stillness — no narration.</p></div>
         <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text">Build the Kalbeliya to its absolute peak — <strong>the boy is in it</strong>, dancing with the village, accepted. Then: <strong>the music cuts dead</strong>. Not a fade — a cut. In absolute stillness, the Queen makes <strong>one gesture</strong>. The villagers <strong>step back, one by one</strong>. The boy reaches toward someone he danced with moments ago — and they look away. <strong>This is not one queen's cruelty. This is a room of people failing a cosmic test.</strong> He simply understands. The audience should feel the violence of silence — and the violence of being unloved.</p><div class="sc-key">"The village does not fail because the queen rejects him. The village fails because no one chooses him."</div></div>
       </div>
       <div class="scene-card">
-        <div class="sc-num" style="background:#b06a20">SCENE 13 · DROUGHT</div>
+        <div class="sc-num" style="background:#b06a20">SCENE 09 · DROUGHT</div>
         <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Chaos & Drought</h3><p class="sc-orig-text">The river disappears. Dead trees. Strobe, smoke machine. Blue dupattas vanish.</p></div>
         <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text">The blue dupattas must be <strong>physically taken</strong> — violently. Multiple dancers seize them and drag them offstage in a kinetic storm. The audience watches the river die. The ensemble becomes <strong>fragmented, searching</strong>. The collective breath of Scene 1 is shattered. Uma collapses, unseen.</p><div class="sc-key">"The audience must feel the absence of what was always there."</div></div>
       </div>
@@ -1348,8 +1351,8 @@ strong, b { font-weight:600; }
       </div>
       <div class="scene-card">
         <div class="sc-num" style="background:#1a8b7a">S18–20 · RAINFALL + RETURN + HOLI</div>
-        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Rainfall, Return & Holi</h3><p class="sc-orig-text"><strong>S23 — Rainfall:</strong> Ghanan Ghanan. <strong>S24 — Return:</strong> Ghar More Pardesiya. <strong>S25 — Holi.</strong> Maha returns as River Goddess. Full company.</p></div>
-        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>S22:</strong> The Queen's body is gone. The boy stands alone. He moves with both his weight and hers. The audience watches a body learning to be two. It is the most intimate moment of the show. <strong>S23:</strong> Silence. Total blackout. One drop. Then another. Then a monsoon. Blue dupattas re-enter one by one. <strong>Maha emerges from the centre</strong> — the River Goddess returning to her source. <strong>S24–25:</strong> The boy is received, celebrated, loved. By the time Ghanan Ghanan hits full force, every body is water. The Holi finale is devastatingly joyful — <strong>but the queen's place is empty.</strong> The village celebrates. The boy celebrates. The person who made it all possible is not there. The audience must feel that absence even as they are swept into the joy.</p><div class="sc-key">"Joy is most devastating when someone is missing from it."</div></div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Rainfall, Return & Holi</h3><p class="sc-orig-text"><strong>S18 — Rainfall:</strong> Barso Re → Ghanan Ghanan. <strong>S19 — Return:</strong> Ghar More Pardesiya. <strong>S20 — Holi:</strong> Krishna Dandiya Medley. Uma returns as River Goddess. Full company.</p></div>
+        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>S22:</strong> The Queen's body is gone. The boy stands alone. He moves with both his weight and hers. The audience watches a body learning to be two. It is the most intimate moment of the show. <strong>S18:</strong> Silence. Total blackout. One drop. Then another. Then a monsoon. Blue dupattas re-enter one by one. <strong>Uma emerges from the centre</strong> — the River Goddess returning to her source. <strong>S19–20:</strong> The boy is received, celebrated, loved. By the time Ghanan Ghanan hits full force, every body is water. The Holi finale is devastatingly joyful — <strong>but the queen's place is empty.</strong> The village celebrates. The boy celebrates. The person who made it all possible is not there. The audience must feel that absence even as they are swept into the joy.</p><div class="sc-key">"Joy is most devastating when someone is missing from it."</div></div>
       </div>
     </div>
   </div>
@@ -1421,12 +1424,13 @@ strong, b { font-weight:600; }
     <div class="char-grid">
 
       <div class="char-card" id="char-Rani">
+        <figure class="char-art" aria-hidden="true"><img src="assets/madhubani/char-rani-kano.webp" alt="" width="600" height="654" loading="lazy" decoding="async"></figure>
         <div class="char-card-top">
           <div class="char-accent">K</div>
           <p class="char-role">The Queen</p>
           <h3 class="char-name">Rani Kanō <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Rani',this)" title="Copy link to Rani">🔗</button></h3>
           <p class="char-sanskrit">रानी कनो &nbsp;·&nbsp; Queen of the village</p>
-          <p class="char-played">Played by <strong>Svetlana Bubnova</strong></p>
+          <p class="char-played"><span class="char-player-photos"><img src="assets/madhubani/cast-svetlana.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></span><span>Played by <strong>Svetlana Bubnova</strong></span></p>
         </div>
         <div class="char-body">
           <div class="char-section">
@@ -1435,23 +1439,24 @@ strong, b { font-weight:600; }
           </div>
           <div class="char-section">
             <p class="char-section-title">Movement Vocabulary</p>
-            <p class="char-section-text" data-char-idx="0" data-char-field="movement">Imperial, grounded, commanding. Early scenes: stillness that demands attention. As she unravels: increasingly desperate, frantic. Scene 21: bare, still — then, in the act of giving, she moves inward. The final gesture is not collapse. It is release. Her last movement is the quietest thing on the stage.</p>
+            <p class="char-section-text" data-char-idx="0" data-char-field="movement">Imperial, grounded, commanding. Early scenes: stillness that demands attention. As she unravels: increasingly desperate, frantic. Scene 17: bare, still — then, in the act of giving, she moves inward. The final gesture is not collapse. It is release. Her last movement is the quietest thing on the stage.</p>
           </div>
           <div class="char-section">
             <p class="char-section-title">Costume Direction</p>
             <p class="char-section-text" data-char-idx="0" data-char-field="costume">Royal and structured. Deep indigo, black, burgundy. Heavy jewellery. By the sacrifice scene, layers removed — human fragility beneath.</p>
           </div>
-          <div class="char-key-scenes"><span class="char-scene-tag">S01 Birth</span><span class="char-scene-tag">S10 Feast → Rejection ◆</span><span class="char-scene-tag">S14 Invitation</span><span class="char-scene-tag">S21 Sacrifice ◆</span></div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S01 Birth</span><span class="char-scene-tag">S08 Feast → Rejection ◆</span><span class="char-scene-tag">S14 Invitation</span><span class="char-scene-tag">S17 Sacrifice ◆</span></div>
         </div>
       </div>
 
       <div class="char-card" id="char-Manu">
+        <figure class="char-art" aria-hidden="true"><img src="assets/madhubani/char-manu-kavi.webp" alt="" width="600" height="566" loading="lazy" decoding="async"></figure>
         <div class="char-card-top">
           <div class="char-accent">M</div>
           <p class="char-role">The Boy</p>
-          <h3 class="char-name">Manu / Kavi <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Manu',this)" title="Copy link to Manu">🔗</button></h3>
-          <p class="char-sanskrit">मनु / कवि &nbsp;·&nbsp; The poet, the bridge</p>
-          <p class="char-played">Played by <strong>Swapnil Dagliya</strong></p>
+          <h3 class="char-name">Manu <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Manu',this)" title="Copy link to Manu">🔗</button></h3>
+          <p class="char-sanskrit">मनु &nbsp;·&nbsp; The poet, the bridge</p>
+          <p class="char-played"><span class="char-player-photos"><img src="assets/madhubani/cast-swapnil.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></span><span>Played by <strong>Swapnil Dagliya</strong></span></p>
         </div>
         <div class="char-body">
           <div class="char-section">
@@ -1460,23 +1465,24 @@ strong, b { font-weight:600; }
           </div>
           <div class="char-section">
             <p class="char-section-title">Movement Vocabulary</p>
-            <p class="char-section-text" data-char-idx="1" data-char-field="movement">Gentle, fluid, responsive. Adult: quiet longing. Rejection: collapse or stillness — never rage. Appeal (S19): completely exposed, dancing with his entire being.</p>
+            <p class="char-section-text" data-char-idx="1" data-char-field="movement">Gentle, fluid, responsive. Adult: quiet longing. Rejection: collapse or stillness — never rage. Appeal (S16): completely exposed, dancing with his entire being.</p>
           </div>
           <div class="char-section">
             <p class="char-section-title">Costume Direction</p>
             <p class="char-section-text" data-char-idx="1" data-char-field="costume">Plain, natural materials. Simple clothing as a child. Contemporary, unstructured as an adult. By the appeal scenes — minimal, emphasising vulnerability.</p>
           </div>
-          <div class="char-key-scenes"><span class="char-scene-tag">S07 Adulthood</span><span class="char-scene-tag">S08 Discovery</span><span class="char-scene-tag">S19 Appeal ◆</span><span class="char-scene-tag">S21 Sacrifice → Becoming ◆</span><span class="char-scene-tag">S24 Return</span></div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S04 Adulthood</span><span class="char-scene-tag">S05 Discovery</span><span class="char-scene-tag">S16 Appeal ◆</span><span class="char-scene-tag">S17 Sacrifice → Becoming ◆</span><span class="char-scene-tag">S19 Return</span></div>
         </div>
       </div>
 
       <div class="char-card" id="char-Birds">
+        <figure class="char-art" aria-hidden="true"><img src="assets/madhubani/char-prabha-chaaya.webp" alt="" width="600" height="654" loading="lazy" decoding="async"></figure>
         <div class="char-card-top">
           <div class="char-accent">P</div>
           <p class="char-role">The Sun & The Moon</p>
           <h3 class="char-name">Prabha & Chaaya <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Birds',this)" title="Copy link to Prabha & Chaaya">🔗</button></h3>
           <p class="char-sanskrit"><span lang="sa">प्रभा</span> & <span lang="sa">छाया</span> &nbsp;·&nbsp; Sun &amp; Moon · Light &amp; Shadow</p>
-          <p class="char-played">Played by <strong>Shreya Vaidya & Laurien De Ridder</strong></p>
+          <p class="char-played"><span class="char-player-photos"><img src="assets/madhubani/cast-shreya.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><img src="assets/madhubani/cast-laurien.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></span><span>Played by <strong>Shreya Vaidya & Laurien De Ridder</strong></span></p>
         </div>
         <div class="char-body">
           <div class="char-section">
@@ -1491,22 +1497,23 @@ strong, b { font-weight:600; }
             <p class="char-section-title">Costume Direction</p>
             <p class="char-section-text" data-char-idx="2" data-char-field="costume">Flowing fabric suggesting wings. Light colours — ivory, pale gold, soft grey. Movement should do the work, not the costume.</p>
           </div>
-          <div class="char-key-scenes"><span class="char-scene-tag">S02 Sun &amp; Moon</span><span class="char-scene-tag">S07 Adulthood cameo</span><span class="char-scene-tag">S19 Villagers' Appeal</span></div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S02 Sun &amp; Moon</span><span class="char-scene-tag">S04 Adulthood cameo</span><span class="char-scene-tag">S16 Villagers' Appeal</span></div>
         </div>
       </div>
 
       <div class="char-card" id="char-Vayu">
+        <figure class="char-art" aria-hidden="true"><img src="assets/madhubani/char-vayu.webp" alt="" width="600" height="536" loading="lazy" decoding="async"></figure>
         <div class="char-card-top">
           <div class="char-accent">V</div>
           <p class="char-role">The Messenger</p>
           <h3 class="char-name">Vayu <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Vayu',this)" title="Copy link to Vayu">🔗</button></h3>
           <p class="char-sanskrit">वायु &nbsp;·&nbsp; The Wind</p>
-          <p class="char-played">Played by <strong>Narcisse Merlier</strong></p>
+          <p class="char-played"><span class="char-player-photos"><img src="assets/madhubani/cast-narcisse.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></span><span>Played by <strong>Narcisse Merlier</strong></span></p>
         </div>
         <div class="char-body">
           <div class="char-section">
             <p class="char-section-title">Arc</p>
-            <p class="char-section-text" data-char-idx="3" data-char-field="arc">Neutral observer and active messenger between worlds. Carries the village's plea to the Four Tribes. Neither judge nor saviour — the medium through which cosmic forces communicate.</p>
+            <p class="char-section-text" data-char-idx="3" data-char-field="arc">Neutral observer and active messenger between worlds. Carries the village's plea to the Three Tribes. Neither judge nor saviour — the medium through which cosmic forces communicate.</p>
           </div>
           <div class="char-section">
             <p class="char-section-title">Movement Vocabulary</p>
@@ -1516,36 +1523,47 @@ strong, b { font-weight:600; }
             <p class="char-section-title">Costume Direction</p>
             <p class="char-section-text" data-char-idx="3" data-char-field="costume">Contemporary and neutral — distinct from the village aesthetic. Could suggest both masculinity and androgyny. The wind has no fixed form.</p>
           </div>
-          <div class="char-key-scenes"><span class="char-scene-tag">S14 Tribe Invitation</span><span class="char-scene-tag">S19 Appeal</span></div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S10 Tribe Invitation</span><span class="char-scene-tag">S16 Appeal</span></div>
         </div>
       </div>
 
       <div class="char-card" id="char-Uma">
+        <figure class="char-art" aria-hidden="true"><img src="assets/madhubani/char-uma.webp" alt="" width="600" height="607" loading="lazy" decoding="async"></figure>
         <div class="char-card-top">
           <div class="char-accent">U</div>
           <p class="char-role">The River Goddess / Mother</p>
           <h3 class="char-name">Uma <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Uma',this)" title="Copy link to Uma">🔗</button></h3>
           <p class="char-sanskrit">उमा &nbsp;·&nbsp; The source of all water</p>
-          <p class="char-played">Played by <strong>Maha</strong></p>
+          <p class="char-played"><span class="char-player-photos"><img src="assets/madhubani/cast-srimahavalli.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></span><span>Played by <strong>Srimahavalli</strong></span></p>
         </div>
         <div class="char-body">
           <div class="char-section">
             <p class="char-section-title">Arc</p>
-            <p class="char-section-text" data-char-idx="4" data-char-field="arc">Mother of two children — the boy and the river. Both born the same moment, from the same grief. She creates the river to send her rejected baby downstream to Sun &amp; Moon, who become his guardians. The village drinks her tears and calls it abundance — they never know. When the village rejects her child a second time (S11), her heart breaks again and the river dies — there is no more baby to send away, the water has nowhere to go. The drought is not punishment. It is love withdrawn. The rain returns only when the boy is finally loved (S21).</p>
+            <p class="char-section-text" data-char-idx="4" data-char-field="arc">Mother of two children — the boy and the river. Both born the same moment, from the same grief. She creates the river to send her rejected baby downstream to Sun &amp; Moon, who become his guardians. The village drinks her tears and calls it abundance — they never know. When the village rejects her child a second time (S08), her heart breaks again and the river dies — there is no more baby to send away, the water has nowhere to go. The drought is not punishment. It is love withdrawn. The rain returns only when the boy is finally loved (S17).</p>
           </div>
           <div class="char-section">
             <p class="char-section-title">Movement Vocabulary</p>
-            <p class="char-section-text" data-char-idx="4" data-char-field="movement">Grounded, maternal, fluid as water. S01: stillness, then weeping — and the dupatta unfurls from her body. She lays the baby on the river she just made. She does not collapse. She <strong>gives</strong>. Through Part 1: she carries the secret. Her hand stays at her heart while the village celebrates the abundance she paid for. Drought (S13): she simply stops flowing — no theatre, no scream. The river withdraws because she has nothing left. Finale (S23–24): she returns not with drama but with inevitability. Water always finds its level.</p>
+            <p class="char-section-text" data-char-idx="4" data-char-field="movement">Grounded, maternal, fluid as water. S01: stillness, then weeping — and the dupatta unfurls from her body. She lays the baby on the river she just made. She does not collapse. She <strong>gives</strong>. Through Part 1: she carries the secret. Her hand stays at her heart while the village celebrates the abundance she paid for. Drought (S09): she simply stops flowing — no theatre, no scream. The river withdraws because she has nothing left. Finale (S18–19): she returns not with drama but with inevitability. Water always finds its level.</p>
           </div>
           <div class="char-section">
             <p class="char-section-title">Costume Direction</p>
             <p class="char-section-text" data-char-idx="4" data-char-field="costume">Blue silks and water-like fabrics throughout. In the final revelation — deep river blue with gold. She is the blue dupatta; when it is taken away, so is she.</p>
           </div>
-          <div class="char-key-scenes"><span class="char-scene-tag">S01 Birth ◆</span><span class="char-scene-tag">S08 Discovery</span><span class="char-scene-tag">S13 Drought ◆</span><span class="char-scene-tag">S19 Appeal</span><span class="char-scene-tag">S23 Rainfall ◆</span><span class="char-scene-tag">S24 Return</span></div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S01 Birth ◆</span><span class="char-scene-tag">S05 Discovery</span><span class="char-scene-tag">S09 Drought ◆</span><span class="char-scene-tag">S16 Appeal</span><span class="char-scene-tag">S18 Rainfall ◆</span><span class="char-scene-tag">S19 Return</span></div>
         </div>
       </div>
 
     </div>
+    <p class="section-label ensemble-label">Ensemble</p>
+    <div class="ensemble-grid">
+      <figure class="ensemble-person"><img src="assets/madhubani/cast-sara.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><figcaption>Sara Van Holm</figcaption></figure>
+      <figure class="ensemble-person"><img src="assets/madhubani/cast-chiara.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><figcaption>Chiara Bisinelli</figcaption></figure>
+      <figure class="ensemble-person"><img src="assets/madhubani/cast-kaushika.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><figcaption>Kaushika Kumar</figcaption></figure>
+      <figure class="ensemble-person"><img src="assets/madhubani/cast-khushboo.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><figcaption>Khushboo Agarwal</figcaption></figure>
+      <figure class="ensemble-person"><img src="assets/madhubani/cast-roshni.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><figcaption>Roshni Tela</figcaption></figure>
+      <figure class="ensemble-person"><img src="assets/madhubani/cast-haike.webp" alt="" width="300" height="300" loading="lazy" decoding="async"><figcaption>Haike Bourgeois</figcaption></figure>
+    </div>
+    <p class="cast-photo-credit">Photos &copy; Stijn Dejonckheere &amp; Jo&euml;lle Verbeeck</p>
   </div>
 </div>
 
@@ -1564,6 +1582,7 @@ strong, b { font-weight:600; }
       <button class="cast-refresh-btn" onclick="renderCastTab()">↺ &nbsp;Refresh</button>
     </div>
     <div class="cast-grid-wrap" id="cast-grid"></div>
+    <p class="cast-photo-credit">Photos &copy; Stijn Dejonckheere &amp; Jo&euml;lle Verbeeck</p>
   </div>
 </div>
 
@@ -1623,7 +1642,7 @@ strong, b { font-weight:600; }
         <div class="ref-card-body">
           <p class="ref-cat">Choreography Inspiration</p>
           <p class="ref-title">Lumini (A Contemporary Dance Piece)</p>
-          <p class="ref-notes">Light as character. How darkness and emergence work together — bodies appearing from nothing, disappearing into nothing. Directly relevant to Scene 13 (drought blackout) and Scene 22 (the rainfall's first drop in total dark).</p>
+          <p class="ref-notes">Light as character. How darkness and emergence work together — bodies appearing from nothing, disappearing into nothing. Directly relevant to Scene 09 (drought blackout) and Scene 18 (the rainfall's first drop in total dark).</p>
         </div>
       </div>
 
@@ -1637,7 +1656,7 @@ strong, b { font-weight:600; }
         <div class="ref-card-body">
           <p class="ref-cat">Choreography Inspiration</p>
           <p class="ref-title">Aayirathil Oruvan — Celebration Of Life</p>
-          <p class="ref-notes">The tribal energy, scale, and visceral joy of the Holi finale. How Indian folk choreography commands a large stage with collective rhythm and colour. Direct reference for Scenes 17–18 (Bhangra &amp; Bollyfolk tribes) and S25. The joy that exists even in the queen's absence.</p>
+          <p class="ref-notes">The tribal energy, scale, and visceral joy of the Holi finale. How Indian folk choreography commands a large stage with collective rhythm and colour. Direct reference for Scenes 12 &amp; 14 (Bhangra &amp; Bollyfolk tribes) and S20. The joy that exists even in the queen's absence.</p>
         </div>
       </div>
 
@@ -1651,7 +1670,7 @@ strong, b { font-weight:600; }
         <div class="ref-card-body">
           <p class="ref-cat">Choreography Inspiration</p>
           <p class="ref-title">Stages of Grief — AVANTGARDE SHOW 2023</p>
-          <p class="ref-notes">Collective suffering staged physically — how grief moves through an ensemble as fragmentation, isolation, searching. Reference for Scene 13 (the ensemble breaks apart as the river dies) and Scene 19 (the village's appeal, searching together for something lost).</p>
+          <p class="ref-notes">Collective suffering staged physically — how grief moves through an ensemble as fragmentation, isolation, searching. Reference for Scene 09 (the ensemble breaks apart as the river dies) and Scene 16 (the village's appeal, searching together for something lost).</p>
         </div>
       </div>
 
@@ -1665,7 +1684,7 @@ strong, b { font-weight:600; }
         <div class="ref-card-body">
           <p class="ref-cat">Choreography Inspiration</p>
           <p class="ref-title">The Final Stage — Girar O Mundo</p>
-          <p class="ref-notes">The language of sacrifice and release. What a body looks like when it gives itself completely — not collapse, but dissolution. Core reference for Scene 21. The queen does not fall. She moves inward. Her last gesture is the quietest thing on the stage.</p>
+          <p class="ref-notes">The language of sacrifice and release. What a body looks like when it gives itself completely — not collapse, but dissolution. Core reference for Scene 17. The queen does not fall. She moves inward. Her last gesture is the quietest thing on the stage.</p>
         </div>
       </div>
 
@@ -1679,7 +1698,7 @@ strong, b { font-weight:600; }
         <div class="ref-card-body">
           <p class="ref-cat">Choreography Inspiration</p>
           <p class="ref-title">Many Angels by Lar Lubovitch</p>
-          <p class="ref-notes">The original Purna vision for Prabha &amp; Chaaya: the Sun and Moon as guardians. Aerial, flowing duet work that expresses unconditional presence — sheltering without possessing. Direct inspiration for Scenes 02–03 and the Sun &amp; Moon movement vocabulary throughout.</p>
+          <p class="ref-notes">The original Purna vision for Prabha &amp; Chaaya: the Sun and Moon as guardians. Aerial, flowing duet work that expresses unconditional presence — sheltering without possessing. Direct inspiration for Scene 02 and the Sun &amp; Moon movement vocabulary throughout.</p>
         </div>
       </div>
 
@@ -1722,8 +1741,10 @@ function getCostume(sceneId) {
 }
 
 // Cast tab — reads cast assignments straight from source data (songs[].dancers + scenes[].dancers strings)
-const DANCERS = ['Swapnil','Narcisse','Sara','Svetlana','Chiara','Kaushika','Laurien','Khushboo','Shreya','Roshni','Haike','Maha'];
+const DANCERS = ['Swapnil','Narcisse','Sara','Svetlana','Chiara','Kaushika','Laurien','Khushboo','Shreya','Roshni','Haike','Srimahavalli'];
 const SHOW_DATE = '2026-11-07';
+// ABC company photos (© Stijn Dejonckheere & Joëlle Verbeeck) — assets/madhubani/cast-<name>.webp
+const CAST_PHOTOS = {Swapnil:'swapnil',Narcisse:'narcisse',Sara:'sara',Svetlana:'svetlana',Chiara:'chiara',Kaushika:'kaushika',Laurien:'laurien',Khushboo:'khushboo',Shreya:'shreya',Roshni:'roshni',Haike:'haike',Srimahavalli:'srimahavalli'};
 function dancerInText(dancer, text) {
   if (!text) return false;
   return new RegExp('\\b' + dancer + '\\b', 'i').test(text);
@@ -1741,7 +1762,7 @@ function renderCastTab() {
     const songPills = songList.map(s => `<span class="cast-song-pill">${s.title}</span>`).join('');
     return `<div class="cast-card">
       <div class="cast-card-top">
-        <div class="cast-initial">${dancer[0]}</div>
+        ${CAST_PHOTOS[dancer] ? `<img class="cast-photo" src="assets/madhubani/cast-${CAST_PHOTOS[dancer]}.webp" alt="${dancer}" width="300" height="300" loading="lazy" decoding="async">` : `<div class="cast-initial">${dancer[0]}</div>`}
         <div>
           <div class="cast-dancer-name">${dancer}</div>
           <div class="cast-dancer-stats">${matchingScenes.length} SCENE${matchingScenes.length !== 1 ? 'S' : ''} · ${songList.length} SONG${songList.length !== 1 ? 'S' : ''}</div>
@@ -1776,59 +1797,59 @@ const STATUS_CLASSES = {tbc:'tag-tbc',partial:'tag-partial',ready:'tag-ready',ne
 // ── DATA START ──
 const scenes1 = [
   {id:'S00',num:'PRE',name:'Pre-show',sub:'The Blue (Niraj Chag) — soundscape only. No dance. Projection plays before curtains open.',dancers:'—',status:'narr',key:false},
-  {id:'S01',num:'01',name:'The Birth of a Boy & a River ◆',sub:'Desert village. Baby rejected. Maha cries — and the river is born to carry him away',songs:[{title:'Call It Luck If You Want To (Ganavya)',status:'ready',dancers:'Svetlana, Sara, Narcisse, Kaushika, Maha, Roshni, Haike'},{title:'Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave)',status:'tbc',dancers:'Maha (solo, with baby doll) — river forms, she places him on the water'}],dancers:'Svetlana, Sara, Narcisse, Kaushika, Maha, Roshni, Haike',status:'ready',key:true},
+  {id:'S01',num:'01',name:'The Birth of a Boy & a River ◆',sub:'Desert village. Baby rejected. Uma cries — and the river is born to carry him away',songs:[{title:'Call It Luck If You Want To (Ganavya)',status:'ready',dancers:'Svetlana, Sara, Narcisse, Kaushika, Srimahavalli, Roshni, Haike'},{title:'Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave)',status:'tbc',dancers:'Srimahavalli (solo, with baby doll) — river forms, she places him on the water'}],dancers:'Svetlana, Sara, Narcisse, Kaushika, Srimahavalli, Roshni, Haike',status:'ready',key:true},
   {id:'S02',num:'02',name:'Sun & Moon',sub:'Two guardians find each other — then find the boy',songs:[{title:'Pyaara Sa Gaon (Zubeida)',note:'Introduction of the Sun & Moon characters · Shorten',status:'partial',dancers:'Shreya & Laurien',costume:'Sun = gold skirt · Moon = silver skirt'},{title:'Dheeme Dheeme',note:'Relationship between Sun & Moon · finding the baby',status:'partial',dancers:'Shreya & Laurien',costume:'Sun = gold skirt · Moon = silver skirt'}],dancers:'Shreya & Laurien',costume:'Sun = gold skirt · Moon = silver skirt',status:'partial',key:false},
   {id:'S04',num:'03',name:'Villagers',sub:'Village established — the river runs, life is full',songs:[{title:'Chalka Re',status:'partial',dancers:'Kaushika, Khushboo, Sara, Chiara, Narcisse, Roshni'},{title:'Aswaar',note:'With pots',status:'partial',dancers:'Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Laurien, Khushboo'}],dancers:'Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Khushboo, Laurien',status:'partial',key:false},
 ];
 const scenes2 = [
   {id:'S07',num:'04',name:'Adulthood Solo',sub:'Boy has grown up — the question of love begins',song:'Oru Paiyan (Ganavya) + Sun & Moon cameo',dancers:'Swapnil + Shreya & Laurien',costume:'Sun = gold · Moon = silver',status:'ready',key:false},
-  {id:'S08',num:'05',name:'First Discovery',sub:'The village turns its gaze toward the boy — and cannot look away',song:'Raatan Lambiyaan',dancers:'Swapnil + Narcisse, Sara, Maha, Haike, Chiara, Kaushika',status:'new',key:false},
+  {id:'S08',num:'05',name:'First Discovery',sub:'The village turns its gaze toward the boy — and cannot look away',song:'Raatan Lambiyaan',dancers:'Swapnil + Narcisse, Sara, Srimahavalli, Haike, Chiara, Kaushika',status:'new',key:false},
   {id:'S09',num:'06',name:'More Villagers',sub:'Queen still unaware — joy building with the boy',song:'Jalalo Bilalo',dancers:'Bollyfolk Students + Svetlana + Roshni, Kaushika',status:'ready',key:false},
   {id:'S09B',num:'07',name:'Queen\'s Entry',sub:'Who she is before the feast — power, obsession, complexity',song:'Deewani Mastani',dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike',status:'ready',key:false},
-  {id:'S10',num:'08',name:'Village Feast → Queen\'s Rejection ◆',sub:"Peak of joy as Kalbeliya climaxes. At the end — music cuts. Queen's gesture. One distant voice. Full company freeze. Act 1 ends in stillness.",song:'Kalbeliya (climax cuts to silence + single distant voice)',dancers:'Svetlana + Narcisse, Shreya, Maha, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',status:'ready',key:true},
+  {id:'S10',num:'08',name:'Village Feast → Queen\'s Rejection ◆',sub:"Peak of joy as Kalbeliya climaxes. At the end — music cuts. Queen's gesture. One distant voice. Full company freeze. Act 1 ends in stillness.",song:'Kalbeliya (climax cuts to silence + single distant voice)',dancers:'Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',status:'ready',key:true},
 ];
 const scenes3 = [
   {id:'S13',num:'09',name:'Chaos & Drought ◆',sub:'The river dies in real time',song:'No song — projection, strobe, smoke',dancers:'Full ensemble — fragmented',status:'tbc',key:true},
-  {id:'S14',num:'10',name:'Tribe Invitation',sub:'Vayu carries the village\'s plea to the Four Tribes',song:'Silsila',dancers:'Narcisse (solo)',status:'partial',key:false},
-  {id:'S15',num:'11',name:'Invocation to Nataraja',sub:'The village prays — but prayer is not love',song:'Natarang Ubha',dancers:'Svetlana + Narcisse, Shreya, Maha, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha',status:'ready',key:false},
-  {id:'S17',num:'12',name:'Tribe 2 — Bhangra',sub:'Strength & joy — but not love',song:'Luddi',dancers:'Bhangra Students',status:'new',key:false},
+  {id:'S14',num:'10',name:'Tribe Invitation',sub:'Vayu carries the village\'s plea to the Three Tribes',song:'Silsila',dancers:'Narcisse (solo)',status:'partial',key:false},
+  {id:'S15',num:'11',name:'Invocation to Nataraja',sub:'The village prays — but prayer is not love',song:'Natarang Ubha',dancers:'Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha',status:'ready',key:false},
+  {id:'S17',num:'12',name:'Tribe 1 — Bhangra',sub:'Strength & joy — but not love',song:'Luddi',dancers:'Bhangra Students',status:'new',key:false},
   {id:'S_BOY_DESPAIR',num:'13',name:"Boy's Despair",sub:'Between the pairs — none of it reaches him. He breaks.',song:'TBC',dancers:'Swapnil (solo)',status:'new',key:false},
-  {id:'S18',num:'14',name:'Tribe 3 — Bolly Folk',sub:'Community — but the boy was never let in',song:'O Re Kanchi',dancers:'Bollyfolk Students + ABC dancers (TBC)',status:'ready',key:false},
-  {id:'S_CHERAW',num:'15',name:'Tribe 4 — Dola Re',sub:'Grace & precision — but not love',song:'Dola Re',dancers:'TBC',status:'partial',key:false},
-  {id:'S19',num:'16',name:'The Appeal',sub:'The village and the boy both plead with the Queen',songs:[{title:'Tera Taali',status:'partial',dancers:'Swapnil, Roshni, Kaushika'},{title:'Ishq Bina',status:'partial',dancers:'Shreya, Laurien, Sara, Khushboo, Haike, Maha, Roshni, Chiara'}],dancers:'Swapnil, Roshni, Kaushika + Shreya, Laurien, Sara, Khushboo, Haike, Maha, Roshni, Chiara',status:'partial',key:false},
+  {id:'S18',num:'14',name:'Tribe 2 — Bolly Folk',sub:'Community — but the boy was never let in',song:'O Re Kanchi',dancers:'Bollyfolk Students + ABC dancers (TBC)',status:'ready',key:false},
+  {id:'S_CHERAW',num:'15',name:'Tribe 3 — Dola Re',sub:'Grace & precision — but not love',song:'Dola Re',dancers:'TBC',status:'partial',key:false},
+  {id:'S19',num:'16',name:'The Appeal',sub:'The village and the boy both plead with the Queen',songs:[{title:'Tera Taali',status:'partial',dancers:'Swapnil, Roshni, Kaushika'},{title:'Ishq Bina',status:'partial',dancers:'Shreya, Laurien, Sara, Khushboo, Haike, Srimahavalli, Roshni, Chiara'}],dancers:'Swapnil, Roshni, Kaushika + Shreya, Laurien, Sara, Khushboo, Haike, Srimahavalli, Roshni, Chiara',status:'partial',key:false},
 ];
 const scenes4 = [
   {id:'S21',num:'17',name:"Sangam ◆",sub:"The Queen's sacrifice — the pivotal moment. She dies. Her soul enters him.",songs:[{title:'Ode to Baji / Jhalla Re (Rani verse, Niraj Chag)',note:'Queen\'s softening / her choice',status:'new',dancers:'Svetlana (Queen)'},{title:'Mystic Tribe',note:'The Queen\'s sacrifice — the pivotal moment',status:'partial',dancers:'Svetlana, Swapnil & ABC'}],dancers:'Svetlana, Swapnil & ABC',status:'partial',key:true},
   {id:'S23',num:'18',name:'Rainfall ◆',sub:'One drop. Then a monsoon. The river returns because love returned.',songs:[{title:'Barso Re',status:'new'},{title:'Ghanan Ghanan',status:'ready',dancers:'Bollywood Level 2 Students + ABC dancers (TBC)'}],dancers:'Bollywood Level 2 Students + ABC dancers (TBC)',status:'ready',key:true},
-  {id:'S24',num:'19',name:'Return of the Boy',song:'Ghar More Pardesiya',dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Maha, Haike, Kaushika, Khushboo',status:'ready',key:false},
+  {id:'S24',num:'19',name:'Return of the Boy',song:'Ghar More Pardesiya',dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Srimahavalli, Haike, Kaushika, Khushboo',status:'ready',key:false},
   {id:'S25',num:'20',name:'Holi Celebration',song:'Krishna Dandiya Medley',dancers:'All dancers',status:'partial',key:false},
 ];
 
 const songs = [
   {title:'The Blue',genre:'Niraj Chag — ambient folk',people:0,dancers:'Pre-show soundscape',backup:'—',status:'ready'},
-  {title:'Call It Luck If You Want To',genre:'Ganavya — devotional',people:7,dancers:'Svetlana, Sara, Narcisse, Kaushika, Maha, Roshni, Haike',backup:'—',status:'ready'},
-  {title:'Remain The Sea',genre:'Anoushka Shankar feat. Vanessa Redgrave — spoken word / sitar',people:1,dancers:'Maha solo (with baby doll) — river forms, places him on the water (S01)',backup:'—',status:'tbc'},
+  {title:'Call It Luck If You Want To',genre:'Ganavya — devotional',people:7,dancers:'Svetlana, Sara, Narcisse, Kaushika, Srimahavalli, Roshni, Haike',backup:'—',status:'ready'},
+  {title:'Remain The Sea',genre:'Anoushka Shankar feat. Vanessa Redgrave — spoken word / sitar',people:1,dancers:'Srimahavalli solo (with baby doll) — river forms, places him on the water (S01)',backup:'—',status:'tbc'},
   {title:'Pyaara Sa Gaon',genre:'Zubeida — folk',people:2,dancers:'Shreya & Laurien (Sun & Moon)',backup:'—',status:'partial'},
   {title:'Dheeme Dheeme',genre:'Bollyfolk',people:2,dancers:'Shreya & Laurien',backup:'Sara, Narcisse, Roshni',status:'partial'},
   {title:'Chalka Re',genre:'Bollyfolk',people:6,dancers:'Kaushika, Khushboo, Sara, Chiara, Narcisse, Roshni',backup:'Narcisse, Shreya',status:'partial'},
   {title:'Aswaar',genre:'—',people:8,dancers:'Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Laurien, Khushboo (with pots)',backup:'—',status:'partial'},
   {title:'Oru Paiyan',genre:'Ganavya — devotional',people:3,dancers:'Swapnil + Shreya & Laurien',backup:'—',status:'ready'},
-  {title:'Raatan Lambiyaan',genre:'—',people:7,dancers:'Swapnil + Narcisse, Sara, Maha, Haike, Chiara, Kaushika (S05)',backup:'—',status:'new'},
+  {title:'Raatan Lambiyaan',genre:'—',people:7,dancers:'Swapnil + Narcisse, Sara, Srimahavalli, Haike, Chiara, Kaushika (S05)',backup:'—',status:'new'},
   {title:'Jalalo Bilalo',genre:'Bollyfolk / Ghoomar',people:'8+',dancers:'Bollyfolk Students + Svetlana + Roshni, Kaushika',backup:'—',status:'ready'},
   {title:'Deewani Mastani',genre:'Bollywood — regal / complex',people:7,dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike',backup:'—',status:'ready'},
-  {title:'Kalbeliya',genre:'Group',people:9,dancers:'Narcisse, Shreya, Maha, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',backup:'—',status:'ready'},
+  {title:'Kalbeliya',genre:'Group',people:9,dancers:'Narcisse, Shreya, Srimahavalli, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',backup:'—',status:'ready'},
   {title:'Silsila',genre:'—',people:1,dancers:'Narcisse (solo)',backup:'—',status:'partial'},
-  {title:'Natarang Ubha',genre:'Semi-classical',people:11,dancers:'Svetlana + Narcisse, Shreya, Maha, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha',backup:'—',status:'ready'},
+  {title:'Natarang Ubha',genre:'Semi-classical',people:11,dancers:'Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha',backup:'—',status:'ready'},
   {title:'Luddi',genre:'Bhangra — folk',people:'—',dancers:'Bhangra Students',backup:'—',status:'new'},
   {title:'O Re Kanchi',genre:'Bollyfolk',people:'—',dancers:'Bollyfolk Students + ABC dancers (TBC)',backup:'—',status:'ready'},
-  {title:'Dola Re',genre:'—',people:'—',dancers:'Tribe 4 — dancers TBC',backup:'—',status:'partial'},
+  {title:'Dola Re',genre:'—',people:'—',dancers:'Tribe 3 — dancers TBC',backup:'—',status:'partial'},
   {title:'Tera Taali',genre:'Folk',people:3,dancers:'Swapnil, Roshni, Kaushika',backup:'Chiara, Khushboo',status:'partial'},
-  {title:'Ishq Bina',genre:'Group',people:8,dancers:'Shreya, Laurien, Sara, Khushboo, Haike, Maha, Roshni, Chiara',backup:'—',status:'partial'},
+  {title:'Ishq Bina',genre:'Group',people:8,dancers:'Shreya, Laurien, Sara, Khushboo, Haike, Srimahavalli, Roshni, Chiara',backup:'—',status:'partial'},
   {title:'Ode to Baji / Jhalla Re (Rani verse)',genre:'Niraj Chag — Rajasthani folk',people:1,dancers:'Svetlana (Queen — softening / choice)',backup:'—',status:'new'},
   {title:'Mystic Tribe',genre:'—',people:'—',dancers:'Svetlana, Swapnil & ABC (S17 Sangam — the Queen\'s sacrifice)',backup:'—',status:'partial'},
   {title:'Barso Re',genre:'Bollywood — rain',people:'16+',dancers:'Full company build (opening of Rainfall)',backup:'—',status:'new'},
   {title:'Ghanan Ghanan',genre:'Bollyfolk',people:'20+',dancers:'Bollywood Level 2 Students + ABC dancers (TBC)',backup:'—',status:'ready'},
-  {title:'Ghar More Pardesiya',genre:'Semi-classical Kathak',people:9,dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Maha, Haike, Kaushika, Khushboo',backup:'—',status:'ready'},
+  {title:'Ghar More Pardesiya',genre:'Semi-classical Kathak',people:9,dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Srimahavalli, Haike, Kaushika, Khushboo',backup:'—',status:'ready'},
   {title:'Krishna Dandiya Medley',genre:'Garba',people:'20+',dancers:'All dancers',backup:'Shreya, Narcisse, Chiara',status:'partial'},
 ];
 // ── DATA END ──
