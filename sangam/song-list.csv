@@ -1,28 +1,27 @@
-Set,#,Scene,Song,Note,Dancers,Status
-Set 1 — Origin,PRE,Pre-show,The Blue (Niraj Chag) — soundscape only,,—,Narration
-Set 1 — Origin,01,The Birth of a Boy & a River,Call It Luck If You Want To (Ganavya),,"Svetlana, Sara, Narcisse, Kaushika, Srimahavalli, Roshni, Haike",Ready
-Set 1 — Origin,01,The Birth of a Boy & a River,Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave),,"Srimahavalli (solo, with baby doll) — river forms, she places him on the water",TBC
-Set 1 — Origin,02,Sun & Moon,Pyaara Sa Gaon (Zubeida),Introduction of the Sun & Moon characters · Shorten,Shreya & Laurien,In progress
-Set 1 — Origin,02,Sun & Moon,Dheeme Dheeme,Relationship between Sun & Moon · finding the baby,Shreya & Laurien,In progress
-Set 1 — Origin,03,Villagers,Chalka Re,,"Kaushika, Khushboo, Sara, Chiara, Narcisse, Roshni",In progress
-Set 1 — Origin,03,Villagers,Aswaar,With pots,"Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Laurien, Khushboo",In progress
-Set 2 — The Boy,04,Adulthood Solo,Oru Paiyan (Ganavya) + Sun & Moon cameo,,Swapnil + Shreya & Laurien,Ready
-Set 2 — The Boy,05,First Discovery,Raatan Lambiyaan,,"Swapnil + Narcisse, Sara, Srimahavalli, Haike, Chiara, Kaushika",New
-Set 2 — The Boy,06,More Villagers,Jalalo Bilalo,,"Bollyfolk Students + Svetlana + Roshni, Kaushika",Ready
-Set 2 — The Boy,07,Queen's Entry,Deewani Mastani,,"Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike",Ready
-Set 2 — The Boy,08,Village Feast → Queen's Rejection,Kalbeliya (climax cuts to silence + single distant voice),,"Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil",Ready
-Set 3 — The Tribes,09,Chaos & Drought,"No song — projection, strobe, smoke",,Full ensemble — fragmented,TBC
-Set 3 — The Tribes,10,Tribe Invitation,Silsila,,Narcisse (solo),In progress
-Set 3 — The Tribes,11,Invocation to Nataraja,Natarang Ubha,,"Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha",Ready
-Set 3 — The Tribes,12,Tribe 1 — Bhangra,Luddi,,Bhangra Students,New
-Set 3 — The Tribes,13,Boy's Despair,TBC,,Swapnil (solo),New
-Set 3 — The Tribes,14,Tribe 2 — Bolly Folk,O Re Kanchi,,Bollyfolk Students + ABC dancers (TBC),Ready
-Set 3 — The Tribes,15,Tribe 3 — Dola Re,Dola Re,,TBC,In progress
-Set 3 — The Tribes,16,The Appeal,Tera Taali,,"Swapnil, Roshni, Kaushika",In progress
-Set 3 — The Tribes,16,The Appeal,Ishq Bina,,"Shreya, Laurien, Sara, Khushboo, Haike, Srimahavalli, Roshni, Chiara",In progress
-Set 4 — Reunion,17,Sangam,"Ode to Baji / Jhalla Re (Rani verse, Niraj Chag)",Queen's softening / her choice,Svetlana (Queen),New
-Set 4 — Reunion,17,Sangam,Mystic Tribe,The Queen's sacrifice — the pivotal moment,"Svetlana, Swapnil & ABC",In progress
-Set 4 — Reunion,18,Rainfall,Barso Re,,Full company build (opening of Rainfall),New
-Set 4 — Reunion,18,Rainfall,Ghanan Ghanan,,Bollywood Level 2 Students + ABC dancers (TBC),Ready
-Set 4 — Reunion,19,Return of the Boy,Ghar More Pardesiya,,"Swapnil, Narcisse, Sara, Roshni, Laurien, Srimahavalli, Haike, Kaushika, Khushboo",Ready
-Set 4 — Reunion,20,Holi Celebration,Krishna Dandiya Medley,,All dancers,In progress
+Set,#,Scene,Song,Dancers,Status,Duration,Costume,Note
+Set 1 — Origin,PRE,Pre-show,The Blue (Niraj Chag) — soundscape only,—,Narration,2:27,,
+Set 1 — Origin,01,The Birth of a Boy & a River,Call It Luck If You Want To (Ganavya),"Svetlana, Sara, Narcisse, Kaushika, Srimahavalli, Roshni, Haike",Ready,6:00,White Anarkali,
+Set 1 — Origin,01,The Birth of a Boy & a River,Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave),"Srimahavalli (solo, with baby doll) — river forms, she places him on the water",TBC,4:00,White Anarkali,
+Set 1 — Origin,02,Sun & Moon,Pyaara Sa Gaon (Zubeida),Shreya & Laurien,In progress,1:30,"Silver skirt, Golden Skirt",Introduction of the Sun & Moon characters · Shorten
+Set 1 — Origin,02,Sun & Moon,Dheeme Dheeme,Shreya & Laurien,In progress,3:20,"Silver skirt, Golden Skirt",Relationship between Sun & Moon · finding the baby
+Set 1 — Origin,03,Villagers,Chalka Re,"Kaushika, Khushboo, Sara, Chiara, Narcisse, Roshni",In progress,3:30,"Mango Skirt, Green Blouse, Chanderi Dupatta",
+Set 1 — Origin,03,Villagers,Aswaar,"Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Haike, Khushboo",In progress,3:00,"Mango Skirt, Green Blouse, Chanderi Dupatta",With pots
+Set 2 — The Boy,04,Adulthood Solo,Oru Paiyan (Ganavya) + Sun & Moon cameo,Swapnil + Shreya & Laurien,Ready,4:00,Sun = gold · Moon = silver,
+Set 2 — The Boy,05,First Discovery,Barso Re,"Swapnil, Srimahavalli, Haike, Chiara, Kaushika, Roshni, Shreya, Laurien, Khushboo",Ready,3:30,Red & Blue Skirt,
+Set 2 — The Boy,06,Queen's Entry,Deewani Mastani,"Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike",Ready,3:41,Red & Blue Skirt,
+Set 2 — The Boy,07,More Villagers,Jalalo Bilalo,"Bollyfolk Students + Svetlana + Roshni, Kaushika",Ready,2:30,Red & Blue Skirt,
+Set 2 — The Boy,08,Village Feast → Queen's Rejection,Kalbeliya (climax cuts to silence + single distant voice),"Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil",Ready,3:30,Red & Blue Skirt,
+,,,BREAK,,,20:00,,
+Set 3 — The Tribes,09,Chaos & Drought,TBD,Full ensemble — fragmented,TBC,2:00,,
+Set 3 — The Tribes,10,Tribe Invitation,Silsila,Narcisse (solo),In progress,3:00,Lavani Saree,
+Set 3 — The Tribes,11,Invocation to Nataraja,Natarang Ubha,"Swapnil + Narcisse, Shreya, Srimahavalli, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha",Ready,3:07,Lavani Saree,
+Set 3 — The Tribes,12,Tribe 1 — Bhangra,Luddi,Bhangra Students,New,2:00,White and Pink,
+Set 3 — The Tribes,13,Tribe 2 — Bolly Folk,O Re Kanchi,Bollyfolk Students,Ready,3:00,Red & Blue Skirt,
+Set 3 — The Tribes,14,Tribe 3 — Chari,Naina Milaike,"Kaushika, Laurien, Srimahavalli",In progress,2:00,Ghoomar costume,
+Set 3 — The Tribes,15,The Appeal,Tera Taali,Swapnil + all tribes + Svetlana,In progress,4:00,Tribes stay in the costume,
+Set 4 — Reunion,16,Sangam,"Ode to Baji / Jhalla Re (Rani verse, Niraj Chag)",Svetlana (Queen),In progress,1:00,,Queen's softening / her choice
+Set 4 — Reunion,17,Rainfall,Ghanan Ghanan,Bollywood Level 2 Students,Ready,2:24,Red & Blue Skirt,
+Set 4 — Reunion,18,Return of the Boy,Ghar More Pardesiya,"Swapnil, Narcisse, Sara, Roshni, Laurien, Haike, Kaushika, Khushboo, Shreya",Ready,2:30,Anarkali + skirt,
+Set 4 — Reunion,19,Reunion with Uma,TBD,Swapnil + Srimahavalli,In progress,2:00,Anarkali,
+Set 4 — Reunion,20,Holi Celebration,Krishna Dandiya Medley,All dancers,In progress,4:00,Ghoomar Costume,
+,,,TOTAL (incl. 20-min break),,,1:31:59,,
