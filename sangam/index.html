@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-edit="off" data-viewer="true">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ead8a9">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SANGAM — ABC a bollywood company 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400&family=Playfair+Display:ital,wght@0,400..600;1,400..500&family=Rozha+One&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ── THEME VARIABLES ── */
+:root {
+  /* OKLCH brand scales — additive, prefer these for new work */
+  --gold-50: oklch(96% 0.04 80);
+  --gold-100: oklch(90% 0.08 80);
+  --gold-300: oklch(78% 0.12 80);
+  --gold-500: oklch(65% 0.13 78);
+  --gold-700: oklch(48% 0.11 75);
+  --gold-900: oklch(30% 0.07 70);
+  --river-300: oklch(72% 0.09 230);
+  --river-500: oklch(55% 0.11 230);
+  --river-700: oklch(40% 0.09 230);
+
+  --gold: #c4941a;
+  --gold-light: #dab84a;
+  --gold-bg: rgba(196,148,26,0.09);
+  --river: #2a6b8f;
+  --river-light: #4a9bbf;
+  --drought: #8b5e1a;
+  --drought-light: #c4874a;
+  --holi-pink: #c4215a;
+  --holi-teal: #1a8b7a;
+  /* Light theme (default) */
+  --bg: #eae4db;
+  --bg2: #e0d9ce;
+  --bg3: #d4ccc0;
+  --text: #1e1810;
+  --text2: #3a2e20;
+  --muted: #7a6a52;
+  --surface: rgba(0,0,0,0.03);
+  --surface2: rgba(0,0,0,0.05);
+  --border: rgba(0,0,0,0.09);
+  --border2: rgba(0,0,0,0.14);
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --header-bg: rgba(247,242,234,0.97);
+  --tag-ready-bg: rgba(42,122,74,0.12); --tag-ready-c: #1a6a3a; --tag-ready-b: rgba(42,122,74,0.25);
+  --tag-partial-bg: rgba(139,110,26,0.12); --tag-partial-c: #7a5a10; --tag-partial-b: rgba(139,110,26,0.25);
+  --tag-new-bg: rgba(106,42,74,0.12); --tag-new-c: #7a2a5a; --tag-new-b: rgba(106,42,74,0.25);
+  --tag-tbc-bg: rgba(80,80,100,0.1); --tag-tbc-c: #505070; --tag-tbc-b: rgba(80,80,100,0.2);
+  --tag-narr-bg: rgba(42,74,139,0.1); --tag-narr-c: #2a4a8f; --tag-narr-b: rgba(42,74,139,0.2);
+  --check-bg: rgba(255,255,255,0.8);
+  --note-bg: rgba(255,255,255,0.5);
+}
+[data-theme="dark"] {
+  --bg: #1c1812; --bg2: #242018; --bg3: #2e2820;
+  --text: #f0e8d8; --text2: #d8cfc0; --muted: #8a7a62;
+  --surface: rgba(255,255,255,0.03); --surface2: rgba(255,255,255,0.06);
+  --border: rgba(201,165,90,0.12); --border2: rgba(201,165,90,0.2);
+  --shadow: 0 2px 12px rgba(0,0,0,0.4); --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+  --header-bg: rgba(28,24,18,0.97);
+  --gold: #c9a55a; --gold-light: #e8c97a; --gold-bg: rgba(201,165,90,0.08);
+  --tag-ready-bg: rgba(42,122,74,0.18); --tag-ready-c: #5dba8a; --tag-ready-b: rgba(42,122,74,0.3);
+  --tag-partial-bg: rgba(139,110,26,0.2); --tag-partial-c: #d4a840; --tag-partial-b: rgba(139,110,26,0.3);
+  --tag-new-bg: rgba(106,42,74,0.22); --tag-new-c: #d47aa0; --tag-new-b: rgba(106,42,74,0.3);
+  --tag-tbc-bg: rgba(58,58,74,0.22); --tag-tbc-c: #8888aa; --tag-tbc-b: rgba(58,58,74,0.3);
+  --tag-narr-bg: rgba(42,74,139,0.2); --tag-narr-c: #7aaad4; --tag-narr-b: rgba(42,74,139,0.3);
+  --check-bg: rgba(255,255,255,0.06);
+  --note-bg: rgba(255,255,255,0.03);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+:lang(sa), [lang="sa"] { font-family:'Tiro Devanagari Sanskrit', 'Noto Sans Devanagari', serif; font-feature-settings:"liga" 1, "calt" 1; }
+html { scroll-behavior:smooth; }
+body { background:var(--bg); color:var(--text); font-family:'Lora',serif; overflow-x:hidden; font-size:17px; transition: background 0.3s, color 0.3s; }
+
+/* ── HEADER ── */
+.site-header {
+  position:sticky; top:0; z-index:100;
+  background:var(--header-bg);
+  background:color-mix(in srgb, var(--header-bg) 100%, transparent);
+  border-bottom:1px solid var(--border2);
+  box-shadow: var(--shadow);
+  display:flex; align-items:center;
+  padding:0 2rem; height:60px; gap:2rem;
+}
+.header-brand { display:flex; flex-direction:column; gap:1px; }
+.header-title {
+  font-family:'Cinzel Decorative',serif; font-size:1.15rem; font-weight:900;
+  color:var(--gold); letter-spacing:0.08em; white-space:nowrap;
+}
+.header-sub { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.35em; color:var(--muted); white-space:nowrap; }
+.nav-tabs {
+  display:flex; height:100%; margin-left:auto;
+  overflow-x:auto; overflow-y:hidden;
+  scrollbar-width:none; -ms-overflow-style:none;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x proximity;
+}
+.nav-tabs::-webkit-scrollbar { display:none; }
+.nav-tab {
+  font-family:'Cinzel',serif; font-size:0.66rem; letter-spacing:0.28em;
+  color:var(--muted); padding:0 1.2rem; height:100%;
+  display:flex; align-items:center; cursor:pointer;
+  border:none; background:none;
+  border-bottom:2px solid transparent; transition:all 0.2s; white-space:nowrap;
+  flex-shrink:0; scroll-snap-align:start;
+}
+.nav-tab:hover { color:var(--text); }
+.nav-tab.active { color:var(--gold); border-bottom-color:var(--gold); }
+:focus-visible { outline:2px solid var(--gold); outline-offset:2px; border-radius:inherit; }
+.skip-link:focus-visible { outline-offset:0; }
+
+/* ── DEEP LINKS ── */
+.copy-link-btn {
+  background:transparent; border:none; cursor:pointer;
+  font-size:0.78rem; opacity:0; padding:2px 4px; margin-left:4px;
+  border-radius:2px; transition:opacity 0.15s, background 0.15s;
+  color:var(--muted); line-height:1;
+}
+.scene-item:hover .copy-link-btn,
+.song-item:hover .copy-link-btn,
+.char-card:hover .copy-link-btn,
+.copy-link-btn:focus,
+.copy-link-btn.copied { opacity:1; }
+.copy-link-btn:hover { background:var(--surface2); color:var(--gold); }
+.copy-link-btn.copied { color:#1a6a3a; background:rgba(42,122,74,0.15); }
+@keyframes hashFlash {
+  0%   { box-shadow:0 0 0 0 rgba(184,146,42,0.55); background:rgba(184,146,42,0.18); }
+  100% { box-shadow:0 0 0 14px rgba(184,146,42,0);    background:transparent; }
+}
+.hash-flash { animation:hashFlash 1.6s ease-out; border-radius:4px; }
+.theme-toggle {
+  margin-left:1rem; width:36px; height:36px; border-radius:50%;
+  background:var(--surface2); border:1px solid var(--border2);
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  font-size:1rem; transition:all 0.2s; flex-shrink:0;
+}
+.theme-toggle:hover { background:var(--bg3); }
+.header-actions { display:flex; align-items:center; gap:0.5rem; flex-shrink:0; margin-left:1rem; }
+.export-btn {
+  font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.2em;
+  background:transparent; border:1px solid var(--border2); padding:0.38rem 0.85rem;
+  cursor:pointer; border-radius:2px; color:var(--muted); transition:all 0.2s; white-space:nowrap;
+}
+.export-btn:hover { background:var(--bg3); color:var(--text); border-color:var(--gold); }
+.publish-btn {
+  font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.2em;
+  background:var(--river); border:1px solid var(--river); padding:0.38rem 0.85rem;
+  cursor:pointer; border-radius:2px; color:white; transition:all 0.2s; white-space:nowrap;
+  display:none;
+}
+.publish-btn:hover { background:var(--river-light); border-color:var(--river-light); }
+.publish-btn.publishing { opacity:0.6; cursor:default; }
+/* ── VIEWER MODE (dancer export) ── */
+[data-viewer="true"] .edit-btn,
+[data-viewer="true"] .export-btn,
+[data-viewer="true"] .edit-mode-bar { display:none !important; }
+/* Dancer view: strip interactive controls (C/M/T, costume toggle, click-to-cycle status) — director controls all state via source */
+[data-viewer="true"] .r-check,
+[data-viewer="true"] .costume-toggle,
+[data-viewer="true"] .scene-costume-row { display:none !important; }
+[data-viewer="true"] .flow-tag { cursor:default !important; pointer-events:none; }
+[data-viewer="true"] .editable-cell { cursor:default !important; }
+[data-viewer="true"] [data-viewer-hide] { display:none !important; }
+.copy-link-btn { display:none !important; }
+.scene-deps-row { display:none !important; } /* hide dep chips — re-enable on request */
+[data-viewer="true"] .header-actions::after {
+  content:'DANCER VIEW'; font-family:'Cinzel',serif; font-size:0.62rem;
+  letter-spacing:0.28em; color:var(--muted); padding:0 0.3rem;
+}
+.edit-btn {
+  width:36px; height:36px; border-radius:50%;
+  background:var(--surface2); border:1px solid var(--border2);
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  font-size:0.88rem; transition:all 0.2s; flex-shrink:0;
+}
+.edit-btn:hover { background:var(--bg3); }
+[data-edit="off"] .edit-btn { background:var(--gold); color:white; border-color:var(--gold); }
+[data-edit="off"] .edit-btn:hover { background:var(--gold-light); }
+
+/* ── EDIT MODE BAR ── */
+.edit-mode-bar {
+  display:none; background:rgba(184,146,42,0.1);
+  border-bottom:1px solid rgba(184,146,42,0.28);
+  padding:0.6rem 2rem; align-items:center; gap:1.5rem; flex-wrap:wrap;
+  position:sticky; top:60px; z-index:90; background:var(--bg);
+}
+[data-edit="off"] .edit-mode-bar { display:flex; }
+.edit-mode-label { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.32em; color:var(--gold); white-space:nowrap; }
+.edit-mode-hint { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.18em; color:var(--muted); }
+.save-status {
+  font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.18em;
+  color:var(--gold); min-width:80px; text-align:right;
+}
+.edit-bar-actions { margin-left:auto; display:flex; align-items:center; gap:0.6rem; flex-shrink:0; }
+.save-file-btn {
+  font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.22em;
+  background:var(--gold); border:none; padding:0.45rem 1.2rem; cursor:pointer;
+  border-radius:2px; color:white; transition:all 0.2s; white-space:nowrap;
+}
+[data-theme="light"] .save-file-btn { color:#1e1810; }
+.save-file-btn:hover { background:var(--gold-light); }
+.link-file-btn {
+  font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.18em;
+  background:transparent; border:1px solid rgba(184,146,42,0.4); padding:0.42rem 0.9rem;
+  cursor:pointer; border-radius:2px; color:var(--gold); transition:all 0.2s; white-space:nowrap;
+}
+.link-file-btn:hover { background:var(--gold-bg); }
+.link-file-btn.is-linked { opacity:0.55; cursor:default; }
+.link-file-btn.is-linked:hover { background:transparent; }
+
+/* ── EDITABLE CELLS ── */
+[data-edit="off"] .editable-cell { cursor:text; border-radius:2px; outline:none; }
+[data-edit="off"] .editable-cell:not(:focus):hover {
+  background:rgba(184,146,42,0.08); box-shadow:inset 0 0 0 1px rgba(184,146,42,0.4);
+}
+[data-edit="off"] .editable-cell:focus {
+  background:rgba(184,146,42,0.1); box-shadow:inset 0 0 0 1.5px var(--gold);
+  padding:1px 4px; outline:none;
+}
+[data-edit="off"] [data-char-idx] { cursor:text; border-radius:2px; }
+[data-edit="off"] [data-char-idx]:not(:focus):hover {
+  background:rgba(184,146,42,0.07); box-shadow:inset 0 0 0 1px rgba(184,146,42,0.35);
+}
+[data-edit="off"] [data-char-idx]:focus {
+  background:rgba(184,146,42,0.1); box-shadow:inset 0 0 0 1.5px var(--gold);
+  outline:none; padding:2px 5px;
+}
+
+/* ── DASHBOARD BAR ── */
+.dash-bar {
+  background:var(--bg2); border-bottom:1px solid var(--border);
+  padding:0.7rem 2rem; display:flex; gap:2.5rem; align-items:center; flex-wrap:wrap;
+}
+.dash-stat {
+  display:flex; flex-direction:column; gap:2px;
+}
+.dash-label { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.3em; color:var(--muted); }
+.dash-value { font-family:'Cinzel',serif; font-size:0.95rem; font-weight:600; color:var(--text); }
+#days-count { font-size:1.6rem; line-height:1; color:var(--gold); }
+.dash-value span { font-size:0.65rem; font-weight:400; color:var(--muted); }
+.dash-divider { width:1px; height:32px; background:var(--border2); flex-shrink:0; }
+.dash-progress { flex:1; min-width:200px; }
+.dash-progress-label { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.3em; color:var(--muted); margin-bottom:4px; }
+.dash-bar-track { height:6px; background:var(--bg3); border-radius:3px; overflow:hidden; display:flex; }
+.dash-bar-seg { height:100%; transition:width 0.5s; }
+.dash-legend { display:flex; gap:1rem; margin-top:4px; flex-wrap:wrap; }
+.dash-legend-item { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.15em; color:var(--muted); display:flex; align-items:center; gap:4px; }
+.dash-legend-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+
+/* ── PANELS ── */
+.panel { display:none; }
+.panel.active { display:block; }
+.section-wrap { max-width:1100px; margin:0 auto; padding:4rem 2rem; }
+.section-label {
+  font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:0.5em;
+  color:var(--gold); text-transform:uppercase; margin-bottom:2rem;
+  display:flex; align-items:center; gap:1.5rem;
+}
+.section-label::after { content:''; flex:1; height:1px; background:linear-gradient(to right,var(--gold),transparent); opacity:0.4; }
+.section-heading { font-family:'Cinzel',serif; font-size:clamp(1.3rem,2.5vw,1.8rem); font-weight:600; color:var(--text); margin-bottom:0.4rem; }
+.section-sub { font-style:italic; color:var(--muted); font-size:0.9rem; margin-bottom:2.5rem; }
+
+/* ══════════════════════
+   TAB 1 — DIRECTION
+══════════════════════ */
+.hero {
+  background:linear-gradient(160deg, var(--bg) 0%, var(--bg2) 60%, var(--bg3) 100%);
+  padding:1.8rem 2rem 1.5rem; text-align:center; position:relative; overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+.hero-eyebrow { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.45em; color:var(--gold); margin-bottom:1.8rem; }
+.hero-title {
+  font-family:'Cinzel Decorative',serif; font-size:clamp(2rem,5.5vw,4rem); font-weight:900;
+  color:var(--gold); line-height:0.9;
+}
+.hero-sanskrit { font-style:italic; color:var(--muted); margin-top:1rem; font-size:0.95rem; letter-spacing:0.2em; }
+.hero-tagline {
+  font-family:'Cinzel',serif; font-size:0.68rem; letter-spacing:0.22em;
+  color:var(--text2); margin-top:1.8rem; line-height:2.2; max-width:520px; margin-left:auto; margin-right:auto;
+}
+.river-rule { height:40px; overflow:hidden; }
+.river-rule svg { width:200%; animation:waveFlow 14s linear infinite; }
+[data-theme="dark"] .river-rule svg path { fill:rgba(42,107,143,0.2); }
+.river-rule svg path { fill:rgba(42,107,143,0.12); }
+@keyframes waveFlow { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+.pillars-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.pillar {
+  padding:2.2rem 2rem; background:var(--surface); border:1px solid var(--border);
+  position:relative; overflow:hidden; transition:background 0.2s;
+}
+.pillar:hover { background:var(--surface2); }
+.pillar::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--pc); }
+.pillar:nth-child(1){--pc:var(--gold)} .pillar:nth-child(2){--pc:var(--river-light)} .pillar:nth-child(3){--pc:var(--holi-pink)}
+.pillar-num { font-family:'Cinzel',serif; font-size:1.4rem; font-weight:900; color:var(--pc); opacity:0.55; line-height:1; margin-bottom:0.8rem; }
+.pillar-title { font-family:'Cinzel',serif; font-size:0.68rem; letter-spacing:0.38em; color:var(--pc); margin-bottom:0.8rem; }
+.pillar-text { font-size:0.9rem; line-height:1.8; color:var(--muted); }
+
+/* Arc */
+.arc-bar { display:flex; gap:3px; height:80px; margin-bottom:0.6rem; }
+.arc-seg { border-radius:3px; display:flex; align-items:flex-end; padding:0.35rem; }
+.arc-seg-label { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.12em; color:rgba(0,0,0,0.35); white-space:nowrap; overflow:hidden; }
+[data-theme="dark"] .arc-seg-label { color:rgba(255,255,255,0.4); }
+
+/* Key Scenes */
+.scene-cards { display:flex; flex-direction:column; gap:2px; }
+.scene-card {
+  display:grid; grid-template-columns:68px 1fr 1fr;
+  min-height:220px; border:1px solid var(--border); overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.sc-num {
+  display:flex; align-items:center; justify-content:center;
+  writing-mode:vertical-rl; transform:rotate(180deg);
+  font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.22em;
+  color:white; background:var(--sca); padding:1rem 0; opacity:0.9;
+}
+.sc-orig { padding:2rem 2.2rem; background:var(--surface); display:flex; flex-direction:column; justify-content:center; border-right:1px solid var(--border); }
+.sc-orig-label { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.38em; color:var(--sca); margin-bottom:0.7rem; opacity:0.8; }
+.sc-orig-title { font-family:'Cinzel',serif; font-size:clamp(0.95rem,1.8vw,1.3rem); font-weight:600; color:var(--text); margin-bottom:0.7rem; line-height:1.3; }
+.sc-orig-text { font-size:0.88rem; font-style:italic; color:var(--muted); line-height:1.7; padding-left:0.2rem; }
+.sc-dir { padding:2rem 2.2rem; background:var(--surface2); display:flex; flex-direction:column; justify-content:center; }
+.sc-dir-eye { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.4em; color:var(--sca); margin-bottom:1rem; opacity:0.9; }
+.sc-dir-text { font-size:0.9rem; line-height:1.85; color:var(--text2); }
+.sc-dir-text strong { color:var(--sca); font-weight:500; }
+.sc-key { margin-top:1.2rem; padding:0.85rem 1.1rem; background:var(--gold-bg); border:1px solid color-mix(in srgb, var(--sca) 18%, transparent); border-radius:3px; font-family:'Cinzel',serif; font-size:0.7rem; letter-spacing:0.07em; color:var(--sca); font-style:italic; }
+.scene-card:nth-child(1){--sca:#b8922a} .scene-card:nth-child(2){--sca:#a03a5a} .scene-card:nth-child(3){--sca:#b06a20} .scene-card:nth-child(4){--sca:#2a6b8f} .scene-card:nth-child(5){--sca:#1a8b7a}
+[data-theme="dark"] .scene-card:nth-child(1){--sca:#c9a55a} [data-theme="dark"] .scene-card:nth-child(3){--sca:#c4874a} [data-theme="dark"] .scene-card:nth-child(4){--sca:#4a9bbf} [data-theme="dark"] .scene-card:nth-child(5){--sca:#4ac4b0}
+
+/* ══════════════════════
+   TAB 2 — SHOW FLOW
+══════════════════════ */
+.act-header { display:flex; align-items:center; gap:2rem; padding:1rem 0 1rem; position:sticky; top:0; background:var(--bg); z-index:5; }
+.act-label { font-family:'Cinzel',serif; font-size:clamp(1rem,1.8vw,1.4rem); font-weight:600; white-space:nowrap; }
+.act-line { flex:1; height:1px; background:var(--border2); }
+.act-counts { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.22em; color:var(--muted); white-space:nowrap; }
+.act-counts b { color:var(--text); font-weight:600; }
+
+/* Multi-song scene parent row = full-width banner (num + spanning name+sub + status) */
+.flow-row.has-songs { background:var(--bg2); }
+.flow-row.has-songs .flow-cell { padding:0.55rem 1rem; }
+.flow-row.has-songs .flow-num { background:transparent; }
+.flow-row.has-songs .flow-cell:nth-child(2) { grid-column: 2 / 8; border-right:none; }
+.flow-row.has-songs .flow-cell:nth-child(3),
+.flow-row.has-songs .flow-cell:nth-child(4),
+.flow-row.has-songs .flow-cell:nth-child(5),
+.flow-row.has-songs .flow-cell:nth-child(6),
+.flow-row.has-songs .flow-cell:nth-child(7) { display:none; }
+
+/* Subrows hang off the same gold accent */
+.scene-item:has(.scene-song-subrow) .scene-song-subrow { background:var(--surface); }
+.scene-song-subrow .flow-cell:nth-child(3) { padding-left:1.4rem; }
+
+/* Narration / interval rows — slim, dimmed, no checkbox clutter */
+.flow-row.is-narr { background:transparent; box-shadow:none; border-style:dashed; opacity:0.7; }
+.flow-row.is-narr .flow-cell { padding:0.5rem 1rem; font-style:italic; color:var(--muted); }
+.flow-row.is-narr .flow-narr-body { grid-column: 2 / 7; }
+.flow-row.is-narr .flow-narr-hide { display:none; }
+
+.flow-header-row, .flow-row {
+  display:grid; grid-template-columns:50px 160px 1fr 1fr 140px 90px 120px;
+  border:1px solid var(--border); overflow:hidden;
+}
+.flow-header-row { margin-bottom:3px; }
+.flow-header-cell { padding:0.5rem 1rem; font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.28em; color:var(--muted); background:var(--bg2); }
+.flow-row { margin-bottom:2px; transition:background 0.15s; box-shadow:var(--shadow); }
+.flow-row:hover { background:var(--surface2); }
+.flow-row.key-scene { border-color:rgba(184,146,42,0.25); }
+.flow-cell { padding:0.9rem 1rem; font-size:0.92rem; display:flex; align-items:center; border-right:1px solid var(--border); }
+.flow-cell:last-child { border-right:none; }
+.flow-num { font-family:'Cinzel',serif; font-size:0.7rem; font-weight:600; color:var(--gold); justify-content:center; background:var(--surface); }
+.flow-scene-name { font-size:0.9rem; font-weight:500; color:var(--text); line-height:1.35; }
+.flow-song { font-style:italic; color:var(--muted); font-size:0.84rem; line-height:1.4; }
+.flow-dancers { font-size:0.82rem; color:var(--muted); line-height:1.5; }
+/* Multi-song sub-rows */
+.scene-song-subrow { display:grid; grid-template-columns:50px 160px 1fr 1fr 140px 90px 120px; border-top:1px dashed var(--border); background:var(--surface); }
+.scene-song-subrow .flow-cell { padding:0.35rem 1rem; font-size:0.83rem; border-right:1px solid var(--border); }
+.scene-song-subrow .flow-cell:last-child { border-right:none; }
+.scene-song-subrow .flow-cell.song-indent { background:var(--surface2); }
+.scene-song-subrow .song-label { font-style:italic; color:var(--text); font-size:0.82rem; line-height:1.3; }
+
+/* Status tags */
+.flow-tag { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.18em; padding:0.35rem 0.7rem; min-height:28px; display:inline-flex; align-items:center; justify-content:center; border-radius:3px; white-space:nowrap; user-select:none; }
+.tag-ready { background:var(--tag-ready-bg); color:var(--tag-ready-c); border:1px solid var(--tag-ready-b); }
+.tag-partial { background:var(--tag-partial-bg); color:var(--tag-partial-c); border:1px solid var(--tag-partial-b); }
+.tag-new { background:var(--tag-new-bg); color:var(--tag-new-c); border:1px solid var(--tag-new-b); }
+.tag-tbc { background:var(--tag-tbc-bg); color:var(--tag-tbc-c); border:1px solid var(--tag-tbc-b); }
+.tag-narr { background:var(--tag-narr-bg); color:var(--tag-narr-c); border:1px solid var(--tag-narr-b); }
+
+/* Rehearsal checklist */
+.rehearsal-checks { display:flex; gap:4px; align-items:center; flex-wrap:wrap; }
+.r-check { display:flex; align-items:center; gap:3px; cursor:pointer; padding:3px 5px; border-radius:3px; background:var(--check-bg); border:1px solid var(--border); transition:all 0.15s; }
+.r-check:hover { background:var(--bg3); }
+.r-check input { display:none; }
+.r-check-box {
+  width:13px; height:13px; border-radius:2px;
+  border:1.5px solid var(--border2); background:var(--bg);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; transition:all 0.15s; font-size:9px; color:white;
+}
+.r-check.checked .r-check-box { background:var(--gold); border-color:var(--gold); }
+.r-check-label { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.15em; color:var(--muted); }
+
+/* ══════════════════════
+   TAB 3 — SONGS
+══════════════════════ */
+.song-header, .song-row {
+  display:grid; grid-template-columns:1fr 120px 60px 1fr 110px 44px;
+  border:1px solid var(--border);
+}
+.song-item { margin-bottom:2px; }
+.song-item .song-row { margin-bottom:0; }
+.song-header { margin-bottom:3px; }
+.song-header-cell { padding:0.5rem 1rem; font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.28em; color:var(--muted); background:var(--bg2); }
+.song-row { margin-bottom:2px; transition:background 0.15s; box-shadow:var(--shadow); }
+.song-row:hover { background:var(--surface2); }
+.song-cell { padding:0.9rem 1rem; font-size:0.92rem; display:flex; align-items:center; border-right:1px solid var(--border); }
+.song-cell:last-child { border-right:none; justify-content:center; }
+.song-title { font-weight:500; color:var(--text); }
+.song-meta { color:var(--muted); font-size:0.86rem; }
+.song-count { font-family:'Cinzel',serif; font-size:1rem; font-weight:600; color:var(--gold); opacity:0.6; justify-content:center; }
+
+/* ══════════════════════
+   TAB 4 — CHARACTERS
+══════════════════════ */
+.char-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:2px; }
+.char-card {
+  background:var(--surface); border:1px solid var(--border);
+  overflow:hidden; box-shadow:var(--shadow); transition:box-shadow 0.2s;
+}
+.char-card:hover { box-shadow:var(--shadow-lg); }
+.char-card-top { padding:2rem; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+.char-card-top::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cc); }
+.char-accent { position:absolute; top:1.5rem; right:1.5rem; font-family:'Cinzel Decorative',serif; font-size:3rem; font-weight:900; color:var(--cc); opacity:0.07; line-height:1; }
+.char-role { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.38em; color:var(--cc); margin-bottom:0.6rem; opacity:0.9; }
+.char-name { font-family:'Cinzel',serif; font-size:1.3rem; font-weight:600; color:var(--text); margin-bottom:0.3rem; }
+.char-sanskrit { font-style:italic; font-size:0.82rem; color:var(--muted); margin-bottom:0.8rem; }
+.char-played { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.25em; color:var(--muted); }
+.char-played strong { color:var(--text); }
+.char-body { padding:1.5rem 2rem; }
+.char-section { margin-bottom:1.2rem; }
+.char-section-title { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.3em; color:var(--cc); margin-bottom:0.5rem; opacity:0.85; }
+.char-section-text { font-size:0.86rem; line-height:1.75; color:var(--text2); }
+.char-key-scenes { display:flex; gap:4px; flex-wrap:wrap; margin-top:0.5rem; }
+.char-scene-tag { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.15em; padding:0.2rem 0.5rem; background:var(--cc-bg); color:var(--cc); border:1px solid var(--cc-b); border-radius:2px; }
+
+.char-card:nth-child(1){--cc:#b8922a;--cc-bg:rgba(184,146,42,0.08);--cc-b:rgba(184,146,42,0.2)}
+.char-card:nth-child(2){--cc:#2a6b8f;--cc-bg:rgba(42,107,143,0.08);--cc-b:rgba(42,107,143,0.2)}
+.char-card:nth-child(3){--cc:#1a8b7a;--cc-bg:rgba(26,139,122,0.08);--cc-b:rgba(26,139,122,0.2)}
+.char-card:nth-child(4){--cc:#7a5a9a;--cc-bg:rgba(122,90,154,0.08);--cc-b:rgba(122,90,154,0.2)}
+.char-card:nth-child(5){--cc:#c4215a;--cc-bg:rgba(196,33,90,0.08);--cc-b:rgba(196,33,90,0.2)}
+[data-theme="dark"] .char-card:nth-child(1){--cc:#c9a55a;--cc-bg:rgba(201,165,90,0.08);--cc-b:rgba(201,165,90,0.2)}
+[data-theme="dark"] .char-card:nth-child(2){--cc:#4a9bbf;--cc-bg:rgba(74,155,191,0.08);--cc-b:rgba(74,155,191,0.2)}
+[data-theme="dark"] .char-card:nth-child(3){--cc:#4ac4b0;--cc-bg:rgba(74,196,176,0.08);--cc-b:rgba(74,196,176,0.2)}
+[data-theme="dark"] .char-card:nth-child(4){--cc:#aa8aca;--cc-bg:rgba(170,138,202,0.08);--cc-b:rgba(170,138,202,0.2)}
+[data-theme="dark"] .char-card:nth-child(5){--cc:#d47aa0;--cc-bg:rgba(212,122,160,0.08);--cc-b:rgba(212,122,160,0.2)}
+
+/* ══════════════════════
+   TAB 5 — NOTES
+══════════════════════ */
+.notes-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+.note-block { background:var(--surface); border:1px solid var(--border); padding:1.8rem; }
+.note-block-title { font-family:'Cinzel',serif; font-size:0.66rem; letter-spacing:0.4em; color:var(--gold); margin-bottom:1rem; display:flex; align-items:center; gap:1rem; }
+.note-block-title::after { content:''; flex:1; height:1px; background:var(--border2); }
+.note-area {
+  width:100%; background:var(--note-bg); border:1px solid var(--border2);
+  border-radius:2px; color:var(--text); font-family:'Lora',serif;
+  font-size:0.92rem; line-height:1.8; padding:0.9rem; resize:vertical; min-height:130px;
+  transition:border-color 0.2s;
+}
+.note-area:focus { outline:none; border-color:rgba(184,146,42,0.4); }
+.note-area::placeholder { color:var(--muted); font-style:italic; }
+.save-bar {
+  position:fixed; bottom:1.5rem; right:1.5rem; z-index:200;
+  display:none; align-items:center; gap:1rem;
+}
+[data-theme="light"] 
+/* ══════════════════════
+   TAB 6 — REFERENCES
+══════════════════════ */
+.ref-origin {
+  background:var(--gold-bg); border:1px solid rgba(184,146,42,0.2);
+  padding:2.5rem; margin-bottom:3rem; position:relative; overflow:hidden;
+}
+.ref-origin::before { content:''; position:absolute; top:0; left:0; bottom:0; width:3px; background:var(--gold); }
+.ref-origin-eyebrow { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.42em; color:var(--gold); margin-bottom:1.2rem; display:flex; align-items:center; gap:1rem; }
+.ref-origin-eyebrow::after { content:''; flex:1; height:1px; background:var(--border2); }
+.ref-origin-title { font-family:'Cinzel Decorative',serif; font-size:1.8rem; font-weight:900; color:var(--text); margin-bottom:0.3rem; letter-spacing:0.08em; }
+.ref-origin-sub { font-style:italic; color:var(--muted); font-size:0.84rem; margin-bottom:1.5rem; letter-spacing:0.12em; }
+.ref-origin-text { font-size:0.92rem; line-height:1.92; color:var(--text2); max-width:760px; }
+.ref-origin-text p { margin-bottom:0.9rem; }
+.ref-origin-text p:last-child { margin-bottom:0; }
+
+.ref-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2px; }
+.ref-card {
+  background:var(--surface); border:1px solid var(--border);
+  overflow:hidden; transition:box-shadow 0.2s; display:flex; flex-direction:column;
+}
+.ref-card:hover { box-shadow:var(--shadow-lg); }
+.ref-card-thumb {
+  aspect-ratio:16/9; display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden;
+}
+.ref-thumb-title {
+  font-family:'Cinzel',serif; font-size:0.65rem; letter-spacing:0.1em;
+  color:rgba(255,255,255,0.55); text-align:center; padding:1rem 1.4rem;
+  line-height:1.6; z-index:1; position:relative;
+}
+.ref-play-btn {
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  background:rgba(0,0,0,0.15); transition:background 0.2s; z-index:2; text-decoration:none;
+}
+.ref-play-btn:hover { background:rgba(0,0,0,0.28); }
+.ref-play-icon {
+  width:50px; height:50px; border-radius:50%;
+  background:rgba(184,146,42,0.18); border:2px solid rgba(184,146,42,0.55);
+  display:flex; align-items:center; justify-content:center;
+  transition:all 0.2s;
+}
+.ref-play-btn:hover .ref-play-icon { background:rgba(184,146,42,0.3); border-color:rgba(184,146,42,0.8); }
+.ref-play-arrow { width:0; height:0; border-top:9px solid transparent; border-bottom:9px solid transparent; border-left:16px solid var(--gold); margin-left:3px; }
+.ref-card-body { padding:1.4rem 1.6rem; flex:1; display:flex; flex-direction:column; }
+.ref-cat { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.34em; color:var(--gold); margin-bottom:0.5rem; opacity:0.85; }
+.ref-title { font-family:'Cinzel',serif; font-size:0.88rem; font-weight:600; color:var(--text); margin-bottom:0.7rem; line-height:1.4; }
+.ref-notes { font-size:0.84rem; line-height:1.75; color:var(--muted); flex:1; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .pillars-grid{grid-template-columns:1fr}
+  /* Stacked card layout for show flow on phones + landscape phones */
+  .flow-header-row{display:none}
+  .scene-item{border:1px solid var(--border);border-radius:8px;background:var(--surface);margin-bottom:10px;overflow:hidden;box-shadow:var(--shadow)}
+  .scene-item .flow-row,.scene-item .scene-song-subrow{display:flex !important;flex-direction:column !important;grid-template-columns:none !important;box-shadow:none;margin-bottom:0;border:none;background:transparent}
+  .flow-row .flow-cell,.scene-song-subrow .flow-cell{border-right:none;border-bottom:1px solid var(--border);padding:0.55rem 0.85rem;justify-content:flex-start !important;align-items:flex-start;flex-direction:column;gap:3px}
+  .flow-row .flow-cell:last-child,.scene-song-subrow .flow-cell:last-child{border-bottom:none}
+  .flow-row .flow-cell:empty,.scene-song-subrow .flow-cell:empty{display:none}
+  /* Scene number header strip */
+  .flow-row .flow-cell:nth-child(1){background:var(--bg2);padding:0.4rem 0.85rem;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.22em;color:var(--gold);justify-content:flex-start !important;flex-direction:row;align-items:center}
+  .flow-row .flow-cell:nth-child(1)::before{content:'Scene · ';opacity:0.55;margin-right:4px}
+  /* Labelled cells via ::before */
+  .flow-row .flow-cell:nth-child(3):not(:empty)::before,
+  .scene-song-subrow .flow-cell:nth-child(3)::before{content:'Song';display:block;width:100%;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;color:var(--muted);margin-bottom:2px}
+  .flow-row .flow-cell:nth-child(4):not(:empty)::before,
+  .scene-song-subrow .flow-cell:nth-child(4):not(:empty)::before{content:'Dancers';display:block;width:100%;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;color:var(--muted);margin-bottom:2px}
+  .flow-row .flow-cell:nth-child(5):not(:empty)::before,
+  .scene-song-subrow .flow-cell:nth-child(5):not(:empty)::before{content:'Costume';display:block;width:100%;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;color:var(--muted);margin-bottom:2px}
+  .flow-row .flow-cell:nth-child(6):not(:empty)::before,
+  .scene-song-subrow .flow-cell:nth-child(6):not(:empty)::before{content:'Time';display:block;width:100%;font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;color:var(--muted);margin-bottom:2px}
+  /* Status pill cell (last) */
+  .flow-row .flow-cell:nth-child(7),.scene-song-subrow .flow-cell:nth-child(7){padding:0.5rem 0.85rem;flex-direction:row;align-items:center;gap:8px}
+  .flow-row .flow-cell:nth-child(7)::before,.scene-song-subrow .flow-cell:nth-child(7)::before{content:'Status';font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;color:var(--muted)}
+  /* Multi-song parent banner stays clean — just name+sub block */
+  .flow-row.has-songs .flow-cell:nth-child(2){grid-column:auto !important;padding:0.7rem 0.85rem}
+  .flow-row.has-songs .flow-cell:nth-child(3),
+  .flow-row.has-songs .flow-cell:nth-child(4),
+  .flow-row.has-songs .flow-cell:nth-child(5),
+  .flow-row.has-songs .flow-cell:nth-child(6),
+  .flow-row.has-songs .flow-cell:nth-child(7){display:none !important}
+  /* Narration rows: slim single block */
+  .flow-row.is-narr .flow-cell:nth-child(1){background:transparent;color:var(--muted)}
+  .flow-row.is-narr .flow-narr-body{grid-column:auto !important}
+  .flow-row.is-narr .flow-cell{border-bottom:none}
+  /* Subrow indents: drop the empty first two cells on mobile (they were spacers in desktop grid) */
+  .scene-song-subrow .flow-cell.song-indent{display:none}
+  .scene-song-subrow{border-top:1px dashed var(--border)}
+  /* Songs catalog table — keep desktop-ish but compact */
+  .song-header,.song-row{grid-template-columns:1fr 120px 100px}
+  .song-header-cell:nth-child(4),.song-header-cell:nth-child(5),.song-cell:nth-child(4),.song-cell:nth-child(5){display:none}
+  .notes-grid{grid-template-columns:1fr}
+  .scene-card{grid-template-columns:52px 1fr}.sc-dir{grid-column:2}
+  .char-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .site-header{padding:0.5rem 0.75rem;gap:0.5rem;height:auto;flex-wrap:wrap;align-items:flex-start}
+  .header-brand{flex:1 0 auto}
+  .header-sub{display:none}
+  .nav-tabs{order:3;flex:1 0 100%;margin-left:0;flex-wrap:wrap;overflow:visible;height:auto;mask-image:none;-webkit-mask-image:none;gap:2px 0;border-top:1px solid var(--border);padding-top:0.45rem;margin-top:0.25rem}
+  .nav-tab{padding:0.55rem 0.95rem;font-size:0.68rem;letter-spacing:0.18em;min-height:34px;border-bottom:none;border-radius:17px;background:var(--surface);margin:2px;display:inline-flex;align-items:center}
+  .nav-tab.active{background:var(--gold-bg);color:var(--gold)}
+  .header-actions{margin-left:0.25rem}
+  .theme-toggle{width:32px;height:32px;margin-left:0.25rem}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration:0.01ms !important; animation-duration:0.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; }
+}
+.skip-link { position:absolute; left:-9999px; top:0; padding:0.6rem 1rem; background:var(--gold); color:#1c1812; font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:0.18em; z-index:10000; border-radius:0 0 4px 4px; text-decoration:none; }
+.skip-link:focus { left:0; }
+
+/* ══════════════════════
+   TAB 7 — CAST
+══════════════════════ */
+.cast-grid-wrap { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2px; container-type:inline-size; }
+.cast-card { container-type:inline-size; }
+@container (max-width: 280px) {
+  .cast-card-top { padding:0.9rem 1.1rem; gap:10px; }
+  .cast-initial { width:36px; height:36px; font-size:0.92rem; }
+  .cast-section-label { font-size:0.56rem; }
+}
+.cast-card { background:var(--surface); border:1px solid var(--border); overflow:hidden; }
+.cast-card-top {
+  padding:1.4rem 1.6rem 1rem; display:flex; align-items:center; gap:1rem;
+  border-bottom:1px solid var(--border);
+}
+.cast-initial {
+  width:44px; height:44px; border-radius:50%; flex-shrink:0;
+  background:var(--gold-bg); border:2px solid rgba(184,146,42,0.3);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Cinzel Decorative',serif; font-size:1.1rem; font-weight:900;
+  color:var(--gold);
+}
+.cast-dancer-name { font-family:'Cinzel',serif; font-size:0.9rem; font-weight:600; color:var(--text); }
+.cast-dancer-stats { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.18em; color:var(--muted); margin-top:3px; }
+.cast-body { padding:0.85rem 1.4rem 1.3rem; }
+.cast-section-label { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.32em; color:var(--muted); margin-bottom:0.5rem; }
+.cast-pill-wrap { display:flex; flex-wrap:wrap; gap:5px; }
+.cast-empty { font-style:italic; font-size:0.85rem; color:var(--muted); padding:0.4rem 0; }
+.cast-scene-pill { font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.08em; padding:0.25rem 0.55rem; background:var(--gold-bg); color:var(--gold); border:1px solid rgba(184,146,42,0.3); border-radius:3px; display:inline-flex; align-items:center; gap:5px; }
+.cast-scene-pill-name { font-family:'Lora',serif; font-style:italic; font-size:0.66rem; color:var(--text2); letter-spacing:0; text-transform:none; opacity:0.85; }
+.cast-song-pill { font-family:'Lora',serif; font-style:italic; font-size:0.82rem; padding:0.35rem 0.7rem; min-height:32px; display:inline-flex; align-items:center; background:var(--surface2); color:var(--text2); border:1px solid var(--border); border-radius:3px; }
+.cast-refresh-bar { display:flex; justify-content:flex-end; margin-bottom:1.5rem; }
+.cast-refresh-btn { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.2em; background:none; border:1px solid var(--border2); color:var(--muted); padding:0.4rem 1rem; cursor:pointer; border-radius:2px; transition:all 0.2s; }
+.cast-refresh-btn:hover { border-color:var(--gold); color:var(--gold); }
+
+/* Costume notes on scene rows */
+.scene-costume-row {
+  display:none; border:1px solid var(--border); border-top:none;
+  background:var(--bg2); padding:0.7rem 1.2rem; gap:0.8rem; align-items:center;
+}
+.scene-costume-row.open { display:flex; }
+.costume-label { font-family:'Cinzel',serif; font-size:0.66rem; letter-spacing:0.22em; color:var(--gold); white-space:nowrap; }
+.costume-input {
+  flex:1; background:var(--note-bg); border:1px solid var(--border2); border-radius:2px;
+  color:var(--text); font-family:'Lora',serif; font-size:0.88rem; padding:0.35rem 0.6rem;
+}
+.costume-input:focus { outline:none; border-color:var(--gold); }
+.costume-toggle {
+  font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.18em;
+  padding:0.22rem 0.55rem; border-radius:2px; cursor:pointer; transition:all 0.15s;
+  border:1px solid var(--border); background:var(--surface); color:var(--muted);
+  white-space:nowrap;
+}
+.costume-toggle:hover { border-color:var(--border2); color:var(--text); }
+.costume-toggle.open { background:var(--gold-bg); border-color:rgba(184,146,42,0.35); color:var(--gold); }
+.scene-item { margin-bottom:2px; }
+.scene-item .flow-row { margin-bottom:0; }
+
+/* Dependency warnings (back-to-back, costume-buffer, stamina) */
+.scene-deps-row {
+  display:none; flex-wrap:wrap; gap:4px;
+  border:1px solid var(--border); border-top:none;
+  background:var(--bg2); padding:0.5rem 0.9rem;
+}
+.scene-deps-row.has-deps { display:flex; }
+.dep-chip {
+  font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.12em;
+  padding:0.22rem 0.55rem; border-radius:2px; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:5px; cursor:help;
+  border:1px solid;
+}
+.dep-chip::before { content:'●'; font-size:0.64rem; line-height:1; }
+.dep-red   { background:rgba(196,33,90,0.10);  color:#c4215a; border-color:rgba(196,33,90,0.30); }
+.dep-amber { background:rgba(184,146,42,0.12); color:#b8922a; border-color:rgba(184,146,42,0.32); }
+.dep-blue  { background:rgba(42,107,143,0.10); color:#2a6b8f; border-color:rgba(42,107,143,0.30); }
+[data-theme="dark"] .dep-red   { background:rgba(220,90,140,0.12); color:#e07ea3; border-color:rgba(220,90,140,0.35); }
+[data-theme="dark"] .dep-amber { background:rgba(201,165,90,0.14); color:#d4b46a; border-color:rgba(201,165,90,0.35); }
+[data-theme="dark"] .dep-blue  { background:rgba(74,155,191,0.14); color:#7cc1de; border-color:rgba(74,155,191,0.35); }
+
+/* ══════════════════════
+   READABILITY OVERRIDES
+   Base was 17px with rem values as small as 0.44rem (7.5px).
+   This block corrects all sizes to be clearly readable.
+══════════════════════ */
+body { font-size: 18px; }
+
+/* Header & nav */
+.header-sub { font-size: 0.68rem; letter-spacing: 0.28em; }
+.nav-tab { font-size: 0.72rem; letter-spacing: 0.2em; }
+.edit-mode-label { font-size: 0.68rem; letter-spacing: 0.25em; }
+.edit-mode-hint { font-size: 0.64rem; letter-spacing: 0.12em; }
+.save-file-btn { font-size: 0.68rem; letter-spacing: 0.16em; padding: 0.5rem 1.4rem; }
+.link-file-btn { font-size: 0.64rem; letter-spacing: 0.12em; padding: 0.46rem 1rem; }
+.save-status { font-size: 0.64rem; }
+
+/* Dashboard */
+.dash-label { font-size: 0.65rem; letter-spacing: 0.22em; }
+.dash-value { font-size: 1.05rem; }
+.dash-value span { font-size: 0.8rem; }
+.dash-progress-label { font-size: 0.65rem; letter-spacing: 0.22em; }
+.dash-legend-item { font-size: 0.62rem; letter-spacing: 0.1em; }
+
+/* Show Flow */
+.flow-header-cell { font-size: 0.65rem; letter-spacing: 0.18em; padding: 0.6rem 1rem; }
+.flow-cell { font-size: 0.96rem; }
+.flow-scene-name { font-size: 0.96rem; }
+.flow-song { font-size: 0.92rem; }
+.flow-dancers { font-size: 0.9rem; }
+.flow-num { font-size: 0.82rem; }
+.flow-tag { font-size: 0.62rem; letter-spacing: 0.12em; padding: 0.28rem 0.65rem; }
+.r-check-label { font-size: 0.66rem; letter-spacing: 0.1em; }
+
+/* Songs */
+.song-header-cell { font-size: 0.65rem; letter-spacing: 0.18em; padding: 0.6rem 1rem; }
+.song-cell { font-size: 0.96rem; padding: 1rem 1rem; }
+.song-title { font-size: 0.96rem; }
+.song-meta { font-size: 0.92rem; }
+.song-count { font-size: 1.05rem; }
+
+/* Creative Direction */
+.section-label { font-size: 0.72rem; letter-spacing: 0.38em; }
+.section-heading { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
+.section-sub { font-size: 0.96rem; }
+.hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.38em; }
+.hero-tagline { font-size: 0.85rem; letter-spacing: 0.16em; line-height: 2; }
+.pillar-title { font-size: 0.8rem; letter-spacing: 0.3em; }
+.pillar-text { font-size: 0.96rem; line-height: 1.85; }
+.arc-seg-label { font-size: 0.6rem; letter-spacing: 0.08em; }
+.sc-orig-label { font-size: 0.65rem; letter-spacing: 0.28em; }
+.sc-orig-title { font-size: clamp(1rem, 1.8vw, 1.35rem); }
+.sc-orig-text { font-size: 0.92rem; line-height: 1.8; }
+.sc-dir-eye { font-size: 0.65rem; letter-spacing: 0.32em; }
+.sc-dir-text { font-size: 0.96rem; line-height: 1.9; }
+.sc-key { font-size: 0.76rem; letter-spacing: 0.06em; padding: 0.8rem 1.1rem; }
+
+/* Characters */
+.char-role { font-size: 0.65rem; letter-spacing: 0.3em; }
+.char-name { font-size: 1.4rem; }
+.char-sanskrit { font-size: 0.9rem; }
+.char-played { font-size: 0.68rem; letter-spacing: 0.2em; }
+.char-section-title { font-size: 0.65rem; letter-spacing: 0.25em; }
+.char-section-text { font-size: 0.94rem; line-height: 1.82; }
+.char-scene-tag { font-size: 0.66rem; letter-spacing: 0.1em; padding: 0.24rem 0.6rem; }
+
+/* Notes */
+.note-block-title { font-size: 0.72rem; letter-spacing: 0.3em; }
+.note-area { font-size: 0.96rem; line-height: 1.85; }
+
+/* References */
+.ref-origin-eyebrow { font-size: 0.68rem; letter-spacing: 0.32em; }
+.ref-origin-title { font-size: 2rem; }
+.ref-origin-sub { font-size: 0.92rem; }
+.ref-origin-text { font-size: 0.96rem; line-height: 1.95; }
+.ref-cat { font-size: 0.62rem; letter-spacing: 0.26em; }
+.ref-title { font-size: 0.96rem; }
+.ref-notes { font-size: 0.94rem; line-height: 1.8; }
+.ref-thumb-title { font-size: 0.8rem; letter-spacing: 0.08em; }
+</style>
+<style id="madhubani-skin">
+/* ══════════════════════════════════════════════════════════════════
+   MADHUBANI SKIN — SANGAM production page
+   Visual layer only. Source of truth: Design System/projects/abc/
+   performance/sangam-2026 (madhubani-kit.css + FINAL-APPROVED).
+   Paper #ead8a9 · ink #2b2016 · teal #00585b · title red #971e16.
+   Title Rozha One · headings Playfair Display · structure Inter.
+   Sharp corners, no shadows, no gradients.
+   Injected by madhubani-skin/apply_skin.py — edit this file, re-apply.
+══════════════════════════════════════════════════════════════════ */
+:root {
+  --mk-paper:#ead8a9; --mk-paper-hi:#f4e9cc; --mk-ink:#2b2016;
+  --mk-teal:#00585b; --mk-red:#971e16; --mk-river:#1f4f8a;
+  --mk-leaf:#3f6526; --mk-ochre:#8a4f0a; --mk-earth:#6e4212;
+  --mk-title:var(--mk-red);
+  --mk-rule:rgba(43,32,22,0.55);
+  --mk-display:'Rozha One', 'Tiro Devanagari Sanskrit', Georgia, serif;
+  --mk-head:'Playfair Display', 'Tiro Devanagari Sanskrit', Georgia, serif;
+  --mk-body:'Inter', 'Tiro Devanagari Sanskrit', system-ui, -apple-system, sans-serif;
+  --mk-deva:'Tiro Devanagari Sanskrit', 'Noto Serif Devanagari', serif;
+
+  --gold:var(--mk-teal); --gold-light:#0a7478; --gold-bg:rgba(0,88,91,0.08);
+  --river:var(--mk-river); --river-light:#2b62a3;
+  --drought:var(--mk-earth); --drought-light:#8a5a22;
+  --holi-pink:var(--mk-red); --holi-teal:var(--mk-teal);
+  --bg:var(--mk-paper); --bg2:#e2cb94; --bg3:#d7bd80;
+  --text:var(--mk-ink); --text2:#3a2c1d; --muted:#664f33;
+  --surface:rgba(255,249,230,0.42); --surface2:rgba(255,249,230,0.72);
+  --border:rgba(43,32,22,0.2); --border2:rgba(43,32,22,0.38);
+  --shadow:none; --shadow-lg:none;
+  --header-bg:var(--mk-paper);
+  --tag-ready-bg:rgba(63,101,38,0.12);  --tag-ready-c:#2f531b;   --tag-ready-b:rgba(63,101,38,0.5);
+  --tag-partial-bg:rgba(168,98,15,0.14); --tag-partial-c:#74420a; --tag-partial-b:rgba(168,98,15,0.5);
+  --tag-new-bg:rgba(151,30,22,0.1);      --tag-new-c:#971e16;     --tag-new-b:rgba(151,30,22,0.45);
+  --tag-tbc-bg:rgba(43,32,22,0.06);      --tag-tbc-c:#574632;     --tag-tbc-b:rgba(43,32,22,0.32);
+  --tag-narr-bg:rgba(31,79,138,0.1);     --tag-narr-c:#1f4f8a;    --tag-narr-b:rgba(31,79,138,0.42);
+  --check-bg:rgba(255,249,230,0.8); --note-bg:rgba(255,249,230,0.6);
+}
+:root[data-theme="dark"] {
+  --mk-teal:#5fb8b1; --mk-red:#e27a62; --mk-river:#86b0e0;
+  --mk-leaf:#9cc57a; --mk-ochre:#d9a24a; --mk-earth:#c89560;
+  --mk-title:#e27a62; --mk-rule:rgba(234,216,169,0.45);
+  --gold:var(--mk-teal); --gold-light:#86d0c9; --gold-bg:rgba(95,184,177,0.1);
+  --river:var(--mk-river); --river-light:#a6c6ec;
+  --drought:var(--mk-earth); --drought-light:#d8aa78;
+  --holi-pink:var(--mk-red); --holi-teal:var(--mk-teal);
+  --bg:#1e1710; --bg2:#271e15; --bg3:#33281c;
+  --text:#f0e2bf; --text2:#dfcfa8; --muted:#b09a72;
+  --surface:rgba(234,216,169,0.04); --surface2:rgba(234,216,169,0.08);
+  --border:rgba(234,216,169,0.15); --border2:rgba(234,216,169,0.28);
+  --header-bg:#1e1710;
+  --tag-ready-bg:rgba(156,197,122,0.12);  --tag-ready-c:#a8d088;   --tag-ready-b:rgba(156,197,122,0.42);
+  --tag-partial-bg:rgba(217,162,74,0.13); --tag-partial-c:#e2b060; --tag-partial-b:rgba(217,162,74,0.42);
+  --tag-new-bg:rgba(226,122,98,0.13);     --tag-new-c:#ec8f78;     --tag-new-b:rgba(226,122,98,0.45);
+  --tag-tbc-bg:rgba(234,216,169,0.06);    --tag-tbc-c:#c2ad86;     --tag-tbc-b:rgba(234,216,169,0.28);
+  --tag-narr-bg:rgba(134,176,224,0.12);   --tag-narr-c:#9cc0ea;    --tag-narr-b:rgba(134,176,224,0.42);
+  --check-bg:rgba(234,216,169,0.06); --note-bg:rgba(234,216,169,0.04);
+}
+
+/* ── BASE ── */
+body {
+  font-family:var(--mk-body); font-size:17px; line-height:1.55;
+  background-color:var(--bg);
+  background-image:url("assets/madhubani/paper.webp");
+  background-size:850px 550px;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+:root[data-theme="dark"] body { background-image:none; }
+:lang(sa), [lang="sa"] { font-family:var(--mk-deva); }
+strong, b { font-weight:600; }
+
+/* Every former Cinzel label becomes an Inter structure label (Cinzel was all-caps). */
+.header-sub, .nav-tab, .export-btn, .publish-btn, .edit-mode-label, .edit-mode-hint, .save-status,
+.save-file-btn, .link-file-btn, .dash-label, .dash-value, .dash-progress-label, .dash-legend-item,
+.section-label, .hero-eyebrow, .pillar-title, .arc-seg-label, .sc-num, .sc-orig-label, .sc-dir-eye,
+.act-counts, .flow-header-cell, .flow-num, .flow-tag, .r-check-label, .song-header-cell, .song-count,
+.char-role, .char-played, .char-section-title, .char-scene-tag, .note-block-title, .ref-origin-eyebrow,
+.ref-thumb-title, .ref-cat, .cast-dancer-stats, .cast-section-label, .cast-scene-pill, .cast-refresh-btn,
+.costume-label, .costume-toggle, .dep-chip, .skip-link, [data-viewer="true"] .header-actions::after {
+  font-family:var(--mk-body); text-transform:uppercase; font-weight:600;
+  font-variant-numeric:tabular-nums;
+}
+/* Inline Cinzel styles written by the render scripts */
+[style*="Cinzel"] {
+  font-family:var(--mk-body) !important; text-transform:uppercase;
+  letter-spacing:0.08em !important; font-variant-numeric:tabular-nums; font-weight:500;
+}
+[style*="Cinzel"][style*="font-size:0.6"] { font-size:0.74rem !important; }
+
+/* ── HEADER + BORDER BAND ── */
+.site-header {
+  background-color:var(--header-bg);
+  background-image:url("assets/madhubani/paper.webp"); background-size:850px 550px;
+  border-bottom:0; box-shadow:none;
+  height:80px; padding-bottom:20px;
+}
+:root[data-theme="dark"] .site-header { background-image:none; }
+.site-header::after {
+  content:''; position:absolute; left:0; right:0; bottom:0; height:20px;
+  background:#2b2016 url("assets/madhubani/band.webp") repeat-x left center / auto 100%;
+  pointer-events:none;
+}
+.header-brand { gap:3px; }
+.header-title {
+  font-family:var(--mk-display); font-weight:400; font-size:1.7rem; line-height:1;
+  color:var(--mk-title); letter-spacing:0.08em;
+}
+.header-sub { font-size:0.68rem; letter-spacing:0.14em; color:var(--muted); }
+.nav-tab {
+  font-size:0.76rem; letter-spacing:0.12em; font-weight:500; color:var(--muted);
+  padding:0 1.05rem; border-bottom:3px solid transparent;
+}
+.nav-tab:hover { color:var(--text); }
+.nav-tab.active { color:var(--mk-teal); border-bottom-color:var(--mk-teal); font-weight:600; }
+.theme-toggle, .edit-btn { border-radius:0; background:transparent; border:1px solid var(--border2); }
+.theme-toggle:hover, .edit-btn:hover { background:var(--surface2); }
+[data-viewer="true"] .header-actions::after { font-size:0.66rem; letter-spacing:0.14em; color:var(--muted); }
+:focus-visible { outline:2px solid var(--mk-teal); outline-offset:2px; }
+.skip-link { background:var(--mk-teal); color:#f4e9cc; font-size:0.78rem; letter-spacing:0.1em; border-radius:0; }
+.export-btn, .publish-btn, .save-file-btn, .link-file-btn, .cast-refresh-btn { border-radius:0; letter-spacing:0.1em; }
+.save-file-btn, [data-theme="light"] .save-file-btn { color:#f4e9cc; }
+.edit-mode-bar { top:80px; }
+
+/* ── DASHBOARD ── */
+.dash-bar { background:rgba(138,79,10,0.08); border-bottom:1px solid var(--border2); padding:0.85rem 2rem; gap:2rem; }
+:root[data-theme="dark"] .dash-bar { background:var(--bg2); }
+.dash-label, .dash-progress-label { font-size:0.68rem; letter-spacing:0.14em; color:var(--muted); }
+.dash-value { font-size:1.1rem; letter-spacing:0.02em; color:var(--text); }
+.dash-value span { font-size:0.74rem; font-weight:500; letter-spacing:0.06em; }
+#days-count { font-family:var(--mk-display); font-weight:400; font-size:1.9rem; color:var(--mk-title); letter-spacing:0; text-transform:none; }
+#days-count span { font-family:var(--mk-body); font-weight:600; text-transform:uppercase; color:var(--muted); }
+.dash-divider { background:var(--border2); }
+.dash-bar-track { border-radius:0; height:8px; background:rgba(43,32,22,0.12); }
+:root[data-theme="dark"] .dash-bar-track { background:rgba(234,216,169,0.1); }
+.dash-legend-item { font-size:0.68rem; letter-spacing:0.08em; }
+.dash-legend-dot { border-radius:0; width:8px; height:8px; }
+[style*="#2a7a4a"] { background:#3f6526 !important; }
+[style*="#d4a840"] { background:#c07a18 !important; }
+[style*="#c4215a"] { background:#971e16 !important; }
+
+/* ── SECTIONS ── */
+.section-label {
+  font-size:0.76rem; letter-spacing:0.16em; color:var(--mk-teal);
+  gap:0.9rem; margin-bottom:1.6rem;
+}
+.section-label::before {
+  content:''; width:9px; height:9px; flex-shrink:0; background:var(--mk-red); transform:rotate(45deg);
+}
+.section-label::after { background:var(--mk-rule); opacity:1; height:1px; }
+.section-heading {
+  font-family:var(--mk-head); font-weight:500; letter-spacing:0;
+  font-size:clamp(1.6rem, 3vw, 2.2rem); line-height:1.15; color:var(--text); margin-bottom:0.5rem;
+}
+.section-sub { font-family:var(--mk-head); font-style:italic; font-size:1.05rem; color:var(--muted); }
+
+/* ── DIRECTION · HERO ── */
+.hero {
+  display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.12fr);
+  grid-template-rows:1fr auto auto auto auto 1fr; column-gap:3.5rem;
+  max-width:1180px; margin:0 auto; padding:3rem 2rem 3.25rem;
+  text-align:left; background:none; border-bottom:0; overflow:visible;
+}
+.hero-art { grid-column:2; grid-row:1 / -1; margin:0; border:2px solid var(--mk-ink); padding:6px; background:var(--mk-paper-hi); }
+:root[data-theme="dark"] .hero-art { border-color:#ead8a9; background:#2b2016; }
+.hero-art picture, .hero-art img { display:block; width:100%; height:auto; aspect-ratio:4 / 3; }
+.hero-art img { border:1px solid var(--mk-ink); }
+.hero-eyebrow { grid-column:1; grid-row:2; font-size:0.74rem; letter-spacing:0.14em; line-height:1.7; color:var(--muted); margin-bottom:1.1rem; }
+.hero-title {
+  grid-column:1; grid-row:3; font-family:var(--mk-display); font-weight:400;
+  font-size:clamp(3.4rem, 7vw, 5.8rem); line-height:0.95; letter-spacing:0.07em; color:var(--mk-title);
+}
+.hero-sanskrit {
+  grid-column:1; grid-row:4; font-family:var(--mk-deva); font-style:normal;
+  font-size:1.35rem; letter-spacing:0.04em; color:var(--mk-teal); margin-top:0.6rem;
+}
+.hero-tagline {
+  grid-column:1; grid-row:5; font-family:var(--mk-head); font-style:italic; font-weight:400;
+  font-size:1.22rem; line-height:1.6; letter-spacing:0; color:var(--text2);
+  max-width:44ch; margin:1.4rem 0 0; padding-top:1.4rem; border-top:1px solid var(--mk-rule);
+}
+.river-rule {
+  height:clamp(40px, 6.4vw, 70px); max-width:1100px; margin:0 auto;
+  background:url("assets/madhubani/fish.webp") center / cover no-repeat;
+  border-top:2px solid var(--mk-ink); border-bottom:2px solid var(--mk-ink);
+}
+:root[data-theme="dark"] .river-rule { border-color:#ead8a9; }
+.river-rule svg { display:none; }
+
+/* Pillars */
+.pillars-grid { gap:1rem; }
+.pillar { background:var(--surface); border:1px solid var(--border2); padding:2rem 1.8rem; }
+.pillar:hover { background:var(--surface2); }
+.pillar::before { height:5px; }
+.pillar:nth-child(1){--pc:var(--mk-red)} .pillar:nth-child(2){--pc:var(--mk-river)} .pillar:nth-child(3){--pc:var(--mk-teal)}
+.pillar-num { font-family:var(--mk-display); font-weight:400; font-size:2.2rem; opacity:1; margin-bottom:0.6rem; }
+.pillar-title { font-size:0.8rem; letter-spacing:0.16em; }
+.pillar-text { font-size:1rem; line-height:1.7; color:var(--text2); }
+
+/* Arc — same five categories, Madhubani palette, flat fills */
+.arc-seg { border-radius:0; }
+.arc-seg-label { font-size:0.66rem; letter-spacing:0.06em; font-weight:600; color:rgba(43,32,22,0.72); }
+[data-theme="dark"] .arc-seg-label { color:rgba(240,226,191,0.72); }
+.arc-bar .arc-seg:nth-child(1)  { background:rgba(168,98,15,0.16) !important; }
+.arc-bar .arc-seg:nth-child(2)  { background:rgba(168,98,15,0.26) !important; }
+.arc-bar .arc-seg:nth-child(3)  { background:rgba(31,79,138,0.3) !important; border-top-color:#1f4f8a !important; }
+.arc-bar .arc-seg:nth-child(4)  { background:rgba(168,98,15,0.2) !important; }
+.arc-bar .arc-seg:nth-child(5)  { background:rgba(168,98,15,0.3) !important; }
+.arc-bar .arc-seg:nth-child(6)  { background:rgba(151,30,22,0.3) !important; border-top-color:#971e16 !important; }
+.arc-bar .arc-seg:nth-child(7)  { background:rgba(110,66,18,0.55) !important; border-top-color:#4a2c0c !important; }
+.arc-bar .arc-seg:nth-child(8)  { background:rgba(110,66,18,0.32) !important; }
+.arc-bar .arc-seg:nth-child(9)  { background:rgba(140,82,16,0.28) !important; }
+.arc-bar .arc-seg:nth-child(10) { background:rgba(31,79,138,0.32) !important; }
+.arc-bar .arc-seg:nth-child(11) { background:rgba(31,79,138,0.5) !important; border-top-color:#1f4f8a !important; }
+.arc-bar .arc-seg:nth-child(12) { background:rgba(151,30,22,0.4) !important; border-top-color:#00585b !important; }
+.arc-bar + div > span > span { border-radius:0 !important; width:10px !important; height:10px !important; }
+[style*="184,146,42,0.5)"] { background:rgba(168,98,15,0.5) !important; }
+[style*="42,107,143,0.6)"] { background:rgba(31,79,138,0.6) !important; }
+[style*="139,94,26,0.7)"]  { background:rgba(110,66,18,0.75) !important; }
+[style*="196,33,90,0.6)"]  { background:rgba(151,30,22,0.62) !important; }
+.arc-bar + div > span[style*="color:var(--gold)"] { color:#9a6410 !important; }
+.arc-bar + div > span > span[style*="background:var(--gold)"] { background:#b87a14 !important; }
+:root[data-theme="dark"] .arc-bar + div > span[style*="color:var(--gold)"] { color:#d9a24a !important; }
+:root[data-theme="dark"] .arc-bar + div > span > span[style*="background:var(--gold)"] { background:#d9a24a !important; }
+
+/* Five key moments */
+.scene-cards { gap:1rem; }
+.scene-card { border:1px solid var(--border2); box-shadow:none; }
+.scene-card:nth-child(1){--sca:var(--mk-ochre)} .scene-card:nth-child(2){--sca:var(--mk-red)} .scene-card:nth-child(3){--sca:var(--mk-earth)}
+.scene-card:nth-child(4){--sca:var(--mk-river)} .scene-card:nth-child(5){--sca:var(--mk-teal)}
+:root[data-theme="dark"] .scene-card:nth-child(1){--sca:var(--mk-ochre)} :root[data-theme="dark"] .scene-card:nth-child(3){--sca:var(--mk-earth)}
+:root[data-theme="dark"] .scene-card:nth-child(4){--sca:var(--mk-river)} :root[data-theme="dark"] .scene-card:nth-child(5){--sca:var(--mk-teal)}
+.scene-card:nth-child(1) .sc-num { background:#8a4f0a !important; }
+.scene-card:nth-child(2) .sc-num { background:#971e16 !important; }
+.scene-card:nth-child(3) .sc-num { background:#6e4212 !important; }
+.scene-card:nth-child(4) .sc-num { background:#1f4f8a !important; }
+.scene-card:nth-child(5) .sc-num { background:#00585b !important; }
+.sc-num { color:#f4e9cc; font-size:0.72rem; letter-spacing:0.14em; opacity:1; }
+.sc-orig { background:var(--surface); border-right:1px solid var(--border2); }
+.sc-dir { background:var(--surface2); }
+.sc-orig-label, .sc-dir-eye { font-size:0.7rem; letter-spacing:0.14em; opacity:1; }
+.sc-orig-title { font-family:var(--mk-head); font-weight:500; font-size:clamp(1.15rem, 2vw, 1.5rem); line-height:1.25; }
+.sc-orig-text { font-style:normal; font-size:0.96rem; line-height:1.7; color:var(--muted); }
+.sc-dir-text { font-size:0.98rem; line-height:1.75; color:var(--text2); }
+.sc-dir-text strong { font-weight:600; }
+.sc-key { border-radius:0; font-family:var(--mk-head); font-size:1rem; letter-spacing:0; line-height:1.5; background:var(--gold-bg); }
+
+/* ── SHOW FLOW ── */
+.act-header { background:var(--bg); }
+:root:not([data-theme="dark"]) .act-header { background-image:url("assets/madhubani/paper.webp"); background-size:850px 550px; background-attachment:fixed; }
+.act-label { font-family:var(--mk-head); font-weight:500; font-size:clamp(1.25rem, 2.2vw, 1.6rem); }
+.act-label[style*="var(--gold)"]        { color:var(--mk-ochre) !important; }
+.act-label[style*="var(--river-light)"] { color:var(--mk-river) !important; }
+.act-label[style*="#c47a3a"]            { color:var(--mk-red) !important; }
+.act-label[style*="#9f7ab8"]            { color:var(--mk-teal) !important; }
+.act-line { background:var(--mk-rule); }
+.act-counts { font-size:0.7rem; letter-spacing:0.1em; font-weight:500; }
+.act-counts b { font-weight:700; }
+
+.flow-header-row, .flow-row, .song-header, .song-row { border-color:var(--border2); }
+.flow-header-cell, .song-header-cell { font-size:0.7rem; letter-spacing:0.12em; color:var(--muted); background:rgba(138,79,10,0.1); }
+:root[data-theme="dark"] .flow-header-cell, :root[data-theme="dark"] .song-header-cell { background:var(--bg2); }
+.flow-row, .song-row { background:var(--surface); box-shadow:none; }
+.flow-row:hover, .song-row:hover { background:var(--surface2); }
+.flow-row.has-songs { background:rgba(138,79,10,0.09); }
+:root[data-theme="dark"] .flow-row.has-songs { background:var(--bg2); }
+.flow-row.key-scene { border-color:var(--mk-teal); }
+.flow-cell, .song-cell { border-right-color:var(--border); }
+.flow-num { font-size:0.84rem; color:var(--mk-teal); letter-spacing:0.04em; }
+.flow-scene-name { font-family:var(--mk-head); font-weight:500; font-size:1.05rem; line-height:1.3; }
+.flow-song, .song-label { font-family:var(--mk-head); font-style:italic; font-size:0.98rem; color:var(--text2); }
+.flow-dancers { font-size:0.92rem; color:var(--text2); }
+.scene-song-subrow { border-top-color:var(--border); }
+.scene-song-subrow .flow-cell.song-indent { background:transparent; }
+.song-row .editable-cell[data-field="people"] { opacity:1 !important; }
+.flow-row.is-narr { border-color:var(--border2); opacity:0.85; }
+.flow-row.is-narr .flow-cell { font-family:var(--mk-head); }
+
+.flow-tag { border-radius:0; font-size:0.66rem; letter-spacing:0.1em; min-height:26px; padding:0.25rem 0.6rem; }
+.r-check, .r-check-box { border-radius:0; }
+
+/* ── SONGS ── */
+.song-title { font-family:var(--mk-head); font-weight:500; font-size:1.02rem; }
+.song-meta { font-size:0.94rem; color:var(--text2); }
+
+/* ── CHARACTERS ── */
+.char-grid { gap:1rem; }
+.char-card { background:var(--surface); border:1px solid var(--border2); box-shadow:none; }
+.char-card:hover { box-shadow:none; background:var(--surface2); }
+.char-card-top { border-bottom:1px solid var(--border2); }
+.char-card-top::before { height:5px; }
+.char-card:nth-child(1){--cc:var(--mk-red);--cc-bg:rgba(151,30,22,0.08);--cc-b:rgba(151,30,22,0.4)}
+.char-card:nth-child(2){--cc:var(--mk-leaf);--cc-bg:rgba(63,101,38,0.09);--cc-b:rgba(63,101,38,0.42)}
+.char-card:nth-child(3){--cc:var(--mk-ochre);--cc-bg:rgba(138,79,10,0.09);--cc-b:rgba(138,79,10,0.42)}
+.char-card:nth-child(4){--cc:var(--mk-teal);--cc-bg:rgba(0,88,91,0.08);--cc-b:rgba(0,88,91,0.4)}
+.char-card:nth-child(5){--cc:var(--mk-river);--cc-bg:rgba(31,79,138,0.08);--cc-b:rgba(31,79,138,0.4)}
+:root[data-theme="dark"] .char-card:nth-child(1){--cc:var(--mk-red);--cc-bg:rgba(226,122,98,0.1);--cc-b:rgba(226,122,98,0.4)}
+:root[data-theme="dark"] .char-card:nth-child(2){--cc:var(--mk-leaf);--cc-bg:rgba(156,197,122,0.1);--cc-b:rgba(156,197,122,0.4)}
+:root[data-theme="dark"] .char-card:nth-child(3){--cc:var(--mk-ochre);--cc-bg:rgba(217,162,74,0.1);--cc-b:rgba(217,162,74,0.4)}
+:root[data-theme="dark"] .char-card:nth-child(4){--cc:var(--mk-teal);--cc-bg:rgba(95,184,177,0.1);--cc-b:rgba(95,184,177,0.4)}
+:root[data-theme="dark"] .char-card:nth-child(5){--cc:var(--mk-river);--cc-bg:rgba(134,176,224,0.1);--cc-b:rgba(134,176,224,0.4)}
+.char-accent { font-family:var(--mk-display); font-weight:400; font-size:3.6rem; opacity:0.14; }
+.char-role { font-size:0.72rem; letter-spacing:0.14em; opacity:1; }
+.char-name { font-family:var(--mk-head); font-weight:500; font-size:1.6rem; line-height:1.2; }
+.char-sanskrit { font-family:var(--mk-head); font-size:1rem; color:var(--muted); }
+.char-played { font-size:0.7rem; letter-spacing:0.1em; font-weight:500; }
+.char-played strong { font-weight:700; }
+.char-section-title { font-size:0.7rem; letter-spacing:0.14em; opacity:1; }
+.char-section-text { font-size:0.98rem; line-height:1.7; color:var(--text2); }
+.char-scene-tag { border-radius:0; font-size:0.68rem; letter-spacing:0.06em; font-weight:500; padding:0.28rem 0.6rem; }
+
+/* ── CAST ── */
+.cast-grid-wrap { gap:1rem; }
+.cast-card { background:var(--surface); border:1px solid var(--border2); }
+.cast-card-top { border-bottom:1px solid var(--border2); }
+.cast-initial {
+  font-family:var(--mk-display); font-weight:400; font-size:1.35rem; color:var(--mk-title);
+  background:var(--surface2); border:2px solid var(--mk-teal);
+}
+.cast-dancer-name { font-family:var(--mk-head); font-weight:500; font-size:1.25rem; }
+.cast-dancer-stats { font-size:0.7rem; letter-spacing:0.1em; font-weight:500; }
+.cast-section-label { font-size:0.68rem; letter-spacing:0.14em; }
+.cast-scene-pill { border-radius:0; font-size:0.72rem; letter-spacing:0.04em; border-color:rgba(0,88,91,0.35); }
+:root[data-theme="dark"] .cast-scene-pill { border-color:rgba(95,184,177,0.35); }
+.cast-scene-pill-name { font-family:var(--mk-head); font-size:0.82rem; text-transform:none; font-weight:400; }
+.cast-song-pill { border-radius:0; font-family:var(--mk-head); font-size:0.9rem; border-color:var(--border2); }
+.cast-refresh-btn { font-size:0.7rem; }
+
+/* ── REFERENCES ── */
+.ref-origin { background:rgba(255,249,230,0.6); border:1px solid var(--border2); }
+:root[data-theme="dark"] .ref-origin { background:var(--surface2); }
+.ref-origin::before { width:5px; background:var(--mk-teal); }
+.ref-origin-eyebrow { font-size:0.72rem; letter-spacing:0.14em; color:var(--mk-teal); }
+.ref-origin-eyebrow::after { background:var(--mk-rule); }
+.ref-origin-title { font-family:var(--mk-display); font-weight:400; font-size:2.8rem; line-height:1; color:var(--mk-title); letter-spacing:0.07em; }
+.ref-origin-sub { font-family:var(--mk-head); font-size:1.02rem; letter-spacing:0; }
+.ref-origin-text { font-size:1rem; line-height:1.8; }
+.ref-grid { gap:1rem; }
+.ref-card { background:var(--surface); border:1px solid var(--border2); }
+.ref-card:hover { box-shadow:none; background:var(--surface2); }
+.ref-card-thumb { background:#2b2016 !important; outline:1px solid rgba(234,216,169,0.4); outline-offset:-9px; }
+.ref-card:nth-child(7n+2) .ref-card-thumb { background:#5c1711 !important; }
+.ref-card:nth-child(7n+3) .ref-card-thumb { background:#583209 !important; }
+.ref-card:nth-child(7n+4) .ref-card-thumb { background:#172f55 !important; }
+.ref-card:nth-child(7n+5) .ref-card-thumb { background:#003a3c !important; }
+.ref-card:nth-child(7n+6) .ref-card-thumb { background:#2c3f16 !important; }
+.ref-card-thumb { align-items:flex-end; }
+.ref-thumb-title { font-size:0.74rem; letter-spacing:0.1em; line-height:1.5; color:rgba(244,233,204,0.8); padding:0 1.4rem 1.35rem; }
+.ref-play-btn { background:transparent; }
+.ref-play-btn:hover { background:rgba(0,0,0,0.18); }
+.ref-play-icon { background:rgba(244,233,204,0.1); border:2px solid rgba(244,233,204,0.75); }
+.ref-play-btn:hover .ref-play-icon { background:rgba(244,233,204,0.22); border-color:#f4e9cc; }
+.ref-play-arrow { border-left-color:#f4e9cc; }
+.ref-cat { font-size:0.7rem; letter-spacing:0.12em; color:var(--mk-teal); opacity:1; }
+.ref-title { font-family:var(--mk-head); font-weight:500; font-size:1.12rem; line-height:1.35; }
+.ref-notes { font-size:0.96rem; line-height:1.7; color:var(--text2); }
+
+/* ── DEPENDENCY CHIPS (hidden by default; palette kept ready) ── */
+.dep-chip { border-radius:0; font-size:0.68rem; letter-spacing:0.06em; }
+.dep-red   { background:rgba(151,30,22,0.1);  color:#971e16; border-color:rgba(151,30,22,0.4); }
+.dep-amber { background:rgba(168,98,15,0.13); color:#74420a; border-color:rgba(168,98,15,0.45); }
+.dep-blue  { background:rgba(31,79,138,0.1);  color:#1f4f8a; border-color:rgba(31,79,138,0.4); }
+[data-theme="dark"] .dep-red   { background:rgba(226,122,98,0.12); color:#ec8f78; border-color:rgba(226,122,98,0.4); }
+[data-theme="dark"] .dep-amber { background:rgba(217,162,74,0.12); color:#e2b060; border-color:rgba(217,162,74,0.4); }
+[data-theme="dark"] .dep-blue  { background:rgba(134,176,224,0.12); color:#9cc0ea; border-color:rgba(134,176,224,0.4); }
+@keyframes hashFlash {
+  0%   { box-shadow:0 0 0 0 rgba(0,88,91,0.5); background:rgba(0,88,91,0.14); }
+  100% { box-shadow:0 0 0 14px rgba(0,88,91,0);  background:transparent; }
+}
+.hash-flash { border-radius:0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  .site-header { height:auto; padding:0.55rem 0.85rem calc(0.5rem + 14px); }
+  .site-header::after { height:14px; }
+  .header-title { font-size:1.45rem; }
+  .nav-tabs { border-top:1px solid var(--border2); gap:4px; padding-top:0.5rem; }
+  .nav-tab {
+    border-radius:0; background:var(--surface); border:1px solid var(--border2);
+    font-size:0.72rem; letter-spacing:0.08em; min-height:38px; padding:0.5rem 0.8rem; margin:0;
+  }
+  .nav-tab.active { background:var(--mk-teal); color:#f4e9cc; border-color:var(--mk-teal); }
+  :root[data-theme="dark"] .nav-tab.active { color:#1e1710; }
+  .theme-toggle { width:38px; height:38px; }
+  .dash-bar { padding:0.75rem 1rem; gap:0.9rem 1.4rem; }
+  .dash-divider { display:none; }
+  .dash-progress { flex-basis:100%; min-width:0; }
+
+  .hero {
+    grid-template-columns:minmax(0, 1fr); grid-template-rows:none;
+    padding:1rem 1rem 2.25rem; text-align:center; row-gap:0;
+  }
+  .hero-art { grid-column:1; grid-row:1; margin-bottom:1.6rem; padding:4px; }
+  .hero-eyebrow { grid-row:2; margin-bottom:0.8rem; font-size:0.7rem; }
+  .hero-title { grid-row:3; font-size:clamp(3rem, 15vw, 4.2rem); }
+  .hero-sanskrit { grid-row:4; }
+  .hero-tagline { grid-row:5; margin:1.2rem auto 0; font-size:1.1rem; }
+  .river-rule { border-left:0; border-right:0; }
+
+  .section-wrap { padding:2.75rem 1rem; }
+  .pillars-grid, .scene-cards, .char-grid, .ref-grid, .cast-grid-wrap { gap:0.75rem; }
+  .scene-item { border-radius:0; border:1px solid var(--border2); background:var(--surface); box-shadow:none; }
+  .flow-row .flow-cell:nth-child(1) { font-family:var(--mk-body); font-size:0.72rem; letter-spacing:0.1em; color:var(--mk-teal); background:rgba(138,79,10,0.1); }
+  :root[data-theme="dark"] .flow-row .flow-cell:nth-child(1) { background:var(--bg2); }
+  .flow-row .flow-cell:nth-child(3)::before, .scene-song-subrow .flow-cell:nth-child(3)::before,
+  .flow-row .flow-cell:nth-child(4)::before, .scene-song-subrow .flow-cell:nth-child(4)::before,
+  .flow-row .flow-cell:nth-child(5)::before, .scene-song-subrow .flow-cell:nth-child(5)::before,
+  .flow-row .flow-cell:nth-child(6)::before, .scene-song-subrow .flow-cell:nth-child(6)::before,
+  .flow-row .flow-cell:nth-child(7)::before, .scene-song-subrow .flow-cell:nth-child(7)::before {
+    font-family:var(--mk-body) !important; font-weight:600; text-transform:uppercase; font-size:0.66rem !important; letter-spacing:0.12em !important; color:var(--muted);
+  }
+  .song-header { display:none; }
+  .song-item { margin-bottom:0.6rem; }
+  .song-row { grid-template-columns:minmax(0, 1fr) auto; border:1px solid var(--border2); }
+  .song-cell { border-right:none; border-bottom:1px solid var(--border); padding:0.55rem 0.85rem; font-size:0.94rem; }
+  .song-cell:nth-child(1) { grid-column:1 / -1; background:rgba(138,79,10,0.09); padding:0.7rem 0.85rem; }
+  :root[data-theme="dark"] .song-cell:nth-child(1) { background:var(--bg2); }
+  .song-cell:nth-child(2) { grid-column:1; flex-direction:column; align-items:flex-start; gap:2px; }
+  .song-cell:nth-child(3) { grid-column:2; flex-direction:column; align-items:flex-end; justify-content:flex-start !important; gap:2px; border-left:1px solid var(--border); min-width:5.5rem; }
+  .song-cell:nth-child(4) { display:flex !important; grid-column:1 / -1; flex-direction:column; align-items:flex-start; gap:2px; }
+  .song-cell:nth-child(5) { display:flex !important; grid-column:1 / -1; gap:8px; border-bottom:none; justify-content:flex-start !important; }
+  .song-cell:nth-child(2)::before, .song-cell:nth-child(3)::before, .song-cell:nth-child(4)::before, .song-cell:nth-child(5)::before {
+    font-family:var(--mk-body); font-weight:600; text-transform:uppercase; font-size:0.66rem; letter-spacing:0.12em; color:var(--muted);
+  }
+  .song-cell:nth-child(2)::before { content:'Genre'; }
+  .song-cell:nth-child(3)::before { content:'People'; }
+  .song-cell:nth-child(4)::before { content:'Primary dancers'; }
+  .song-cell:nth-child(5)::before { content:'Status'; }
+  .act-header { gap:0.4rem 0.9rem; flex-wrap:wrap; }
+  .act-counts { white-space:normal; }
+  .arc-bar { overflow-x:auto; overflow-y:hidden; align-items:flex-end; height:auto; min-height:80px; padding-bottom:6px; scrollbar-width:thin; }
+  .arc-seg { flex-shrink:0; }
+  .act-line { min-width:2rem; }
+  .ref-origin { padding:1.6rem 1.25rem 1.6rem 1.5rem; }
+  .ref-origin-title { font-size:2.3rem; }
+  .sc-orig, .sc-dir { padding:1.4rem 1.2rem; }
+}
+@media (max-width:560px) {
+  .scene-card { grid-template-columns:40px minmax(0, 1fr); }
+  .sc-num { font-size:0.66rem; letter-spacing:0.1em; }
+  .char-card-top { padding:1.5rem 1.25rem; }
+  .char-body { padding:1.25rem; }
+  .pillar { padding:1.5rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="header-brand">
+    <div class="header-title">SANGAM</div>
+    <div class="header-sub">ABC a bollywood company &nbsp;·&nbsp; NOV 7–8 2026</div>
+  </div>
+  <nav class="nav-tabs" aria-label="Sections">
+    <button class="nav-tab active" onclick="showTab('direction',this)">Direction</button>
+    <button class="nav-tab" onclick="showTab('flow',this)">Show Flow</button>
+    <button class="nav-tab" onclick="showTab('songs',this)">Songs</button>
+    <button class="nav-tab" onclick="showTab('characters',this)">Characters</button>
+    <button class="nav-tab" onclick="showTab('cast',this)">Cast</button>
+    <button class="nav-tab" onclick="showTab('references',this)">References</button>
+  </nav>
+  <div class="header-actions">
+    <button class="export-btn" onclick="exportForDancers()" title="Export view-only snapshot as a file">📤 &nbsp;Export</button>
+    <button class="edit-btn" onclick="toggleEditMode()" id="edit-btn" title="Toggle edit mode">✏</button>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle theme">☀️</button>
+  </div>
+</header>
+
+<!-- EDIT MODE BAR -->
+<div class="edit-mode-bar" id="edit-mode-bar">
+  <span class="edit-mode-label">✏ &nbsp;EDIT MODE</span>
+  <span class="edit-mode-hint">Click any gold-bordered field to edit &nbsp;·&nbsp; Changes auto-save to browser</span>
+  <div class="edit-bar-actions">
+    <span class="save-status" id="save-status"></span>
+    <button class="link-file-btn" id="link-file-btn" title="Run SANGAM-save-server.py to enable direct saving">⚫ &nbsp;Server</button>
+    <button class="save-file-btn" id="save-main-btn" onclick="saveFile()" title="Save changes to file">💾 &nbsp;Save</button>
+  </div>
+</div>
+
+<!-- DASHBOARD BAR -->
+<div class="dash-bar" id="dash-bar">
+  <div class="dash-stat">
+    <div class="dash-label">DAYS TO SHOW</div>
+    <div class="dash-value" id="days-count">—</div>
+  </div>
+  <div class="dash-divider"></div>
+  <div class="dash-stat">
+    <div class="dash-label">RUNNING TIME</div>
+    <div class="dash-value" id="total-duration">— <span>timed</span></div>
+  </div>
+  <div class="dash-divider"></div>
+  <div class="dash-stat">
+    <div class="dash-label">SONGS READY</div>
+    <div class="dash-value" id="songs-ready">3 <span>/ 19</span></div>
+  </div>
+  <div class="dash-stat">
+    <div class="dash-label">IN PROGRESS</div>
+    <div class="dash-value" id="songs-progress">14 <span>songs</span></div>
+  </div>
+  <div class="dash-stat">
+    <div class="dash-label">COMPLETELY NEW</div>
+    <div class="dash-value" id="songs-new">2 <span>songs</span></div>
+  </div>
+  <div class="dash-divider"></div>
+  <div class="dash-progress">
+    <div class="dash-progress-label">SONG READINESS</div>
+    <div class="dash-bar-track">
+      <div class="dash-bar-seg" style="background:#2a7a4a;width:15.8%"></div>
+      <div class="dash-bar-seg" style="background:#d4a840;width:73.7%"></div>
+      <div class="dash-bar-seg" style="background:#c4215a;width:10.5%"></div>
+    </div>
+    <div class="dash-legend">
+      <div class="dash-legend-item"><div class="dash-legend-dot" style="background:#2a7a4a"></div>Ready</div>
+      <div class="dash-legend-item"><div class="dash-legend-dot" style="background:#d4a840"></div>In progress</div>
+      <div class="dash-legend-item"><div class="dash-legend-dot" style="background:#c4215a"></div>New</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 1: CREATIVE DIRECTION
+════════════════════════════════════════ -->
+<main id="main-content">
+<div id="tab-direction" class="panel active">
+  <section class="hero">
+    <figure class="hero-art" aria-hidden="true"><picture><source type="image/webp" srcset="assets/madhubani/hero-800.webp 800w, assets/madhubani/hero-1200.webp 1200w" sizes="(max-width: 900px) calc(100vw - 2rem), 600px"><img src="assets/madhubani/hero-800.jpg" alt="" width="800" height="600" decoding="async" fetchpriority="high"></picture></figure>
+    <p class="hero-eyebrow">ABC a bollywood company &nbsp;·&nbsp; November 2026 &nbsp;·&nbsp; Creative Direction</p>
+    <h1 class="hero-title">SANGAM</h1>
+    <p class="hero-sanskrit">संगम &nbsp;·&nbsp; Confluence</p>
+    <p class="hero-tagline">An all-female village. A river goddess. A rejected boy.<br>A calamity born from heartbreak. A queen whose love cost her everything.</p>
+  </section>
+  <div class="river-rule">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none" height="40">
+      <path d="M0,20 C180,5 360,35 540,20 C720,5 900,35 1080,20 C1260,5 1350,30 1440,20 L1440,40 L0,40Z"/>
+      <path d="M0,28 C240,14 480,38 720,25 C960,12 1200,36 1440,28 L1440,40 L0,40Z" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="section-wrap" style="padding-top:3.5rem">
+    <p class="section-label">Creative North Star</p>
+    <div class="pillars-grid">
+      <div class="pillar"><div class="pillar-num">I</div><p class="pillar-title">Ritual</p><p class="pillar-text">Movement is meditative before it is explosive. Repetition, collective breathing, ensemble synchronisation. Stillness carries as much weight as the most complex choreography.</p></div>
+      <div class="pillar"><div class="pillar-num">II</div><p class="pillar-title">Spectacle</p><p class="pillar-text">Strategic projections, fabric as landscape, lighting transformations. The blue dupatta is not a prop — it is the river. When it is pulled away, the audience watches a world die.</p></div>
+      <div class="pillar"><div class="pillar-num">III</div><p class="pillar-title">Emotional Arc</p><p class="pillar-text">Every climactic moment must be earned through restraint. Joy is most devastating when someone is missing from it. The queen's sacrifice — her life — means nothing to an audience that has not watched her prison become her love.</p></div>
+    </div>
+  </div>
+  <div class="section-wrap" style="padding-top:3rem;padding-bottom:2rem">
+    <p class="section-label">Dramatic Arc</p>
+    <h2 class="section-heading">Emotional Temperature — 21 Scenes</h2>
+    <p class="section-sub">Gold ◆ markers indicate the five key creative moments.</p>
+    <div class="arc-bar">
+      <div class="arc-seg" style="background:rgba(184,146,42,0.12);flex:1;height:32px"><span class="arc-seg-label">PRE</span></div>
+      <div class="arc-seg" style="background:rgba(184,146,42,0.22);flex:3;height:46px"><span class="arc-seg-label">S1–3</span></div>
+      <div class="arc-seg" style="background:rgba(42,107,143,0.28);flex:2;height:56px;border-top:2px solid rgba(74,155,191,0.5)"><span class="arc-seg-label">S4–5</span></div>
+      <div class="arc-seg" style="background:rgba(184,146,42,0.16);flex:2;height:50px"><span class="arc-seg-label">S6–7</span></div>
+      <div class="arc-seg" style="background:rgba(184,146,42,0.26);flex:2;height:62px"><span class="arc-seg-label">S8–9</span></div>
+      <div class="arc-seg" style="background:linear-gradient(to right,rgba(184,146,42,0.45),rgba(160,58,90,0.45));flex:2;height:80px;border-top:3px solid #a03a5a"><span class="arc-seg-label">S10 — Feast → Rejection ◆</span></div>
+      <div class="arc-seg" style="background:rgba(139,94,26,0.5);flex:1;height:80px;border-top:3px solid var(--drought-light)"><span class="arc-seg-label">S13 ◆</span></div>
+      <div class="arc-seg" style="background:rgba(139,94,26,0.3);flex:1;height:54px"><span class="arc-seg-label">S14</span></div>
+      <div class="arc-seg" style="background:linear-gradient(to right,rgba(139,94,26,0.28),rgba(184,146,42,0.25));flex:4;height:68px"><span class="arc-seg-label">S15–18</span></div>
+      <div class="arc-seg" style="background:rgba(42,107,143,0.3);flex:2;height:72px"><span class="arc-seg-label">S19–20</span></div>
+      <div class="arc-seg" style="background:rgba(42,107,143,0.45);flex:1;height:62px;border-top:3px solid var(--river-light)"><span class="arc-seg-label">S17 ◆ Sangam</span></div>
+      <div class="arc-seg" style="background:linear-gradient(to right,rgba(42,107,143,0.4),rgba(196,33,90,0.4),rgba(220,100,30,0.35));flex:4;height:80px;border-top:3px solid var(--holi-teal)"><span class="arc-seg-label">S18–20 ◆</span></div>
+    </div>
+    <div style="display:flex;gap:1.8rem;flex-wrap:wrap;margin-top:1rem">
+      <span style="font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.18em;color:var(--muted);display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:rgba(184,146,42,0.5);display:inline-block"></span>Village life</span>
+      <span style="font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.18em;color:var(--muted);display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:rgba(42,107,143,0.6);display:inline-block"></span>River / Uma</span>
+      <span style="font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.18em;color:var(--muted);display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:rgba(139,94,26,0.7);display:inline-block"></span>Drought</span>
+      <span style="font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.18em;color:var(--muted);display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:rgba(196,33,90,0.6);display:inline-block"></span>Catharsis / Holi</span>
+      <span style="font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.18em;color:var(--gold);display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block"></span>Key moment</span>
+    </div>
+  </div>
+  <div class="section-wrap" style="padding-top:2.5rem">
+    <p class="section-label">Five Key Moments</p>
+    <div class="scene-cards">
+      <div class="scene-card">
+        <div class="sc-num" style="background:#b8922a">SCENE 01 · BIRTH</div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">The Birth of a Boy &amp; a River</h3><p class="sc-orig-text"><strong>Desert village.</strong> Baby is born and rejected. Maha cradles the child alone — she knows what she must do. She weeps. Her tears become the first water this earth has ever held. The blue dupatta unfurls FROM her body. She lays the baby on it. <strong>The river carries him away to Sun &amp; Moon</strong>, who receive him as guardians. Maha stands empty-handed. The village wakes to flowing water and celebrates — never knowing it was bought with a child.</p></div>
+        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>Begin in total darkness. Desert. Cracked earth. Collective breath.</strong> Ganavya's "Call It Luck If You Want To" rises as the baby passes through the ensemble. The village turns away. Maha is left alone with the child. Silence. Then her tears begin — and <strong>Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave)</strong> rises. The blue dupatta unfurls FROM her body as she weeps. The river forms from her grief. She lays the baby on the water. The dupatta carries the baby across the stage. At the far edge, <strong>Sun &amp; Moon enter and lift him</strong> — they become his guardians in this exact moment. The river remains. Maha is empty-handed. The village wakes to abundance. They celebrate the water. <strong>They do not know what it cost.</strong> Only Maha keeps her hand at her heart.</p><div class="sc-key">"The village built its entire life on a child they threw away. Every drink of water is the boy they rejected. They drink her grief and call it bounty."</div></div>
+      </div>
+      <div class="scene-card">
+        <div class="sc-num" style="background:#a03a5a">SCENE 10 · FEAST → REJECTION</div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Village Feast → Queen's Rejection</h3><p class="sc-orig-text">Kalbeliya peaks — the boy is in it, dancing with the village, accepted. At the climax the music cuts dead. Queen's gesture. Single distant voice. Full company freeze. Act 1 ends in stillness — no narration.</p></div>
+        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text">Build the Kalbeliya to its absolute peak — <strong>the boy is in it</strong>, dancing with the village, accepted. Then: <strong>the music cuts dead</strong>. Not a fade — a cut. In absolute stillness, the Queen makes <strong>one gesture</strong>. The villagers <strong>step back, one by one</strong>. The boy reaches toward someone he danced with moments ago — and they look away. <strong>This is not one queen's cruelty. This is a room of people failing a cosmic test.</strong> He simply understands. The audience should feel the violence of silence — and the violence of being unloved.</p><div class="sc-key">"The village does not fail because the queen rejects him. The village fails because no one chooses him."</div></div>
+      </div>
+      <div class="scene-card">
+        <div class="sc-num" style="background:#b06a20">SCENE 13 · DROUGHT</div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Chaos & Drought</h3><p class="sc-orig-text">The river disappears. Dead trees. Strobe, smoke machine. Blue dupattas vanish.</p></div>
+        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text">The blue dupattas must be <strong>physically taken</strong> — violently. Multiple dancers seize them and drag them offstage in a kinetic storm. The audience watches the river die. The ensemble becomes <strong>fragmented, searching</strong>. The collective breath of Scene 1 is shattered. Uma collapses, unseen.</p><div class="sc-key">"The audience must feel the absence of what was always there."</div></div>
+      </div>
+      <div class="scene-card">
+        <div class="sc-num" style="background:#2a6b8f">SCENE 17 · SANGAM</div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Sangam</h3><p class="sc-orig-text">Ode to Baji (Rani verse) → Mystic Tribe. Svetlana, Swapnil &amp; ABC. The Queen's sacrifice — the pivotal moment of the show.</p></div>
+        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>Strip everything.</strong> No ensemble. Perhaps no music — only breathing or wind. Her movement becomes smaller, lower — then inward. She does not fall. <strong>She gives.</strong> He reaches toward her; she does not reach back. She places her hand against his chest — and <strong>her soul crosses over</strong>. The lights shift before any music does. The Queen's body dies; the boy stands up changed — moving with both his weight and hers. <strong>Ardhanarishwar. Two became one.</strong> The audience understands what has happened before the village does. <strong>She is not lost. She chose where to go.</strong></p><div class="sc-key">"She does not surrender. She becomes him. Love is the only thing that could undo the drought — and it took two souls in one body to prove it."</div></div>
+      </div>
+      <div class="scene-card">
+        <div class="sc-num" style="background:#1a8b7a">S18–20 · RAINFALL + RETURN + HOLI</div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Rainfall, Return & Holi</h3><p class="sc-orig-text"><strong>S23 — Rainfall:</strong> Ghanan Ghanan. <strong>S24 — Return:</strong> Ghar More Pardesiya. <strong>S25 — Holi.</strong> Maha returns as River Goddess. Full company.</p></div>
+        <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>S22:</strong> The Queen's body is gone. The boy stands alone. He moves with both his weight and hers. The audience watches a body learning to be two. It is the most intimate moment of the show. <strong>S23:</strong> Silence. Total blackout. One drop. Then another. Then a monsoon. Blue dupattas re-enter one by one. <strong>Maha emerges from the centre</strong> — the River Goddess returning to her source. <strong>S24–25:</strong> The boy is received, celebrated, loved. By the time Ghanan Ghanan hits full force, every body is water. The Holi finale is devastatingly joyful — <strong>but the queen's place is empty.</strong> The village celebrates. The boy celebrates. The person who made it all possible is not there. The audience must feel that absence even as they are swept into the joy.</p><div class="sc-key">"Joy is most devastating when someone is missing from it."</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="height:4rem"></div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 2: SHOW FLOW
+════════════════════════════════════════ -->
+<div id="tab-flow" class="panel">
+  <div class="section-wrap">
+    <p class="section-label">Show Flow</p>
+    <h2 class="section-heading">21 Scenes — Both Acts</h2>
+    <p class="section-sub" data-viewer-hide>Check off choreography (C), music (M), and tech (T) as each scene progresses. Click a status badge to update it.</p>
+    <div class="flow-header-row">
+      <div class="flow-header-cell">#</div>
+      <div class="flow-header-cell">Scene</div>
+      <div class="flow-header-cell">Song / Audio</div>
+      <div class="flow-header-cell">Dancers</div>
+      <div class="flow-header-cell">Costume</div>
+      <div class="flow-header-cell">Time</div>
+      <div class="flow-header-cell">Status</div>
+    </div>
+    <div class="act-header"><span class="act-label" style="color:var(--gold)">Set 1 — Origin</span><div class="act-line"></div><span class="act-counts" id="act-counts-1"></span></div>
+    <div id="flow-scenes"></div>
+    <div class="act-header" style="margin-top:2rem"><span class="act-label" style="color:var(--river-light)">Set 2 — The Boy</span><div class="act-line"></div><span class="act-counts" id="act-counts-2"></span></div>
+    <div id="flow-scenes-2"></div>
+    <div style="margin:2.5rem 0;display:flex;align-items:center;gap:1.2rem;opacity:0.7">
+      <div style="flex:1;height:1px;background:var(--border)"></div>
+      <span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.3em;color:var(--muted);white-space:nowrap">— INTERVAL —</span>
+      <div style="flex:1;height:1px;background:var(--border)"></div>
+    </div>
+    <div class="act-header" style="margin-top:0"><span class="act-label" style="color:#c47a3a">Set 3 — The Tribes</span><div class="act-line"></div><span class="act-counts" id="act-counts-3"></span></div>
+    <div id="flow-scenes-3"></div>
+    <div class="act-header" style="margin-top:2rem"><span class="act-label" style="color:#9f7ab8">Set 4 — Reunion</span><div class="act-line"></div><span class="act-counts" id="act-counts-4"></span></div>
+    <div id="flow-scenes-4"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 3: SONGS
+════════════════════════════════════════ -->
+<div id="tab-songs" class="panel">
+  <div class="section-wrap">
+    <p class="section-label">Songs & Cast</p>
+    <h2 class="section-heading">Full Song List</h2>
+    <p class="section-sub" id="songs-subtitle">songs across the production. Click a status badge to update readiness.</p>
+    <div class="song-header">
+      <div class="song-header-cell">Song Title</div>
+      <div class="song-header-cell">Genre</div>
+      <div class="song-header-cell">People</div>
+      <div class="song-header-cell">Primary Dancers</div>
+      <div class="song-header-cell">Status</div>
+      <div class="song-header-cell"></div>
+    </div>
+    <div id="songs-list"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 4: CHARACTERS
+════════════════════════════════════════ -->
+<div id="tab-characters" class="panel">
+  <div class="section-wrap">
+    <p class="section-label">Characters</p>
+    <h2 class="section-heading">Cast of SANGAM</h2>
+    <p class="section-sub">Five named characters carrying the dramatic arc of the show.</p>
+    <div class="char-grid">
+
+      <div class="char-card" id="char-Rani">
+        <div class="char-card-top">
+          <div class="char-accent">K</div>
+          <p class="char-role">The Queen</p>
+          <h3 class="char-name">Rani Kanō <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Rani',this)" title="Copy link to Rani">🔗</button></h3>
+          <p class="char-sanskrit">रानी कनो &nbsp;·&nbsp; Queen of the village</p>
+          <p class="char-played">Played by <strong>Svetlana Bubnova</strong></p>
+        </div>
+        <div class="char-body">
+          <div class="char-section">
+            <p class="char-section-title">Arc</p>
+            <p class="char-section-text" data-char-idx="0" data-char-field="arc">Rigid and fearful → catalyst for catastrophe → redeemed through ultimate sacrifice. She acts from terror, not malice. Control is her religion and her prison — until she dissolves both, offering her life to send her soul into the boy's heart. She does not live to see the world she heals.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Movement Vocabulary</p>
+            <p class="char-section-text" data-char-idx="0" data-char-field="movement">Imperial, grounded, commanding. Early scenes: stillness that demands attention. As she unravels: increasingly desperate, frantic. Scene 21: bare, still — then, in the act of giving, she moves inward. The final gesture is not collapse. It is release. Her last movement is the quietest thing on the stage.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Costume Direction</p>
+            <p class="char-section-text" data-char-idx="0" data-char-field="costume">Royal and structured. Deep indigo, black, burgundy. Heavy jewellery. By the sacrifice scene, layers removed — human fragility beneath.</p>
+          </div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S01 Birth</span><span class="char-scene-tag">S10 Feast → Rejection ◆</span><span class="char-scene-tag">S14 Invitation</span><span class="char-scene-tag">S21 Sacrifice ◆</span></div>
+        </div>
+      </div>
+
+      <div class="char-card" id="char-Manu">
+        <div class="char-card-top">
+          <div class="char-accent">M</div>
+          <p class="char-role">The Boy</p>
+          <h3 class="char-name">Manu / Kavi <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Manu',this)" title="Copy link to Manu">🔗</button></h3>
+          <p class="char-sanskrit">मनु / कवि &nbsp;·&nbsp; The poet, the bridge</p>
+          <p class="char-played">Played by <strong>Swapnil Dagliya</strong></p>
+        </div>
+        <div class="char-body">
+          <div class="char-section">
+            <p class="char-section-title">Arc</p>
+            <p class="char-section-text" data-char-idx="1" data-char-field="arc">Hidden, innocent → gradually discovered and accepted → publicly rejected, heartbroken → transformative bridge to the village's healing. Seeks connection, not validation.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Movement Vocabulary</p>
+            <p class="char-section-text" data-char-idx="1" data-char-field="movement">Gentle, fluid, responsive. Adult: quiet longing. Rejection: collapse or stillness — never rage. Appeal (S19): completely exposed, dancing with his entire being.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Costume Direction</p>
+            <p class="char-section-text" data-char-idx="1" data-char-field="costume">Plain, natural materials. Simple clothing as a child. Contemporary, unstructured as an adult. By the appeal scenes — minimal, emphasising vulnerability.</p>
+          </div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S07 Adulthood</span><span class="char-scene-tag">S08 Discovery</span><span class="char-scene-tag">S19 Appeal ◆</span><span class="char-scene-tag">S21 Sacrifice → Becoming ◆</span><span class="char-scene-tag">S24 Return</span></div>
+        </div>
+      </div>
+
+      <div class="char-card" id="char-Birds">
+        <div class="char-card-top">
+          <div class="char-accent">P</div>
+          <p class="char-role">The Sun & The Moon</p>
+          <h3 class="char-name">Prabha & Chaaya <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Birds',this)" title="Copy link to Prabha & Chaaya">🔗</button></h3>
+          <p class="char-sanskrit"><span lang="sa">प्रभा</span> & <span lang="sa">छाया</span> &nbsp;·&nbsp; Sun &amp; Moon · Light &amp; Shadow</p>
+          <p class="char-played">Played by <strong>Shreya Vaidya & Laurien De Ridder</strong></p>
+        </div>
+        <div class="char-body">
+          <div class="char-section">
+            <p class="char-section-title">Arc</p>
+            <p class="char-section-text" data-char-idx="2" data-char-field="arc">Cosmic caretakers who protect the boy not through ownership but through unconditional presence. They do not own him — they shelter him. Their role is freedom, not possession.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Movement Vocabulary</p>
+            <p class="char-section-text" data-char-idx="2" data-char-field="movement">Flowing, aerial, celestial. Veils suggest light and shadow, day and night. Near-synchronisation — two cosmic bodies orbiting the same centre. Rooted in Bollyfolk but with an ethereal, otherworldly quality.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Costume Direction</p>
+            <p class="char-section-text" data-char-idx="2" data-char-field="costume">Flowing fabric suggesting wings. Light colours — ivory, pale gold, soft grey. Movement should do the work, not the costume.</p>
+          </div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S02 Sun &amp; Moon</span><span class="char-scene-tag">S07 Adulthood cameo</span><span class="char-scene-tag">S19 Villagers' Appeal</span></div>
+        </div>
+      </div>
+
+      <div class="char-card" id="char-Vayu">
+        <div class="char-card-top">
+          <div class="char-accent">V</div>
+          <p class="char-role">The Messenger</p>
+          <h3 class="char-name">Vayu <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Vayu',this)" title="Copy link to Vayu">🔗</button></h3>
+          <p class="char-sanskrit">वायु &nbsp;·&nbsp; The Wind</p>
+          <p class="char-played">Played by <strong>Narcisse Merlier</strong></p>
+        </div>
+        <div class="char-body">
+          <div class="char-section">
+            <p class="char-section-title">Arc</p>
+            <p class="char-section-text" data-char-idx="3" data-char-field="arc">Neutral observer and active messenger between worlds. Carries the village's plea to the Four Tribes. Neither judge nor saviour — the medium through which cosmic forces communicate.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Movement Vocabulary</p>
+            <p class="char-section-text" data-char-idx="3" data-char-field="movement">Fluid, directional, purposeful. The wind doesn't hesitate. Movement has clear intention and direction. Unlike Sun &amp; Moon (ethereal) or the queen (grounded), Vayu is always in transit.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Costume Direction</p>
+            <p class="char-section-text" data-char-idx="3" data-char-field="costume">Contemporary and neutral — distinct from the village aesthetic. Could suggest both masculinity and androgyny. The wind has no fixed form.</p>
+          </div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S14 Tribe Invitation</span><span class="char-scene-tag">S19 Appeal</span></div>
+        </div>
+      </div>
+
+      <div class="char-card" id="char-Uma">
+        <div class="char-card-top">
+          <div class="char-accent">U</div>
+          <p class="char-role">The River Goddess / Mother</p>
+          <h3 class="char-name">Uma <button class="copy-link-btn" onclick="event.stopPropagation();copyDeepLink('char-Uma',this)" title="Copy link to Uma">🔗</button></h3>
+          <p class="char-sanskrit">उमा &nbsp;·&nbsp; The source of all water</p>
+          <p class="char-played">Played by <strong>Maha</strong></p>
+        </div>
+        <div class="char-body">
+          <div class="char-section">
+            <p class="char-section-title">Arc</p>
+            <p class="char-section-text" data-char-idx="4" data-char-field="arc">Mother of two children — the boy and the river. Both born the same moment, from the same grief. She creates the river to send her rejected baby downstream to Sun &amp; Moon, who become his guardians. The village drinks her tears and calls it abundance — they never know. When the village rejects her child a second time (S11), her heart breaks again and the river dies — there is no more baby to send away, the water has nowhere to go. The drought is not punishment. It is love withdrawn. The rain returns only when the boy is finally loved (S21).</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Movement Vocabulary</p>
+            <p class="char-section-text" data-char-idx="4" data-char-field="movement">Grounded, maternal, fluid as water. S01: stillness, then weeping — and the dupatta unfurls from her body. She lays the baby on the river she just made. She does not collapse. She <strong>gives</strong>. Through Part 1: she carries the secret. Her hand stays at her heart while the village celebrates the abundance she paid for. Drought (S13): she simply stops flowing — no theatre, no scream. The river withdraws because she has nothing left. Finale (S23–24): she returns not with drama but with inevitability. Water always finds its level.</p>
+          </div>
+          <div class="char-section">
+            <p class="char-section-title">Costume Direction</p>
+            <p class="char-section-text" data-char-idx="4" data-char-field="costume">Blue silks and water-like fabrics throughout. In the final revelation — deep river blue with gold. She is the blue dupatta; when it is taken away, so is she.</p>
+          </div>
+          <div class="char-key-scenes"><span class="char-scene-tag">S01 Birth ◆</span><span class="char-scene-tag">S08 Discovery</span><span class="char-scene-tag">S13 Drought ◆</span><span class="char-scene-tag">S19 Appeal</span><span class="char-scene-tag">S23 Rainfall ◆</span><span class="char-scene-tag">S24 Return</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 5: NOTES
+════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════
+     TAB 7: CAST OVERVIEW
+════════════════════════════════════════ -->
+<div id="tab-cast" class="panel">
+  <div class="section-wrap">
+    <p class="section-label">Cast Overview</p>
+    <h2 class="section-heading">Per-Dancer Assignments</h2>
+    <p class="section-sub">Reads cast assignments directly from the show data — rebuilds on every page load.</p>
+    <div class="cast-refresh-bar">
+      <button class="cast-refresh-btn" onclick="renderCastTab()">↺ &nbsp;Refresh</button>
+    </div>
+    <div class="cast-grid-wrap" id="cast-grid"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 6: REFERENCES & ORIGINS
+════════════════════════════════════════ -->
+<div id="tab-references" class="panel">
+  <div class="section-wrap">
+    <p class="section-label">References & Origins</p>
+    <h2 class="section-heading">Where SANGAM Comes From</h2>
+    <p class="section-sub">The original concept, choreography inspirations, and visual references that shaped the production.</p>
+
+    <!-- Origin Story -->
+    <div class="ref-origin">
+      <div class="ref-origin-eyebrow">Origin Concept — April 2026</div>
+      <h3 class="ref-origin-title">PURNA</h3>
+      <p class="ref-origin-sub">पूर्ण &nbsp;·&nbsp; Whole, Complete &nbsp;·&nbsp; The concept that became SANGAM</p>
+      <div class="ref-origin-text">
+        <p>In a distant land, there exists a village in the <strong>desert</strong> — a place where no men have ever been born, where women coexist with cracked earth, dust, and sky. They know no water. They have never known any.</p>
+        <p>One day, a woman becomes pregnant. When her child is born, the village gasps — it's a boy. The village turns away. The mother — Maha — is left alone with her rejected child. She weeps. And as she weeps, the first water this earth has ever held appears at her feet. A river is born from her grief, not for the village, but for her baby — <strong>so he can be carried somewhere he will be loved.</strong></p>
+        <p>The rejected baby travels downstream on the river his mother just made for him. At the far edge of the village, two celestial beings — <strong>the Sun and the Moon</strong> — receive him. They become his guardians in that exact moment because Maha trusted them with what she could not keep. They raise him with the wisdom of light and shadow, teaching him the dance of opposites: feminine &amp; masculine. From them he learns the only thing worth learning: <em>to love and be loved in return.</em></p>
+        <p>Years pass. The boy returns. The village discovers him, hesitates, then accepts him — for a moment. At the feast, the Queen sees him and rejects him publicly. The village steps back. The boy reaches out to someone he just danced with. They look away. <strong>This is the second rejection — and Maha cannot bear it.</strong> Her heart breaks again. The river withdraws. The drought begins. There is no more child to send away; the water has nowhere to go.</p>
+        <p>The village panics. They call on Nataraja, they summon the Four Tribes — ritual, strength, community, prayer. Each tribe gives everything. <strong>None of it is enough. None of it is love.</strong></p>
+        <p>Only then does the Queen understand. She does not surrender — <strong>she gives</strong>. She places her hand on the boy's chest and her soul crosses into him. Her body dies. He rises moving with both his weight and hers — <strong>Ardhanarishwar</strong>. Two souls in one body. Two opposites made whole.</p>
+        <p>Now the boy has been loved twice — once by Sun &amp; Moon, once by the Queen. The river returns. The rain falls. The village embraces him — not as disruption, but as the embodiment of wholeness — of <em>Purna</em>, the eternal circle of love, sacrifice, and unity. <strong>But the Queen's place is empty. And only Maha knows what it took.</strong></p>
+      </div>
+    </div>
+
+    <!-- Video References -->
+    <p class="section-label">Creative References</p>
+    <h3 class="section-heading" style="margin-bottom:0.4rem">7 Works That Shape the Production</h3>
+    <p class="section-sub">Each reference informs a specific scene, texture, or movement quality in SANGAM.</p>
+
+    <div class="ref-grid">
+
+      <div class="ref-card">
+        <div class="ref-card-thumb" style="background:linear-gradient(160deg,#16100a,#2a1e0e)">
+          <span class="ref-thumb-title">ganavya<br>ami pana so'dras</span>
+          <a class="ref-play-btn" href="https://www.youtube.com/watch?v=Mw3r5gPq-Bo" target="_blank" rel="noopener">
+            <div class="ref-play-icon"><div class="ref-play-arrow"></div></div>
+          </a>
+        </div>
+        <div class="ref-card-body">
+          <p class="ref-cat">Beginning Sequence</p>
+          <p class="ref-title">ganavya — ami pana so'dras</p>
+          <p class="ref-notes">The opening ritual quality. Tamil devotional music meeting contemporary minimalism — intimacy, stillness, the sacred before it becomes spectacle. Directly informs Scene 01's collective breath and the pre-verbal atmosphere before any movement begins.</p>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-thumb" style="background:linear-gradient(160deg,#1a0808,#380e0e)">
+          <span class="ref-thumb-title">LUMINI<br>A Contemporary Dance Piece</span>
+          <a class="ref-play-btn" href="https://www.youtube.com/watch?v=fdcfQT5j7PY" target="_blank" rel="noopener">
+            <div class="ref-play-icon"><div class="ref-play-arrow"></div></div>
+          </a>
+        </div>
+        <div class="ref-card-body">
+          <p class="ref-cat">Choreography Inspiration</p>
+          <p class="ref-title">Lumini (A Contemporary Dance Piece)</p>
+          <p class="ref-notes">Light as character. How darkness and emergence work together — bodies appearing from nothing, disappearing into nothing. Directly relevant to Scene 13 (drought blackout) and Scene 22 (the rainfall's first drop in total dark).</p>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-thumb" style="background:linear-gradient(160deg,#2a1600,#4a2a08)">
+          <span class="ref-thumb-title">Aayirathil Oruvan<br>Celebration Of Life</span>
+          <a class="ref-play-btn" href="https://www.youtube.com/watch?v=86djRLU_P9A" target="_blank" rel="noopener">
+            <div class="ref-play-icon"><div class="ref-play-arrow"></div></div>
+          </a>
+        </div>
+        <div class="ref-card-body">
+          <p class="ref-cat">Choreography Inspiration</p>
+          <p class="ref-title">Aayirathil Oruvan — Celebration Of Life</p>
+          <p class="ref-notes">The tribal energy, scale, and visceral joy of the Holi finale. How Indian folk choreography commands a large stage with collective rhythm and colour. Direct reference for Scenes 17–18 (Bhangra &amp; Bollyfolk tribes) and S25. The joy that exists even in the queen's absence.</p>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-thumb" style="background:linear-gradient(160deg,#080820,#141430)">
+          <span class="ref-thumb-title">Stages of Grief<br>AVANTGARDE SHOW 2023</span>
+          <a class="ref-play-btn" href="https://www.youtube.com/watch?v=IZio9bdkzTI" target="_blank" rel="noopener">
+            <div class="ref-play-icon"><div class="ref-play-arrow"></div></div>
+          </a>
+        </div>
+        <div class="ref-card-body">
+          <p class="ref-cat">Choreography Inspiration</p>
+          <p class="ref-title">Stages of Grief — AVANTGARDE SHOW 2023</p>
+          <p class="ref-notes">Collective suffering staged physically — how grief moves through an ensemble as fragmentation, isolation, searching. Reference for Scene 13 (the ensemble breaks apart as the river dies) and Scene 19 (the village's appeal, searching together for something lost).</p>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-thumb" style="background:linear-gradient(160deg,#081818,#0e2e2e)">
+          <span class="ref-thumb-title">The Final Stage<br>Girar O Mundo</span>
+          <a class="ref-play-btn" href="https://www.youtube.com/watch?v=nIJn-pZ3lgE" target="_blank" rel="noopener">
+            <div class="ref-play-icon"><div class="ref-play-arrow"></div></div>
+          </a>
+        </div>
+        <div class="ref-card-body">
+          <p class="ref-cat">Choreography Inspiration</p>
+          <p class="ref-title">The Final Stage — Girar O Mundo</p>
+          <p class="ref-notes">The language of sacrifice and release. What a body looks like when it gives itself completely — not collapse, but dissolution. Core reference for Scene 21. The queen does not fall. She moves inward. Her last gesture is the quietest thing on the stage.</p>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-thumb" style="background:linear-gradient(160deg,#181808,#2e2e10)">
+          <span class="ref-thumb-title">Many Angels<br>Lar Lubovitch</span>
+          <a class="ref-play-btn" href="https://www.youtube.com/watch?v=LDyeLzEP9dQ" target="_blank" rel="noopener">
+            <div class="ref-play-icon"><div class="ref-play-arrow"></div></div>
+          </a>
+        </div>
+        <div class="ref-card-body">
+          <p class="ref-cat">Choreography Inspiration</p>
+          <p class="ref-title">Many Angels by Lar Lubovitch</p>
+          <p class="ref-notes">The original Purna vision for Prabha &amp; Chaaya: the Sun and Moon as guardians. Aerial, flowing duet work that expresses unconditional presence — sheltering without possessing. Direct inspiration for Scenes 02–03 and the Sun &amp; Moon movement vocabulary throughout.</p>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-thumb" style="background:linear-gradient(160deg,#081220,#101e3c)">
+          <span class="ref-thumb-title">Max Richter<br>The Four Seasons</span>
+          <a class="ref-play-btn" href="https://www.youtube.com/watch?v=DLDvbnK_Sqk" target="_blank" rel="noopener">
+            <div class="ref-play-icon"><div class="ref-play-arrow"></div></div>
+          </a>
+        </div>
+        <div class="ref-card-body">
+          <p class="ref-cat">Choreography Inspiration</p>
+          <p class="ref-title">Max Richter — The Four Seasons (Dance Video)</p>
+          <p class="ref-notes">Structural approach to the production arc — how seasonal and cyclical change maps onto bodies. Classical structure carrying contemporary movement. Relevant to the overall rhythm of 21 scenes and the idea of nature as the dominant character driving the human story.</p>
+        </div>
+      </div>
+
+    </div>
+    <p style="font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.22em;color:var(--muted);margin-top:2rem;font-style:italic">Note: YouTube links above are truncated from source — search by title if a link does not open directly.</p>
+  </div>
+</div>
+
+</main>
+<script>
+
+// Costume notes on scenes
+function toggleCostume(sceneId) {
+  const row = document.getElementById('cos-' + sceneId);
+  const btn = document.getElementById('cosBtn-' + sceneId);
+  const isOpen = row.classList.contains('open');
+  row.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+function saveCostume(sceneId, val) {
+  localStorage.setItem('sangam_costume_' + sceneId, val);
+  if (typeof invalidateDeps === 'function') invalidateDeps();
+}
+function getCostume(sceneId) {
+  return localStorage.getItem('sangam_costume_' + sceneId) || '';
+}
+
+// Cast tab — reads cast assignments straight from source data (songs[].dancers + scenes[].dancers strings)
+const DANCERS = ['Swapnil','Narcisse','Sara','Svetlana','Chiara','Kaushika','Laurien','Khushboo','Shreya','Roshni','Haike','Maha'];
+const SHOW_DATE = '2026-11-07';
+function dancerInText(dancer, text) {
+  if (!text) return false;
+  return new RegExp('\\b' + dancer + '\\b', 'i').test(text);
+}
+function renderCastTab() {
+  const allScenes = [...scenes1, ...scenes2, ...scenes3, ...scenes4];
+  const html = DANCERS.map(dancer => {
+    const matchingScenes = allScenes.filter(sc =>
+      dancerInText(dancer, sc.dancers) || (sc.songs && sc.songs.some(sg => dancerInText(dancer, sg.dancers)))
+    );
+    const scenePills = matchingScenes.map(sc =>
+      `<span class="cast-scene-pill" title="${(sc.name||'').replace(/"/g,'&quot;')}">${sc.num}<span class="cast-scene-pill-name">${sc.name||''}</span></span>`
+    ).join('');
+    const songList = songs.filter(s => dancerInText(dancer, s.dancers));
+    const songPills = songList.map(s => `<span class="cast-song-pill">${s.title}</span>`).join('');
+    return `<div class="cast-card">
+      <div class="cast-card-top">
+        <div class="cast-initial">${dancer[0]}</div>
+        <div>
+          <div class="cast-dancer-name">${dancer}</div>
+          <div class="cast-dancer-stats">${matchingScenes.length} SCENE${matchingScenes.length !== 1 ? 'S' : ''} · ${songList.length} SONG${songList.length !== 1 ? 'S' : ''}</div>
+        </div>
+      </div>
+      <div class="cast-body">
+        ${matchingScenes.length ? `<div class="cast-section-label">Scenes</div><div class="cast-pill-wrap">${scenePills}</div>` : ''}
+        ${songList.length ? `<div class="cast-section-label" style="margin-top:1rem">Songs</div><div class="cast-pill-wrap">${songPills}</div>` : '<div class="cast-empty">No assignments yet</div>'}
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('cast-grid').innerHTML = html;
+}
+
+// ── EDIT DATA HELPERS ──
+function getEditData() {
+  try { return JSON.parse(localStorage.getItem('sangam_edits') || '{}'); } catch(e) { return {}; }
+}
+function saveEdit(category, id, field, value) {
+  const d = getEditData();
+  if (!d[category]) d[category] = {};
+  if (!d[category][id]) d[category][id] = {};
+  d[category][id][field] = value;
+  localStorage.setItem('sangam_edits', JSON.stringify(d));
+}
+
+// ── DATA ──
+const STATUSES = ['tbc','partial','ready','new','narr'];
+const STATUS_LABELS = {tbc:'TBC',partial:'IN PROGRESS',ready:'READY',new:'NEW',narr:'NARRATION'};
+const STATUS_CLASSES = {tbc:'tag-tbc',partial:'tag-partial',ready:'tag-ready',new:'tag-new',narr:'tag-narr'};
+
+// ── DATA START ──
+const scenes1 = [
+  {id:'S00',num:'PRE',name:'Pre-show',sub:'The Blue (Niraj Chag) — soundscape only. No dance. Projection plays before curtains open.',dancers:'—',status:'narr',key:false},
+  {id:'S01',num:'01',name:'The Birth of a Boy & a River ◆',sub:'Desert village. Baby rejected. Maha cries — and the river is born to carry him away',songs:[{title:'Call It Luck If You Want To (Ganavya)',status:'ready',dancers:'Svetlana, Sara, Narcisse, Kaushika, Maha, Roshni, Haike'},{title:'Remain The Sea (Anoushka Shankar feat. Vanessa Redgrave)',status:'tbc',dancers:'Maha (solo, with baby doll) — river forms, she places him on the water'}],dancers:'Svetlana, Sara, Narcisse, Kaushika, Maha, Roshni, Haike',status:'ready',key:true},
+  {id:'S02',num:'02',name:'Sun & Moon',sub:'Two guardians find each other — then find the boy',songs:[{title:'Pyaara Sa Gaon (Zubeida)',note:'Introduction of the Sun & Moon characters · Shorten',status:'partial',dancers:'Shreya & Laurien',costume:'Sun = gold skirt · Moon = silver skirt'},{title:'Dheeme Dheeme',note:'Relationship between Sun & Moon · finding the baby',status:'partial',dancers:'Shreya & Laurien',costume:'Sun = gold skirt · Moon = silver skirt'}],dancers:'Shreya & Laurien',costume:'Sun = gold skirt · Moon = silver skirt',status:'partial',key:false},
+  {id:'S04',num:'03',name:'Villagers',sub:'Village established — the river runs, life is full',songs:[{title:'Chalka Re',status:'partial',dancers:'Kaushika, Khushboo, Sara, Chiara, Narcisse, Roshni'},{title:'Aswaar',note:'With pots',status:'partial',dancers:'Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Laurien, Khushboo'}],dancers:'Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Khushboo, Laurien',status:'partial',key:false},
+];
+const scenes2 = [
+  {id:'S07',num:'04',name:'Adulthood Solo',sub:'Boy has grown up — the question of love begins',song:'Oru Paiyan (Ganavya) + Sun & Moon cameo',dancers:'Swapnil + Shreya & Laurien',costume:'Sun = gold · Moon = silver',status:'ready',key:false},
+  {id:'S08',num:'05',name:'First Discovery',sub:'The village turns its gaze toward the boy — and cannot look away',song:'Raatan Lambiyaan',dancers:'Swapnil + Narcisse, Sara, Maha, Haike, Chiara, Kaushika',status:'new',key:false},
+  {id:'S09',num:'06',name:'More Villagers',sub:'Queen still unaware — joy building with the boy',song:'Jalalo Bilalo',dancers:'Bollyfolk Students + Svetlana + Roshni, Kaushika',status:'ready',key:false},
+  {id:'S09B',num:'07',name:'Queen\'s Entry',sub:'Who she is before the feast — power, obsession, complexity',song:'Deewani Mastani',dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike',status:'ready',key:false},
+  {id:'S10',num:'08',name:'Village Feast → Queen\'s Rejection ◆',sub:"Peak of joy as Kalbeliya climaxes. At the end — music cuts. Queen's gesture. One distant voice. Full company freeze. Act 1 ends in stillness.",song:'Kalbeliya (climax cuts to silence + single distant voice)',dancers:'Svetlana + Narcisse, Shreya, Maha, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',status:'ready',key:true},
+];
+const scenes3 = [
+  {id:'S13',num:'09',name:'Chaos & Drought ◆',sub:'The river dies in real time',song:'No song — projection, strobe, smoke',dancers:'Full ensemble — fragmented',status:'tbc',key:true},
+  {id:'S14',num:'10',name:'Tribe Invitation',sub:'Vayu carries the village\'s plea to the Four Tribes',song:'Silsila',dancers:'Narcisse (solo)',status:'partial',key:false},
+  {id:'S15',num:'11',name:'Invocation to Nataraja',sub:'The village prays — but prayer is not love',song:'Natarang Ubha',dancers:'Svetlana + Narcisse, Shreya, Maha, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha',status:'ready',key:false},
+  {id:'S17',num:'12',name:'Tribe 2 — Bhangra',sub:'Strength & joy — but not love',song:'Luddi',dancers:'Bhangra Students',status:'new',key:false},
+  {id:'S_BOY_DESPAIR',num:'13',name:"Boy's Despair",sub:'Between the pairs — none of it reaches him. He breaks.',song:'TBC',dancers:'Swapnil (solo)',status:'new',key:false},
+  {id:'S18',num:'14',name:'Tribe 3 — Bolly Folk',sub:'Community — but the boy was never let in',song:'O Re Kanchi',dancers:'Bollyfolk Students + ABC dancers (TBC)',status:'ready',key:false},
+  {id:'S_CHERAW',num:'15',name:'Tribe 4 — Dola Re',sub:'Grace & precision — but not love',song:'Dola Re',dancers:'TBC',status:'partial',key:false},
+  {id:'S19',num:'16',name:'The Appeal',sub:'The village and the boy both plead with the Queen',songs:[{title:'Tera Taali',status:'partial',dancers:'Swapnil, Roshni, Kaushika'},{title:'Ishq Bina',status:'partial',dancers:'Shreya, Laurien, Sara, Khushboo, Haike, Maha, Roshni, Chiara'}],dancers:'Swapnil, Roshni, Kaushika + Shreya, Laurien, Sara, Khushboo, Haike, Maha, Roshni, Chiara',status:'partial',key:false},
+];
+const scenes4 = [
+  {id:'S21',num:'17',name:"Sangam ◆",sub:"The Queen's sacrifice — the pivotal moment. She dies. Her soul enters him.",songs:[{title:'Ode to Baji / Jhalla Re (Rani verse, Niraj Chag)',note:'Queen\'s softening / her choice',status:'new',dancers:'Svetlana (Queen)'},{title:'Mystic Tribe',note:'The Queen\'s sacrifice — the pivotal moment',status:'partial',dancers:'Svetlana, Swapnil & ABC'}],dancers:'Svetlana, Swapnil & ABC',status:'partial',key:true},
+  {id:'S23',num:'18',name:'Rainfall ◆',sub:'One drop. Then a monsoon. The river returns because love returned.',songs:[{title:'Barso Re',status:'new'},{title:'Ghanan Ghanan',status:'ready',dancers:'Bollywood Level 2 Students + ABC dancers (TBC)'}],dancers:'Bollywood Level 2 Students + ABC dancers (TBC)',status:'ready',key:true},
+  {id:'S24',num:'19',name:'Return of the Boy',song:'Ghar More Pardesiya',dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Maha, Haike, Kaushika, Khushboo',status:'ready',key:false},
+  {id:'S25',num:'20',name:'Holi Celebration',song:'Krishna Dandiya Medley',dancers:'All dancers',status:'partial',key:false},
+];
+
+const songs = [
+  {title:'The Blue',genre:'Niraj Chag — ambient folk',people:0,dancers:'Pre-show soundscape',backup:'—',status:'ready'},
+  {title:'Call It Luck If You Want To',genre:'Ganavya — devotional',people:7,dancers:'Svetlana, Sara, Narcisse, Kaushika, Maha, Roshni, Haike',backup:'—',status:'ready'},
+  {title:'Remain The Sea',genre:'Anoushka Shankar feat. Vanessa Redgrave — spoken word / sitar',people:1,dancers:'Maha solo (with baby doll) — river forms, places him on the water (S01)',backup:'—',status:'tbc'},
+  {title:'Pyaara Sa Gaon',genre:'Zubeida — folk',people:2,dancers:'Shreya & Laurien (Sun & Moon)',backup:'—',status:'partial'},
+  {title:'Dheeme Dheeme',genre:'Bollyfolk',people:2,dancers:'Shreya & Laurien',backup:'Sara, Narcisse, Roshni',status:'partial'},
+  {title:'Chalka Re',genre:'Bollyfolk',people:6,dancers:'Kaushika, Khushboo, Sara, Chiara, Narcisse, Roshni',backup:'Narcisse, Shreya',status:'partial'},
+  {title:'Aswaar',genre:'—',people:8,dancers:'Svetlana, Narcisse, Kaushika, Roshni, Sara, Chiara, Laurien, Khushboo (with pots)',backup:'—',status:'partial'},
+  {title:'Oru Paiyan',genre:'Ganavya — devotional',people:3,dancers:'Swapnil + Shreya & Laurien',backup:'—',status:'ready'},
+  {title:'Raatan Lambiyaan',genre:'—',people:7,dancers:'Swapnil + Narcisse, Sara, Maha, Haike, Chiara, Kaushika (S05)',backup:'—',status:'new'},
+  {title:'Jalalo Bilalo',genre:'Bollyfolk / Ghoomar',people:'8+',dancers:'Bollyfolk Students + Svetlana + Roshni, Kaushika',backup:'—',status:'ready'},
+  {title:'Deewani Mastani',genre:'Bollywood — regal / complex',people:7,dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike',backup:'—',status:'ready'},
+  {title:'Kalbeliya',genre:'Group',people:9,dancers:'Narcisse, Shreya, Maha, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',backup:'—',status:'ready'},
+  {title:'Silsila',genre:'—',people:1,dancers:'Narcisse (solo)',backup:'—',status:'partial'},
+  {title:'Natarang Ubha',genre:'Semi-classical',people:11,dancers:'Svetlana + Narcisse, Shreya, Maha, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha',backup:'—',status:'ready'},
+  {title:'Luddi',genre:'Bhangra — folk',people:'—',dancers:'Bhangra Students',backup:'—',status:'new'},
+  {title:'O Re Kanchi',genre:'Bollyfolk',people:'—',dancers:'Bollyfolk Students + ABC dancers (TBC)',backup:'—',status:'ready'},
+  {title:'Dola Re',genre:'—',people:'—',dancers:'Tribe 4 — dancers TBC',backup:'—',status:'partial'},
+  {title:'Tera Taali',genre:'Folk',people:3,dancers:'Swapnil, Roshni, Kaushika',backup:'Chiara, Khushboo',status:'partial'},
+  {title:'Ishq Bina',genre:'Group',people:8,dancers:'Shreya, Laurien, Sara, Khushboo, Haike, Maha, Roshni, Chiara',backup:'—',status:'partial'},
+  {title:'Ode to Baji / Jhalla Re (Rani verse)',genre:'Niraj Chag — Rajasthani folk',people:1,dancers:'Svetlana (Queen — softening / choice)',backup:'—',status:'new'},
+  {title:'Mystic Tribe',genre:'—',people:'—',dancers:'Svetlana, Swapnil & ABC (S17 Sangam — the Queen\'s sacrifice)',backup:'—',status:'partial'},
+  {title:'Barso Re',genre:'Bollywood — rain',people:'16+',dancers:'Full company build (opening of Rainfall)',backup:'—',status:'new'},
+  {title:'Ghanan Ghanan',genre:'Bollyfolk',people:'20+',dancers:'Bollywood Level 2 Students + ABC dancers (TBC)',backup:'—',status:'ready'},
+  {title:'Ghar More Pardesiya',genre:'Semi-classical Kathak',people:9,dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Maha, Haike, Kaushika, Khushboo',backup:'—',status:'ready'},
+  {title:'Krishna Dandiya Medley',genre:'Garba',people:'20+',dancers:'All dancers',backup:'Shreya, Narcisse, Chiara',status:'partial'},
+];
+// ── DATA END ──
+
+// ── DEPENDENCY ENGINE ──
+// Three colors:
+//   RED   = back-to-back (S(n) and S(n+1))
+//   AMBER = 1-scene buffer (S(n) and S(n+2)) AND costume strings differ
+//   BLUE  = 3+ consecutive scenes (stamina)
+const OG_CAST = ['Svetlana','Sara','Roshni','Kaushika','Narcisse'];
+
+function parseSceneDancers(s) {
+  const edits = getEditData();
+  const text = (edits.scenes?.[s.id]?.dancers ?? s.dancers) || '';
+  const stripped = text.replace(/\([^)]*\)/g, ' ');
+  const set = new Set();
+  if (/\bOG\s*cast\b/i.test(stripped)) OG_CAST.forEach(n => set.add(n));
+  DANCERS.forEach(name => {
+    if (new RegExp('\\b' + name + '\\b', 'i').test(stripped)) set.add(name);
+  });
+  return [...set];
+}
+
+function computeDeps() {
+  const all = [...scenes1, ...scenes2, ...scenes3, ...scenes4].filter(s => s.id !== 'S00' && s.status !== 'narr');
+  const dancerToIdx = {};
+  all.forEach((s, i) => {
+    parseSceneDancers(s).forEach(d => {
+      (dancerToIdx[d] = dancerToIdx[d] || []).push(i);
+    });
+  });
+  const warnings = {};
+  const push = (sid, w) => (warnings[sid] = warnings[sid] || []).push(w);
+
+  for (const dancer in dancerToIdx) {
+    const idxs = dancerToIdx[dancer];
+    for (let k = 0; k < idxs.length - 1; k++) {
+      const a = all[idxs[k]];
+      if (idxs[k+1] - idxs[k] === 1) {
+        const b = all[idxs[k+1]];
+        push(a.id, {type:'red', dancer, label:`${dancer} → S${b.num}`, title:`${dancer} is back-to-back into S${b.num} (${b.name})`});
+        push(b.id, {type:'red', dancer, label:`${dancer} ← S${a.num}`, title:`${dancer} just came from S${a.num} (${a.name}) — back-to-back`});
+      }
+      for (let j = k+1; j < idxs.length; j++) {
+        const gap = idxs[j] - idxs[k];
+        if (gap > 2) break;
+        if (gap === 2) {
+          const b = all[idxs[j]];
+          const ca = (getCostume(a.id) || '').trim().toLowerCase();
+          const cb = (getCostume(b.id) || '').trim().toLowerCase();
+          if (ca && cb && ca !== cb) {
+            push(a.id, {type:'amber', dancer, label:`${dancer} ⇢ S${b.num}`, title:`${dancer}: 1-scene buffer to S${b.num} with costume change (${ca} → ${cb})`});
+            push(b.id, {type:'amber', dancer, label:`${dancer} ⇠ S${a.num}`, title:`${dancer}: 1-scene buffer from S${a.num} with costume change (${ca} → ${cb})`});
+          }
+        }
+      }
+    }
+    let runStart = 0;
+    for (let k = 1; k <= idxs.length; k++) {
+      if (k === idxs.length || idxs[k] !== idxs[k-1] + 1) {
+        const len = k - runStart;
+        if (len >= 3) {
+          const a = all[idxs[runStart]], z = all[idxs[k-1]];
+          push(a.id, {type:'blue', dancer, label:`${dancer} ${len}× S${a.num}–S${z.num}`, title:`${dancer}: ${len} consecutive scenes (S${a.num} through S${z.num})`});
+        }
+        runStart = k;
+      }
+    }
+  }
+  return warnings;
+}
+
+let _depsCache = null;
+function getDepsForScene(sid) {
+  if (!_depsCache) _depsCache = computeDeps();
+  return _depsCache[sid] || [];
+}
+function renderDepsChips(sid) {
+  return getDepsForScene(sid).map(w =>
+    `<span class="dep-chip dep-${w.type}" title="${w.title.replace(/"/g,'&quot;')}">${w.label}</span>`
+  ).join('');
+}
+function invalidateDeps() {
+  _depsCache = null;
+  document.querySelectorAll('.scene-deps-row').forEach(row => {
+    const sid = row.dataset.sceneId;
+    if (!sid) return;
+    const html = renderDepsChips(sid);
+    row.innerHTML = html;
+    row.classList.toggle('has-deps', !!html);
+  });
+}
+
+// ── RENDER FLOW ──
+function makeCheck(sid, type, label) {
+  const key = 'sangam_check_' + sid + '_' + type;
+  const checked = localStorage.getItem(key) === '1';
+  return `<label class="r-check${checked?' checked':''}" onclick="toggleCheck(this,'${key}')">
+    <div class="r-check-box">${checked?'✓':''}</div>
+    <span class="r-check-label">${label}</span>
+  </label>`;
+}
+
+function makeFlowRow(s) {
+  const edits = getEditData();
+  const sc = {...s, ...(edits.scenes?.[s.id] || {})};
+  const statusKey = 'sangam_status_' + s.id;
+  const currentStatus = localStorage.getItem(statusKey) || sc.status;
+  // Treat non-narration single-song scenes as banner+1-subrow too (consistent layout)
+  const effectiveSongs = sc.songs || (currentStatus !== 'narr' && sc.song
+    ? [{title: sc.song, status: currentStatus, dancers: sc.dancers, costume: sc.costume, duration: sc.duration, _synth: true}]
+    : null);
+  const kc = (sc.key ? ' key-scene' : '') + (effectiveSongs ? ' has-songs' : '') + (currentStatus === 'narr' ? ' is-narr' : '');
+  const narrHide = currentStatus === 'narr' ? ' flow-narr-hide' : '';
+  const nameBodyClass = currentStatus === 'narr' ? ' flow-narr-body' : '';
+  const numStyle = sc.key ? 'color:var(--gold-light)' : '';
+  const costumeVal = getCostume(s.id);
+  const depsHtml = renderDepsChips(s.id);
+  // Sub-row(s): one per song
+  const songSubRows = effectiveSongs ? effectiveSongs.map((sg, i) => {
+    const sgKey = 'sangam_song_sub_' + s.id + '_' + i;
+    const sgStatus = localStorage.getItem(sgKey) || sg.status;
+    return `<div class="scene-song-subrow">
+      <div class="flow-cell song-indent"></div>
+      <div class="flow-cell song-indent"></div>
+      <div class="flow-cell"><div style="display:flex;flex-direction:column;gap:2px;width:100%"><span class="song-label">${sg.title}</span>${sg.note?`<span style="font-size:0.72rem;color:var(--muted);font-style:italic;line-height:1.35">${sg.note}</span>`:''}</div></div>
+      <div class="flow-cell">${sg.dancers?`<span style="font-size:0.78rem;color:var(--muted)">${sg.dancers}</span>`:''}</div>
+      <div class="flow-cell">${sg.costume?`<span style="font-size:0.74rem;color:var(--muted);line-height:1.4">${sg.costume}</span>`:''}</div>
+      <div class="flow-cell" style="justify-content:center">${sg.duration?`<span style="font-family:'Cinzel',serif;font-size:0.68rem;color:var(--muted);letter-spacing:0.05em">${sg.duration}</span>`:''}</div>
+      <div class="flow-cell"><span class="flow-tag ${STATUS_CLASSES[sgStatus]}" aria-label="Status: ${STATUS_LABELS[sgStatus]}">${STATUS_LABELS[sgStatus]}</span></div>
+    </div>`;
+  }).join('') : '';
+  const songCell = sc.songs
+    ? ''
+    : `<span class="flow-song editable-cell" data-field="song">${sc.song||''}</span>`;
+  return `<div class="scene-item" id="${s.id}">
+    <div class="flow-row${kc}" id="row-${s.id}" data-scene-id="${s.id}">
+      <div class="flow-cell flow-num" style="${numStyle}">${sc.num}${copyLinkBtn(s.id, 'scene ' + sc.num)}</div>
+      <div class="flow-cell${nameBodyClass}"><div style="display:flex;flex-direction:column;gap:3px;width:100%"><span class="flow-scene-name editable-cell" data-field="name">${sc.name}</span>${sc.sub?`<span class="editable-cell" style="font-size:0.74rem;color:var(--muted);line-height:1.35" data-field="sub">${sc.sub}</span>`:''}</div></div>
+      <div class="flow-cell${narrHide}">${songCell}</div>
+      <div class="flow-cell${narrHide}">${sc.songs?'':`<span class="flow-dancers editable-cell" data-field="dancers">${sc.dancers}</span>`}</div>
+      <div class="flow-cell${narrHide}">${sc.costume?`<span style="font-size:0.78rem;color:var(--muted);line-height:1.4">${sc.costume}</span>`:''}</div>
+      <div class="flow-cell${narrHide}" style="justify-content:center">${sc.duration?`<span style="font-family:'Cinzel',serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.05em">${sc.duration}</span>`:''}</div>
+      <div class="flow-cell"><span class="flow-tag ${STATUS_CLASSES[currentStatus]}" aria-label="Status: ${STATUS_LABELS[currentStatus]}">${STATUS_LABELS[currentStatus]}</span></div>
+    </div>
+    ${songSubRows}
+    <div class="scene-deps-row${depsHtml?' has-deps':''}" id="deps-${s.id}" data-scene-id="${s.id}">${depsHtml}</div>
+  </div>`;
+}
+
+function renderFlow() {
+  _depsCache = null; // recompute on each full render
+  document.getElementById('flow-scenes').innerHTML = scenes1.map(makeFlowRow).join('');
+  document.getElementById('flow-scenes-2').innerHTML = scenes2.map(makeFlowRow).join('');
+  document.getElementById('flow-scenes-3').innerHTML = scenes3.map(makeFlowRow).join('');
+  document.getElementById('flow-scenes-4').innerHTML = scenes4.map(makeFlowRow).join('');
+  renderActCounts();
+}
+function renderActCounts() {
+  const tally = list => {
+    const c = {ready:0, partial:0, tbc:0, new:0, narr:0};
+    list.forEach(s => {
+      const st = localStorage.getItem('sangam_status_' + s.id) || s.status;
+      if (c[st] !== undefined) c[st]++;
+    });
+    const parts = [];
+    parts.push(`<b>${list.length}</b> scenes`);
+    if (c.ready) parts.push(`<b>${c.ready}</b> ready`);
+    if (c.partial) parts.push(`<b>${c.partial}</b> partial`);
+    if (c.tbc) parts.push(`<b>${c.tbc}</b> tbc`);
+    if (c.new) parts.push(`<b>${c.new}</b> new`);
+    if (c.narr) parts.push(`<b>${c.narr}</b> narr`);
+    return parts.join(' · ');
+  };
+  const el1 = document.getElementById('act-counts-1');
+  const el2 = document.getElementById('act-counts-2');
+  const el3 = document.getElementById('act-counts-3');
+  const el4 = document.getElementById('act-counts-4');
+  if (el1) el1.innerHTML = tally(scenes1);
+  if (el2) el2.innerHTML = tally(scenes2);
+  if (el3) el3.innerHTML = tally(scenes3);
+  if (el4) el4.innerHTML = tally(scenes4);
+}
+
+// ── RENDER SONGS ──
+function makeSongRow(s, i) {
+  const edits = getEditData();
+  const sg = {...s, ...(edits.songs?.[String(i)] || {})};
+  const key = 'sangam_song_status_' + i;
+  const currentStatus = localStorage.getItem(key) || sg.status;
+  return `<div class="song-item" id="song-${i}">
+    <div class="song-row" data-song-idx="${i}">
+      <div class="song-cell"><span class="song-title editable-cell" data-field="title">${sg.title}</span>${copyLinkBtn('song-' + i, sg.title)}</div>
+      <div class="song-cell"><span class="song-meta editable-cell" data-field="genre">${sg.genre}</span></div>
+      <div class="song-cell" style="justify-content:center"><span class="editable-cell" style="font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--gold);opacity:0.55;text-align:center" data-field="people">${sg.people}</span></div>
+      <div class="song-cell"><span class="song-meta editable-cell" data-field="dancers">${sg.dancers}</span></div>
+      <div class="song-cell"><span class="flow-tag ${STATUS_CLASSES[currentStatus]}" aria-label="Status: ${STATUS_LABELS[currentStatus]}">${STATUS_LABELS[currentStatus]}</span></div>
+    </div>
+  </div>`;
+}
+
+function renderSongs() {
+  document.getElementById('songs-list').innerHTML = songs.map((s,i) => makeSongRow(s,i)).join('');
+}
+
+// ── STATUS CYCLING ──
+function cycleStatus(el, sid) {
+  const cyclable = ['tbc','partial','ready'];
+  const cur = el.className.includes('tag-ready') ? 'ready' : el.className.includes('tag-partial') ? 'partial' : 'tbc';
+  const next = cyclable[(cyclable.indexOf(cur)+1)%cyclable.length];
+  el.className = 'flow-tag ' + STATUS_CLASSES[next];
+  el.textContent = STATUS_LABELS[next];
+  localStorage.setItem('sangam_status_'+sid, next);
+  updateDashboard();
+}
+
+function cycleSongSub(el, sid, i) {
+  const cyclable = ['tbc','new','partial','ready'];
+  const cur = Object.keys(STATUS_CLASSES).find(k => el.className.includes(STATUS_CLASSES[k])) || 'tbc';
+  const next = cyclable[(cyclable.indexOf(cur)+1)%cyclable.length];
+  el.className = 'flow-tag ' + STATUS_CLASSES[next];
+  el.textContent = STATUS_LABELS[next];
+  localStorage.setItem('sangam_song_sub_' + sid + '_' + i, next);
+  updateDashboard();
+}
+function cycleSongStatus(el, idx) {
+  const cyclable = ['tbc','partial','ready','new'];
+  const cur = Object.keys(STATUS_CLASSES).find(k => el.className.includes(STATUS_CLASSES[k])) || 'tbc';
+  const next = cyclable[(cyclable.indexOf(cur)+1)%cyclable.length];
+  el.className = 'flow-tag ' + STATUS_CLASSES[next];
+  el.textContent = STATUS_LABELS[next];
+  localStorage.setItem('sangam_song_status_'+idx, next);
+  updateDashboard();
+}
+
+// ── CHECKLIST ──
+function toggleCheck(label, key) {
+  const checked = label.classList.contains('checked');
+  if(checked) {
+    label.classList.remove('checked');
+    label.querySelector('.r-check-box').textContent = '';
+    localStorage.setItem(key, '0');
+  } else {
+    label.classList.add('checked');
+    label.querySelector('.r-check-box').textContent = '✓';
+    localStorage.setItem(key, '1');
+  }
+  updateDashboard();
+}
+
+// ── DASHBOARD ──
+function updateDashboard() {
+  // Days to show
+  const show = new Date(SHOW_DATE);
+  const now = new Date();
+  const diff = Math.ceil((show - now) / (1000*60*60*24));
+  document.getElementById('days-count').innerHTML = diff > 0 ? diff + ' <span>days</span>' : 'SHOW DAY';
+
+  // Count song statuses
+  let ready = 0, inprog = 0, neww = 0;
+  songs.forEach((s, i) => {
+    const st = localStorage.getItem('sangam_song_status_' + i) || s.status;
+    if (st === 'ready') ready++;
+    else if (st === 'partial') inprog++;
+    else if (st === 'new') neww++;
+  });
+
+  document.getElementById('songs-ready').innerHTML = ready + ' <span>/ ' + songs.length + '</span>';
+  document.getElementById('songs-subtitle').textContent = songs.length + ' songs across the production.';
+  document.getElementById('songs-progress').innerHTML = inprog + ' <span>songs</span>';
+  document.getElementById('songs-new').innerHTML = neww + ' <span>songs</span>';
+}
+
+// ── TABS ──
+function showTab(name, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  if(btn) btn.classList.add('active');
+  else {
+    // Activate matching nav-tab if no button passed (programmatic switch)
+    const match = document.querySelector(`.nav-tab[onclick*="'${name}'"]`);
+    if (match) match.classList.add('active');
+  }
+  if(name === 'cast') renderCastTab();
+}
+
+// ── DEEP LINKS ──
+// Hash format:
+//   #S01 .. #S24       → Show Flow tab, scroll to scene row
+//   #song-3            → Songs tab, scroll to song row, expand it
+//   #char-Uma          → Characters tab, scroll to character card
+//   #tab-direction     → switch to a tab without scrolling
+function goToHash(hash) {
+  hash = (hash || location.hash).replace(/^#/, '');
+  if (!hash) return;
+  // Tab-only links
+  if (hash.startsWith('tab-')) {
+    showTab(hash.replace(/^tab-/, ''));
+    return;
+  }
+  let tab = null, targetId = null, expandSong = -1;
+  if (/^S\d{1,2}$/i.test(hash))            { tab = 'flow';       targetId = 'row-' + hash.toUpperCase(); }
+  else if (/^song-\d+$/.test(hash))        { tab = 'songs';      targetId = hash; expandSong = parseInt(hash.split('-')[1], 10); }
+  else if (/^char-[A-Za-z]+$/.test(hash))  { tab = 'characters'; targetId = hash; }
+  if (!tab) return;
+  showTab(tab);
+  // Wait a tick for the tab to render, then scroll
+  setTimeout(() => {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+      el.classList.add('hash-flash');
+      setTimeout(() => el.classList.remove('hash-flash'), 2000);
+    }
+    if (expandSong >= 0 && typeof toggleSongExpand === 'function') {
+      // Only expand if it's not already expanded
+      const panel = document.getElementById('sep-' + expandSong);
+      if (panel && !panel.classList.contains('open')) toggleSongExpand(expandSong);
+    }
+  }, 80);
+}
+
+// Build a copy-link button
+function copyLinkBtn(hash, label) {
+  return `<button class="copy-link-btn" data-hash="${hash}" onclick="event.stopPropagation();copyDeepLink('${hash}',this)" title="Copy link to ${label}">🔗</button>`;
+}
+async function copyDeepLink(hash, btn) {
+  const url = location.origin + location.pathname + '#' + hash;
+  try {
+    await navigator.clipboard.writeText(url);
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 1400);
+  } catch(e) {
+    prompt('Copy this link:', url);
+  }
+}
+window.addEventListener('hashchange', () => goToHash());
+
+// ── THEME ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('theme-btn').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('sangam_theme', isDark ? 'light' : 'dark');
+}
+
+// ── EDIT MODE ──
+let editMode = false;
+
+function toggleEditMode() {
+  editMode = !editMode;
+  document.documentElement.setAttribute('data-edit', editMode ? 'on' : 'off');
+  const btn = document.getElementById('edit-btn');
+  btn.textContent = editMode ? '✓' : '✏';
+  btn.title = editMode ? 'Done editing' : 'Toggle edit mode';
+  // Apply/remove contenteditable
+  document.querySelectorAll('.editable-cell').forEach(el => {
+    el.contentEditable = editMode ? 'true' : 'false';
+  });
+  document.querySelectorAll('[data-char-idx]').forEach(el => {
+    el.contentEditable = editMode ? 'true' : 'false';
+  });
+}
+
+// Event delegation — save on blur (capture phase catches blur on children)
+document.addEventListener('blur', function(e) {
+  if (!editMode) return;
+  const cell = e.target;
+  if (cell.classList && cell.classList.contains('editable-cell')) {
+    const sceneRow = cell.closest('[data-scene-id]');
+    const songRow = cell.closest('[data-song-idx]');
+    const field = cell.dataset.field;
+    const value = cell.innerText.trim();
+    if (sceneRow && field) {
+      saveEdit('scenes', sceneRow.dataset.sceneId, field, value);
+      if (field === 'dancers' && typeof invalidateDeps === 'function') invalidateDeps();
+    }
+    else if (songRow && field) saveEdit('songs', songRow.dataset.songIdx, field, value);
+  }
+  if (cell.dataset && cell.dataset.charIdx !== undefined) {
+    saveEdit('chars', cell.dataset.charIdx, cell.dataset.charField, cell.innerText.trim());
+  }
+}, true);
+
+function loadCharEdits() {
+  const edits = getEditData();
+  if (!edits.chars) return;
+  document.querySelectorAll('[data-char-idx]').forEach(el => {
+    const v = edits.chars?.[el.dataset.charIdx]?.[el.dataset.charField];
+    if (v !== undefined) el.innerText = v;
+  });
+}
+
+// ── SAVE SYSTEM ──
+// Uses local Python server when running (instant save to disk).
+// Falls back to browser download if server is not running.
+const SAVE_SERVER = 'http://localhost:7842';
+let serverOnline = false;
+
+function setSaveStatus(msg, duration=3000) {
+  const el = document.getElementById('save-status');
+  if (!el) return;
+  el.textContent = msg;
+  if (duration > 0) setTimeout(() => { if (el.textContent === msg) el.textContent = ''; }, duration);
+}
+
+let pagesUrl = '';
+
+function updateSaveUI(online, newPagesUrl) {
+  const saveBtn = document.getElementById('save-main-btn');
+  const linkBtn = document.getElementById('link-file-btn');
+  const publishBtn = document.getElementById('publish-btn');
+  if (!saveBtn) return;
+  serverOnline = online;
+  if (newPagesUrl !== undefined) pagesUrl = newPagesUrl;
+  if (online) {
+    saveBtn.innerHTML = '💾 &nbsp;Save';
+    saveBtn.title = 'Save directly to file on disk (server connected)';
+    linkBtn.innerHTML = '🟢 &nbsp;Server';
+    linkBtn.classList.add('is-linked');
+    linkBtn.title = 'Local save server is running — saves go directly to disk';
+    linkBtn.onclick = null;
+    if (publishBtn) {
+      publishBtn.style.display = 'inline-block';
+      publishBtn.title = pagesUrl
+        ? `Publish dancer view to ${pagesUrl}`
+        : 'Publish dancer view to GitHub Pages (add remote first)';
+    }
+  } else {
+    saveBtn.innerHTML = '⬇ &nbsp;Download';
+    saveBtn.title = 'Download updated file (run SANGAM-save-server.py for direct saving)';
+    linkBtn.innerHTML = '⚫ &nbsp;Server';
+    linkBtn.classList.remove('is-linked');
+    linkBtn.style.opacity = '0.5';
+    linkBtn.title = 'Save server not running. Run: python3 SANGAM-save-server.py';
+    linkBtn.onclick = null;
+    if (publishBtn) publishBtn.style.display = 'none';
+  }
+}
+
+// Only probe the local save-server when we're in editor mode on the author's
+// own machine. In dancer-view (published GitHub Pages) the Save/Publish buttons
+// are hidden anyway, and pinging http://localhost:7842 from an HTTPS site
+// triggers the browser's "Local Network Access" permission prompt on dancers'
+// devices — which is alarming and pointless.
+function shouldProbeSaveServer() {
+  if (document.documentElement.dataset.viewer === 'true') return false;
+  // Belt-and-braces: also skip when not running off file:// or localhost
+  const h = location.hostname;
+  if (location.protocol !== 'file:' && h !== 'localhost' && h !== '127.0.0.1' && h !== '') return false;
+  return true;
+}
+
+async function pingServer() {
+  if (!shouldProbeSaveServer()) return {online: false, pagesUrl: ''};
+  try {
+    const res = await fetch(SAVE_SERVER + '/ping', {signal: AbortSignal.timeout(1200)});
+    if (res.ok) {
+      const data = await res.json();
+      return {online: true, pagesUrl: data.pagesUrl || ''};
+    }
+  } catch(e) {}
+  return {online: false, pagesUrl: ''};
+}
+
+async function initFileHandle() {
+  const {online, pagesUrl: url} = await pingServer();
+  updateSaveUI(online, url);
+}
+
+// Re-check every 5s — UI updates automatically when server starts/stops.
+// No-op (skipped entirely) on the dancer view, so no localhost requests there.
+if (shouldProbeSaveServer()) {
+  setInterval(async () => {
+    const {online, pagesUrl: url} = await pingServer();
+    if (online !== serverOnline || (online && url !== pagesUrl)) updateSaveUI(online, url);
+  }, 5000);
+}
+
+function linkFile() {} // no-op in server mode
+
+// Collect all sangam_ keys from localStorage into a plain object
+function collectAllData() {
+  const data = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (k && k.startsWith('sangam_')) data[k] = localStorage.getItem(k);
+  }
+  return data;
+}
+
+// Inject a preload block into HTML so data survives on other devices/viewers
+function injectPreload(html, data) {
+  const block = `<script id="sangam-preload">window.SANGAM_PRELOAD=${JSON.stringify(data)};<\/script>`;
+  // Remove any existing preload block first (for repeated saves)
+  html = html.replace(/<script id="sangam-preload">[\s\S]*?<\/script>\n?/, '');
+  return html.replace('</head>', block + '\n</head>');
+}
+
+function buildUpdatedHTML() {
+  const edits = getEditData();
+  const mergedScenes1 = scenes1.map(s => ({...s, ...(edits.scenes?.[s.id] || {})}));
+  const mergedScenes2 = scenes2.map(s => ({...s, ...(edits.scenes?.[s.id] || {})}));
+  const mergedScenes3 = scenes3.map(s => ({...s, ...(edits.scenes?.[s.id] || {})}));
+  const mergedScenes4 = scenes4.map(s => ({...s, ...(edits.scenes?.[s.id] || {})}));
+  const mergedSongs = songs.map((s, i) => ({...s, ...(edits.songs?.[String(i)] || {})}));
+  const newData =
+    '// ── DATA START ──\n' +
+    'const scenes1 = ' + JSON.stringify(mergedScenes1) + ';\n' +
+    'const scenes2 = ' + JSON.stringify(mergedScenes2) + ';\n' +
+    'const scenes3 = ' + JSON.stringify(mergedScenes3) + ';\n' +
+    'const scenes4 = ' + JSON.stringify(mergedScenes4) + ';\n' +
+    'const songs = ' + JSON.stringify(mergedSongs) + ';\n' +
+    '// ── DATA END ──';
+  let html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  html = html.replace(/data-edit="off"]*"/, 'data-edit="off"');
+  html = html.replace(/ contenteditable="(true|false)"/g, '');
+  const si = html.indexOf('// ── DATA START ──');
+  const ei = html.indexOf('// ── DATA END ──') + '// ── DATA END ──'.length;
+  if (si >= 0 && ei > si) html = html.slice(0, si) + newData + html.slice(ei);
+  return html;
+}
+
+async function saveFile() {
+  let html = buildUpdatedHTML();
+  // Embed all working data so the file is complete on any device
+  html = injectPreload(html, collectAllData());
+  if (serverOnline) {
+    try {
+      setSaveStatus('Saving…', 0);
+      const res = await fetch(SAVE_SERVER + '/save', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({html}),
+        signal: AbortSignal.timeout(5000)
+      });
+      if (res.ok) { setSaveStatus('Saved ✓', 3000); return; }
+    } catch(e) {
+      console.warn('Server save failed, falling back to download:', e);
+      updateSaveUI(false);
+    }
+  }
+  // Fallback: download
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'SANGAM-production.html';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  setSaveStatus('Downloaded', 3000);
+}
+
+function exportForDancers() {
+  let html = buildUpdatedHTML();
+  // Embed all data — viewer always loads from preload, ignoring their own localStorage
+  html = injectPreload(html, collectAllData());
+  // Mark as viewer (hides edit controls, locks editing)
+  html = html.replace(/(<html[^>]*?)>/, '$1 data-viewer="true">');
+  // Remove data-edit state cleanly
+  html = html.replace(/data-edit="off"]*"/, 'data-edit="off"');
+  // Download with today's date
+  const date = new Date().toISOString().slice(0,10);
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `SANGAM-dancers-${date}.html`;
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function buildDancerHTML() {
+  let html = buildUpdatedHTML();
+  html = injectPreload(html, collectAllData());
+  html = html.replace(/(<html[^>]*?)>/, '$1 data-viewer="true">');
+  html = html.replace(/data-edit="off"]*"/, 'data-edit="off"');
+  return html;
+}
+
+async function publishToGitHub() {
+  const btn = document.getElementById('publish-btn');
+  if (!serverOnline) return;
+  btn.classList.add('publishing');
+  btn.innerHTML = '⏳ &nbsp;Publishing…';
+  // Save working file first
+  await saveFile();
+  // Build and push dancer view
+  try {
+    setSaveStatus('Publishing…', 0);
+    const res = await fetch(SAVE_SERVER + '/publish', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({html: buildDancerHTML()}),
+      signal: AbortSignal.timeout(20000)
+    });
+    const data = await res.json();
+    if (res.ok) {
+      setSaveStatus('Published ✓', 5000);
+      btn.innerHTML = '✓ &nbsp;Published';
+      if (pagesUrl) {
+        btn.title = `Live at ${pagesUrl}`;
+      }
+      setTimeout(() => {
+        btn.classList.remove('publishing');
+        btn.innerHTML = '🚀 &nbsp;Publish';
+      }, 4000);
+    } else {
+      throw new Error(data.error || 'Unknown error');
+    }
+  } catch(e) {
+    setSaveStatus('Publish failed', 4000);
+    btn.classList.remove('publishing');
+    btn.innerHTML = '🚀 &nbsp;Publish';
+    alert('Publish failed:\n' + e.message + '\n\nCheck that the GitHub remote is configured and you\'re authenticated.');
+  }
+}
+
+
+function setSyncStatus(text) {
+  const el = document.getElementById('sync-status');
+  if (el) {
+    el.textContent = text;
+    el.style.opacity = '1';
+    clearTimeout(window._syncFade);
+    window._syncFade = setTimeout(() => { el.style.opacity = '0.55'; }, 2400);
+  }
+}
+
+// ── INIT ──
+function bootSangam() {
+  // Prevent double-boot
+  if (window._sangamBooted) return;
+  window._sangamBooted = true;
+
+  const savedTheme = localStorage.getItem('sangam_theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  document.getElementById('theme-btn').textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+  renderFlow();
+  renderSongs();
+  loadCharEdits();
+  updateDashboard();
+  initFileHandle();
+  // Honour any incoming deep-link hash (e.g. /#S11) on first paint
+  if (location.hash) setTimeout(() => goToHash(), 100);
+
+}
+
+bootSangam();
+</script>
+</body>
+</html>
