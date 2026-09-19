@@ -493,6 +493,15 @@
         format: "Workshop series, stage moment, public dance, programme support…"
       }
     },
+    "Coach me one to one": {
+      title: "Just you, and whatever you are working towards.",
+      text: "Online from anywhere or in person in Ghent. Tell me what the sessions are for — a performance, a wedding, technique, or confidence on a stage you have already said yes to.",
+      labels: { place: "Where are you? (city / time zone)", date: "Timeline, if there is one", people: "Your experience so far", format: "Online, in Ghent, or either" },
+      placeholders: {
+        people: "Complete beginner, some classes, trained in another style…",
+        format: "Online · in person in Ghent · either"
+      }
+    },
     "Commission choreography": {
       title: "What are we making move?",
       text: "A show, a group, a single impossible transition, a music video, a wedding sangeet, a school production. Give me the shape.",
@@ -576,9 +585,21 @@
     });
   });
 
-  /* The ending. Nothing is transmitted from this page and no address is published on it:
-     we compose the message, hand it over as copyable text, and point at the Shoonya
-     contact form — which is the one channel that actually reaches Swapnil. */
+  /* Arriving from another page (e.g. /workshops/) with ?intent=… preselects the door,
+     so a visitor who already told us why they came does not have to say it twice.
+     data-select-intent only fires on a same-page click; this is its cross-page twin. */
+  (() => {
+    const wanted = new URLSearchParams(window.location.search).get("intent");
+    if (!wanted) return;
+    const choice = document.querySelector(`#enquiryForm input[name="intent"][value="${CSS.escape(wanted)}"]`);
+    if (!choice) return;
+    choice.checked = true;
+    updateIntentUI(wanted);
+  })();
+
+  /* The ending. With a key set, deliver() posts to Web3Forms; no address is published on
+     this page either way. The composed message stays on screen as copyable text and the
+     Shoonya contact form remains the fallback whenever a send fails. */
 
   const enquiryDone = document.querySelector("#enquiryDone");
   const enquirySummary = document.querySelector("#enquirySummary");

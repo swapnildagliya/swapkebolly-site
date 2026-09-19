@@ -337,7 +337,10 @@
             <p><strong>180 min</strong><span>masterclass energy</span></p>
             <p><strong>2–5 days</strong><span>technique, choreography, showcase</span></p>
           </div>
-          <a class="inv-btn" href="#hello" data-select-intent="Invite you to teach">Start an invitation <span aria-hidden="true">↓</span></a>
+          <div class="action-pair">
+            <a class="inv-btn" href="#hello" data-select-intent="Invite you to teach">Start an invitation <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="workshops/">Workshop details <span>→</span></a>
+          </div>
         </footer>
       </div>
     </section>
@@ -434,6 +437,7 @@
             <label class="door"><input type="radio" name="intent" value="Book a performance"><span>Book</span><small>a performance</small></label>
             <label class="door"><input type="radio" name="intent" value="Build a festival moment"><span>Festival</span><small>build a moment</small></label>
             <label class="door"><input type="radio" name="intent" value="Commission choreography"><span>Choreo</span><small>make a piece</small></label>
+            <label class="door"><input type="radio" name="intent" value="Coach me one to one"><span>Coach</span><small>one to one</small></label>
             <label class="door door--wild"><input type="radio" name="intent" value="Surprise you"><span>Surprise me</span><small>weird door</small></label>
           </div>
         </fieldset>
@@ -443,7 +447,7 @@
           <span>The form re-choreographs itself around your answer.</span>
         </div>
 
-        <fieldset class="doors__styles" data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography">
+        <fieldset class="doors__styles" data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography,Coach me one to one">
           <legend>Useful flavours</legend>
           <div class="doors__checks">
             <label><input type="checkbox" name="style" value="Bollywood / Bollyfolk"><span>Bollywood / Bollyfolk</span></label>
@@ -458,10 +462,10 @@
         <div class="doors__fields">
           <label><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
           <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
-          <label data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography"><span data-field-label="place">City / venue</span><input type="text" name="place" autocomplete="address-level2"></label>
-          <label data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography"><span data-field-label="date">Date, if there is one</span><input type="date" name="date"></label>
-          <label data-smart-for="Learn with you,Invite you to teach,Book a performance,Build a festival moment,Commission choreography"><span data-field-label="people">People / level</span><input type="text" name="people" placeholder="20 beginners, 12 trained dancers, 300 festival humans…"></label>
-          <label data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography"><span data-field-label="format">Format</span><input type="text" name="format" placeholder="60 min, 2 days, showcase, lecture-demo…"></label>
+          <label data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography,Coach me one to one"><span data-field-label="place">City / venue</span><input type="text" name="place" autocomplete="address-level2"></label>
+          <label data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography,Coach me one to one"><span data-field-label="date">Date, if there is one</span><input type="date" name="date"></label>
+          <label data-smart-for="Learn with you,Invite you to teach,Book a performance,Build a festival moment,Commission choreography,Coach me one to one"><span data-field-label="people">People / level</span><input type="text" name="people" placeholder="20 beginners, 12 trained dancers, 300 festival humans…"></label>
+          <label data-smart-for="Invite you to teach,Book a performance,Build a festival moment,Commission choreography,Coach me one to one"><span data-field-label="format">Format</span><input type="text" name="format" placeholder="60 min, 2 days, showcase, lecture-demo…"></label>
         </div>
 
         <label class="doors__message"><span>Tell me enough to get excited</span><textarea name="message" rows="5" required></textarea></label>
