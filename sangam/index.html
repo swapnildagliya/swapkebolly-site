@@ -1030,6 +1030,10 @@ strong, b { font-weight:600; }
 .r-check, .r-check-box { border-radius:0; }
 
 /* ── SONGS ── */
+.song-pdf-link { margin:-1.4rem 0 2rem; }
+.song-pdf-link a { display:inline-flex; align-items:center; min-height:44px; padding:0 1.1rem; border:1px solid var(--mk-teal); color:var(--mk-teal); font-family:var(--mk-body); font-weight:600; font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; }
+.song-pdf-link a:hover { background:var(--mk-teal); color:#f4e9cc; }
+:root[data-theme="dark"] .song-pdf-link a:hover { color:#1e1710; }
 .song-title { font-family:var(--mk-head); font-weight:500; font-size:1.02rem; }
 .song-meta { font-size:0.94rem; color:var(--text2); }
 
@@ -1393,6 +1397,7 @@ strong, b { font-weight:600; }
     <p class="section-label">Songs & Cast</p>
     <h2 class="section-heading">Full Song List</h2>
     <p class="section-sub" id="songs-subtitle">songs across the production. Click a status badge to update readiness.</p>
+    <p class="song-pdf-link"><a href="song-list.pdf" target="_blank" rel="noopener">↓ Download song list (PDF)</a></p>
     <div class="song-header">
       <div class="song-header-cell">Song Title</div>
       <div class="song-header-cell">Genre</div>
