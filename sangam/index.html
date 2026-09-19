@@ -1351,7 +1351,7 @@ strong, b { font-weight:600; }
       </div>
       <div class="scene-card">
         <div class="sc-num" style="background:#1a8b7a">S17–20 · RAINFALL + RETURN + REUNION + HOLI</div>
-        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Rainfall, Return & Holi</h3><p class="sc-orig-text"><strong>S17 — Rainfall:</strong> Ghanan Ghanan. <strong>S18 — Return:</strong> Ghar More Pardesiya. <strong>S19 — Reunion with Uma.</strong> <strong>S20 — Holi:</strong> Krishna Dandiya Medley. Uma returns as River Goddess. Full company.</p></div>
+        <div class="sc-orig"><p class="sc-orig-label">What exists now</p><h3 class="sc-orig-title">Rainfall, Return & Holi</h3><p class="sc-orig-text"><strong>S17 — Rainfall:</strong> Ghanan Ghanan. <strong>S18 — Return:</strong> Ghar More Pardesiya. <strong>S19 — Reunion with Uma.</strong> <strong>S20 — Holi:</strong> Krishna Dandiya Medley. Uma returns as River Goddess. All ABC dancers.</p></div>
         <div class="sc-dir"><p class="sc-dir-eye">Creative Direction</p><p class="sc-dir-text"><strong>S22:</strong> The Queen's body is gone. The boy stands alone. He moves with both his weight and hers. The audience watches a body learning to be two. It is the most intimate moment of the show. <strong>S17:</strong> Silence. Total blackout. One drop. Then another. Then a monsoon. Blue dupattas re-enter one by one. <strong>Uma emerges from the centre</strong> — the River Goddess returning to her source. <strong>S18–20:</strong> The boy is received, celebrated, loved. By the time Ghanan Ghanan hits full force, every body is water. The Holi finale is devastatingly joyful — <strong>but the queen's place is empty.</strong> The village celebrates. The boy celebrates. The person who made it all possible is not there. The audience must feel that absence even as they are swept into the joy.</p><div class="sc-key">"Joy is most devastating when someone is missing from it."</div></div>
       </div>
     </div>
@@ -1749,8 +1749,10 @@ function sceneSecs(sc) { return sc.songs ? sc.songs.reduce((t, sg) => t + durSec
 function fmtDur(t) { const h = Math.floor(t / 3600), m = Math.floor(t % 3600 / 60), sec = t % 60; return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(sec).padStart(2, '0'); }
 // ABC company photos (© Stijn Dejonckheere & Joëlle Verbeeck) — assets/madhubani/cast-<name>.webp
 const CAST_PHOTOS = {Swapnil:'swapnil',Narcisse:'narcisse',Sara:'sara',Svetlana:'svetlana',Chiara:'chiara',Kaushika:'kaushika',Laurien:'laurien',Khushboo:'khushboo',Shreya:'shreya',Roshni:'roshni',Haike:'haike',Srimahavalli:'srimahavalli'};
+const ALL_ABC = /\bAll ABC dancers\b/i; // S20 Holi — every company dancer in DANCERS
 function dancerInText(dancer, text) {
   if (!text) return false;
+  if (ALL_ABC.test(text)) return true;
   return new RegExp('\\b' + dancer + '\\b', 'i').test(text);
 }
 function renderCastTab() {
@@ -1826,7 +1828,7 @@ const scenes4 = [
   {id:'S23',num:'17',name:'Rainfall ◆',sub:'One drop. Then a monsoon. The river returns because love returned.',song:'Ghanan Ghanan',dancers:'Bollywood Level 2 Students',costume:'Red & Blue Skirt',duration:'2:24',status:'ready',key:true},
   {id:'S24',num:'18',name:'Return of the Boy',song:'Ghar More Pardesiya',dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Haike, Kaushika, Khushboo, Shreya',costume:'Anarkali + skirt',duration:'2:30',status:'ready',key:false},
   {id:'S_REUNION_UMA',num:'19',name:'Reunion with Uma',song:'TBD',dancers:'Swapnil + Srimahavalli',costume:'Anarkali',duration:'2:00',status:'partial',key:false},
-  {id:'S25',num:'20',name:'Holi Celebration',song:'Krishna Dandiya Medley',dancers:'All dancers',costume:'Ghoomar Costume',duration:'4:00',status:'partial',key:false},
+  {id:'S25',num:'20',name:'Holi Celebration',song:'Krishna Dandiya Medley',dancers:'All ABC dancers',costume:'Ghoomar Costume',duration:'4:00',status:'partial',key:false},
 ];
 
 const songs = [
@@ -1851,7 +1853,7 @@ const songs = [
   {title:'Ode to Baji / Jhalla Re (Rani verse)',genre:'Niraj Chag — Rajasthani folk',people:1,dancers:'Svetlana (Queen — softening / choice)',backup:'—',status:'partial'},
   {title:'Ghanan Ghanan',genre:'Bollyfolk',people:'20+',dancers:'Bollywood Level 2 Students',backup:'—',status:'ready'},
   {title:'Ghar More Pardesiya',genre:'Semi-classical Kathak',people:9,dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Haike, Kaushika, Khushboo, Shreya',backup:'—',status:'ready'},
-  {title:'Krishna Dandiya Medley',genre:'Garba',people:'20+',dancers:'All dancers',backup:'Shreya, Narcisse, Chiara',status:'partial'},
+  {title:'Krishna Dandiya Medley',genre:'Garba',people:12,dancers:'All ABC dancers',backup:'Shreya, Narcisse, Chiara',status:'partial'},
 ];
 // ── DATA END ──
 
@@ -1868,6 +1870,7 @@ function parseSceneDancers(s) {
   const stripped = text.replace(/\([^)]*\)/g, ' ');
   const set = new Set();
   if (/\bOG\s*cast\b/i.test(stripped)) OG_CAST.forEach(n => set.add(n));
+  if (ALL_ABC.test(stripped)) DANCERS.forEach(n => set.add(n));
   DANCERS.forEach(name => {
     if (new RegExp('\\b' + name + '\\b', 'i').test(stripped)) set.add(name);
   });
