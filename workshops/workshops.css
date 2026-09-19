@@ -84,8 +84,9 @@
 .wt-proof img { border-radius: 1rem; width: 100%; }
 .wt-proof figcaption { margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.75; }
 .wt-cities { margin-top: 2rem; font-size: 1.05rem; }
-.wt-examples { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
-.wt-examples li { border: 1px solid color-mix(in oklab, var(--bold-cream) 35%, transparent); border-radius: 1rem; padding: 1.25rem 1.4rem; display: grid; gap: 0.35rem; }
+.wt-fest-title { margin: 3rem 0 0; font-family: var(--font-display); font-size: clamp(1.3rem, 2.6vw, 1.8rem); font-weight: 800; }
+.wt-examples { list-style: none; margin: 1.25rem 0 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.wt-examples li { border: 1px solid color-mix(in oklab, var(--bold-cream) 35%, transparent); border-radius: 1rem; padding: 1.25rem 1.4rem; display: grid; gap: 0.35rem; align-content: start; }
 .wt-examples small { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
 .wt-examples strong { font-family: var(--font-display); font-size: clamp(1.25rem, 2.4vw, 1.6rem); font-weight: 800; }
 .wt-examples span { font-size: 1rem; line-height: 1.5; }
