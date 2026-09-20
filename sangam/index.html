@@ -1019,6 +1019,12 @@ strong, b { font-weight:600; }
 .r-check, .r-check-box { border-radius:0; }
 
 /* ── SONGS ── */
+.song-header, .song-row { grid-template-columns:minmax(0, 1.15fr) minmax(0, 0.85fr) 66px minmax(0, 1.45fr) minmax(0, 0.95fr) 64px 106px; }
+.song-header-cell, .song-cell { padding-left:0.75rem; padding-right:0.75rem; }
+.song-header-cell:nth-child(3), .song-row .song-cell:nth-child(3) { padding-left:0.3rem; padding-right:0.3rem; }
+.song-header-cell:nth-child(6), .song-row .song-cell:nth-child(6) { padding-left:0.3rem; padding-right:0.5rem; }
+.song-costume { font-size:0.88rem; color:var(--muted); line-height:1.4; }
+.song-time { font-family:var(--mk-body); font-weight:500; font-size:0.86rem; letter-spacing:0.04em; color:var(--muted); font-variant-numeric:tabular-nums; }
 .song-pdf-link { margin:-1.4rem 0 2rem; }
 .song-pdf-link a { display:inline-flex; align-items:center; min-height:44px; padding:0 1.1rem; border:1px solid var(--mk-teal); color:var(--mk-teal); font-family:var(--mk-body); font-weight:600; font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; text-decoration:none; }
 .song-pdf-link a:hover { background:var(--mk-teal); color:#f4e9cc; }
@@ -1175,14 +1181,18 @@ strong, b { font-weight:600; }
   .song-cell:nth-child(2) { grid-column:1; flex-direction:column; align-items:flex-start; gap:2px; }
   .song-cell:nth-child(3) { grid-column:2; flex-direction:column; align-items:flex-end; justify-content:flex-start !important; gap:2px; border-left:1px solid var(--border); min-width:5.5rem; }
   .song-cell:nth-child(4) { display:flex !important; grid-column:1 / -1; flex-direction:column; align-items:flex-start; gap:2px; }
-  .song-cell:nth-child(5) { display:flex !important; grid-column:1 / -1; gap:8px; border-bottom:none; justify-content:flex-start !important; }
-  .song-cell:nth-child(2)::before, .song-cell:nth-child(3)::before, .song-cell:nth-child(4)::before, .song-cell:nth-child(5)::before {
+  .song-cell:nth-child(5) { display:flex !important; grid-column:1; flex-direction:column; align-items:flex-start; gap:2px; }
+  .song-cell:nth-child(6) { display:flex !important; grid-column:2; flex-direction:column; align-items:flex-end; justify-content:flex-start !important; gap:2px; border-left:1px solid var(--border); }
+  .song-cell:nth-child(7) { display:flex !important; grid-column:1 / -1; gap:8px; border-bottom:none; justify-content:flex-start !important; }
+  .song-cell:nth-child(2)::before, .song-cell:nth-child(3)::before, .song-cell:nth-child(4)::before, .song-cell:nth-child(5)::before, .song-cell:nth-child(6)::before, .song-cell:nth-child(7)::before {
     font-family:var(--mk-body); font-weight:600; text-transform:uppercase; font-size:0.66rem; letter-spacing:0.12em; color:var(--muted);
   }
   .song-cell:nth-child(2)::before { content:'Genre'; }
   .song-cell:nth-child(3)::before { content:'People'; }
   .song-cell:nth-child(4)::before { content:'Primary dancers'; }
-  .song-cell:nth-child(5)::before { content:'Status'; }
+  .song-cell:nth-child(5)::before { content:'Costume'; }
+  .song-cell:nth-child(6)::before { content:'Time'; }
+  .song-cell:nth-child(7)::before { content:'Status'; }
   .act-header { gap:0.4rem 0.9rem; flex-wrap:wrap; }
   .act-counts { white-space:normal; }
   .arc-bar { overflow-x:auto; overflow-y:hidden; align-items:flex-end; height:auto; min-height:80px; padding-bottom:6px; scrollbar-width:thin; }
@@ -1406,8 +1416,9 @@ strong, b { font-weight:600; }
       <div class="song-header-cell">Genre</div>
       <div class="song-header-cell">People</div>
       <div class="song-header-cell">Primary Dancers</div>
+      <div class="song-header-cell">Costume</div>
+      <div class="song-header-cell">Time</div>
       <div class="song-header-cell">Status</div>
-      <div class="song-header-cell"></div>
     </div>
     <div id="songs-list"></div>
   </div>
@@ -1844,6 +1855,7 @@ const songs = [
   {title:'Deewani Mastani',genre:'Bollywood — regal / complex',people:7,dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike',backup:'—',status:'ready'},
   {title:'Jalalo Bilalo',genre:'Bollyfolk / Ghoomar',people:'8+',dancers:'Bollyfolk Students + Svetlana + Roshni, Kaushika',backup:'—',status:'ready'},
   {title:'Kalbeliya',genre:'Group',people:9,dancers:'Narcisse, Shreya, Srimahavalli, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',backup:'—',status:'ready'},
+  {title:'TBD — Chaos & Drought',genre:'Prop piece — projection, strobe, smoke',people:'—',dancers:'Full ensemble — fragmented',backup:'—',status:'tbc'},
   {title:'Silsila',genre:'—',people:1,dancers:'Narcisse (solo)',backup:'—',status:'partial'},
   {title:'Natarang Ubha',genre:'Semi-classical',people:11,dancers:'Swapnil + Narcisse, Shreya, Srimahavalli, Kaushika, Roshni, Sara, Chiara, Laurien, Haike & Amy/Yasha',backup:'—',status:'ready'},
   {title:'Luddi',genre:'Bhangra — folk',people:'—',dancers:'Swapnil + Bhangra Students',backup:'—',status:'new'},
@@ -1853,6 +1865,7 @@ const songs = [
   {title:'Ode to Baji / Jhalla Re (Rani verse)',genre:'Niraj Chag — Rajasthani folk',people:1,dancers:'Svetlana (Queen — softening / choice)',backup:'—',status:'partial'},
   {title:'Ghanan Ghanan',genre:'Bollyfolk',people:'20+',dancers:'Bollywood Level 2 Students',backup:'—',status:'ready'},
   {title:'Ghar More Pardesiya',genre:'Semi-classical Kathak',people:9,dancers:'Swapnil, Narcisse, Sara, Roshni, Laurien, Haike, Kaushika, Khushboo, Shreya',backup:'—',status:'ready'},
+  {title:'TBD — Reunion with Uma',genre:'—',people:2,dancers:'Swapnil + Srimahavalli',backup:'—',status:'partial'},
   {title:'Krishna Dandiya Medley',genre:'Garba',people:12,dancers:'All ABC dancers',backup:'Shreya, Narcisse, Chiara',status:'partial'},
 ];
 // ── DATA END ──
@@ -2041,18 +2054,37 @@ function renderActCounts() {
 }
 
 // ── RENDER SONGS ──
+// Costume + running time for a song, read from the scene it belongs to (never stored twice)
+const songKey = t => String(t || '').toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+function songMeta(title) {
+  const all = [...scenes1, ...scenes2, ...scenes3, ...scenes4];
+  const t = songKey(String(title || '').split(' — ')[0]);
+  const scene = songKey(String(title || '').split(' — ')[1] || '');
+  if (scene) { const sc = all.find(x => songKey(x.name) === scene); if (sc) return {duration: sc.duration || '', costume: sc.costume || ''}; }
+  for (const sc of all) {
+    for (const sg of (sc.songs || [{title: sc.song || sc.sub, duration: sc.duration, costume: sc.costume}])) {
+      const k = songKey(sg.title);
+      if (k && t && k !== 'tbd' && (k.startsWith(t) || t.startsWith(k)))
+        return {duration: sg.duration || sc.duration || '', costume: sg.costume || sc.costume || ''};
+    }
+  }
+  return {duration: '', costume: ''};
+}
 function makeSongRow(s, i) {
   const edits = getEditData();
   const sg = {...s, ...(edits.songs?.[String(i)] || {})};
   const key = 'sangam_song_status_' + i;
   const currentStatus = localStorage.getItem(key) || sg.status;
+  const meta = songMeta(sg.title);
   return `<div class="song-item" id="song-${i}">
     <div class="song-row" data-song-idx="${i}">
       <div class="song-cell"><span class="song-title editable-cell" data-field="title">${sg.title}</span>${copyLinkBtn('song-' + i, sg.title)}</div>
       <div class="song-cell"><span class="song-meta editable-cell" data-field="genre">${sg.genre}</span></div>
       <div class="song-cell" style="justify-content:center"><span class="editable-cell" style="font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--gold);opacity:0.55;text-align:center" data-field="people">${sg.people}</span></div>
       <div class="song-cell"><span class="song-meta editable-cell" data-field="dancers">${sg.dancers}</span></div>
-      <div class="song-cell"><span class="flow-tag ${STATUS_CLASSES[currentStatus]}" aria-label="Status: ${STATUS_LABELS[currentStatus]}">${STATUS_LABELS[currentStatus]}</span></div>
+      <div class="song-cell"><span class="song-costume">${meta.costume}</span></div>
+      <div class="song-cell" style="justify-content:center"><span class="song-time">${meta.duration}</span></div>
+      <div class="song-cell"><span class="flow-tag" ${STATUS_CLASSES[currentStatus]}" aria-label="Status: ${STATUS_LABELS[currentStatus]}">${STATUS_LABELS[currentStatus]}</span></div>
     </div>
   </div>`;
 }
