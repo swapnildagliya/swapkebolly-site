@@ -80,13 +80,14 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:urn:uuid:9b826fbc-1f5e-50c1-b563-c410f06296c3
-DTSTAMP:20261003T120000Z
-SEQUENCE:1
+DTSTAMP:20261003T174414Z
+SEQUENCE:2
 SUMMARY:SANGAM · Saturday
 DTSTART;TZID=Europe/Brussels:20261107T193000
-DTEND;TZID=Europe/Brussels:20261107T204500
-DESCRIPTION:Performance at Shoonya Theatre. 60 minutes plus a 15-minute int
- erval. Tickets €20\, ages 8+: https://links.shoonyadance.com/go/ticket/
+DTEND;TZID=Europe/Brussels:20261107T210000
+DESCRIPTION:Performance at Shoonya Theatre. 70 minutes plus a 20-minute int
+ erval. Tickets €20\, ages 8+. Tickets: https://links.shoonyadance.com/go
+ /ticket/
 LOCATION:Shoonya Theatre\, Stapelplein 41\, 9000 Gent\, Belgium
 CATEGORIES:Event
 STATUS:CONFIRMED
@@ -95,13 +96,14 @@ URL:https://performances.shoonyadance.com/sangam/
 END:VEVENT
 BEGIN:VEVENT
 UID:urn:uuid:34f315fc-cb72-56e9-95a4-63b517e52f5b
-DTSTAMP:20261003T120000Z
-SEQUENCE:1
+DTSTAMP:20261003T174414Z
+SEQUENCE:2
 SUMMARY:SANGAM · Sunday
 DTSTART;TZID=Europe/Brussels:20261108T150000
-DTEND;TZID=Europe/Brussels:20261108T161500
-DESCRIPTION:Performance at Shoonya Theatre. 60 minutes plus a 15-minute int
- erval. Tickets €20\, ages 8+: https://links.shoonyadance.com/go/ticket/
+DTEND;TZID=Europe/Brussels:20261108T163000
+DESCRIPTION:Performance at Shoonya Theatre. 70 minutes plus a 20-minute int
+ erval. Tickets €20\, ages 8+. Tickets: https://links.shoonyadance.com/go
+ /ticket/
 LOCATION:Shoonya Theatre\, Stapelplein 41\, 9000 Gent\, Belgium
 CATEGORIES:Event
 STATUS:CONFIRMED
