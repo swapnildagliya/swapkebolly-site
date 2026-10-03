@@ -1,0 +1,467 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Swapnil Dagliya//Dance Year 2026-27//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Your dance year 2026–27
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VTIMEZONE
+TZID:Europe/Brussels
+X-LIC-LOCATION:Europe/Brussels
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:urn:uuid:6f880ca0-528b-5785-a26f-c1ce51c43526
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Semester 1 · Shoonya
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20270131
+DESCRIPTION:School semester window\, not an individual class schedule. Swap
+ nil’s December break begins after the combined class on 3 December.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School dates
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:4c6fcef1-8d04-5908-bfeb-2c9b7aff2fce
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:SANGAM performer rehearsal
+DTSTART;TZID=Europe/Brussels:20261031T130000
+DTEND;TZID=Europe/Brussels:20261031T170000
+DESCRIPTION:Only for students performing in SANGAM. Shoonya Dance Centre\, 
+ Stapelplein 41\, Gent. This rehearsal is not for the whole class.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:SANGAM performers only
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:018820eb-6512-5f0a-975b-e91f5224ad6f
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Autumn break · no regular classes
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261109
+DESCRIPTION:No regular classes. SANGAM still takes place on 7 and 8 Novembe
+ r.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School break
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:bf70f53a-a108-542a-9c7f-52d12b5395d8
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:SANGAM performer rehearsal
+DTSTART;TZID=Europe/Brussels:20261105T190000
+DTEND;TZID=Europe/Brussels:20261105T220000
+DESCRIPTION:Only for students performing in SANGAM. Shoonya Dance Centre\, 
+ Stapelplein 41\, Gent. This rehearsal is not for the whole class.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:SANGAM performers only
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:9b826fbc-1f5e-50c1-b563-c410f06296c3
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:SANGAM · Saturday
+DTSTART;TZID=Europe/Brussels:20261107T193000
+DTEND;TZID=Europe/Brussels:20261107T204500
+DESCRIPTION:Performance at Shoonya Theatre. 60 minutes plus a 15-minute int
+ erval. Tickets €20\, ages 8+: https://links.shoonyadance.com/go/ticket/
+LOCATION:Shoonya Theatre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Event
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://performances.shoonyadance.com/sangam/
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:34f315fc-cb72-56e9-95a4-63b517e52f5b
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:SANGAM · Sunday
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T161500
+DESCRIPTION:Performance at Shoonya Theatre. 60 minutes plus a 15-minute int
+ erval. Tickets €20\, ages 8+: https://links.shoonyadance.com/go/ticket/
+LOCATION:Shoonya Theatre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Event
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://performances.shoonyadance.com/sangam/
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:5c7f42c2-a6f4-5705-a1ea-2ebda6c55a6c
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Combined final class of 2026
+DTSTART;TZID=Europe/Brussels:20261203T190000
+DTEND;TZID=Europe/Brussels:20261203T203000
+DESCRIPTION:All Swapnil students together at Shoonya. Final class before Sw
+ apnil’s December teaching break.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:All Swapnil students
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:71401011-49b4-51ff-91c7-1a2897007b1c
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Swapnil’s teaching break · no regular classes
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20270111
+DESCRIPTION:No regular classes after the combined class on 3 December. From
+  the week of 11 January\, classes follow your own timetable.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Personal teaching break
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:e8c555e0-7c47-5614-88cc-ee228dcb6b26
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Christmas break · school dates
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20270111
+DESCRIPTION:School-wide closure.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School break
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:93d520d1-0a4e-5216-ad97-c203a1d5d6ca
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Bhangra & Jhoomar · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270122T183000
+DTEND;TZID=Europe/Brussels:20270122T213000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:8a10e243-9cd2-5709-ac9e-c2ca2a41b5a4
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Indian Semi-Classical · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270123T100000
+DTEND;TZID=Europe/Brussels:20270123T130000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:613690e9-3c1c-5ddf-b153-74cf215e98b5
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Group Choreography · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270123T140000
+DTEND;TZID=Europe/Brussels:20270123T170000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:75f20f6f-b62f-5461-a334-a68e6a6147e1
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Garba & Dandiya Raas · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270124T100000
+DTEND;TZID=Europe/Brussels:20270124T123000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:66c6157a-e74f-5f34-be3c-620e7d55c7bf
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Khoriya · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270124T133000
+DTEND;TZID=Europe/Brussels:20270124T160000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:aa8395b5-39ab-5737-8de0-c307be4225e6
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Spring open day · Shoonya
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+DESCRIPTION:Explore the spring semester. Programme and times to follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School event
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:a3170105-3fbf-5357-a893-ccff7996ec6e
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Krokus break · no regular classes
+DTSTART;VALUE=DATE:20270208
+DTEND;VALUE=DATE:20270215
+DESCRIPTION:School holiday before Semester 2 starts.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School break
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:eac03bb7-e5ba-5947-9739-40880b47c07a
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Semester 2 · Shoonya
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270613
+DESCRIPTION:School semester window\, not an individual class schedule. Use 
+ your class timetable for weekly sessions.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School dates
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:26860d53-9ffe-5c06-b198-b230337fb0d6
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Free trial week · Shoonya
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270221
+DESCRIPTION:Spring free trial week. Try classes from the published weekly t
+ imetable.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School event
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:25951178-5281-5ac8-9a72-e9534ea8c93b
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Bhangra Starter Series · week 1
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:5fe198db-46af-57c8-b7d4-4ee41d85484e
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Indian Semi-Classical Starter Series · week 1
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:08ab7f7c-2d85-5e93-8a8d-f6d9e47667a6
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Bhangra Starter Series · week 2
+DTSTART;VALUE=DATE:20270224
+DTEND;VALUE=DATE:20270225
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:e30cc985-6627-502d-b367-a5ead1489702
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Indian Semi-Classical Starter Series · week 2
+DTSTART;VALUE=DATE:20270224
+DTEND;VALUE=DATE:20270225
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:9db78df7-7c0c-59e5-b0aa-27c4ac456646
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Bhangra Starter Series · week 3
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270304
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:9b6be023-a142-51f2-b0d1-e4610f2f9713
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Indian Semi-Classical Starter Series · week 3
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270304
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:ed011a89-ca09-5879-9bab-ba3cb2935865
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Bhangra Starter Series · week 4
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:5f4abf81-450d-52f8-8f01-e043d077de77
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Indian Semi-Classical Starter Series · week 4
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+DESCRIPTION:Four Wednesday dates confirmed: 17 and 24 February\, 3 and 10 M
+ arch 2027. Class times and registration details will follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Starter Series
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:09bf0486-f893-54b1-88e9-29828489c13b
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Easter break · no regular classes
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270412
+DESCRIPTION:School Easter holiday.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School break
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:a1fcfce0-fbcb-5b04-a509-ebabc7a3cd16
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Gent India Dans Festival
+DTSTART;VALUE=DATE:20270507
+DTEND;VALUE=DATE:20270510
+DESCRIPTION:Three days of Indian dance. Programme and session times to foll
+ ow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Festival
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://gidf.abcdans.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:45e2ddd1-bccb-5451-b08c-8a5f5fc4b102
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:Participant technical rehearsal · evening
+DTSTART;VALUE=DATE:20270611
+DTEND;VALUE=DATE:20270612
+DESCRIPTION:Only for students performing at NTGent. Keep Friday evening fre
+ e for the full technical rehearsal at Shoonya. Times to follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:NTGent performers only
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:825f4740-5066-5a9b-9949-81e2c9641d2e
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:NTGent performance
+DTSTART;VALUE=DATE:20270612
+DTEND;VALUE=DATE:20270613
+DESCRIPTION:Performance date confirmed. Time and practical details to follo
+ w.
+LOCATION:NTGent\, Gent\, Belgium
+CATEGORIES:Student performance
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:e2d3a2eb-c063-5e3b-8291-4c127552e1bd
+DTSTAMP:20261003T120000Z
+SEQUENCE:1
+SUMMARY:End-of-year open day · Shoonya
+DTSTART;VALUE=DATE:20270613
+DTEND;VALUE=DATE:20270614
+DESCRIPTION:School-wide open day. Programme and times to follow.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:School event
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

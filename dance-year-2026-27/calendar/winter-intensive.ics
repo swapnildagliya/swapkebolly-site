@@ -1,0 +1,105 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Swapnil Dagliya//Dance Year 2026-27//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Your dance year 2026–27
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VTIMEZONE
+TZID:Europe/Brussels
+X-LIC-LOCATION:Europe/Brussels
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:urn:uuid:93d520d1-0a4e-5216-ad97-c203a1d5d6ca
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Bhangra & Jhoomar · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270122T183000
+DTEND;TZID=Europe/Brussels:20270122T213000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:8a10e243-9cd2-5709-ac9e-c2ca2a41b5a4
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Indian Semi-Classical · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270123T100000
+DTEND;TZID=Europe/Brussels:20270123T130000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:613690e9-3c1c-5ddf-b153-74cf215e98b5
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Group Choreography · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270123T140000
+DTEND;TZID=Europe/Brussels:20270123T170000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:75f20f6f-b62f-5461-a334-a68e6a6147e1
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Garba & Dandiya Raas · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270124T100000
+DTEND;TZID=Europe/Brussels:20270124T123000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+BEGIN:VEVENT
+UID:urn:uuid:66c6157a-e74f-5f34-be3c-620e7d55c7bf
+DTSTAMP:20261001T120000Z
+SEQUENCE:0
+SUMMARY:Khoriya · Winter Intensive
+DTSTART;TZID=Europe/Brussels:20270124T133000
+DTEND;TZID=Europe/Brussels:20270124T160000
+DESCRIPTION:Indian Dance Winter Intensive 2027 with Swapnil. Check the even
+ t page for booking and practical details.
+LOCATION:Shoonya Dance Centre\, Stapelplein 41\, 9000 Gent\, Belgium
+CATEGORIES:Winter Intensive
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-jan
+ uary-2027
+END:VEVENT
+END:VCALENDAR
