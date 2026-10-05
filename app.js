@@ -817,7 +817,7 @@
       bollywood: "https://www.shoonyadance.com/bollywood-danslessen-in-gent",
     };
     // SOURCE OF TRUTH: Swapnil, direct. Nine classes / six forms / three days.
-    const STARTER = "New? Enter via the 4-week Starter Series or a seasonal intensive.";
+    const WAYIN = "New? Enter via a seasonal intensive.";
     const P2DAYS = [
       { name: "Tuesday", dow: 2, calls: [
         ["18:30", "Bollyfolk", "Film-dance joy, folk roots.", P2L.bollyfolk, "Level 2", false],
@@ -826,8 +826,8 @@
       { name: "Wednesday", dow: 3, calls: [
         ["17:20", "Yoga", "Breath, pranayama, a softer landing.", P2L.yoga, "Open level", true],
         ["18:30", "Bollyfolk", "Film-dance joy, folk roots.", P2L.bollyfolk, "Open level", true],
-        ["19:30", "Bhangra", "Shoulders up, mood up.", P2L.bhangra, "Level 2", false, STARTER],
-        ["20:30", "Indian Semi-Classical", "Kathak vocabulary — a quieter thunder.", P2L.semi, "Level 2", false, STARTER]] },
+        ["19:30", "Bhangra", "Shoulders up, mood up.", P2L.bhangra, "Level 2", false, WAYIN],
+        ["20:30", "Indian Semi-Classical", "Kathak vocabulary — a quieter thunder.", P2L.semi, "Level 2", false, WAYIN]] },
       { name: "Thursday", dow: 4, calls: [
         ["18:30", "Bollywood", "Thumkas, mudras, no room for shy.", P2L.bollywood, "Level 2", false],
         ["19:30", "Bollywood", "Technique, timing, performance quality.", P2L.bollywood, "Level 3", false]] },
