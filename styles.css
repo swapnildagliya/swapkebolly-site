@@ -891,7 +891,7 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
    glow so newcomers find a way in. Cool pale paper (contrast to the warm gold Notes above).
    Colours section-scoped p2- so they never touch global tokens. */
 .practice2 {
-  --p2-paper: var(--ink-deep); --p2-ink: var(--cream);  /* D-123 touch rule: neutral ground, colour in the details */
+  --p2-paper: var(--ink-deep); --p2-ink: var(--cream);  /* D-125 touch rule: neutral ground, colour in the details */
   --p2-rani: var(--glow); --p2-gold: var(--glow);  /* glow-rose on cobalt was 3.1:1 */
   --p2-mono: ui-monospace, "SF Mono", Menlo, monospace;
   background: var(--p2-paper);
