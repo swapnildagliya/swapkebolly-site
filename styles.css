@@ -891,10 +891,10 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
    glow so newcomers find a way in. Cool pale paper (contrast to the warm gold Notes above).
    Colours section-scoped p2- so they never touch global tokens. */
 .practice2 {
-  --p2-paper: var(--bold-cobalt); --p2-ink: var(--cream);
+  --p2-paper: var(--ink-deep); --p2-ink: var(--cream);  /* D-123 touch rule: neutral ground, colour in the details */
   --p2-rani: var(--glow); --p2-gold: var(--glow);  /* glow-rose on cobalt was 3.1:1 */
   --p2-mono: ui-monospace, "SF Mono", Menlo, monospace;
-  background: radial-gradient(120vmax 80vmax at 80% -10%, oklch(0.56 0.2 262), var(--p2-paper) 70%);
+  background: var(--p2-paper);
   color: var(--p2-ink);
   padding: clamp(2.5rem, 9vh, 6rem) var(--page) clamp(3rem, 10vh, 7rem);
 }
@@ -1136,7 +1136,7 @@ html.js .lb-board.is-live .lb-cell:not(.gap) { animation: lb-flip 0.5s var(--eas
 /* ============================== Act V — The Thali ==============================
    A steel platter ringed with round dish cutouts; point at one and it serves into the centre.
    Bold orange ground; the metal platter and cream rings pop against it. Namespaced th-. */
-.thali-act { background: var(--bold-orange); color: var(--ink-deep); overflow: clip; }
+.thali-act { background: var(--cream); color: var(--ink-deep); overflow: clip; }
 .th-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   padding: 0.85rem var(--page); background: var(--ink-deep); color: var(--cream);
   font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; }
@@ -1148,14 +1148,14 @@ html.js .lb-board.is-live .lb-cell:not(.gap) { animation: lb-flip 0.5s var(--eas
 .thali-act .eyebrow { color: color-mix(in oklch, var(--ink-deep), transparent 20%); opacity: 1; margin-bottom: 0.9rem; }
 .thali-act h2 { font-family: var(--font-display); font-weight: 840; font-stretch: 114%; font-size: clamp(2rem, 5vw, 3.7rem);
   line-height: 0.92; letter-spacing: -0.03em; text-transform: uppercase; margin: 0; }
-.thali-act h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--cream); }
+.thali-act h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--bold-orange); }
 .th-copy p { margin-top: 1.05rem; line-height: 1.65; opacity: 0.85; max-width: 30rem; }
 .th-cta { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; margin-top: 1.5rem; }
-.th-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--cream); color: var(--ink);
+.th-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--bold-orange); color: var(--cream);
   border-radius: 99px; padding: 0.8rem 1.4rem; font-weight: 600; font-size: 0.92rem; text-decoration: none;
   transition: transform 0.16s var(--ease-out), background-color 0.2s; }
 @media (hover: hover) and (pointer: fine) { .th-btn:hover { background: var(--glow); transform: scale(1.03); } }
-.th-copy .scribble { color: var(--cream); rotate: -3deg; font-size: 1.05rem; }
+.th-copy .scribble { color: var(--bold-orange); rotate: -3deg; font-size: 1.05rem; }
 
 .th-plate { position: relative; aspect-ratio: 1; width: min(46rem, 88vw); justify-self: center; display: grid; place-items: center;
   border-radius: 50%; background: radial-gradient(circle at 38% 32%, #fdfdfb, #e6e4dd 58%, #c9c6bd 78%, #a9a69c);
@@ -1194,7 +1194,7 @@ html.no-js .th-picked { display: none; }
 
 /* ============================== Curtain call — hello ============================== */
 
-.hello { position: relative; padding: clamp(5rem, 13vh, 9rem) var(--page) 2.5rem; overflow: clip; background: var(--bold-cobalt); color: var(--cream); }
+.hello { position: relative; padding: clamp(5rem, 13vh, 9rem) var(--page) 2.5rem; overflow: clip; background: var(--ink-deep); color: var(--cream); }
 .hello__ghost {
   position: absolute; top: 0.5rem; left: 50%; transform: translateX(-50%);
   font-family: var(--font-display); font-weight: 850; font-stretch: 124%;
