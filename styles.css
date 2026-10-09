@@ -1717,3 +1717,15 @@ html.no-js .hero__footer .hero__cue { transform: none; }
   font-size: 0.86rem; line-height: 1.5;
   color: color-mix(in oklch, var(--cream), transparent 45%);
 }
+
+/* ---- Interlude II — SANGAM (2026-10-09). Story opener + the maker's note; links to the production page. ---- */
+.sangam-note { background: var(--ink-deep, #0b0a08); color: var(--cream); padding: clamp(2.5rem, 9vh, 6rem) var(--page) clamp(3rem, 10vh, 7rem); }
+.sangam-note .sn-wrap { max-width: 68rem; }
+.sangam-note .eyebrow { color: var(--marigold); opacity: 1; margin-bottom: 0.9rem; }
+.sangam-note h2 { font-family: var(--font-display); font-weight: 840; font-stretch: 114%; font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase; margin: 0 0 1.6rem; max-width: 16ch; }
+.sangam-note h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--marigold); }
+.sn-story p { font-size: clamp(1.15rem, 1.9vw, 1.55rem); line-height: 1.4; max-width: 34ch; margin: 0 0 0.9rem; }
+.sn-story .sn-cue { opacity: 0.72; font-size: clamp(1rem, 1.3vw, 1.15rem); margin-top: 1.2rem; }
+.sn-quote { margin: 2.2rem 0 0; padding-left: 1.2rem; border-left: 3px solid var(--marigold); max-width: 44ch; }
+.sn-quote p { font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.5; margin: 0 0 0.8rem; color: color-mix(in oklch, var(--cream), transparent 12%); }
+.sn-cta { margin: 2rem 0 0; }
