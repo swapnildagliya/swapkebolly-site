@@ -926,7 +926,7 @@
   const lbBoard = document.querySelector("#lbBoard");
   if (lbBoard) {
     // [date, month, CITY, name, programme, info-label, href, startISO, endISO]
-    const DATES = [
+    const FALLBACK_DATES = [
       [
             "11-25",
             "Sep",
@@ -1005,6 +1005,7 @@
             "2027-05-09"
       ]
 ];
+    const renderBoard = (DATES) => {
     // keep only events that haven't finished yet (compare on date, ignore time)
     const today = new Date(); today.setHours(0, 0, 0, 0);
     const upcoming = DATES.filter((d) => new Date(d[8] + "T23:59:59") >= today);
@@ -1028,6 +1029,41 @@
           if (e.isIntersecting) { e.target.classList.add("is-live"); o.unobserve(e.target); }
         }), { threshold: 0.15 }).observe(lbBoard);
       } else { lbBoard.classList.add("is-live"); }
+    }
+    };
+
+    // Single source of truth: Swapnil's link-in-bio events list (links.swapnil.dance/events.js).
+    // The hardcoded FALLBACK_DATES above render only if that file fails or takes >3s. Renders once.
+    const MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const datesFromBio = (evs) => {
+      const groups = new Map();
+      (evs || []).forEach((e) => {
+        if (!e || (e.audience !== "swapnil" && e.audience !== "both") || !e.city || e.site === false || !e.date) return;
+        if (!groups.has(e.title)) groups.set(e.title, []);
+        groups.get(e.title).push(e);
+      });
+      const rows = [];
+      groups.forEach((g) => {
+        const start = g.map((e) => e.date).sort()[0];
+        const end = g.map((e) => e.endDate || e.date).sort().slice(-1)[0];
+        const [sy, sm, sd] = start.split("-"), [, em, ed] = end.split("-");
+        const day = start === end ? sd : sm === em ? sd + "-" + ed : sd + "–" + ed;
+        rows.push([day, MONS[+sm - 1], g[0].city.toUpperCase(), esc(g[0].title), esc(g[0].dateLabel || ""),
+          "Details ↗", g[0].siteUrl || g[0].url || "#hello", start, end]);
+      });
+      return rows.sort((a, b) => (a[7] < b[7] ? -1 : a[7] > b[7] ? 1 : 0));
+    };
+    let boardDone = false;
+    const boardOnce = (rows) => { if (boardDone) return; boardDone = true; renderBoard(rows && rows.length ? rows : FALLBACK_DATES); };
+    {
+      const s = document.createElement("script");
+      s.src = "https://links.swapnil.dance/events.js?d=" + new Date().toISOString().slice(0, 10);
+      s.async = true;
+      s.onload = () => { let r = null; try { r = datesFromBio(window.EVENTS); } catch (e) {} boardOnce(r); };
+      s.onerror = () => boardOnce(null);
+      setTimeout(() => boardOnce(null), 3000);
+      document.head.appendChild(s);
     }
   }
 
