@@ -1720,7 +1720,13 @@ html.no-js .hero__footer .hero__cue { transform: none; }
 
 /* ---- Interlude II — SANGAM (2026-10-09). Story opener + the maker's note; links to the production page. ---- */
 .sangam-note { background: var(--ink-deep, #0b0a08); color: var(--cream); padding: clamp(2.5rem, 9vh, 6rem) var(--page) clamp(3rem, 10vh, 7rem); }
-.sangam-note .sn-wrap { max-width: 68rem; }
+.sangam-note { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.sangam-note .sn-wrap { max-width: 40rem; }
+.sn-art { margin: 0; position: relative; justify-self: end; width: 100%; max-width: 30rem; }
+.sn-art img { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); }
+.sn-art figcaption { margin-top: 0.8rem; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in oklch, var(--cream), transparent 30%); }
+.sn-art figcaption b { color: var(--marigold); margin-right: 0.6rem; }
+@media (max-width: 860px) { .sangam-note { grid-template-columns: 1fr; } .sn-art { justify-self: start; max-width: 22rem; } }
 .sangam-note .eyebrow { color: var(--marigold); opacity: 1; margin-bottom: 0.9rem; }
 .sangam-note h2 { font-family: var(--font-display); font-weight: 840; font-stretch: 114%; font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase; margin: 0 0 1.6rem; max-width: 16ch; }
 .sangam-note h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--marigold); }
