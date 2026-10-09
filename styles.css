@@ -1718,3 +1718,36 @@ html.no-js .hero__footer .hero__cue { transform: none; }
   color: color-mix(in oklch, var(--cream), transparent 45%);
 }
 
+/* ---- Act VI — SANGAM (2026-10-09). The production gets its own world: the Madhubani paper
+   as the field, ink type, the SANGAM red for the split word, the artwork as the one object. ---- */
+.sangam-act { --sg-paper: #e9c982; --sg-ink: #2b2016; --sg-red: #971e16; --sg-teal: #00585b;
+  position: relative; z-index: 6; overflow: hidden; background: var(--sg-paper); color: var(--sg-ink); isolation: isolate; }
+.sg-bar { background: var(--sg-ink); color: #f2e2bd; }
+.sg-bar b { color: #f0d782; }
+.sg-bar b i { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #f0d782; display: inline-block; }
+.sg-ghost { position: absolute; z-index: 0; pointer-events: none; margin: 0; right: -0.04em; top: 0.02em; line-height: 1;
+  font-family: "Noto Serif Devanagari", "Devanagari MT", "Kohinoor Devanagari", serif; font-weight: 700;
+  font-size: clamp(14rem, 34vw, 30rem); color: var(--sg-teal); opacity: 0.09; user-select: none; }
+.sg-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 6vw, 6rem); align-items: center; padding: clamp(3rem, 9vh, 6rem) var(--page) clamp(3.5rem, 10vh, 7rem); }
+.sangam-act .eyebrow { color: var(--sg-teal); opacity: 1; margin-bottom: 0.9rem; }
+.sangam-act h2 { font-family: var(--font-display); font-weight: 840; font-stretch: 114%; font-size: clamp(2.4rem, 6.4vw, 5rem);
+  line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase; margin: 0 0 1.4rem; max-width: 11ch; color: var(--sg-ink); }
+.sangam-act h2 em { font-style: normal; font-weight: 320; font-stretch: 76%; color: var(--sg-red); }
+.sg-lede { font-size: clamp(1.1rem, 1.7vw, 1.4rem); line-height: 1.45; max-width: 36ch; margin: 0 0 0.8rem; }
+.sg-cue { font-size: clamp(0.98rem, 1.2vw, 1.1rem); color: color-mix(in oklch, #2b2016, transparent 32%); margin: 0 0 1.6rem; }
+.sangam-act .button--ink { background: var(--sg-ink); color: #f2e2bd; border-color: var(--sg-ink); }
+.sangam-act .text-link { color: var(--sg-ink); }
+.sangam-act .text-link:hover { color: var(--sg-red); }
+.sg-scribble { font-family: var(--font-hand); color: var(--sg-red); font-size: clamp(1rem, 1.6vw, 1.3rem); margin: 1.6rem 0 0; transform: rotate(-2deg); transform-origin: left; max-width: 30ch; }
+.sg-card { margin: 0; justify-self: center; width: min(100%, 26rem); position: relative;
+  transform: rotate(-3deg); transition: transform 420ms var(--ease-out, ease-out); }
+.sg-card:hover { transform: rotate(0deg) scale(1.01); }
+.sg-card img { display: block; width: 100%; height: auto; border: 10px solid #f2e2bd; box-shadow: 0 40px 70px -35px rgba(43,32,22,0.8), 0 10px 24px -14px rgba(43,32,22,0.5); }
+.sg-card figcaption { display: flex; flex-wrap: wrap; gap: 0.35rem 1.2rem; margin-top: 0.9rem; justify-content: center;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sg-teal); }
+@media (max-width: 860px) {
+  .sg-grid { grid-template-columns: 1fr; gap: 2.4rem; }
+  .sg-card { width: min(100%, 20rem); justify-self: start; transform: rotate(-2deg); }
+  .sg-ghost { display: none; }
+}
