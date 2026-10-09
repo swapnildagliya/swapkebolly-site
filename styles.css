@@ -1083,7 +1083,7 @@ html.no-js .rl-stills { display: grid; grid-template-columns: repeat(auto-fit, m
    Departure board of upcoming dates; the destination city flips in split-flap style. Bold
    cobalt ground; the flap tiles stay near-black so they still read as flaps. Namespaced lb-.
    Past events are date-gated out in JS. */
-.live-board { background: var(--bold-cobalt); color: var(--cream);
+.live-board { background: var(--ink-deep); color: var(--cream);
   padding: clamp(2.5rem, 9vh, 6rem) var(--page) clamp(3rem, 10vh, 7rem); }
 .lb-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
   padding-bottom: 1.4rem; border-bottom: 1px solid color-mix(in oklch, var(--cream), transparent 78%); }

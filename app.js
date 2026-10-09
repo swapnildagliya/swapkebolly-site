@@ -961,6 +961,17 @@
             "2026-10-04"
       ],
       [
+            "10",
+            "Oct",
+            "NICE",
+            "Happy Inde Festival",
+            "Ghoomar workshop 14:00 · Closing show 19:00",
+            "Details ↗",
+            "https://happy-inde.fr/10-octobre-happy-inde-programme-art-culture-danse-theatre-inde-rajasthan/",
+            "2026-10-10",
+            "2026-10-10"
+      ],
+      [
             "07-08",
             "Nov",
             "GHENT",
@@ -981,6 +992,17 @@
             "#hello",
             "2027-01-22",
             "2027-01-24"
+      ],
+      [
+            "07-09",
+            "May",
+            "GHENT",
+            "Gent India Dans Festival",
+            "Edition Five · Shoonya Dance Centre, Gent",
+            "Festival ↗",
+            "https://gidf.abcdans.com",
+            "2027-05-07",
+            "2027-05-09"
       ]
 ];
     // keep only events that haven't finished yet (compare on date, ignore time)
