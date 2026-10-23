@@ -1747,13 +1747,17 @@ html.no-js .hero__footer .hero__cue { transform: none; }
 .sg-card figcaption { display: flex; flex-wrap: wrap; gap: 0.35rem 1.2rem; margin-top: 0.9rem; justify-content: center;
   font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sg-teal); }
 .sg-poem { position: relative; z-index: 1; padding: 0 var(--page) clamp(3.5rem, 10vh, 7rem); }
-.sg-poem-cols { columns: 2; column-gap: clamp(2rem, 6vw, 6rem); max-width: 60rem; }
-.sg-poem-cols p { break-inside: avoid; font-size: clamp(1.02rem, 1.35vw, 1.18rem); line-height: 1.6; margin: 0 0 1.1em; }
+.sg-poem-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(2rem, 6vw, 6rem); max-width: 60rem; }
+.sg-poem-col { display: flex; flex-direction: column; justify-content: space-between; }
+.sg-poem-col p:last-child { margin-bottom: 0; }
+.sg-poem-cols p { font-size: clamp(1.02rem, 1.35vw, 1.18rem); line-height: 1.6; margin: 0 0 1.1em; }
+.sg-poem-cols .l { display: block; padding-left: 1.2em; text-indent: -1.2em; }
 .sg-poem-cols .river { color: var(--sg-teal); }
 .sg-poem-end { font-style: italic; margin-top: 1.6em !important; }
 .sg-poem-title { display: block; font-weight: 400; font-size: 1.14em; color: var(--sg-red); margin-bottom: 0.35em; }
 @media (max-width: 860px) {
-  .sg-poem-cols { columns: 1; }
+  .sg-poem-cols { display: block; }
+  .sg-poem-col p:last-child { margin-bottom: 1.1em; }
   .sg-grid { grid-template-columns: 1fr; gap: 2.4rem; }
   .sg-card { width: min(100%, 20rem); justify-self: start; transform: rotate(-2deg); }
   .sg-ghost { display: none; }
