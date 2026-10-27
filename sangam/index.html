@@ -1401,17 +1401,13 @@ strong, b { font-weight:600; }
 <div class="task-row"><span>Before Sun &amp; Moon</span><strong>Khushboo</strong><span>Park the basket rope at SL; cross backstage to Asvaar SR.</span><em>Assigned</em></div>
 <div class="task-row task-open"><span>After Asvaar</span><strong>TBD</strong><span>Pull the white screen OUT for the growth film.</span><em>Open</em></div>
 <div class="task-row"><span>Pot solo end</span><strong>Swapnil</strong><span>Move the screen BACK and exit back SR with the pot.</span><em>Assigned</em></div>
-<div class="task-row"><span>During growth</span><strong>Haike</strong><span>Rehearse the Chalka pots and queue crossover from back SR to back SL.</span><em>Working</em></div>
+<div class="task-row"><span>During growth</span><strong>Haike</strong><span>Rehearse moving Chalka pots backstage from SR to SL.</span><em>Working</em></div>
 </div>
 <div class="task-group"><h3>04–05 · Adulthood and Barso Re</h3>
 <div class="task-row"><span>Gehra end</span><strong>Swapnil</strong><span>Exit back SL, change to blue sherwani, return back SL in Barso.</span><em>Assigned</em></div>
 <div class="task-row"><span>Before Barso GO</span><strong>Haike + Khushboo</strong><span>Roll the river cloth to centre after Gehra ends.</span><em>Assigned</em></div>
 <div class="task-row"><span>River set</span><strong>Wim</strong><span>Start Barso only when blue cloth is at centre and villagers are set.</span><em>Assigned</em></div>
-<div class="task-row"><span>Tug of war</span><strong>Svetlana</strong><span>Watch the tug, then clear before the boy falls.</span><em>Assigned</em></div>
-<div class="task-row"><span>Barso 0:33</span><strong>Sara</strong><span>Pull the river cloth fully offstage; boy falls beside its edge before the pull.</span><em>Assigned</em></div>
-<div class="task-row"><span>Barso 0:33</span><strong>Laurien + Shreya</strong><span>Enter from SL for the full dance.</span><em>Assigned</em></div>
-<div class="task-row"><span>Barso end</span><strong>Swapnil</strong><span>Exit first through SR.</span><em>Assigned</em></div>
-<div class="task-row"><span>Barso end</span><strong>Khushboo, Haike, Kaushika, Chiara</strong><span>Take Deewani Mastani positions.</span><em>Assigned</em></div>
+<div class="task-row"><span>Barso 0:33</span><strong>Sara</strong><span>Pull the river cloth fully offstage after the boy clears its edge.</span><em>Assigned</em></div>
 <div class="task-row task-open"><span>Barso end</span><strong>TBD</strong><span>Mark Svetlana&#x27;s route and Maha/Roshni exit wings.</span><em>Open</em></div>
 </div>
 <div class="task-group"><h3>Later confirmed handover</h3>
@@ -1839,7 +1835,7 @@ const scenes1 = [
 ];
 const scenes2 = [
   {id:'S07',num:'04',name:'Adulthood Solo',sub:'The grown boy steps into his own journey, framed briefly by Sun and Moon',song:'Oru Paiyan → Gehra Hua (approved edit) + Sun & Moon cameo',dancers:'Swapnil + Shreya & Laurien',costume:'Swapnil: black dhoti, black necklace, oil, hair open with braids · Sun & Moon: as in 02',duration:'4:15',status:'partial',key:false},
-  {id:'S08',num:'05',name:'First Discovery',sub:'The boy and village meet across the river; play opens into dance',song:'Barso Re',dancers:'Swapnil, Srimahavalli, Haike, Chiara, Kaushika, Roshni, Shreya, Laurien, Khushboo · Svetlana watches tug only',costume:'Red & blue skirt, yellow blouse, bandhani shaded dupatta, gold jhumkas · Svetlana: blue skirt, peach blouse, figure scarf, gold set · Swapnil: blue sherwani, black dhoti, black necklace after quick change',duration:'3:35',status:'partial',key:false},
+  {id:'S08',num:'05',name:'First Discovery',sub:'River tug → boy falls beside the cloth → full dance from 0:33',song:'Barso Re',dancers:'Swapnil, Srimahavalli, Haike, Chiara, Kaushika, Roshni, Shreya, Laurien, Khushboo · Svetlana watches tug only',costume:'Red & blue skirt, yellow blouse, bandhani shaded dupatta, gold jhumkas · Svetlana: blue skirt, peach blouse, figure scarf, gold set · Swapnil: blue sherwani, black dhoti, black necklace after quick change',duration:'3:35',status:'partial',key:false},
   {id:'S09B',num:'06',name:'Queen\'s Entry',sub:'After secretly watching the Barso tug, she seeks the boy; the choreography keeps them just missing each other',song:'Deewani Mastani',dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike, Swapnil',costume:'Same as 05 (red & blue skirt set) · Svetlana & Roshni: have the loom (prop) ready for 07',duration:'3:41',status:'ready',key:false},
   {id:'S09',num:'07',name:'More Villagers',sub:'Joy builds with the boy while the Queen remains at a distance',song:'Jalalo Bilalo',dancers:'Bollyfolk Students + Svetlana + Roshni',costume:'Same as 05 (red & blue skirt set) · Svetlana & Roshni: loom',duration:'2:30',status:'ready',key:false},
   {id:'S10',num:'08',name:'Village Feast → Queen\'s Rejection ◆',sub:"Peak of joy as Kalbeliya climaxes — the village celebrates with the boy. The music cuts: the Queen's rejection lands at the peak, and the village stays with him. One distant voice. Full company freeze. Act 1 ends in stillness.",song:'Kalbeliya (climax cuts to silence + single distant voice)',dancers:'Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',costume:'Same as 05 (red & blue skirt set) · Swapnil: Kalbeliya costume',duration:'3:30',status:'ready',key:true},
@@ -1994,7 +1990,8 @@ function makeFlowRow(s) {
   const currentStatus = localStorage.getItem(statusKey) || sc.status;
   // Multi-track scenes get one song row per playback file. A single-song scene
   // stays on one row so its track, cast and costume are not repeated.
-  const effectiveSongs = sc.songs || null;
+  const effectiveSongs = sc.songs?.length > 1 ? sc.songs : null;
+  const singleSong = sc.songs?.length === 1 ? sc.songs[0] : null;
   const kc = (sc.key ? ' key-scene' : '') + (effectiveSongs ? ' has-songs' : '') + (currentStatus === 'narr' ? ' is-narr' : '');
   const narrHide = currentStatus === 'narr' ? ' flow-narr-hide' : '';
   const nameBodyClass = currentStatus === 'narr' ? ' flow-narr-body' : '';
@@ -2015,18 +2012,18 @@ function makeFlowRow(s) {
       <div class="flow-cell"><span class="flow-tag ${STATUS_CLASSES[sgStatus]}" aria-label="Status: ${STATUS_LABELS[sgStatus]}">${STATUS_LABELS[sgStatus]}</span></div>
     </div>`;
   }).join('') : '';
-  const songCell = sc.songs
+  const songCell = effectiveSongs
     ? ''
-    : `<span class="flow-song editable-cell" data-field="song">${sc.song||''}</span>`;
+    : `<span class="flow-song editable-cell" data-field="song">${singleSong?.title || sc.song || ''}</span>`;
   return `<div class="scene-item" id="${s.id}">
     <div class="flow-row${kc}" id="row-${s.id}" data-scene-id="${s.id}">
       <div class="flow-cell flow-num" style="${numStyle}">${sc.num}${copyLinkBtn(s.id, 'scene ' + sc.num)}</div>
       <div class="flow-cell${nameBodyClass}"><div style="display:flex;flex-direction:column;gap:3px;width:100%"><span class="flow-scene-name editable-cell" data-field="name">${sc.name}</span>${sc.sub?`<span class="editable-cell" style="font-size:0.74rem;color:var(--muted);line-height:1.35" data-field="sub">${sc.sub}</span>`:''}</div></div>
       <div class="flow-cell${narrHide}">${songCell}</div>
-      <div class="flow-cell${narrHide}">${sc.songs?'':`<span class="flow-dancers editable-cell" data-field="dancers">${sc.dancers}</span>`}</div>
-      <div class="flow-cell${narrHide}">${sc.costume?`<span style="font-size:0.78rem;color:var(--muted);line-height:1.4">${sc.costume}</span>`:''}</div>
-      <div class="flow-cell${narrHide}" style="justify-content:center">${sc.duration?`<span style="font-family:'Cinzel',serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.05em">${sc.duration}</span>`:''}</div>
-      <div class="flow-cell"><span class="flow-tag ${STATUS_CLASSES[currentStatus]}" aria-label="Status: ${STATUS_LABELS[currentStatus]}">${STATUS_LABELS[currentStatus]}</span></div>
+      <div class="flow-cell${narrHide}">${effectiveSongs?'':`<span class="flow-dancers editable-cell" data-field="dancers">${singleSong?.dancers || sc.dancers || ''}</span>`}</div>
+      <div class="flow-cell${narrHide}">${!effectiveSongs && (singleSong?.costume || sc.costume)?`<span style="font-size:0.78rem;color:var(--muted);line-height:1.4">${singleSong?.costume || sc.costume}</span>`:''}</div>
+      <div class="flow-cell${narrHide}" style="justify-content:center">${singleSong?.duration || sc.duration?`<span style="font-family:'Cinzel',serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.05em">${singleSong?.duration || sc.duration}</span>`:''}</div>
+      <div class="flow-cell">${effectiveSongs?'':`<span class="flow-tag ${STATUS_CLASSES[currentStatus]}" aria-label="Status: ${STATUS_LABELS[currentStatus]}">${STATUS_LABELS[currentStatus]}</span>`}</div>
     </div>
     ${songSubRows}
   </div>`;
