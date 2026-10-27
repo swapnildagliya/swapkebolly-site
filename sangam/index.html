@@ -598,6 +598,8 @@ body { background:var(--bg); color:var(--text); font-family:'Lora',serif; overfl
   .nav-tab.active{background:var(--gold-bg);color:var(--gold)}
   .nav-cues { flex:1 0 100%; padding:0.55rem 0.9rem; border-left:0; border-top:1px solid var(--border2); }
   .nav-cues-tabs { flex-wrap:wrap; gap:0.5rem 1rem; }
+  .nav-cues-tabs a { background:var(--surface); border:1px solid var(--border2); padding:0.5rem 0.8rem; font-size:0.72rem; }
+  .nav-cues-tabs a:hover, .nav-cues-tabs a:focus-visible { border-color:var(--gold); }
   .header-actions{margin-left:0.25rem}
   .theme-toggle{width:32px;height:32px;margin-left:0.25rem}
 }
@@ -1269,6 +1271,7 @@ strong, b { font-weight:600; }
     <button class="nav-tab" onclick="showTab('flow',this)">Dance scenes</button>
     <button class="nav-tab" onclick="showTab('tasks',this)">Production tasks</button>
     <button class="nav-tab" onclick="showTab('cast',this)">Cast</button>
+    <button class="nav-tab" onclick="window.print()">Print</button>
     <div class="nav-cues" role="group" aria-label="Production Cues">
       <span class="nav-cues-label">Production Cues</span>
       <div class="nav-cues-tabs">
@@ -1277,7 +1280,6 @@ strong, b { font-weight:600; }
         <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=sound">Sound</a>
       </div>
     </div>
-    <button class="nav-tab" onclick="window.print()">Print</button>
   </nav>
   <div class="header-actions">
     <button class="export-btn" onclick="exportForDancers()" title="Export view-only snapshot as a file">📤 &nbsp;Export</button>
