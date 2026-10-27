@@ -110,6 +110,21 @@ body { background:var(--bg); color:var(--text); font-family:'Lora',serif; overfl
 }
 .nav-tab:hover { color:var(--text); }
 .nav-tab.active { color:var(--gold); border-bottom-color:var(--gold); }
+.nav-cues {
+  display:flex; flex-direction:column; justify-content:center; gap:3px;
+  padding:0 0.9rem; border-left:1px solid var(--border2); flex-shrink:0;
+}
+.nav-cues-label {
+  font-family:'Cinzel',serif; font-size:0.56rem; letter-spacing:0.19em;
+  color:var(--muted); text-transform:uppercase;
+}
+.nav-cues-tabs { display:flex; gap:0.7rem; }
+.nav-cues-tabs a {
+  font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.06em;
+  color:var(--text); text-decoration:none; white-space:nowrap;
+  border-bottom:2px solid transparent; padding:2px 0;
+}
+.nav-cues-tabs a:hover, .nav-cues-tabs a:focus-visible { color:var(--gold); border-bottom-color:var(--gold); }
 :focus-visible { outline:2px solid var(--gold); outline-offset:2px; border-radius:inherit; }
 .skip-link:focus-visible { outline-offset:0; }
 
@@ -581,6 +596,8 @@ body { background:var(--bg); color:var(--text); font-family:'Lora',serif; overfl
   .nav-tabs{order:3;flex:1 0 100%;margin-left:0;flex-wrap:wrap;overflow:visible;height:auto;mask-image:none;-webkit-mask-image:none;gap:2px 0;border-top:1px solid var(--border);padding-top:0.45rem;margin-top:0.25rem}
   .nav-tab{padding:0.55rem 0.95rem;font-size:0.68rem;letter-spacing:0.18em;min-height:34px;border-bottom:none;border-radius:17px;background:var(--surface);margin:2px;display:inline-flex;align-items:center}
   .nav-tab.active{background:var(--gold-bg);color:var(--gold)}
+  .nav-cues { flex:1 0 100%; padding:0.55rem 0.9rem; border-left:0; border-top:1px solid var(--border2); }
+  .nav-cues-tabs { flex-wrap:wrap; gap:0.5rem 1rem; }
   .header-actions{margin-left:0.25rem}
   .theme-toggle{width:32px;height:32px;margin-left:0.25rem}
 }
@@ -1252,6 +1269,14 @@ strong, b { font-weight:600; }
     <button class="nav-tab" onclick="showTab('flow',this)">Dance scenes</button>
     <button class="nav-tab" onclick="showTab('tasks',this)">Production tasks</button>
     <button class="nav-tab" onclick="showTab('cast',this)">Cast</button>
+    <div class="nav-cues" role="group" aria-label="Production Cues">
+      <span class="nav-cues-label">Production Cues</span>
+      <div class="nav-cues-tabs">
+        <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=lighting">Lighting</a>
+        <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=crew">Stage Manager</a>
+        <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=sound">Sound</a>
+      </div>
+    </div>
     <button class="nav-tab" onclick="window.print()">Print</button>
   </nav>
   <div class="header-actions">
@@ -1323,7 +1348,6 @@ strong, b { font-weight:600; }
     <h1 class="hero-title">SANGAM</h1>
     <p class="hero-sanskrit">संगम &nbsp;·&nbsp; Confluence</p>
     <p class="hero-tagline">An all-female village. A river goddess. A rejected boy.<br>A world that has never held water &mdash; until it does.</p>
-    <p class="scene-links">Production cues: <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=lighting">Lighting</a> &nbsp;·&nbsp; <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=crew">Stage Manager</a> &nbsp;·&nbsp; <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=sound">Sound</a></p>
   </section>
   <div class="river-rule">
     <svg viewBox="0 0 1440 40" preserveAspectRatio="none" height="40">
@@ -1356,7 +1380,7 @@ strong, b { font-weight:600; }
     <p class="section-label">Dance scenes</p>
     <h2 class="section-heading">Scene order</h2>
     <p class="section-sub">Scene, track, cast and costume. Working cues are reviewed through Scene 05 · Barso Re.</p>
-    <p class="scene-links">Crew cues: <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=lighting">Lighting</a> &nbsp;·&nbsp; <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=crew">Stage Manager</a> &nbsp;·&nbsp; <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=sound">Sound</a> &nbsp;·&nbsp; <a href="song-list.pdf">Song list PDF</a></p>
+    <p class="scene-links"><a href="song-list.pdf">Song list PDF</a></p>
     <div class="flow-header-row">
       <div class="flow-header-cell">#</div>
       <div class="flow-header-cell">Scene</div>
@@ -1386,7 +1410,6 @@ strong, b { font-weight:600; }
 <div id="tab-tasks" class="panel"><div class="section-wrap">
 <p class="section-label">Production tasks</p><h2 class="section-heading">Who does what</h2>
 <p class="section-sub">Named actions and open assignments. Playbill ready.</p>
-<p class="scene-links"><a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=crew">Stage Manager cues</a></p>
 <div class="task-group"><h3>Pre-show</h3>
 <div class="task-row"><span>Before FOH</span><strong>Laurien</strong><span>Place her duet dupatta at its pickup mark.</span><em>Assigned</em></div>
 <div class="task-row"><span>Before FOH</span><strong>Shreya</strong><span>Place her duet dupatta at its pickup mark.</span><em>Assigned</em></div>
