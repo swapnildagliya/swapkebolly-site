@@ -110,21 +110,21 @@ body { background:var(--bg); color:var(--text); font-family:'Lora',serif; overfl
 }
 .nav-tab:hover { color:var(--text); }
 .nav-tab.active { color:var(--gold); border-bottom-color:var(--gold); }
-.nav-cues {
-  display:flex; flex-direction:column; justify-content:center; gap:3px;
-  padding:0 0.9rem; border-left:1px solid var(--border2); flex-shrink:0;
+.nav-cues-toggle::after { content:'▾'; margin-left:0.45rem; font-size:0.8rem; }
+.nav-cues-toggle[aria-expanded="true"] { color:var(--gold); border-bottom-color:var(--gold); }
+.nav-cues-menu {
+  position:absolute; top:100%; right:2rem; z-index:101;
+  min-width:210px; padding:0.5rem;
+  display:flex; flex-direction:column; gap:0.2rem;
+  background:var(--header-bg); border:1px solid var(--border2); box-shadow:var(--shadow);
 }
-.nav-cues-label {
-  font-family:'Cinzel',serif; font-size:0.56rem; letter-spacing:0.19em;
-  color:var(--muted); text-transform:uppercase;
-}
-.nav-cues-tabs { display:flex; gap:0.7rem; }
-.nav-cues-tabs a {
-  font-family:'Cinzel',serif; font-size:0.64rem; letter-spacing:0.06em;
+.nav-cues-menu[hidden] { display:none; }
+.nav-cues-menu a {
+  font-family:'Cinzel',serif; font-size:0.68rem; letter-spacing:0.08em;
   color:var(--text); text-decoration:none; white-space:nowrap;
-  border-bottom:2px solid transparent; padding:2px 0;
+  padding:0.65rem 0.8rem; border:1px solid transparent;
 }
-.nav-cues-tabs a:hover, .nav-cues-tabs a:focus-visible { color:var(--gold); border-bottom-color:var(--gold); }
+.nav-cues-menu a:hover, .nav-cues-menu a:focus-visible { color:var(--gold); background:var(--surface); border-color:var(--border2); }
 :focus-visible { outline:2px solid var(--gold); outline-offset:2px; border-radius:inherit; }
 .skip-link:focus-visible { outline-offset:0; }
 
@@ -596,10 +596,8 @@ body { background:var(--bg); color:var(--text); font-family:'Lora',serif; overfl
   .nav-tabs{order:3;flex:1 0 100%;margin-left:0;flex-wrap:wrap;overflow:visible;height:auto;mask-image:none;-webkit-mask-image:none;gap:2px 0;border-top:1px solid var(--border);padding-top:0.45rem;margin-top:0.25rem}
   .nav-tab{padding:0.55rem 0.95rem;font-size:0.68rem;letter-spacing:0.18em;min-height:34px;border-bottom:none;border-radius:17px;background:var(--surface);margin:2px;display:inline-flex;align-items:center}
   .nav-tab.active{background:var(--gold-bg);color:var(--gold)}
-  .nav-cues { flex:1 0 100%; padding:0.55rem 0.9rem; border-left:0; border-top:1px solid var(--border2); }
-  .nav-cues-tabs { flex-wrap:wrap; gap:0.5rem 1rem; }
-  .nav-cues-tabs a { background:var(--surface); border:1px solid var(--border2); padding:0.5rem 0.8rem; font-size:0.72rem; }
-  .nav-cues-tabs a:hover, .nav-cues-tabs a:focus-visible { border-color:var(--gold); }
+  .nav-cues-menu { position:static; order:4; flex:1 0 100%; min-width:0; box-shadow:none; flex-direction:row; flex-wrap:wrap; gap:0.45rem; }
+  .nav-cues-menu a { background:var(--surface); border-color:var(--border2); font-size:0.72rem; }
   .header-actions{margin-left:0.25rem}
   .theme-toggle{width:32px;height:32px;margin-left:0.25rem}
 }
@@ -1271,16 +1269,14 @@ strong, b { font-weight:600; }
     <button class="nav-tab" onclick="showTab('flow',this)">Dance scenes</button>
     <button class="nav-tab" onclick="showTab('tasks',this)">Production tasks</button>
     <button class="nav-tab" onclick="showTab('cast',this)">Cast</button>
+    <button class="nav-tab nav-cues-toggle" id="nav-cues-toggle" type="button" aria-expanded="false" aria-controls="nav-cues-menu" aria-haspopup="true" onclick="toggleCueMenu()">Production Cues</button>
     <button class="nav-tab" onclick="window.print()">Print</button>
-    <div class="nav-cues" role="group" aria-label="Production Cues">
-      <span class="nav-cues-label">Production Cues</span>
-      <div class="nav-cues-tabs">
-        <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=lighting">Lighting</a>
-        <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=crew">Stage Manager</a>
-        <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=sound">Sound</a>
-      </div>
-    </div>
   </nav>
+  <div class="nav-cues-menu" id="nav-cues-menu" aria-label="Production Cues" hidden>
+    <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=lighting">Lighting</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=crew">Stage Manager</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=sound">Sound</a>
+  </div>
   <div class="header-actions">
     <button class="export-btn" onclick="exportForDancers()" title="Export view-only snapshot as a file">📤 &nbsp;Export</button>
     <button class="edit-btn" onclick="toggleEditMode()" id="edit-btn" title="Toggle edit mode">✏</button>
@@ -2069,7 +2065,32 @@ function updateDashboard() {
 }
 
 // ── TABS ──
+function closeCueMenu() {
+  const menu = document.getElementById('nav-cues-menu');
+  const toggle = document.getElementById('nav-cues-toggle');
+  if (!menu || !toggle) return;
+  menu.hidden = true;
+  toggle.setAttribute('aria-expanded', 'false');
+}
+function toggleCueMenu() {
+  const menu = document.getElementById('nav-cues-menu');
+  const toggle = document.getElementById('nav-cues-toggle');
+  const opening = menu.hidden;
+  menu.hidden = !opening;
+  toggle.setAttribute('aria-expanded', String(opening));
+}
+document.addEventListener('pointerdown', event => {
+  if (!event.target.closest('#nav-cues-toggle, #nav-cues-menu')) closeCueMenu();
+});
+document.addEventListener('keydown', event => {
+  const menu = document.getElementById('nav-cues-menu');
+  if (event.key === 'Escape' && menu && !menu.hidden) {
+    closeCueMenu();
+    document.getElementById('nav-cues-toggle').focus();
+  }
+});
 function showTab(name, btn) {
+  closeCueMenu();
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-'+name).classList.add('active');
