@@ -391,6 +391,9 @@ body { background:var(--bg); color:var(--text); font-family:'Lora',serif; overfl
 .flow-scene-name { font-size:0.9rem; font-weight:500; color:var(--text); line-height:1.35; }
 .flow-song { font-style:italic; color:var(--muted); font-size:0.84rem; line-height:1.4; }
 .flow-dancers { font-size:0.82rem; color:var(--muted); line-height:1.5; }
+.flow-audio-links { display:flex; flex-wrap:wrap; gap:0.35rem 0.65rem; margin-top:0.45rem; }
+.flow-audio-links a { font:600 0.68rem/1.4 'Inter',sans-serif; color:var(--river); text-decoration:underline; text-underline-offset:2px; }
+.flow-audio-links a:hover { color:var(--gold); }
 /* Multi-song sub-rows */
 .scene-song-subrow { display:grid; grid-template-columns:50px 160px 1fr 1fr 140px 90px 120px; border-top:1px dashed var(--border); background:var(--surface); }
 .scene-song-subrow .flow-cell { padding:0.35rem 1rem; font-size:0.83rem; border-right:1px solid var(--border); }
@@ -785,7 +788,7 @@ body { font-size: 18px; }
   @page { size:A4; margin:12mm; }
   html, body { background:#fff!important; color:#000!important; filter:grayscale(1); }
   *, *::before, *::after { color:#000!important; border-color:#777!important; box-shadow:none!important; text-shadow:none!important; background-image:none!important; print-color-adjust:economy!important; }
-  .site-header, .dash-bar, .header-actions, .river-rule, .scene-links, .copy-link-btn { display:none!important; }
+  .site-header, .dash-bar, .header-actions, .river-rule, .scene-links, .copy-link-btn, .flow-audio-links { display:none!important; }
   .panel { display:none!important; }
   .panel.active { display:block!important; }
   .section-wrap { max-width:none; padding:0; }
@@ -1273,9 +1276,9 @@ strong, b { font-weight:600; }
     <button class="nav-tab" onclick="window.print()">Print</button>
   </nav>
   <div class="nav-cues-menu" id="nav-cues-menu" aria-label="Production Cues" hidden>
-    <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=lighting">Lighting</a>
-    <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=crew">Stage Manager</a>
-    <a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=sound">Sound</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=lighting">Lighting</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=crew">Stage Manager</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=sound">Sound</a>
   </div>
   <div class="header-actions">
     <button class="export-btn" onclick="exportForDancers()" title="Export view-only snapshot as a file">📤 &nbsp;Export</button>
@@ -1365,7 +1368,7 @@ strong, b { font-weight:600; }
     <p class="section-label">Story arc</p>
     <h2 class="section-heading">From rejection to reunion</h2>
     <p class="section-sub">Maha’s grief gives the village its river. The boy grows among them, is rejected again by the Queen, and returns changed through her sacrifice. The numbered dance scenes and working script carry the detailed sequence.</p>
-    <p class="scene-links"><a href="SANGAM-CUE-SHEETS.html?v=2dbd4dbc53&sheet=script">Read the working script in the cue book</a></p>
+    <p class="scene-links"><a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=script">Read the working script in the cue book</a></p>
   </div>
   <div style="height:4rem"></div>
 </div>
@@ -1712,6 +1715,20 @@ function saveEdit(category, id, field, value) {
 const STATUSES = ['tbc','partial','ready','new','narr'];
 const STATUS_LABELS = {tbc:'TBC',partial:'IN PROGRESS',ready:'READY',new:'NEW',narr:'NARRATION'};
 const STATUS_CLASSES = {tbc:'tag-tbc',partial:'tag-partial',ready:'tag-ready',new:'tag-new',narr:'tag-narr'};
+// Stable Drive IDs for the confirmed playback sequence through Barso Re.
+// Replace file bytes in Drive when an edit changes; keep each ID and link.
+const SHOW_AUDIO_LINKS = {
+  S00:[['The Blue','1AHx_473bSsPOM04vsXHMrMuzNpB_ua2z']],
+  S01:[['Birth & river','1ooHomYC9f8YS-if1ZWYv9F9ezzEk4Jhz']],
+  S02:[['Sun & Moon','1y2z7VTAoa4UcoOLDzmgWgaldTPhmWzW0']],
+  S04:[['Asvaar women','18cV4JTjF9nHVc8NL0Sq1jBFKxV1TC6ZG'],['Growth → Chalka','12W9sW7E3SLG1n8kLmBIOUkAoLm2KMbAN']],
+  S07:[['Adulthood Solo','1bStVcii8tSymdqjokiee_aXnJL_bd8Ce']],
+  S08:[['Barso Re','1FpZ_2-8YfwK0KB9ldwfdn_LhSTJB7yHA']]
+};
+function showAudioLinks(sceneId) {
+  const links = SHOW_AUDIO_LINKS[sceneId];
+  return links ? `<div class="flow-audio-links" aria-label="Scene audio">${links.map(([label,id]) => `<a href="https://drive.google.com/file/d/${id}/view" target="_blank" rel="noopener noreferrer" aria-label="Listen to ${label}">Listen · ${label}</a>`).join('')}</div>` : '';
+}
 
 // ── DATA START ──
 const scenes1 = [
@@ -1905,7 +1922,7 @@ function makeFlowRow(s) {
   return `<div class="scene-item" id="${s.id}">
     <div class="flow-row${kc}" id="row-${s.id}" data-scene-id="${s.id}">
       <div class="flow-cell flow-num" style="${numStyle}">${sc.num}${copyLinkBtn(s.id, 'scene ' + sc.num)}</div>
-      <div class="flow-cell${nameBodyClass}"><div style="display:flex;flex-direction:column;gap:3px;width:100%"><span class="flow-scene-name editable-cell" data-field="name">${sc.name}</span>${sc.sub?`<span class="editable-cell" style="font-size:0.74rem;color:var(--muted);line-height:1.35" data-field="sub">${sc.sub}</span>`:''}</div></div>
+      <div class="flow-cell${nameBodyClass}"><div style="display:flex;flex-direction:column;gap:3px;width:100%"><span class="flow-scene-name editable-cell" data-field="name">${sc.name}</span>${sc.sub?`<span class="editable-cell" style="font-size:0.74rem;color:var(--muted);line-height:1.35" data-field="sub">${sc.sub}</span>`:''}${showAudioLinks(s.id)}</div></div>
       <div class="flow-cell${narrHide}">${songCell}</div>
       <div class="flow-cell${narrHide}">${effectiveSongs?'':`<span class="flow-dancers editable-cell" data-field="dancers">${singleSong?.dancers || sc.dancers || ''}</span>`}</div>
       <div class="flow-cell${narrHide}">${!effectiveSongs && (singleSong?.costume || sc.costume)?`<span style="font-size:0.78rem;color:var(--muted);line-height:1.4">${singleSong?.costume || sc.costume}</span>`:''}</div>
