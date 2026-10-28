@@ -1276,9 +1276,9 @@ strong, b { font-weight:600; }
     <button class="nav-tab" onclick="window.print()">Print</button>
   </nav>
   <div class="nav-cues-menu" id="nav-cues-menu" aria-label="Production Cues" hidden>
-    <a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=lighting">Lighting</a>
-    <a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=crew">Stage Manager</a>
-    <a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=sound">Sound</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=f3e3040782&sheet=lighting">Lighting</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=f3e3040782&sheet=crew">Stage Manager</a>
+    <a href="SANGAM-CUE-SHEETS.html?v=f3e3040782&sheet=sound">Sound</a>
   </div>
   <div class="header-actions">
     <button class="export-btn" onclick="exportForDancers()" title="Export view-only snapshot as a file">📤 &nbsp;Export</button>
@@ -1368,7 +1368,7 @@ strong, b { font-weight:600; }
     <p class="section-label">Story arc</p>
     <h2 class="section-heading">From rejection to reunion</h2>
     <p class="section-sub">Maha’s grief gives the village its river. The boy grows among them, is rejected again by the Queen, and returns changed through her sacrifice. The numbered dance scenes and working script carry the detailed sequence.</p>
-    <p class="scene-links"><a href="SANGAM-CUE-SHEETS.html?v=a54dc19ca9&sheet=script">Read the working script in the cue book</a></p>
+    <p class="scene-links"><a href="SANGAM-CUE-SHEETS.html?v=f3e3040782&sheet=script">Read the working script in the cue book</a></p>
   </div>
   <div style="height:4rem"></div>
 </div>
@@ -1414,7 +1414,7 @@ strong, b { font-weight:600; }
 <div class="task-group"><h3>Pre-show</h3>
 <div class="task-row"><span>Before FOH</span><strong>Laurien</strong><span>Place her duet dupatta at its pickup mark.</span><em>Assigned</em></div>
 <div class="task-row"><span>Before FOH</span><strong>Shreya</strong><span>Place her duet dupatta at its pickup mark.</span><em>Assigned</em></div>
-<div class="task-row"><span>FOH clear</span><strong>Wim</strong><span>Play The Blue in full (2:27). No narration or projection.</span><em>Ready</em></div>
+<div class="task-row"><span>FOH clear</span><strong>Wim</strong><span>Play 00 - Pre-show.mp3 in full (2:27). No narration or projection.</span><em>Ready</em></div>
 <div class="task-row"><span>S01 music</span><strong>Laurien</strong><span>Open the main curtain from the SR pulley during the music.</span><em>Assigned</em></div>
 </div>
 <div class="task-group"><h3>01 · Birth and river</h3>
@@ -1428,12 +1428,15 @@ strong, b { font-weight:600; }
 <div class="task-row"><span>Pot solo end</span><strong>Swapnil</strong><span>Move the screen BACK and exit back SR with the pot.</span><em>Assigned</em></div>
 <div class="task-row"><span>During growth</span><strong>Haike</strong><span>Rehearse moving Chalka pots backstage from SR to SL.</span><em>Working</em></div>
 </div>
-<div class="task-group"><h3>04–05 · Adulthood and Barso Re</h3>
+<div class="task-group"><h3>04–07 · Adulthood through More Villagers</h3>
 <div class="task-row"><span>Gehra end</span><strong>Swapnil</strong><span>Exit back SL, change to blue sherwani, return back SL in Barso.</span><em>Assigned</em></div>
 <div class="task-row"><span>Before Barso GO</span><strong>Haike + Khushboo</strong><span>Roll the river cloth to centre after Gehra ends.</span><em>Assigned</em></div>
-<div class="task-row"><span>River set</span><strong>Wim</strong><span>Start Barso only when blue cloth is at centre and villagers are set.</span><em>Assigned</em></div>
+<div class="task-row"><span>River set</span><strong>Wim</strong><span>Play 05 - First Discovery.wav when blue cloth is at centre and villagers are set.</span><em>Assigned</em></div>
 <div class="task-row"><span>Barso 0:33</span><strong>Sara</strong><span>Pull the river cloth fully offstage after the boy clears its edge.</span><em>Assigned</em></div>
-<div class="task-row task-open"><span>Barso end</span><strong>TBD</strong><span>Mark Svetlana&#x27;s route and Maha/Roshni exit wings.</span><em>Open</em></div>
+<div class="task-row"><span>Barso end</span><strong>Svetlana + Maha + Roshni</strong><span>Svetlana exits SR after her Barso peek and crosses backstage for Deewani SL; Maha/Roshni exit SR. Svetlana, Narcisse and Sara enter SL for Deewani.</span><em>Assigned</em></div>
+<div class="task-row"><span>06 GO</span><strong>Wim</strong><span>Play 06 - Queen&#x27;s Entry.wav once seven dancers and Swapnil are in position; Swapnil is SR under the spot.</span><em>Assigned</em></div>
+<div class="task-row"><span>Deewani end</span><strong>Swapnil + Deewani dancers</strong><span>Swapnil and six remaining dancers exit. Svetlana returns first to downstage centre for Jalalo; Roshni/Bollyfolk take spots after her.</span><em>Assigned</em></div>
+<div class="task-row"><span>07 GO</span><strong>Wim</strong><span>When Svetlana is visible downstage centre, play 07 - More Villagers.wav (2:27). Roshni/Bollyfolk enter with music.</span><em>Assigned</em></div>
 </div>
 <div class="task-group"><h3>Later confirmed handover</h3>
 <div class="task-row"><span>Before Scene 19</span><strong>Chiara + Svetlana</strong><span>Place one opened wing each for the reunion duet.</span><em>Assigned</em></div>
@@ -1715,15 +1718,16 @@ function saveEdit(category, id, field, value) {
 const STATUSES = ['tbc','partial','ready','new','narr'];
 const STATUS_LABELS = {tbc:'TBC',partial:'IN PROGRESS',ready:'READY',new:'NEW',narr:'NARRATION'};
 const STATUS_CLASSES = {tbc:'tag-tbc',partial:'tag-partial',ready:'tag-ready',new:'tag-new',narr:'tag-narr'};
-// Stable Drive IDs for the confirmed playback sequence through Barso Re.
+// Stable Drive IDs for confirmed playback files 00–05 and 07.
 // Replace file bytes in Drive when an edit changes; keep each ID and link.
 const SHOW_AUDIO_LINKS = {
-  S00:[['The Blue','1AHx_473bSsPOM04vsXHMrMuzNpB_ua2z']],
-  S01:[['Birth & river','1ooHomYC9f8YS-if1ZWYv9F9ezzEk4Jhz']],
+  S00:[['Pre-show','1AHx_473bSsPOM04vsXHMrMuzNpB_ua2z']],
+  S01:[['The Birth of a Boy & a River','1ooHomYC9f8YS-if1ZWYv9F9ezzEk4Jhz']],
   S02:[['Sun & Moon','1y2z7VTAoa4UcoOLDzmgWgaldTPhmWzW0']],
-  S04:[['Asvaar women','18cV4JTjF9nHVc8NL0Sq1jBFKxV1TC6ZG'],['Growth → Chalka','12W9sW7E3SLG1n8kLmBIOUkAoLm2KMbAN']],
+  S04:[['Villagers Part A','18cV4JTjF9nHVc8NL0Sq1jBFKxV1TC6ZG'],['Villagers Part B','12W9sW7E3SLG1n8kLmBIOUkAoLm2KMbAN']],
   S07:[['Adulthood Solo','1bStVcii8tSymdqjokiee_aXnJL_bd8Ce']],
-  S08:[['Barso Re','1FpZ_2-8YfwK0KB9ldwfdn_LhSTJB7yHA']]
+  S08:[['First Discovery','1FpZ_2-8YfwK0KB9ldwfdn_LhSTJB7yHA']],
+  S09:[['More Villagers','1cPiObGknfLkbjqWq2xQ3BjLlhPITbP2H']]
 };
 function showAudioLinks(sceneId) {
   const links = SHOW_AUDIO_LINKS[sceneId];
@@ -1740,8 +1744,8 @@ const scenes1 = [
 const scenes2 = [
   {id:'S07',num:'04',name:'Adulthood Solo',sub:'The grown boy steps into his own journey, framed briefly by Sun and Moon',song:'Oru Paiyan → Gehra Hua (approved edit) + Sun & Moon cameo',dancers:'Swapnil + Shreya & Laurien',costume:'Swapnil: black dhoti, black necklace, oil, hair open with braids · Sun & Moon: as in 02',duration:'4:15',status:'partial',key:false},
   {id:'S08',num:'05',name:'First Discovery',sub:'River tug → boy falls beside the cloth → full dance from 0:33',song:'Barso Re',dancers:'Swapnil, Srimahavalli, Haike, Chiara, Kaushika, Roshni, Shreya, Laurien, Khushboo · Svetlana watches tug only',costume:'Red & blue skirt, yellow blouse, bandhani shaded dupatta, gold jhumkas · Svetlana: blue skirt, peach blouse, figure scarf, gold set · Swapnil: blue sherwani, black dhoti, black necklace after quick change',duration:'3:35',status:'partial',key:false},
-  {id:'S09B',num:'06',name:'Queen\'s Entry',sub:'After secretly watching the Barso tug, she seeks the boy; the choreography keeps them just missing each other',song:'Deewani Mastani',dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike, Swapnil',costume:'Same as 05 (red & blue skirt set) · Svetlana & Roshni: have the loom (prop) ready for 07',duration:'3:41',status:'ready',key:false},
-  {id:'S09',num:'07',name:'More Villagers',sub:'Joy builds with the boy while the Queen remains at a distance',song:'Jalalo Bilalo',dancers:'Bollyfolk Students + Svetlana + Roshni',costume:'Same as 05 (red & blue skirt set) · Svetlana & Roshni: loom',duration:'2:30',status:'ready',key:false},
+  {id:'S09B',num:'06',name:'Queen\'s Entry',sub:'Village feast hide and seek; Svetlana exits back SL, Swapnil returns downstage SR to finish; all Deewani dancers clear',song:'Deewani Mastani',dancers:'Sara, Svetlana, Narcisse, Kaushika, Chiara, Khushboo, Haike, Swapnil',costume:'Same as 05 (red & blue skirt set) · Svetlana & Roshni: have the loom (prop) ready for 07',duration:'3:41',status:'ready',key:false},
+  {id:'S09',num:'07',name:'More Villagers',sub:'Svetlana visible downstage centre before music; Roshni and Bollyfolk enter on edited Jalalo',song:'Jalalo Bilalo',dancers:'Bollyfolk Students + Svetlana + Roshni',costume:'Same as 05 (red & blue skirt set) · Svetlana & Roshni: loom',duration:'2:27',status:'ready',key:false},
   {id:'S10',num:'08',name:'Village Feast → Queen\'s Rejection ◆',sub:"Peak of joy as Kalbeliya climaxes — the village celebrates with the boy. The music cuts: the Queen's rejection lands at the peak, and the village stays with him. One distant voice. Full company freeze. Act 1 ends in stillness.",song:'Kalbeliya (climax cuts to silence + single distant voice)',dancers:'Svetlana + Narcisse, Shreya, Srimahavalli, Kaushika, Sara, Laurien, Roshni, Haike, Swapnil',costume:'Same as 05 (red & blue skirt set) · Swapnil: Kalbeliya costume',duration:'3:30',status:'ready',key:true},
 ];
 const scenes3 = [
