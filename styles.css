@@ -944,6 +944,8 @@ html.no-js .nts-credit { opacity: 1; transform: none; }
 
 .p2-aside { margin-top: clamp(1.6rem, 4vh, 2.6rem); display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; justify-content: space-between; }
 .p2-aside p { line-height: 1.5; }
+.p2-spring { flex-basis: 100%; padding: 1.1rem 1.3rem; border: 1px solid currentColor; border-radius: 0.5rem; }
+.p2-spring p + p { margin-top: 0.65rem; }
 .p2-aside .scribble { color: var(--p2-rani); rotate: -2deg; font-size: 1.05rem; }
 .p2-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--p2-ink); color: var(--p2-paper);
   border-radius: 99px; padding: 0.75rem 1.35rem; font-weight: 600; font-size: 0.92rem; text-decoration: none;
@@ -1717,6 +1719,7 @@ html.no-js .hero__footer .hero__cue { transform: none; }
   font-size: 0.86rem; line-height: 1.5;
   color: color-mix(in oklch, var(--cream), transparent 45%);
 }
+
 
 /* ---- Act VI — SANGAM (2026-10-09). The production gets its own world: the Madhubani paper
    as the field, ink type, the SANGAM red for the split word, the artwork as the one object. ---- */
