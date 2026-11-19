@@ -927,84 +927,14 @@
   if (lbBoard) {
     // [date, month, CITY, name, programme, info-label, href, startISO, endISO]
     const FALLBACK_DATES = [
-      [
-            "11-25",
-            "Sep",
-            "BRUSSELS",
-            "Garba Miniseries",
-            "Fri 11, 18 & 25 Sep · 19:30–21:30 · with For the Love of Bollywood",
-            "Register ↗",
-            "https://www.fortheloveofbollywood.be/workshops",
-            "2026-09-11",
-            "2026-09-25"
-      ],
-      [
-            "13",
-            "Sep",
-            "GHENT",
-            "Open Door Day",
-            "Free tasters with me: Yoga 11:00 · Indian Dance Technique 12:00 · Bollyfolk 15:00",
-            "Details ↗",
-            "https://www.shoonyadance.com/calendar/opendeurdag-gratis-dansen-gent-13-september",
-            "2026-09-13",
-            "2026-09-13"
-      ],
-      [
-            "02-04",
-            "Oct",
-            "TOULOUSE",
-            "Bollywood Vibes Festival",
-            "Teaching Lavani (Sat) & Garba (Sun) · performing in the Friday show",
-            "Details ↗",
-            "https://www.helloasso.com/associations/les-perles-de-jaffna/evenements/festival-bollywood-vibes",
-            "2026-10-02",
-            "2026-10-04"
-      ],
-      [
-            "10",
-            "Oct",
-            "NICE",
-            "Happy Inde Festival",
-            "Ghoomar workshop 14:00 · Closing show 19:00",
-            "Details ↗",
-            "https://happy-inde.fr/10-octobre-happy-inde-programme-art-culture-danse-theatre-inde-rajasthan/",
-            "2026-10-10",
-            "2026-10-10"
-      ],
-      [
-            "07-08",
-            "Nov",
-            "GHENT",
-            "Sangam",
-            "A Bollywood Company premiere · €20",
-            "ABC ↗",
-            "https://performances.shoonyadance.com/sangam/",
-            "2026-11-07",
-            "2026-11-08"
-      ],
-      [
-            "22-24",
-            "Jan",
-            "GHENT",
-            "Indian Dance Winter Intensive 2027",
-            "Save the date — Bhangra & Jhoomar, Semi-Classical, Group Choreography, Garba & Dandiya Raas, Khoriya",
-            "Ask me ↓",
-            "#hello",
-            "2027-01-22",
-            "2027-01-24"
-      ],
-      [
-            "07-09",
-            "May",
-            "GHENT",
-            "Gent India Dans Festival",
-            "Edition Five · Shoonya Dance Centre, Gent",
-            "Festival ↗",
-            "https://gidf.abcdans.com",
-            "2027-05-07",
-            "2027-05-09"
-      ]
-];
+      ["22-24", "Jan", "GHENT", "Indian Dance Winter Intensive 2027",
+        "Bhangra & Jhoomar, Semi-Classical, Group Choreography, Garba & Dandiya Raas, Khoriya",
+        "Details ↗", "https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-january-2027",
+        "2027-01-22", "2027-01-24"],
+      ["07-09", "May", "GHENT", "Gent India Dans Festival",
+        "Edition Five · Shoonya Dance Centre, Gent", "Festival ↗",
+        "https://gidf.abcdans.com/", "2027-05-07", "2027-05-09"]
+    ];
     const renderBoard = (DATES) => {
     // keep only events that haven't finished yet (compare on date, ignore time)
     const today = new Date(); today.setHours(0, 0, 0, 0);
