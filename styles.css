@@ -1829,3 +1829,12 @@ body.menu-open .topbar__quick { visibility: hidden; }
    2. Act III is not pinned at ≤900px, so its Next button sat on "Workshop details". */
 .srl__caption { max-width: min(46rem, 82%, calc(100vw - 3.5rem)); }
 @media (max-width: 900px) { .scene--invite .scene-skip { display: none; } }
+
+/* ---------- New to dance? Start here (20 Nov 2026; facts: semester-config 2027-spring + Shoonya spring timetable) ---------- */
+.p2-start { scroll-margin-top: 6rem; margin: clamp(1.4rem, 4vh, 2.4rem) 0; padding: clamp(1.2rem, 3vw, 2rem); border: 1.5px solid var(--p2-gold, var(--marigold)); border-radius: 0.8rem; background: color-mix(in oklab, var(--p2-gold, var(--marigold)) 7%, transparent); }
+.p2-start__eyebrow { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--p2-gold, var(--marigold)); }
+.p2-start__steps { list-style: none; counter-reset: st; margin: 1rem 0 1.2rem; padding: 0; display: grid; gap: 0.9rem 1.6rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+.p2-start__steps li { counter-increment: st; display: grid; align-content: start; gap: 0.3rem; }
+.p2-start__steps b { font-family: var(--font-display); font-weight: 760; font-size: 1.1rem; }
+.p2-start__steps b::before { content: counter(st) ". "; color: var(--p2-gold, var(--marigold)); }
+.p2-start__steps span { font-size: 1rem; line-height: 1.5; opacity: 0.88; }

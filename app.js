@@ -861,6 +861,12 @@
       </div>`).join("");
   }
   const p2Reg = document.querySelector("#p2Reg");
+  const startReg = document.querySelector("#startReg");
+  if (startReg) {
+    const now = Date.now();
+    if (now >= Date.parse("2026-12-07T09:00:00+01:00") && now <= Date.parse("2027-03-08T23:59:00+01:00")) startReg.textContent = "Registration is open now.";
+    else if (now >= Date.parse("2026-11-30T09:00:00+01:00") && now < Date.parse("2026-12-07T09:00:00+01:00")) startReg.textContent = "From Monday 7 December, 09:00. Current Shoonya students can register now.";
+  }
   if (p2Reg) {
     const now = Date.now();
     const CUR = Date.parse("2026-11-30T09:00:00+01:00"), ALL = Date.parse("2026-12-07T09:00:00+01:00"), END = Date.parse("2027-03-08T23:59:00+01:00");
