@@ -1434,7 +1434,7 @@ html.js .curtain:not([hidden]) { animation: curtain-drop 640ms var(--ease-out) b
 @media (max-width: 720px) {
   .cta-pill { display: inline-flex; }
   /* On stage after the Overture; off again once you have arrived at the Curtain call. */
-  body[data-act]:not([data-act="overture"]):not([data-act="hello"]):not([data-act="programme"]):not([data-act="classes"]):not([data-act="workshops"]) .cta-pill {
+  body[data-act]:not([data-act="overture"]):not([data-act="hello"]):not([data-act="programme"]):not([data-act="classes"]):not([data-act="workshops"]):not([data-act="stage"]) .cta-pill {
     opacity: 1; transform: none; pointer-events: auto;
   }
   body.menu-open .cta-pill { opacity: 0; transform: translateY(10px); pointer-events: none; }
@@ -1444,7 +1444,7 @@ html.js .curtain:not([hidden]) { animation: curtain-drop 640ms var(--ease-out) b
 }
 @media (prefers-reduced-motion: reduce) {
   .cta-pill { transform: none; transition: opacity 220ms linear; }
-  body[data-act]:not([data-act="overture"]):not([data-act="hello"]):not([data-act="programme"]):not([data-act="classes"]):not([data-act="workshops"]) .cta-pill { transform: none; }
+  body[data-act]:not([data-act="overture"]):not([data-act="hello"]):not([data-act="programme"]):not([data-act="classes"]):not([data-act="workshops"]):not([data-act="stage"]) .cta-pill { transform: none; }
 }
 
 /* ============================== Cameo (surprise door) ============================== */
@@ -1808,3 +1808,17 @@ body.menu-open .topbar__quick { visibility: hidden; }
   .hero__title { z-index: 5; }
   .hero__line--1, .hero__line--3 { text-shadow: 0 2px 14px oklch(0.12 0.02 40 / 0.7), 0 0 2px oklch(0.12 0.02 40 / 0.6); }
 }
+
+/* ---------- Act IV booker block (20 Nov 2026; facts from Swapnil, AskUserQuestion) ---------- */
+.bk { position: relative; z-index: 2; margin-top: clamp(1.8rem, 5vh, 3rem); padding: clamp(1.3rem, 3vw, 2.2rem); border: 1px solid color-mix(in oklab, var(--cream) 22%, transparent); border-radius: 1rem; scroll-margin-top: 6rem; }
+.bk-title { font-family: var(--font-display); font-weight: 820; font-stretch: 110%; font-size: clamp(1.5rem, 3.2vw, 2.2rem); color: var(--marigold); }
+.bk-formats { list-style: none; margin: 1.2rem 0 0; padding: 0; display: grid; gap: 0.9rem 1.6rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+.bk-formats li { display: grid; align-content: start; gap: 0.25rem; padding-top: 0.8rem; border-top: 1px solid color-mix(in oklab, var(--cream) 18%, transparent); }
+.bk-formats b { font-family: var(--font-display); font-weight: 760; font-size: 1.15rem; }
+.bk-formats span { font-size: 1rem; line-height: 1.5; opacity: 0.85; }
+.bk-facts { margin: 1.6rem 0 0; display: grid; gap: 0.9rem; }
+.bk-facts div { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; }
+.bk-facts dt { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--marigold); padding-top: 0.15rem; }
+.bk-facts dd { margin: 0; font-size: 1rem; line-height: 1.55; opacity: 0.9; }
+.bk-actions { display: flex; flex-wrap: wrap; gap: 1rem 1.6rem; align-items: center; margin-top: 1.6rem; }
+@media (max-width: 640px) { .bk-facts div { grid-template-columns: 1fr; gap: 0.25rem; } }
