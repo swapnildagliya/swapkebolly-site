@@ -1434,7 +1434,7 @@ html.js .curtain:not([hidden]) { animation: curtain-drop 640ms var(--ease-out) b
 @media (max-width: 720px) {
   .cta-pill { display: inline-flex; }
   /* On stage after the Overture; off again once you have arrived at the Curtain call. */
-  body[data-act]:not([data-act="overture"]):not([data-act="hello"]) .cta-pill {
+  body[data-act]:not([data-act="overture"]):not([data-act="hello"]):not([data-act="programme"]):not([data-act="classes"]):not([data-act="workshops"]) .cta-pill {
     opacity: 1; transform: none; pointer-events: auto;
   }
   body.menu-open .cta-pill { opacity: 0; transform: translateY(10px); pointer-events: none; }
@@ -1444,7 +1444,7 @@ html.js .curtain:not([hidden]) { animation: curtain-drop 640ms var(--ease-out) b
 }
 @media (prefers-reduced-motion: reduce) {
   .cta-pill { transform: none; transition: opacity 220ms linear; }
-  body[data-act]:not([data-act="overture"]):not([data-act="hello"]) .cta-pill { transform: none; }
+  body[data-act]:not([data-act="overture"]):not([data-act="hello"]):not([data-act="programme"]):not([data-act="classes"]):not([data-act="workshops"]) .cta-pill { transform: none; }
 }
 
 /* ============================== Cameo (surprise door) ============================== */
@@ -1797,3 +1797,14 @@ body.menu-open .topbar__quick { visibility: hidden; }
   .topbar__quick a { font-size: 0.7rem; letter-spacing: 0.06em; }
 }
 @media (max-width: 430px) { .topbar .brand__name { display: none; } } /* the S mark carries the name on small phones; frees room for the quick links */
+
+/* ---------- Phone hero: words in front of the dancer (critique 20 Nov 2026) ----------
+   At this width the dancer (translateZ 120px) covered the middle of the words — the
+   headline read "EVERY THI G CHO EO GRAPHY". Behind the type on phones only;
+   desktop keeps the break-through. A soft shadow keeps cream type legible over the costume. */
+@media (max-width: 640px) {
+  .hero__dancer { transform: translateX(-50%) translateZ(0) scale(calc(0.96 + var(--progress) * 0.34)) translateY(calc(max(0, calc((var(--progress) - 0.05) / 0.95)) * 8vh)); }
+  .hero__dancer { z-index: 1; }
+  .hero__title { z-index: 5; }
+  .hero__line--1, .hero__line--3 { text-shadow: 0 2px 14px oklch(0.12 0.02 40 / 0.7), 0 0 2px oklch(0.12 0.02 40 / 0.6); }
+}

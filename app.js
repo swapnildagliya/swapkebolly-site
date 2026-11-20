@@ -538,6 +538,9 @@
 
   const updateIntentUI = (intent) => {
     const copy = intentCopy[intent];
+    /* Learn = name, email, level. A beginner should not have to write a paragraph (critique 20 Nov 2026). */
+    const msgField = enquiryForm?.querySelector('textarea[name="message"]');
+    if (msgField) msgField.required = intent !== "Learn with you";
 
     smartGroups.forEach((group) => {
       const allowed = group.dataset.smartFor.split(",").map((item) => item.trim());
