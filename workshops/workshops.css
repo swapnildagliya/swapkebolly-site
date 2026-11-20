@@ -161,3 +161,12 @@
 @media (prefers-reduced-motion: reduce) {
   .js-motion [data-rise] { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---------- next public intensive (dated: remove after 24 Jan 2027) ---------- */
+.wt-next { background: var(--bold-marigold); color: var(--ink-text); }
+.wt-next em { color: var(--rani-deep); }
+.wt-next-when { margin-top: 1.5rem; font-size: 1.05rem; line-height: 1.55; max-width: 44rem; }
+.wt-next-when b { display: block; font-family: var(--font-display); font-size: clamp(1.3rem, 2.4vw, 1.9rem); line-height: 1.15; font-weight: 800; margin-bottom: 0.6rem; }
+.wt-next .wt-examples li { border-color: color-mix(in oklab, var(--ink-text) 30%, transparent); }
+.wt-next .wt-btn { background: var(--ink-text); color: var(--bold-cream); border-color: var(--ink-text); }
+.wt-next .wt-btn:hover { background: transparent; color: var(--ink-text); }
