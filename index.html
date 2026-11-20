@@ -48,7 +48,7 @@
       document.body && document.body.classList.add("is-loaded", "is-settled");
     }, 4000);
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261120-spring">
+  <link rel="stylesheet" href="styles.css?v=20261120-pace">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -111,11 +111,11 @@
     <ol>
       <li><a href="#programme"><small>Tonight</small><span>Programme</span><i>choose your seat</i></a></li>
       <li><a href="#body"><small>Act I</small><span>The Body</span><i>folk first</i></a></li>
-      <li><a href="#notes"><small>Notes</small><span>The Journey</span><i>the long way to Ghent</i></a></li>
       <li><a href="#classes"><small>Act II</small><span>The Practice</span><i>again — with love</i></a></li>
+      <li><a href="#live"><small>Interlude</small><span>Live Dates</span><i>come find me</i></a></li>
       <li><a href="#workshops"><small>Act III</small><span>The Invitation</span><i>bring me your room</i></a></li>
       <li><a href="#stage"><small>Act IV</small><span>The Stage</span><i>press play</i></a></li>
-      <li><a href="#live"><small>Interlude</small><span>Live Dates</span><i>come find me</i></a></li>
+      <li><a href="#notes"><small>Notes</small><span>The Journey</span><i>the long way to Ghent</i></a></li>
       <li><a href="#table"><small>Act V</small><span>The Interval</span><i>stay for chai</i></a></li>
       <li><a href="#hello"><small>Curtain call</small><span>Hello</span><i>what brings you here?</i></a></li>
     </ol>
@@ -212,40 +212,6 @@
       </div>
     </section>
 
-    <!-- ============ NOTES — THE CREDITS (paper credit-roll) ============ -->
-    <section class="scene notes-credits" id="notes" data-scene data-act-name="Notes" data-context="Programme notes — the long way to Ghent" data-theme="dark" aria-labelledby="notesTitle">
-      <div class="scene__pin nts-stage">
-        <div class="nts-year" aria-hidden="true"><span id="ntsYear">2005</span></div>
-        <div class="nts-card">
-          <p class="eyebrow">Programme notes · how I got here</p>
-          <h2 id="notesTitle">Two decades,<br><em>four cities.</em></h2>
-          <p class="nts-bio">Pune gave me my first counts. New York and Florence sharpened them — Broadway Dance Center, then Opus Ballet on a scholarship. Back home I ran SPACE, my own studio, for ten years, and directed Avayava for six editions. Ghent’s been home since 2015 — folk first these days, and still wearing every hat that fits.</p>
-          <div class="nts-chips" aria-label="Current training">
-            <span>Ten-form Indian folk diploma</span>
-            <span>Kathak · in training since 2020</span>
-            <span>Certified yoga teacher</span>
-          </div>
-        </div>
-        <div class="nts-rollwrap">
-          <span class="nts-markline" aria-hidden="true"></span>
-          <span class="nts-rolllabel" aria-hidden="true">Selected credits</span>
-          <div class="nts-roll" id="ntsRoll">
-            <ol class="nts-track" id="ntsTrack" aria-label="Selected credits">
-              <li class="nts-credit"><time>2005–07</time><div><strong>Shiamak Davar’s Institute, Pune</strong><span>first training, twice medalled</span></div></li>
-              <li class="nts-credit"><time>2009–12</time><div><strong>Broadway Dance Center, NYC &amp; Opus Ballet, Florence</strong><span>on scholarship</span></div></li>
-              <li class="nts-credit"><time>2008–18</time><div><strong>SPACE, Pune</strong><span>my studio; started with seven students, ran a decade</span></div></li>
-              <li class="nts-credit"><time>2012–17</time><div><strong>Avayava, Pune</strong><span>founder &amp; artistic director, six international editions</span></div></li>
-              <li class="nts-credit"><time>2013–15</time><div><strong>International Dance Retreat</strong><span>co-founder · Auroville &amp; Udaipur</span></div></li>
-              <li class="nts-credit"><time>2011–15</time><div><strong>University of Pune &amp; FLAME University</strong><span>taught contemporary dance</span></div></li>
-              <li class="nts-credit"><time>2017</time><div><strong>Shoonya Dance Centre, Ghent</strong><span>co-founder &amp; artistic director</span></div></li>
-              <li class="nts-credit"><time>2017</time><div><strong>ABC — a bollywood company</strong><span>founder &amp; artistic director</span></div></li>
-              <li class="nts-credit"><time>ongoing</time><div><strong>Gent India Dans Festival</strong><span>artistic director</span></div></li>
-              <li class="nts-credit"><time>2024</time><div><strong>The Four Loves</strong><span>born in Pune 2011, reborn with ABC in Ghent</span></div></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <div class="marquee-wrap" aria-hidden="true">
       <div class="marquee">
@@ -304,6 +270,19 @@
         <a class="p2-btn" href="https://www.shoonyadance.com/register" target="_blank" rel="noopener noreferrer">Register at Shoonya <span aria-hidden="true">↗</span></a>
         <a href="https://schedule.shoonyadance.com/schedule-spring-2027/" target="_blank" rel="noopener noreferrer">Spring timetable ↗</a>
       </div>
+    </section>
+
+    <!-- ============ INTERLUDE — LIVE ============ -->
+    <section class="live-board" id="live" data-act-name="Interlude" data-context="Live — come find me" data-theme="dark" aria-labelledby="liveTitle">
+      <header class="lb-head">
+        <div>
+          <p class="eyebrow">Interlude · dates &amp; places</p>
+          <h2 id="liveTitle">Next places to<br><em>accidentally find me.</em></h2>
+        </div>
+        <p class="lb-boarding"><i></i>Now boarding · 2026–27</p>
+      </header>
+      <div class="lb-cols" aria-hidden="true"><span>Date</span><span>Destination</span><span>Programme</span><span>Info</span></div>
+      <div class="lb-board" id="lbBoard" aria-label="Upcoming live dates"><a class="lb-row" href="https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-january-2027"><time datetime="2027-01-22"><b>22-24</b>Jan</time><time class="sr-only" datetime="2027-01-24">Ends 2027-01-24</time><span class="lb-flap">GHENT</span><span class="lb-what"><strong>Indian Dance Winter Intensive 2027</strong><span>Bhangra &amp; Jhoomar, Semi-Classical, Group Choreography, Garba &amp; Dandiya Raas, Khoriya</span></span><span class="lb-status">Details ↗</span></a><a class="lb-row" href="https://gidf.abcdans.com/"><time datetime="2027-05-07"><b>07-09</b>May</time><time class="sr-only" datetime="2027-05-09">Ends 2027-05-09</time><span class="lb-flap">GHENT</span><span class="lb-what"><strong>Gent India Dans Festival</strong><span>Edition Five · Shoonya Dance Centre, Gent</span></span><span class="lb-status">Festival ↗</span></a></div>
     </section>
 
     <!-- ============ ACT III — THE INVITATION ============ -->
@@ -384,17 +363,40 @@
       </div>
     </section>
 
-    <!-- ============ INTERLUDE — LIVE ============ -->
-    <section class="live-board" id="live" data-act-name="Interlude" data-context="Live — come find me" data-theme="dark" aria-labelledby="liveTitle">
-      <header class="lb-head">
-        <div>
-          <p class="eyebrow">Interlude · dates &amp; places</p>
-          <h2 id="liveTitle">Next places to<br><em>accidentally find me.</em></h2>
+
+    <!-- ============ NOTES — THE CREDITS (paper credit-roll) ============ -->
+    <section class="scene notes-credits" id="notes" data-scene data-act-name="Notes" data-context="Programme notes — the long way to Ghent" data-theme="dark" aria-labelledby="notesTitle">
+      <div class="scene__pin nts-stage">
+        <div class="nts-year" aria-hidden="true"><span id="ntsYear">2005</span></div>
+        <div class="nts-card">
+          <p class="eyebrow">Programme notes · how I got here</p>
+          <h2 id="notesTitle">Two decades,<br><em>four cities.</em></h2>
+          <p class="nts-bio">Pune gave me my first counts. New York and Florence sharpened them — Broadway Dance Center, then Opus Ballet on a scholarship. Back home I ran SPACE, my own studio, for ten years, and directed Avayava for six editions. Ghent’s been home since 2015 — folk first these days, and still wearing every hat that fits.</p>
+          <div class="nts-chips" aria-label="Current training">
+            <span>Ten-form Indian folk diploma</span>
+            <span>Kathak · in training since 2020</span>
+            <span>Certified yoga teacher</span>
+          </div>
         </div>
-        <p class="lb-boarding"><i></i>Now boarding · 2026–27</p>
-      </header>
-      <div class="lb-cols" aria-hidden="true"><span>Date</span><span>Destination</span><span>Programme</span><span>Info</span></div>
-      <div class="lb-board" id="lbBoard" aria-label="Upcoming live dates"><a class="lb-row" href="https://www.shoonyadance.com/calendar/indian-dance-winter-intensive-january-2027"><time datetime="2027-01-22"><b>22-24</b>Jan</time><time class="sr-only" datetime="2027-01-24">Ends 2027-01-24</time><span class="lb-flap">GHENT</span><span class="lb-what"><strong>Indian Dance Winter Intensive 2027</strong><span>Bhangra &amp; Jhoomar, Semi-Classical, Group Choreography, Garba &amp; Dandiya Raas, Khoriya</span></span><span class="lb-status">Details ↗</span></a><a class="lb-row" href="https://gidf.abcdans.com/"><time datetime="2027-05-07"><b>07-09</b>May</time><time class="sr-only" datetime="2027-05-09">Ends 2027-05-09</time><span class="lb-flap">GHENT</span><span class="lb-what"><strong>Gent India Dans Festival</strong><span>Edition Five · Shoonya Dance Centre, Gent</span></span><span class="lb-status">Festival ↗</span></a></div>
+        <div class="nts-rollwrap">
+          <span class="nts-markline" aria-hidden="true"></span>
+          <span class="nts-rolllabel" aria-hidden="true">Selected credits</span>
+          <div class="nts-roll" id="ntsRoll">
+            <ol class="nts-track" id="ntsTrack" aria-label="Selected credits">
+              <li class="nts-credit"><time>2005–07</time><div><strong>Shiamak Davar’s Institute, Pune</strong><span>first training, twice medalled</span></div></li>
+              <li class="nts-credit"><time>2009–12</time><div><strong>Broadway Dance Center, NYC &amp; Opus Ballet, Florence</strong><span>on scholarship</span></div></li>
+              <li class="nts-credit"><time>2008–18</time><div><strong>SPACE, Pune</strong><span>my studio; started with seven students, ran a decade</span></div></li>
+              <li class="nts-credit"><time>2012–17</time><div><strong>Avayava, Pune</strong><span>founder &amp; artistic director, six international editions</span></div></li>
+              <li class="nts-credit"><time>2013–15</time><div><strong>International Dance Retreat</strong><span>co-founder · Auroville &amp; Udaipur</span></div></li>
+              <li class="nts-credit"><time>2011–15</time><div><strong>University of Pune &amp; FLAME University</strong><span>taught contemporary dance</span></div></li>
+              <li class="nts-credit"><time>2017</time><div><strong>Shoonya Dance Centre, Ghent</strong><span>co-founder &amp; artistic director</span></div></li>
+              <li class="nts-credit"><time>2017</time><div><strong>ABC — a bollywood company</strong><span>founder &amp; artistic director</span></div></li>
+              <li class="nts-credit"><time>ongoing</time><div><strong>Gent India Dans Festival</strong><span>artistic director</span></div></li>
+              <li class="nts-credit"><time>2024</time><div><strong>The Four Loves</strong><span>born in Pune 2011, reborn with ABC in Ghent</span></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ============ ACT VI — SANGAM (my production) ============ -->
@@ -574,7 +576,7 @@
     <img src="assets/cutouts/web/cutout-garba-jump.webp" alt="" width="893" height="1200" loading="lazy" decoding="async">
   </figure>
 
-  <script src="app.js?v=20261120-spring" defer></script>
+  <script src="app.js?v=20261120-pace" defer></script>
 
 </body>
 </html>

@@ -805,6 +805,22 @@
     }
   }
 
+  /* ---------------- Next ↓ — skip to the end of a pinned scene ----------------
+     Owner, 20 Nov 2026: "hard to continue to the next section". Every pinned scene gets a
+     button that jumps to the first thing after it. Hidden under reduced motion (pins are static). */
+  document.querySelectorAll("[data-scene]").forEach((sc) => {
+    const pin = sc.querySelector(".scene__pin");
+    if (!pin || sc.id === "overture") return;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "scene-skip"; b.innerHTML = 'Next <span aria-hidden="true">↓</span>';
+    b.setAttribute("aria-label", "Skip to the next section");
+    b.addEventListener("click", () => {
+      const y = sc.getBoundingClientRect().top + window.scrollY + sc.offsetHeight + 2;
+      window.scrollTo({ top: y, behavior: reduceMotion.matches ? "auto" : "smooth" });
+    });
+    pin.appendChild(b);
+  });
+
   /* ---------------- Act II — the call sheet (build day columns) ---------------- */
   const p2Days = document.querySelector("#p2Days");
   if (p2Days) {

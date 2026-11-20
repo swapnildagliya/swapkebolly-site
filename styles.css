@@ -340,9 +340,9 @@ html.no-js .bdy-beat { opacity: 1; transform: none; margin-bottom: 1.4rem; }
 html.no-js .watch__iris { clip-path: none; }
 html.no-js .watch__iris::after { opacity: 1; }
 
-.scene--hero  { --len: 200; }
-.scene--body  { --len: 700; } /* Six styles, one viewport of scroll each. */
-.scene--invite{ --len: 280; }
+.scene--hero  { --len: 140; }
+.scene--body  { --len: 260; } /* Six styles over ~1.6 screens (was 700: 7 screens for three lines — owner: "full of scrolls", 20 Nov 2026). */
+.scene--invite{ --len: 200; }
 .scene--watch { --len: 220; }
 
 /* Each pinned act brings its own stage colour, so scenes never depend on the
@@ -598,7 +598,7 @@ html.no-js .hero__cue { transform: translateX(-50%); }
 /* ============================== Programme — scene-selection reel ==============================
    Namespaced srl__ so it never collides with Act IV's video .reel. */
 
-.scenereel { --len: 420; position: relative; background: var(--ink-deep); }
+.scenereel { --len: 220; position: relative; background: var(--ink-deep); }
 .srl__stage { display: grid; grid-template-rows: auto 1fr auto; background: #000; color: var(--cream); }
 
 .srl__bar {
@@ -685,7 +685,7 @@ html.no-js .srl__sheet { display: grid; }
    reader line as you scroll (driven by the engine's --p). Warm gold-cast paper. Colours are
    section-scoped (--nts-*) so they never touch the global tokens other acts rely on. */
 .notes-credits {
-  --len: 300;
+  --len: 170;
   --nts-paper: var(--bold-orange); --nts-ink: var(--ink-deep);
   --nts-gold: var(--cream); --nts-rani: var(--cream);  /* --glow on orange was 2.4:1 */
   --nts-mono: ui-monospace, "SF Mono", Menlo, monospace;
@@ -1514,8 +1514,10 @@ html.js .plate.is-visible { opacity: 1; scale: 1; }
   .invite__card { scroll-snap-align: center; width: min(21rem, 78vw); }
   .invite__scribble { position: static; margin-top: 0.8rem; rotate: -2deg; text-align: left; }
 
-  .scene--hero { --len: 165; }
-  .scene--body { --len: 700; }
+  .scene--hero { --len: 120; }
+  .scene--body { --len: 230; }
+  .scenereel { --len: 190; }
+  .notes-credits { --len: 150; }
   .scene--watch { --len: 190; }
 
   .hero__dancer img { height: min(44svh, 24rem); }
@@ -1766,3 +1768,15 @@ html.no-js .hero__footer .hero__cue { transform: none; }
   .sg-ghost { display: none; }
 }
 .p2-reg-when strong { display: block; font-family: var(--font-display, inherit); font-size: clamp(1.15rem, 2.2vw, 1.5rem); line-height: 1.2; color: var(--p2-rani); margin-bottom: 0.35rem; }
+
+/* ---------- Next ↓ — a way out of every pinned scene (20 Nov 2026) ---------- */
+.scene-skip {
+  position: absolute; left: 50%; translate: -50% 0; bottom: clamp(1rem, 3vh, 2rem); z-index: 30;
+  font: 600 0.8rem/1 var(--font-body, inherit); letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.75rem 1.1rem; border-radius: 999px; border: 1px solid currentColor;
+  background: color-mix(in oklab, var(--ink-deep, #16100d) 55%, transparent); color: var(--cream, #f5ead8);
+  cursor: pointer; backdrop-filter: blur(6px);
+}
+.scene-skip:hover, .scene-skip:focus-visible { background: var(--cream, #f5ead8); color: var(--ink-deep, #16100d); }
+@media (max-width: 760px) { .scene-skip { left: var(--page, 1.25rem); translate: none; bottom: 1.6rem; } }
+@media (prefers-reduced-motion: reduce) { .scene-skip { display: none; } }
