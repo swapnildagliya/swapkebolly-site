@@ -1765,3 +1765,4 @@ html.no-js .hero__footer .hero__cue { transform: none; }
   .sg-card { width: min(100%, 20rem); justify-self: start; transform: rotate(-2deg); }
   .sg-ghost { display: none; }
 }
+.p2-reg-when strong { display: block; font-family: var(--font-display, inherit); font-size: clamp(1.15rem, 2.2vw, 1.5rem); line-height: 1.2; color: var(--p2-rani); margin-bottom: 0.35rem; }

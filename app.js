@@ -218,7 +218,7 @@
 
   if (srlFrame && srlStrip && srlSection) {
     const SCENES = [
-      ["I",   "Learn with me, weekly", "Shoonya Dance Centre · Ghent","Nine classes a week, six forms, one studio.",                   "assets/swapnil-bhangra-001.jpg",              "62% 40%", "#classes"],
+      ["I",   "Learn with me, weekly", "Shoonya Dance Centre · Ghent","Eight classes a week from 15 February. Registration opens 7 December.",                   "assets/swapnil-bhangra-001.jpg",              "62% 40%", "#classes"],
       ["II",  "Catch me live",         "Festivals · squares · stages","Festivals, street stages and theatre nights — come find me.",        "assets/swapnil-bollywood-001.jpg",            "50% 40%", "#live"],
       ["III", "Invite me to teach",    "60 min – 5 days",             "A taster, a masterclass, or a multi-day intensive.",            "assets/media/garba-crowd-poster.jpg",         "50% 38%", "#workshops", "assets/media/garba-crowd.mp4"],
       ["IV",  "Book a performance",    "Stage · sangeet · square",    "Or commission the choreography a room needs.",                  "assets/media/hero-loop-poster.jpg",           "50% 42%", "#stage", "assets/media/hero-loop.mp4"],
@@ -816,16 +816,17 @@
       semi: "https://www.shoonyadance.com/kathak-danslessen-in-gent",
       bollywood: "https://www.shoonyadance.com/bollywood-danslessen-in-gent",
     };
-    // SOURCE OF TRUTH: Swapnil, direct. Nine classes / six forms / three days.
-    const WAYIN = "New? Enter via a seasonal intensive.";
+    // SOURCE OF TRUTH: Shoonya spring 2027 timetable (preliminary), schedule.shoonyadance.com/schedule-spring-2027/, read 20 Nov 2026.
+    // Dance Flow = the renamed Indian Dance Technique (Swapnil, 20 Nov 2026).
+    // Eight classes / six forms / three days, 15 Feb – 12 Jun 2027.
+    const WAYIN = "New? Start with the four-week starter series, 17 Feb – 10 Mar.";
     const P2DAYS = [
       { name: "Tuesday", dow: 2, calls: [
         ["18:30", "Bollyfolk", "Film-dance joy, folk roots.", P2L.bollyfolk, "Level 2", false],
         ["19:35", "Yoga", "Breath, pranayama, a softer landing.", P2L.yoga, "Open level", true],
-        ["20:40", "Indian Dance Technique", "Footwork, hands, rhythm — the grammar.", P2L.technique, "Open level", true]] },
+        ["20:40", "Dance Flow", "Footwork, hands, rhythm — the grammar.", P2L.technique, "Open level", true]] },
       { name: "Wednesday", dow: 3, calls: [
         ["17:20", "Yoga", "Breath, pranayama, a softer landing.", P2L.yoga, "Open level", true],
-        ["18:30", "Bollyfolk", "Film-dance joy, folk roots.", P2L.bollyfolk, "Open level", true],
         ["19:30", "Bhangra", "Shoulders up, mood up.", P2L.bhangra, "Level 2", false, WAYIN],
         ["20:30", "Indian Semi-Classical", "Kathak vocabulary — a quieter thunder.", P2L.semi, "Level 2", false, WAYIN]] },
       { name: "Thursday", dow: 4, calls: [
@@ -839,6 +840,13 @@
         ${d.calls.map((c) => `<a class="p2-call${c[5] ? " is-open" : ""}" href="${c[3]}" target="_blank" rel="noopener noreferrer">
           <time>${c[0]}</time><strong>${c[1]}<b class="p2-lvl">${c[4]}</b></strong><small>${c[2]}${c[6] ? `<u class="p2-wayin">${c[6]}</u>` : ""}</small></a>`).join("")}
       </div>`).join("");
+  }
+  const p2Reg = document.querySelector("#p2Reg");
+  if (p2Reg) {
+    const now = Date.now();
+    const CUR = Date.parse("2026-11-30T09:00:00+01:00"), ALL = Date.parse("2026-12-07T09:00:00+01:00"), END = Date.parse("2027-03-08T23:59:00+01:00");
+    if (now >= ALL && now <= END) p2Reg.innerHTML = "<strong>Registration is open.</strong> Spring classes start Monday 15 February; the first week, 15–20 February, is a free trial week.";
+    else if (now >= CUR && now < ALL) p2Reg.innerHTML = "<strong>Current Shoonya students can register now</strong>, with the code from Shoonya’s e-mail. Registration opens for everyone on Monday 7 December at 09:00.";
   }
 
   /* ---------------- Act IV — the folk showreel ----------------
