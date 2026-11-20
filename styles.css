@@ -1822,3 +1822,10 @@ body.menu-open .topbar__quick { visibility: hidden; }
 .bk-facts dd { margin: 0; font-size: 1rem; line-height: 1.55; opacity: 0.9; }
 .bk-actions { display: flex; flex-wrap: wrap; gap: 1rem 1.6rem; align-items: center; margin-top: 1.6rem; }
 @media (max-width: 640px) { .bk-facts div { grid-template-columns: 1fr; gap: 0.25rem; } }
+
+/* ---------- Review fixes (20 Nov 2026) ----------
+   1. On phones the scene frame is wider than the viewport, so captions longer than
+      ~45 characters ran off-screen ("Registration … December" lost "opens 7").
+   2. Act III is not pinned at ≤900px, so its Next button sat on "Workshop details". */
+.srl__caption { max-width: min(46rem, 82%, calc(100vw - 3.5rem)); }
+@media (max-width: 900px) { .scene--invite .scene-skip { display: none; } }
