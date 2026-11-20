@@ -48,7 +48,7 @@
       document.body && document.body.classList.add("is-loaded", "is-settled");
     }, 4000);
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261120-pace">
+  <link rel="stylesheet" href="styles.css?v=20261120-nav">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -101,9 +101,14 @@
       <span class="brand__name">Swapnil<br>Dagliya</span>
     </a>
     <p class="topbar__context"><span id="topbarAct">Overture</span><em id="topbarContext">Everything is choreography</em></p>
-    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menu">
-      <span>Programme</span><i aria-hidden="true"></i>
-    </button>
+    <div class="topbar__end">
+      <nav class="topbar__quick" aria-label="Quick links">
+        <a href="#classes">Classes</a><a href="#live">Dates</a><a href="#stage">Book</a>
+      </nav>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menu">
+        <span>Programme</span><i aria-hidden="true"></i>
+      </button>
+    </div>
   </header>
 
   <nav class="menu" id="menu" aria-label="Primary navigation" aria-hidden="true">

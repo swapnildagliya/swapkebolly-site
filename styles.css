@@ -80,10 +80,10 @@ body[data-act="overture"]  { --house: var(--ink-deep); color: var(--cream); }
 body[data-act="programme"] { --house: oklch(0.19 0.045 300); color: var(--cream); }
 body[data-act="body"]      { --house: var(--indigo-deep); color: var(--cream); }
 body[data-act="notes"]     { --house: oklch(0.17 0.045 300); color: var(--cream); }
-body[data-act="classes"]   { --house: var(--cream); color: var(--ink); }
+body[data-act="classes"]   { --house: var(--ink-deep); color: var(--cream); } /* dark section since the call-sheet redesign; cream house made the header cream-on-cream (20 Nov 2026) */
 body[data-act="workshops"] { --house: var(--marigold); color: var(--ink); }
 body[data-act="stage"]     { --house: oklch(0.14 0.015 45); color: var(--cream); }
-body[data-act="live"]      { --house: var(--cream); color: var(--ink); }
+body[data-act="live"]      { --house: var(--ink-deep); color: var(--cream); } /* dark board — see classes */
 body[data-act="table"]     { --house: var(--blush); color: var(--ink); }
 body[data-act="hello"]     { --house: var(--rani-deep); color: var(--cream); }
 
@@ -150,8 +150,6 @@ h2 em, h1 em {
 
 :focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; border-radius: 2px; }
 body[data-act="workshops"] :focus-visible,
-body[data-act="classes"] :focus-visible,
-body[data-act="live"] :focus-visible,
 body[data-act="table"] :focus-visible { outline-color: var(--ink); }
 
 .grain {
@@ -1780,3 +1778,22 @@ html.no-js .hero__footer .hero__cue { transform: none; }
 .scene-skip:hover, .scene-skip:focus-visible { background: var(--cream, #f5ead8); color: var(--ink-deep, #16100d); }
 @media (max-width: 760px) { .scene-skip { left: var(--page, 1.25rem); translate: none; bottom: 1.6rem; } }
 @media (prefers-reduced-motion: reduce) { .scene-skip { display: none; } }
+
+/* ---------- Header quick links: Classes · Dates · Book (20 Nov 2026, critique heuristic 6) ---------- */
+.topbar__end { grid-column: -2 / -1; justify-self: end; display: inline-flex; align-items: center; gap: clamp(0.6rem, 2vw, 1.6rem); }
+.topbar__end .menu-button { justify-self: auto; }
+.topbar__quick { display: inline-flex; align-items: center; gap: clamp(0.4rem, 1.6vw, 1.3rem); }
+.topbar__quick a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.15rem;
+  font-weight: 600; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+  opacity: 0.82; text-decoration: none; text-underline-offset: 0.35em;
+}
+.topbar__quick a:hover, .topbar__quick a:focus-visible { opacity: 1; text-decoration: underline; }
+body.menu-open .topbar__quick { visibility: hidden; }
+@media (max-width: 1100px) and (min-width: 901px) { .topbar__context { display: none; } }
+@media (max-width: 600px) {
+  .topbar__end .menu-button > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .topbar__quick { gap: 0.75rem; }
+  .topbar__quick a { font-size: 0.7rem; letter-spacing: 0.06em; }
+}
+@media (max-width: 430px) { .topbar .brand__name { display: none; } } /* the S mark carries the name on small phones; frees room for the quick links */
