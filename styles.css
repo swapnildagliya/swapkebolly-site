@@ -1838,3 +1838,26 @@ body.menu-open .topbar__quick { visibility: hidden; }
 .p2-start__steps b { font-family: var(--font-display); font-weight: 760; font-size: 1.1rem; }
 .p2-start__steps b::before { content: counter(st) ". "; color: var(--p2-gold, var(--marigold)); }
 .p2-start__steps span { font-size: 1rem; line-height: 1.5; opacity: 0.88; }
+
+/* ============================== Notes — At a glance ==============================
+   Plain (not pinned) fact sheet after the credit roll, so bookers and press can read the
+   whole CV at once on any screen. Same orange paper + dark ink as Notes. Facts = the credits. */
+.glance { background: var(--bold-orange); color: var(--ink-deep); padding: clamp(3rem, 8vw, 6rem) var(--page); }
+.glance__inner { max-width: 62rem; margin: 0 auto; }
+.glance .eyebrow { color: color-mix(in oklch, var(--ink-deep), transparent 20%); opacity: 1; }
+.glance h2 { font-family: var(--font-display); font-weight: 840; font-stretch: 114%; text-transform: uppercase;
+  font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: 0.95; letter-spacing: -0.03em; margin: 0 0 2rem; }
+.glance__list { margin: 0; display: grid; gap: 0; }
+.glance__list > div { display: grid; grid-template-columns: 11rem 1fr; gap: 1.2rem; padding: 1rem 0;
+  border-top: 1px solid color-mix(in oklch, var(--ink-deep), transparent 75%); }
+.glance__list dt { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.78rem; letter-spacing: 0.14em;
+  text-transform: uppercase; padding-top: 0.2rem; }
+.glance__list dd { margin: 0; font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.55; }
+.glance__list strong { font-weight: 700; }
+.glance__list em { font-style: italic; }
+@media (max-width: 640px) {
+  .glance__list > div { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+.glance__items { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.glance__items li { padding-left: 1rem; position: relative; }
+.glance__items li::before { content: "·"; position: absolute; left: 0; font-weight: 700; }
